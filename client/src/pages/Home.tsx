@@ -3,7 +3,7 @@ import {
   Terminal, Github, Linkedin, Phone, Mail, FileText, ExternalLink, 
   Code2, Cpu, Layers, Award, GraduationCap, User, Home as HomeIcon, 
   BookOpen, Briefcase, Radio, Send, CheckCircle2, Sparkles, Command, 
-  ChevronRight, Download, Menu, X, ArrowUpRight, ShieldCheck, TerminalSquare, Plus, Image as ImageIcon, MessageSquare
+  ChevronRight, Download, Menu, X, ArrowUpRight, ShieldCheck, TerminalSquare, Plus, Image as ImageIcon, MessageSquare, TrendingUp
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -59,8 +59,8 @@ export default function Home() {
   const [linkedinPosts, setLinkedinPosts] = useState<LinkedInPost[]>([
     {
       id: "1",
-      title: "Completed 2nd Semester of Engineering & Starting C++ DSA!",
-      summary: "Excited to share that I've completed my 2nd semester of engineering and started my DSA journey in C++. Solved 20+ LeetCode problems in the last 2 weeks!",
+      title: "SGPA Jump to 8.05 in 2nd Semester!",
+      summary: "Thrilled to share my academic progress! Improved my SGPA from 7.2 in 1st sem to 8.05 in 2nd sem, alongside solving 20+ LeetCode problems in C++ over the last 2 weeks.",
       date: "August 2026",
       postUrl: "https://www.linkedin.com/in/adithya-a-shetty-421097382"
     },
@@ -207,7 +207,7 @@ export default function Home() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1 lg:space-x-1">
+          <nav className="hidden md:flex items-center space-x-1">
             {[
               { id: "home", label: "Home" },
               { id: "about", label: "About" },
@@ -292,7 +292,7 @@ export default function Home() {
         )}
       </header>
 
-      {/* Fixed Left Vertical Dock (Reference Style) */}
+      {/* Fixed Left Vertical Dock */}
       <aside className="hidden lg:flex fixed left-0 top-1/2 -translate-y-1/2 z-20 flex-col items-center py-6 px-3 bg-[#141416]/80 backdrop-blur-md border-r border-y border-white/10 rounded-r-xl space-y-6 shadow-2xl">
         <a 
           href="https://github.com/adithyaashetty2007-a11y" 
@@ -364,7 +364,7 @@ export default function Home() {
             <div className="lg:col-span-7 space-y-6 text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-zinc-300">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                Engineering Student (2nd Sem Completed) & Aspiring Developer
+                SGPA Improved: 7.2 (Sem 1) → 8.05 (Sem 2)
               </div>
 
               <div className="space-y-2">
@@ -375,7 +375,7 @@ export default function Home() {
               </div>
 
               <p className="text-zinc-300 text-base sm:text-lg font-sans leading-relaxed max-w-xl">
-                Completed 2nd semester of engineering. College-level basics in C, C++, and Python, started DSA in C++ (20+ LeetCode solved), and building web projects with AI assistance (~60% frontend accuracy).
+                Engineering student with consistent academic growth (Sem 2 SGPA: 8.05, up from 7.2 in Sem 1). College basics in C, C++, Python, active DSA learner in C++ (20+ LeetCode solved in 2 weeks), and AI-assisted frontend builder.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -399,13 +399,13 @@ export default function Home() {
 
               <div className="pt-4 flex flex-wrap items-center gap-6 text-xs font-mono text-zinc-400 border-t border-white/10">
                 <div className="flex items-center gap-2">
+                  <span className="text-emerald-400 font-bold">8.05 SGPA</span> (Sem 2)
+                </div>
+                <div className="flex items-center gap-2">
                   <span className="text-white font-bold">20+</span> LeetCode Solved
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-white font-bold">10+</span> GitHub Repos
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-white font-bold">2nd Sem</span> Completed
                 </div>
               </div>
             </div>
@@ -433,22 +433,22 @@ export default function Home() {
         {/* ABOUT SECTION */}
         <section id="about" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 01. BACKGROUND</span>
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 01. BACKGROUND & GROWTH</span>
             <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">About Adithya</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-7 space-y-6 text-zinc-300 leading-relaxed font-sans text-base sm:text-lg">
               <p>
-                Hello! I am <strong className="text-white font-semibold">Adithya A Shetty</strong>. I have just completed my second semester of engineering. I am building my foundation in programming with college-level basics in C, C++, and Python.
+                Hello! I am <strong className="text-white font-semibold">Adithya A Shetty</strong>. I have successfully completed my second semester of engineering, showing consistent academic improvement with an <strong className="text-emerald-400 font-semibold">8.05 SGPA in Sem 2</strong> (up from <strong className="text-white">7.2 SGPA in Sem 1</strong>).
               </p>
               <p>
-                I am not a backend developer; I build frontend and web projects with AI assistance (achieving ~60% frontend accuracy). I started learning Data Structures and Algorithms (DSA) in C++ 2 weeks ago, and I have already solved 20+ problems.
+                I am building my foundation in programming with college-level basics in C, C++, and Python. I started practicing Data Structures and Algorithms (DSA) in C++ 2 weeks ago, and I have already solved 20+ problems on LeetCode.
               </p>
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="p-4 rounded-lg bg-[#141416] border border-white/10">
-                  <h4 className="text-white font-mono text-sm font-bold mb-1">AI-Assisted Builder</h4>
-                  <p className="text-xs text-zinc-400">Building user interfaces and web applications with AI tools (~60% frontend accuracy).</p>
+                  <h4 className="text-white font-mono text-sm font-bold mb-1">Academic Growth</h4>
+                  <p className="text-xs text-zinc-400">Sem 1: 7.2 SGPA → Sem 2: 8.05 SGPA (Consistent improvement).</p>
                 </div>
                 <div className="p-4 rounded-lg bg-[#141416] border border-white/10">
                   <h4 className="text-white font-mono text-sm font-bold mb-1">DSA in C++ (2 Weeks)</h4>
@@ -468,8 +468,12 @@ export default function Home() {
                   <span className="text-white font-semibold">Adithya A Shetty</span>
                 </li>
                 <li className="flex justify-between border-b border-white/5 pb-2">
-                  <span className="text-zinc-500">Stage:</span>
-                  <span className="text-white">2nd Sem Engineering Completed</span>
+                  <span className="text-zinc-500">Sem 2 SGPA:</span>
+                  <span className="text-emerald-400 font-bold">8.05 (Improved)</span>
+                </li>
+                <li className="flex justify-between border-b border-white/5 pb-2">
+                  <span className="text-zinc-500">Sem 1 SGPA:</span>
+                  <span className="text-white">7.2</span>
                 </li>
                 <li className="flex justify-between border-b border-white/5 pb-2">
                   <span className="text-zinc-500">Phone:</span>
@@ -506,7 +510,7 @@ export default function Home() {
               <p className="text-xs text-zinc-400">Started practicing Data Structures and Algorithms in C++ 2 weeks ago. Solving problems daily to build solid fundamentals.</p>
               <div className="mt-4 pt-4 border-t border-white/10 flex justify-between text-xs font-mono">
                 <span className="text-emerald-400">Language: C++</span>
-                <span className="text-zinc-300">Streak: Active</span>
+                <span className="text-zinc-300">Active Streak</span>
               </div>
             </div>
 
@@ -526,7 +530,7 @@ export default function Home() {
         <section id="visual-skills" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
             <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 03. VISUAL SKILLS & PROFICIENCY</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Language & DSA Proficiency</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Language & Academic Metrics</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -581,11 +585,17 @@ export default function Home() {
 
             <div className="lg:col-span-6 space-y-6 bg-[#141416] border border-white/10 rounded-2xl p-8">
               <h3 className="font-mono text-lg font-bold text-white mb-6 flex items-center gap-2">
-                <Cpu className="w-5 h-5 text-emerald-400" />
-                DSA & Problem Solving Metrics
+                <TrendingUp className="w-5 h-5 text-emerald-400" />
+                Academic & Problem Solving Metrics
               </h3>
 
               <div className="grid grid-cols-2 gap-4">
+                <div className="p-5 bg-black/50 border border-white/10 rounded-xl text-center">
+                  <span className="text-zinc-500 font-mono text-xs uppercase block mb-1">Sem 2 SGPA</span>
+                  <span className="text-3xl font-bold font-mono text-emerald-400">8.05</span>
+                  <span className="text-[10px] font-mono text-zinc-400 block mt-1">Up from 7.2 in Sem 1</span>
+                </div>
+
                 <div className="p-5 bg-black/50 border border-white/10 rounded-xl text-center">
                   <span className="text-zinc-500 font-mono text-xs uppercase block mb-1">LeetCode Solved</span>
                   <span className="text-3xl font-bold font-mono text-white">20+</span>
@@ -596,12 +606,6 @@ export default function Home() {
                   <span className="text-zinc-500 font-mono text-xs uppercase block mb-1">GitHub Repos</span>
                   <span className="text-3xl font-bold font-mono text-white">10+</span>
                   <span className="text-[10px] font-mono text-blue-400 block mt-1">Active commits</span>
-                </div>
-
-                <div className="p-5 bg-black/50 border border-white/10 rounded-xl text-center">
-                  <span className="text-zinc-500 font-mono text-xs uppercase block mb-1">Engineering Year</span>
-                  <span className="text-xl font-bold font-mono text-white">2nd Sem Done</span>
-                  <span className="text-[10px] font-mono text-zinc-400 block mt-1">Building foundation</span>
                 </div>
 
                 <div className="p-5 bg-black/50 border border-white/10 rounded-xl text-center">
@@ -910,26 +914,42 @@ export default function Home() {
         {/* EDUCATION SECTION */}
         <section id="education" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 08. ACADEMIC STATUS</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Education</h2>
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 08. ACADEMIC STATUS & IMPROVEMENT</span>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Education & SGPA Growth</h2>
           </div>
 
-          <div className="bg-[#141416] border border-white/10 rounded-xl p-8 max-w-3xl">
-            <div className="flex items-start gap-4">
-              <div className="p-3 bg-white/5 border border-white/10 rounded-lg">
-                <GraduationCap className="w-6 h-6 text-white" />
-              </div>
-              <div className="space-y-2">
-                <span className="text-xs font-mono text-zinc-500">Engineering Undergraduate</span>
-                <h3 className="text-xl font-bold font-mono text-white">Completed 2nd Semester</h3>
-                <p className="text-zinc-400 text-sm font-sans">
-                  Completed 2nd semester of engineering studies, with coursework covering C, C++, and Python programming basics.
-                </p>
-                <div className="pt-2 flex items-center gap-4 text-xs font-mono text-zinc-400">
-                  <span>Student: Adithya A Shetty</span>
-                  <span>•</span>
-                  <span className="text-emerald-400">Motivated Learner</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+            <div className="bg-[#141416] border border-white/10 rounded-xl p-8 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-mono text-zinc-500">First Semester</span>
+                  <span className="text-lg font-bold font-mono text-white">7.2 SGPA</span>
                 </div>
+                <p className="text-zinc-400 text-xs font-sans">
+                  Built foundational engineering concepts and programming basics in C and Python.
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-white/10 text-xs font-mono text-zinc-500">
+                Completed
+              </div>
+            </div>
+
+            <div className="bg-[#141416] border border-emerald-500/30 rounded-xl p-8 flex flex-col justify-between relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-emerald-500/20 text-emerald-400 text-[10px] font-mono px-3 py-1 rounded-bl">
+                +0.85 Improvement
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-mono text-emerald-400">Second Semester</span>
+                  <span className="text-2xl font-bold font-mono text-emerald-400">8.05 SGPA</span>
+                </div>
+                <p className="text-zinc-300 text-xs font-sans">
+                  Demonstrated strong academic growth and improved performance across all engineering coursework.
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono">
+                <span className="text-white font-bold">Adithya A Shetty</span>
+                <span className="text-emerald-400">Completed</span>
               </div>
             </div>
           </div>
@@ -1037,7 +1057,7 @@ export default function Home() {
         <footer className="py-8 px-4 sm:px-8 border-t border-white/10 text-center text-xs font-mono text-zinc-500">
           <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
-              © {new Date().getFullYear()} Adithya A Shetty. Engineering Student (2nd Sem Completed).
+              © {new Date().getFullYear()} Adithya A Shetty. Engineering Student (Sem 2 SGPA: 8.05).
             </div>
             <div className="flex items-center gap-4">
               <a href="https://github.com/adithyaashetty2007-a11y" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">GitHub</a>
@@ -1176,7 +1196,7 @@ export default function Home() {
                   required
                   value={newPost.title}
                   onChange={(e) => setNewPost({ ...newPost, title: e.target.value })}
-                  placeholder="e.g. Started DSA in C++!"
+                  placeholder="e.g. Sem 2 SGPA Jump to 8.05!"
                   className="w-full bg-black/50 border border-white/15 rounded px-3 py-2 text-white outline-none focus:border-white"
                 />
               </div>
