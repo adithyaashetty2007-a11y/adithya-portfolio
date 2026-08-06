@@ -26,7 +26,7 @@ export default function Home() {
   // Scroll spy
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "dsa", "development", "leadership", "projects", "education", "contact"];
+      const sections = ["home", "about", "dsa", "skills", "certifications", "projects", "education", "contact"];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -67,13 +67,15 @@ export default function Home() {
     const newLogs = [...terminalLogs, `$ ${terminalInput}`];
 
     if (cmd === "help") {
-      newLogs.push("Available commands: about, skills, projects, contact, clear, resume");
+      newLogs.push("Available commands: about, skills, certs, projects, contact, clear, resume");
     } else if (cmd === "about") {
-      newLogs.push("Adithya A Shetty: Engineering student (completed 2nd sem), building frontend web development skills and starting DSA journey.");
+      newLogs.push("Adithya A Shetty: Engineering student (2nd sem completed). Learning C, C++, Python basics & DSA in C++.");
     } else if (cmd === "skills") {
-      newLogs.push("Frontend: HTML, CSS, JavaScript, React basics (60% accuracy) | Tools: Git, GitHub (10+ repos)");
+      newLogs.push("Languages: C, C++, Python (College level basics) | Frontend: ~60% accuracy, AI-assisted builder | Repos: 10+ on GitHub");
+    } else if (cmd === "certs") {
+      newLogs.push("Certifications & Achievements: View verified badges and certificates on LinkedIn (/in/adithya-a-shetty-421097382)");
     } else if (cmd === "projects") {
-      newLogs.push("1. Portfolio Website | 2. Student Web Projects | 3. Frontend UI Experiments");
+      newLogs.push("1. Portfolio Website | 2. 10+ GitHub Repositories | 3. AI-assisted Web Apps");
     } else if (cmd === "contact") {
       newLogs.push("Phone: 8088814686 | LinkedIn: /in/adithya-a-shetty-421097382");
     } else if (cmd === "resume") {
@@ -135,7 +137,8 @@ export default function Home() {
               { id: "home", label: "Home" },
               { id: "about", label: "About" },
               { id: "dsa", label: "DSA" },
-              { id: "development", label: "Development" },
+              { id: "skills", label: "Skills" },
+              { id: "certifications", label: "Certifications" },
               { id: "projects", label: "Projects" },
               { id: "education", label: "Education" },
               { id: "contact", label: "Contact" },
@@ -184,7 +187,8 @@ export default function Home() {
               { id: "home", label: "Home" },
               { id: "about", label: "About" },
               { id: "dsa", label: "DSA" },
-              { id: "development", label: "Development" },
+              { id: "skills", label: "Skills" },
+              { id: "certifications", label: "Certifications" },
               { id: "projects", label: "Projects" },
               { id: "education", label: "Education" },
               { id: "contact", label: "Contact" },
@@ -238,13 +242,13 @@ export default function Home() {
           </span>
         </a>
         <button 
-          onClick={() => scrollToSection("development")} 
+          onClick={() => scrollToSection("skills")} 
           className="p-2.5 rounded-lg text-zinc-400 hover:text-white hover:bg-white/10 transition group relative"
-          title="Development & Skills"
+          title="Skills"
         >
           <Code2 className="w-5 h-5" />
           <span className="absolute left-full ml-3 px-2 py-1 bg-zinc-900 border border-white/20 text-white text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap z-50">
-            Development
+            Skills
           </span>
         </button>
         <button 
@@ -258,9 +262,19 @@ export default function Home() {
           </span>
         </button>
         <button 
+          onClick={() => scrollToSection("certifications")} 
+          className="p-2.5 rounded-lg text-zinc-400 hover:text-white hover:bg-white/10 transition group relative"
+          title="Certifications"
+        >
+          <Award className="w-5 h-5" />
+          <span className="absolute left-full ml-3 px-2 py-1 bg-zinc-900 border border-white/20 text-white text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap z-50">
+            Certifications
+          </span>
+        </button>
+        <button 
           onClick={() => scrollToSection("contact")} 
           className="p-2.5 rounded-lg text-zinc-400 hover:text-white hover:bg-white/10 transition group relative"
-          title="Contact Adithya"
+          title="Contact"
         >
           <Mail className="w-5 h-5" />
           <span className="absolute left-full ml-3 px-2 py-1 bg-zinc-900 border border-white/20 text-white text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap z-50">
@@ -283,7 +297,7 @@ export default function Home() {
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-zinc-300">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                Engineering Student (2nd Sem Completed) & Aspiring Frontend Developer
+                Engineering Student (2nd Sem Completed) & Aspiring Developer
               </div>
 
               <div className="space-y-2">
@@ -294,7 +308,7 @@ export default function Home() {
               </div>
 
               <p className="text-zinc-400 text-base sm:text-lg max-w-xl font-sans leading-relaxed">
-                I have just completed my second semester of engineering. I am building my foundation in frontend web development (~60% accuracy) and recently started my DSA journey 3 days ago.
+                I have just completed my second semester of engineering. I have college-level basics in C, C++, and Python, started DSA in C++ 3 days ago (20+ LeetCode solved), and I build web projects with AI assistance (~60% frontend accuracy).
               </p>
 
               <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -321,10 +335,10 @@ export default function Home() {
                   <span className="text-white font-bold">20+</span> LeetCode Solved
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-white font-bold">10+</span> Repositories
+                  <span className="text-white font-bold">10+</span> GitHub Repos
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-white font-bold">2nd Sem</span> Engineering
+                  <span className="text-white font-bold">2nd Sem</span> Completed
                 </div>
               </div>
             </div>
@@ -379,19 +393,19 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-7 space-y-6 text-zinc-300 leading-relaxed font-sans text-base sm:text-lg">
               <p>
-                Hello! I am <strong className="text-white font-semibold">Adithya A Shetty</strong>. I have just completed my second semester of engineering. I am currently learning and growing as an aspiring frontend developer, continuously refining my coding accuracy and building user interfaces.
+                Hello! I am <strong className="text-white font-semibold">Adithya A Shetty</strong>. I have just completed my second semester of engineering. I am building my foundation in programming with college-level basics in C, C++, and Python.
               </p>
               <p>
-                I am not yet a full-stack developer, but I am putting in consistent daily practice. I started my Data Structures and Algorithms (DSA) journey just 3 days ago, solving problems and building my analytical foundation step by step.
+                I am not a backend developer; I build frontend and web projects with AI assistance (achieving ~60% frontend accuracy). I started learning Data Structures and Algorithms (DSA) in C++ just 3 days ago, and I have already solved 20+ problems.
               </p>
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="p-4 rounded-lg bg-[#141416] border border-white/10">
-                  <h4 className="text-white font-mono text-sm font-bold mb-1">Frontend Focus</h4>
-                  <p className="text-xs text-zinc-400">Building responsive web pages and components with ~60% accuracy, learning every day.</p>
+                  <h4 className="text-white font-mono text-sm font-bold mb-1">AI-Assisted Builder</h4>
+                  <p className="text-xs text-zinc-400">Building user interfaces and web applications with AI tools (~60% frontend accuracy).</p>
                 </div>
                 <div className="p-4 rounded-lg bg-[#141416] border border-white/10">
-                  <h4 className="text-white font-mono text-sm font-bold mb-1">DSA Journey</h4>
-                  <p className="text-xs text-zinc-400">Started solving LeetCode problems 3 days ago with 20+ solved so far.</p>
+                  <h4 className="text-white font-mono text-sm font-bold mb-1">DSA in C++ (3 Days)</h4>
+                  <p className="text-xs text-zinc-400">Started DSA 3 days ago in C++, with 20+ LeetCode problems solved so far.</p>
                 </div>
               </div>
             </div>
@@ -408,7 +422,7 @@ export default function Home() {
                 </li>
                 <li className="flex justify-between border-b border-white/5 pb-2">
                   <span className="text-zinc-500">Stage:</span>
-                  <span className="text-white">Engineering 2nd Sem Completed</span>
+                  <span className="text-white">2nd Sem Engineering Completed</span>
                 </li>
                 <li className="flex justify-between border-b border-white/5 pb-2">
                   <span className="text-zinc-500">Phone:</span>
@@ -423,7 +437,7 @@ export default function Home() {
                 <li className="flex justify-between pb-2">
                   <span className="text-zinc-500">LinkedIn:</span>
                   <a href="https://www.linkedin.com/in/adithya-a-shetty-421097382" target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-zinc-300 truncate max-w-[180px]">
-                    adithya-a-shetty
+                    /in/adithya-a-shetty
                   </a>
                 </li>
               </ul>
@@ -431,28 +445,28 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DSA & COMPETITIVE PROGRAMMING SECTION */}
+        {/* DSA SECTION */}
         <section id="dsa" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 02. DSA JOURNEY</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">DSA & Practice</h2>
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 02. DSA IN C++</span>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">DSA Journey (3 Days In)</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             <div className="bg-[#141416] border border-white/10 rounded-xl p-6 relative overflow-hidden">
               <div className="text-zinc-500 font-mono text-xs uppercase mb-2">LeetCode Progress</div>
               <div className="text-3xl font-bold font-mono text-white mb-1">20+ Solved</div>
-              <p className="text-xs text-zinc-400">Started DSA just 3 days ago. Building problem-solving momentum and consistency every day.</p>
+              <p className="text-xs text-zinc-400">Started practicing Data Structures and Algorithms in C++ 3 days ago. Solving problems daily to build solid fundamentals.</p>
               <div className="mt-4 pt-4 border-t border-white/10 flex justify-between text-xs font-mono">
-                <span className="text-emerald-400">Status: Active & Learning</span>
-                <span className="text-zinc-300">Target: 100+</span>
+                <span className="text-emerald-400">Language: C++</span>
+                <span className="text-zinc-300">Streak: Active</span>
               </div>
             </div>
 
             <div className="bg-[#141416] border border-white/10 rounded-xl p-6 relative overflow-hidden">
               <div className="text-zinc-500 font-mono text-xs uppercase mb-2">GitHub Repositories</div>
               <div className="text-3xl font-bold font-mono text-white mb-1">10+ Repos</div>
-              <p className="text-xs text-zinc-400">Created 10+ public repositories experimenting with frontend layouts, HTML/CSS, and JavaScript projects.</p>
+              <p className="text-xs text-zinc-400">Created 10+ public repositories containing college practice assignments, C/C++/Python code, and frontend web pages.</p>
               <div className="mt-4 pt-4 border-t border-white/10 flex justify-between text-xs font-mono">
                 <span className="text-zinc-300">Public Repos: 10+</span>
                 <span className="text-emerald-400">Growing</span>
@@ -461,41 +475,57 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DEVELOPMENT & SKILLS SECTION */}
-        <section id="development" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
+        {/* SKILLS SECTION */}
+        <section id="skills" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 03. LEARNING STACK</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Frontend & Tools</h2>
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 03. TECHNICAL SKILLS</span>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Programming & Development</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-[#141416] border border-white/10 rounded-xl p-6 hover:border-white/30 transition">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-[#141416] border border-white/10 rounded-xl p-6">
               <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-4">
                 <Code2 className="w-5 h-5 text-white" />
               </div>
-              <h3 className="text-lg font-mono font-bold text-white mb-2">Frontend Development (~60% Accuracy)</h3>
-              <p className="text-xs text-zinc-400 mb-4">Learning HTML, CSS, JavaScript, and React basics. Building responsive pages with steady improvement.</p>
+              <h3 className="text-lg font-mono font-bold text-white mb-2">College-Level Basics</h3>
+              <p className="text-xs text-zinc-400 mb-4">Learned fundamentals of C, C++, and Python during my engineering coursework.</p>
               <ul className="space-y-2">
-                {["HTML5 & CSS3 Basics", "JavaScript Fundamentals", "React Components", "Responsive Layouts"].map((skill, sIdx) => (
-                  <li key={sIdx} className="flex items-center gap-2 text-xs font-mono text-zinc-300">
+                {["C Programming Basics", "C++ & DSA Basics", "Python Fundamentals", "Academic Assignments"].map((s, idx) => (
+                  <li key={idx} className="flex items-center gap-2 text-xs font-mono text-zinc-300">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                    {skill}
+                    {s}
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="bg-[#141416] border border-white/10 rounded-xl p-6 hover:border-white/30 transition">
+            <div className="bg-[#141416] border border-white/10 rounded-xl p-6">
+              <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-4">
+                <Sparkles className="w-5 h-5 text-white" />
+              </div>
+              <h3 className="text-lg font-mono font-bold text-white mb-2">AI-Assisted Frontend</h3>
+              <p className="text-xs text-zinc-400 mb-4">I build web interfaces and practice pages using AI assistance (~60% frontend accuracy).</p>
+              <ul className="space-y-2">
+                {["AI-Assisted Development", "HTML / CSS / JS", "React Components (~60%)", "UI Design & Layouts"].map((s, idx) => (
+                  <li key={idx} className="flex items-center gap-2 text-xs font-mono text-zinc-300">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                    {s}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="bg-[#141416] border border-white/10 rounded-xl p-6">
               <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-4">
                 <Github className="w-5 h-5 text-white" />
               </div>
-              <h3 className="text-lg font-mono font-bold text-white mb-2">Version Control & Practice</h3>
-              <p className="text-xs text-zinc-400 mb-4">Using Git and GitHub to manage 10+ personal practice repositories and academic assignments.</p>
+              <h3 className="text-lg font-mono font-bold text-white mb-2">Tools & Version Control</h3>
+              <p className="text-xs text-zinc-400 mb-4">Managing code and projects with Git and GitHub.</p>
               <ul className="space-y-2">
-                {["Git Version Control", "GitHub Repositories (10+)", "Code Organization", "Continuous Practice"].map((skill, sIdx) => (
-                  <li key={sIdx} className="flex items-center gap-2 text-xs font-mono text-zinc-300">
+                {["Git Version Control", "10+ GitHub Repositories", "Code Collaboration", "Project Management"].map((s, idx) => (
+                  <li key={idx} className="flex items-center gap-2 text-xs font-mono text-zinc-300">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                    {skill}
+                    {s}
                   </li>
                 ))}
               </ul>
@@ -503,10 +533,44 @@ export default function Home() {
           </div>
         </section>
 
+        {/* CERTIFICATIONS & ACHIEVEMENTS SECTION */}
+        <section id="certifications" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
+          <div className="space-y-2 mb-12">
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 04. CREDENTIALS</span>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Certifications & Achievements</h2>
+          </div>
+
+          <div className="bg-[#141416] border border-white/10 rounded-xl p-8 max-w-3xl space-y-6">
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-white/5 border border-white/10 rounded-lg">
+                <Award className="w-6 h-6 text-white" />
+              </div>
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold font-mono text-white">Verified Certifications & Badges</h3>
+                <p className="text-zinc-400 text-sm font-sans leading-relaxed">
+                  I have earned various certifications and academic achievements during my engineering studies. You can view all verified certificates, badges, and professional updates directly on my LinkedIn profile.
+                </p>
+                <div className="pt-2">
+                  <a 
+                    href="https://www.linkedin.com/in/adithya-a-shetty-421097382" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 text-white text-xs font-mono rounded hover:bg-white/20 transition"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                    <span>View Certifications on LinkedIn</span>
+                    <ExternalLink className="w-3 h-3 ml-1" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* PROJECTS SECTION */}
         <section id="projects" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 04. PRACTICE PROJECTS</span>
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 05. PRACTICE WORK</span>
             <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Featured Practice Work</h2>
           </div>
 
@@ -514,15 +578,15 @@ export default function Home() {
             {[
               {
                 title: "Portfolio & Terminal UI",
-                desc: "My interactive developer portfolio website featuring retro-terminal command line simulator, responsive design, and clean dark aesthetic.",
-                tech: ["React", "Tailwind CSS", "TypeScript"],
+                desc: "My interactive developer portfolio website built with AI assistance, featuring retro-terminal command line simulator and clean dark aesthetic.",
+                tech: ["React", "Tailwind CSS", "TypeScript", "AI-Assisted"],
                 github: "https://github.com/adithyaashetty2007-a11y",
                 live: "#"
               },
               {
-                title: "Frontend Practice Repos (10+)",
-                desc: "A collection of 10+ GitHub repositories containing small web apps, UI components, and JavaScript practice exercises.",
-                tech: ["HTML/CSS", "JavaScript", "Git"],
+                title: "GitHub Repositories (10+)",
+                desc: "A collection of 10+ public repositories containing college assignments, C/C++/Python code snippets, and frontend practice work.",
+                tech: ["C", "C++", "Python", "HTML/CSS"],
                 github: "https://github.com/adithyaashetty2007-a11y",
                 live: "#"
               }
@@ -558,7 +622,7 @@ export default function Home() {
         {/* EDUCATION SECTION */}
         <section id="education" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 05. ACADEMIC STATUS</span>
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 06. ACADEMIC STATUS</span>
             <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Education</h2>
           </div>
 
@@ -571,7 +635,7 @@ export default function Home() {
                 <span className="text-xs font-mono text-zinc-500">Engineering Undergraduate</span>
                 <h3 className="text-xl font-bold font-mono text-white">Completed 2nd Semester</h3>
                 <p className="text-zinc-400 text-sm font-sans">
-                  Currently pursuing engineering studies, building core programming competencies, and actively developing web development skills.
+                  Completed 2nd semester of engineering studies, with coursework covering C, C++, and Python programming basics.
                 </p>
                 <div className="pt-2 flex items-center gap-4 text-xs font-mono text-zinc-400">
                   <span>Student: Adithya A Shetty</span>
@@ -586,7 +650,7 @@ export default function Home() {
         {/* CONTACT SECTION */}
         <section id="contact" className="py-24 px-4 sm:px-8 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 06. TRANSMIT MESSAGE</span>
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 07. TRANSMIT MESSAGE</span>
             <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Get In Touch</h2>
           </div>
 
