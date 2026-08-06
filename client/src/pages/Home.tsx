@@ -3,7 +3,7 @@ import {
   Terminal, Github, Linkedin, Phone, Mail, FileText, ExternalLink, 
   Code2, Cpu, Layers, Award, GraduationCap, User, Home as HomeIcon, 
   BookOpen, Briefcase, Radio, Send, CheckCircle2, Sparkles, Command, 
-  ChevronRight, Download, Menu, X, ArrowUpRight, ShieldCheck, TerminalSquare, Plus, Image as ImageIcon
+  ChevronRight, Download, Menu, X, ArrowUpRight, ShieldCheck, TerminalSquare, Plus, Image as ImageIcon, MessageSquare
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -14,6 +14,14 @@ interface Certificate {
   date: string;
   imageUrl?: string;
   credentialUrl?: string;
+}
+
+interface LinkedInPost {
+  id: string;
+  title: string;
+  summary: string;
+  date: string;
+  postUrl: string;
 }
 
 export default function Home() {
@@ -47,6 +55,26 @@ export default function Home() {
   const [isAddCertModalOpen, setIsAddCertModalOpen] = useState(false);
   const [newCert, setNewCert] = useState({ title: "", issuer: "", date: "", imageUrl: "", credentialUrl: "" });
 
+  // LinkedIn Posts state
+  const [linkedinPosts, setLinkedinPosts] = useState<LinkedInPost[]>([
+    {
+      id: "1",
+      title: "Completed 2nd Semester of Engineering & Starting C++ DSA!",
+      summary: "Excited to share that I've completed my 2nd semester of engineering and started my DSA journey in C++. Solved 20+ LeetCode problems in the last 3 days!",
+      date: "August 2026",
+      postUrl: "https://www.linkedin.com/in/adithya-a-shetty-421097382"
+    },
+    {
+      id: "2",
+      title: "Building AI-Assisted Frontend Web Projects",
+      summary: "Exploring web development and building interactive projects with AI assistance. Growing my frontend skills every single day.",
+      date: "July 2026",
+      postUrl: "https://www.linkedin.com/in/adithya-a-shetty-421097382"
+    }
+  ]);
+  const [isAddPostModalOpen, setIsAddPostModalOpen] = useState(false);
+  const [newPost, setNewPost] = useState({ title: "", summary: "", date: "", postUrl: "" });
+
   // Intro animation timer
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -58,7 +86,7 @@ export default function Home() {
   // Scroll spy
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "dsa", "skills", "certifications", "projects", "education", "contact"];
+      const sections = ["home", "about", "dsa", "skills", "certifications", "posts", "projects", "education", "contact"];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -128,6 +156,25 @@ export default function Home() {
     toast.success("Certificate added successfully!");
   };
 
+  const handleAddPost = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newPost.title || !newPost.summary) {
+      toast.error("Please provide at least a title and summary.");
+      return;
+    }
+    const post: LinkedInPost = {
+      id: Date.now().toString(),
+      title: newPost.title,
+      summary: newPost.summary,
+      date: newPost.date || "Recent",
+      postUrl: newPost.postUrl || "https://www.linkedin.com/in/adithya-a-shetty-421097382"
+    };
+    setLinkedinPosts([...linkedinPosts, post]);
+    setNewPost({ title: "", summary: "", date: "", postUrl: "" });
+    setIsAddPostModalOpen(false);
+    toast.success("LinkedIn post added successfully!");
+  };
+
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-[#ededed] font-sans relative selection:bg-white/20 selection:text-white">
       {/* INTRO CURSIVE SIGNATURE OVERLAY */}
@@ -160,13 +207,14 @@ export default function Home() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
+          <nav className="hidden md:flex items-center space-x-1 lg:space-x-1.5">
             {[
               { id: "home", label: "Home" },
               { id: "about", label: "About" },
               { id: "dsa", label: "DSA" },
               { id: "skills", label: "Skills" },
               { id: "certifications", label: "Certifications" },
+              { id: "posts", label: "LinkedIn Posts" },
               { id: "projects", label: "Projects" },
               { id: "education", label: "Education" },
               { id: "contact", label: "Contact" },
@@ -174,7 +222,7 @@ export default function Home() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`px-3 py-1.5 rounded text-xs font-mono transition-all ${
+                className={`px-2.5 py-1.5 rounded text-xs font-mono transition-all ${
                   activeSection === item.id
                     ? "bg-white text-black font-semibold shadow-sm"
                     : "text-zinc-400 hover:text-white hover:bg-white/5"
@@ -217,6 +265,7 @@ export default function Home() {
               { id: "dsa", label: "DSA" },
               { id: "skills", label: "Skills" },
               { id: "certifications", label: "Certifications" },
+              { id: "posts", label: "LinkedIn Posts" },
               { id: "projects", label: "Projects" },
               { id: "education", label: "Education" },
               { id: "contact", label: "Contact" },
@@ -280,23 +329,13 @@ export default function Home() {
           </span>
         </button>
         <button 
-          onClick={() => scrollToSection("dsa")} 
+          onClick={() => scrollToSection("posts")} 
           className="p-2.5 rounded-lg text-zinc-400 hover:text-white hover:bg-white/10 transition group relative"
-          title="DSA Journey"
+          title="LinkedIn Posts"
         >
-          <Cpu className="w-5 h-5" />
+          <MessageSquare className="w-5 h-5" />
           <span className="absolute left-full ml-3 px-2 py-1 bg-zinc-900 border border-white/20 text-white text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap z-50">
-            DSA Journey
-          </span>
-        </button>
-        <button 
-          onClick={() => scrollToSection("certifications")} 
-          className="p-2.5 rounded-lg text-zinc-400 hover:text-white hover:bg-white/10 transition group relative"
-          title="Certifications"
-        >
-          <Award className="w-5 h-5" />
-          <span className="absolute left-full ml-3 px-2 py-1 bg-zinc-900 border border-white/20 text-white text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap z-50">
-            Certifications
+            LinkedIn Posts
           </span>
         </button>
         <button 
@@ -620,10 +659,59 @@ export default function Home() {
           </div>
         </section>
 
+        {/* LINKEDIN POSTS SECTION */}
+        <section id="posts" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
+            <div>
+              <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 05. SOCIAL FEED & INSIGHTS</span>
+              <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">LinkedIn Posts & Articles</h2>
+            </div>
+            <button
+              onClick={() => setIsAddPostModalOpen(true)}
+              className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-mono text-xs rounded transition flex items-center gap-2 w-fit"
+            >
+              <Plus className="w-4 h-4" />
+              <span>Add LinkedIn Post</span>
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {linkedinPosts.map((post) => (
+              <div key={post.id} className="bg-[#141416] border border-white/10 rounded-xl p-6 flex flex-col justify-between group hover:border-white/30 transition">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2 text-xs font-mono text-zinc-400">
+                      <Linkedin className="w-4 h-4 text-blue-400" />
+                      <span>LinkedIn Update</span>
+                    </div>
+                    <span className="text-xs font-mono text-zinc-500">{post.date}</span>
+                  </div>
+
+                  <h3 className="text-lg font-bold font-mono text-white">{post.title}</h3>
+                  <p className="text-xs sm:text-sm text-zinc-300 font-sans leading-relaxed">{post.summary}</p>
+                </div>
+
+                <div className="pt-4 mt-6 border-t border-white/10 flex items-center justify-between">
+                  <a 
+                    href={post.postUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-xs font-mono text-white bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded transition flex items-center gap-1.5"
+                  >
+                    <span>View on LinkedIn</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                  <span className="text-[10px] font-mono text-zinc-500">Adithya A Shetty</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* PROJECTS SECTION */}
         <section id="projects" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 05. PRACTICE WORK</span>
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 06. PRACTICE WORK</span>
             <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Featured Practice Work</h2>
           </div>
 
@@ -675,7 +763,7 @@ export default function Home() {
         {/* EDUCATION SECTION */}
         <section id="education" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 06. ACADEMIC STATUS</span>
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 07. ACADEMIC STATUS</span>
             <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Education</h2>
           </div>
 
@@ -703,7 +791,7 @@ export default function Home() {
         {/* CONTACT SECTION */}
         <section id="contact" className="py-24 px-4 sm:px-8 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 07. TRANSMIT MESSAGE</span>
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 08. TRANSMIT MESSAGE</span>
             <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Get In Touch</h2>
           </div>
 
@@ -889,7 +977,6 @@ export default function Home() {
                   placeholder="https://example.com/certificate.jpg"
                   className="w-full bg-black/50 border border-white/15 rounded px-3 py-2 text-white outline-none focus:border-white"
                 />
-                <p className="text-[10px] text-zinc-500">Tip: You can upload your certificate image using the chat or paste a direct image URL.</p>
               </div>
 
               <div className="space-y-1">
@@ -916,6 +1003,84 @@ export default function Home() {
                   className="w-1/2 py-2.5 bg-white text-black font-bold rounded hover:bg-zinc-200 transition"
                 >
                   Add Certificate
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* ADD LINKEDIN POST MODAL */}
+      {isAddPostModalOpen && (
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-[#141416] border border-white/20 rounded-xl p-6 space-y-6 shadow-2xl">
+            <div className="flex items-center justify-between border-b border-white/10 pb-4">
+              <h3 className="font-mono text-base font-bold text-white">Add LinkedIn Post</h3>
+              <button onClick={() => setIsAddPostModalOpen(false)} className="text-zinc-400 hover:text-white">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <form onSubmit={handleAddPost} className="space-y-4 font-mono text-xs">
+              <div className="space-y-1">
+                <label className="text-zinc-400 uppercase">Post Title / Heading *</label>
+                <input
+                  type="text"
+                  required
+                  value={newPost.title}
+                  onChange={(e) => setNewPost({ ...newPost, title: e.target.value })}
+                  placeholder="e.g. Started DSA in C++!"
+                  className="w-full bg-black/50 border border-white/15 rounded px-3 py-2 text-white outline-none focus:border-white"
+                />
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-zinc-400 uppercase">Post Summary / Content *</label>
+                <textarea
+                  rows={3}
+                  required
+                  value={newPost.summary}
+                  onChange={(e) => setNewPost({ ...newPost, summary: e.target.value })}
+                  placeholder="Write a brief summary of your LinkedIn post..."
+                  className="w-full bg-black/50 border border-white/15 rounded px-3 py-2 text-white outline-none focus:border-white resize-none"
+                />
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-zinc-400 uppercase">Date</label>
+                <input
+                  type="text"
+                  value={newPost.date}
+                  onChange={(e) => setNewPost({ ...newPost, date: e.target.value })}
+                  placeholder="e.g. August 2026"
+                  className="w-full bg-black/50 border border-white/15 rounded px-3 py-2 text-white outline-none focus:border-white"
+                />
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-zinc-400 uppercase">LinkedIn Post URL</label>
+                <input
+                  type="url"
+                  value={newPost.postUrl}
+                  onChange={(e) => setNewPost({ ...newPost, postUrl: e.target.value })}
+                  placeholder="https://www.linkedin.com/feed/update/..."
+                  className="w-full bg-black/50 border border-white/15 rounded px-3 py-2 text-white outline-none focus:border-white"
+                />
+              </div>
+
+              <div className="flex items-center gap-3 pt-4">
+                <button
+                  type="button"
+                  onClick={() => setIsAddPostModalOpen(false)}
+                  className="w-1/2 py-2.5 bg-white/5 hover:bg-white/10 text-white rounded border border-white/10 transition"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="w-1/2 py-2.5 bg-white text-black font-bold rounded hover:bg-zinc-200 transition"
+                >
+                  Add Post
                 </button>
               </div>
             </form>
