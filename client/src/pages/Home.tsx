@@ -289,9 +289,32 @@ export default function Home() {
 
       {/* Main Container */}
       <main className="lg:pl-16 pt-16">
-        {/* HERO SECTION */}
+        {/* HERO SECTION WITH USER PHOTO & GLOWING RING BACKGROUND (EXACT SENIOR REFERENCE STYLE) */}
         <section id="home" className="min-h-[calc(100vh-4rem)] flex items-center justify-center relative overflow-hidden py-16 px-4 sm:px-8 border-b border-white/10">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a0a]/50 to-[#0a0a0a] pointer-events-none"></div>
+          
+          {/* Glowing Circular Background Ring (Senior Reference Style) */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40 z-0">
+            <div className="w-[500px] h-[500px] sm:w-[650px] sm:h-[650px] rounded-full border border-white/20 relative flex items-center justify-center shadow-[0_0_100px_rgba(255,255,255,0.15)] animate-pulse">
+              <div className="absolute inset-8 rounded-full border border-dashed border-white/15"></div>
+            </div>
+          </div>
+
+          {/* User Photo Centerpiece (Grayscale + High Contrast matching reference) */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+            <div className="w-[320px] sm:w-[420px] h-[400px] sm:h-[500px] relative overflow-hidden flex items-end justify-center">
+              <img 
+                src="/manus-storage/WhatsAppImage2026-07-27at17.09.12_0f7a6855.jpeg" 
+                alt="Adithya A Shetty" 
+                className="w-full h-full object-cover object-top grayscale contrast-125 brightness-90 mask-image-gradient opacity-85"
+                style={{
+                  maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)',
+                  WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)'
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent"></div>
+            </div>
+          </div>
           
           <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
             <div className="lg:col-span-7 space-y-6">
@@ -345,7 +368,7 @@ export default function Home() {
 
             {/* Hero Visual Card / Retro Terminal Display */}
             <div className="lg:col-span-5">
-              <div className="bg-[#141416] border border-white/15 rounded-xl p-5 glow-box relative overflow-hidden">
+              <div className="bg-[#141416]/90 backdrop-blur border border-white/15 rounded-xl p-5 glow-box relative overflow-hidden shadow-2xl">
                 <div className="absolute top-0 right-0 px-4 py-1 bg-white/10 text-[10px] font-mono text-zinc-300 rounded-bl-lg">
                   ADITHYA_TERMINAL // v2.0
                 </div>
