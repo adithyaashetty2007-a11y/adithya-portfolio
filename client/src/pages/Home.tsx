@@ -60,7 +60,7 @@ export default function Home() {
     {
       id: "1",
       title: "Completed 2nd Semester of Engineering & Starting C++ DSA!",
-      summary: "Excited to share that I've completed my 2nd semester of engineering and started my DSA journey in C++. Solved 20+ LeetCode problems in the last 3 days!",
+      summary: "Excited to share that I've completed my 2nd semester of engineering and started my DSA journey in C++. Solved 20+ LeetCode problems in the last 2 weeks!",
       date: "August 2026",
       postUrl: "https://www.linkedin.com/in/adithya-a-shetty-421097382"
     },
@@ -443,7 +443,7 @@ export default function Home() {
                 Hello! I am <strong className="text-white font-semibold">Adithya A Shetty</strong>. I have just completed my second semester of engineering. I am building my foundation in programming with college-level basics in C, C++, and Python.
               </p>
               <p>
-                I am not a backend developer; I build frontend and web projects with AI assistance (achieving ~60% frontend accuracy). I started learning Data Structures and Algorithms (DSA) in C++ just 3 days ago, and I have already solved 20+ problems.
+                I am not a backend developer; I build frontend and web projects with AI assistance (achieving ~60% frontend accuracy). I started learning Data Structures and Algorithms (DSA) in C++ 2 weeks ago, and I have already solved 20+ problems.
               </p>
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="p-4 rounded-lg bg-[#141416] border border-white/10">
@@ -451,8 +451,8 @@ export default function Home() {
                   <p className="text-xs text-zinc-400">Building user interfaces and web applications with AI tools (~60% frontend accuracy).</p>
                 </div>
                 <div className="p-4 rounded-lg bg-[#141416] border border-white/10">
-                  <h4 className="text-white font-mono text-sm font-bold mb-1">DSA in C++ (3 Days)</h4>
-                  <p className="text-xs text-zinc-400">Started DSA 3 days ago in C++, with 20+ LeetCode problems solved so far.</p>
+                  <h4 className="text-white font-mono text-sm font-bold mb-1">DSA in C++ (2 Weeks)</h4>
+                  <p className="text-xs text-zinc-400">Started DSA 2 weeks ago in C++, with 20+ LeetCode problems solved so far.</p>
                 </div>
               </div>
             </div>
@@ -496,14 +496,14 @@ export default function Home() {
         <section id="dsa" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
             <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 02. DSA IN C++</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">DSA Journey (3 Days In)</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">DSA Journey (2 Weeks In)</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             <div className="bg-[#141416] border border-white/10 rounded-xl p-6 relative overflow-hidden">
               <div className="text-zinc-500 font-mono text-xs uppercase mb-2">LeetCode Progress</div>
               <div className="text-3xl font-bold font-mono text-white mb-1">20+ Solved</div>
-              <p className="text-xs text-zinc-400">Started practicing Data Structures and Algorithms in C++ 3 days ago. Solving problems daily to build solid fundamentals.</p>
+              <p className="text-xs text-zinc-400">Started practicing Data Structures and Algorithms in C++ 2 weeks ago. Solving problems daily to build solid fundamentals.</p>
               <div className="mt-4 pt-4 border-t border-white/10 flex justify-between text-xs font-mono">
                 <span className="text-emerald-400">Language: C++</span>
                 <span className="text-zinc-300">Streak: Active</span>
@@ -522,7 +522,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* NEW VISUAL SKILLS SECTION */}
+        {/* VISUAL SKILLS SECTION */}
         <section id="visual-skills" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
             <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 03. VISUAL SKILLS & PROFICIENCY</span>
@@ -549,7 +549,7 @@ export default function Home() {
 
                 <div>
                   <div className="flex justify-between mb-2">
-                    <span className="text-white font-bold">C++ & DSA (3 Days Active)</span>
+                    <span className="text-white font-bold">C++ & DSA (2 Weeks Active)</span>
                     <span className="text-zinc-400">65%</span>
                   </div>
                   <div className="w-full h-2.5 bg-black/60 rounded-full overflow-hidden border border-white/10">
@@ -589,7 +589,7 @@ export default function Home() {
                 <div className="p-5 bg-black/50 border border-white/10 rounded-xl text-center">
                   <span className="text-zinc-500 font-mono text-xs uppercase block mb-1">LeetCode Solved</span>
                   <span className="text-3xl font-bold font-mono text-white">20+</span>
-                  <span className="text-[10px] font-mono text-emerald-400 block mt-1">Started 3 days ago</span>
+                  <span className="text-[10px] font-mono text-emerald-400 block mt-1">Started 2 weeks ago</span>
                 </div>
 
                 <div className="p-5 bg-black/50 border border-white/10 rounded-xl text-center">
