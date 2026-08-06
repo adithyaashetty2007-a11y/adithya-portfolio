@@ -408,9 +408,25 @@ export default function Home() {
                 </h1>
               </div>
 
-              <p className="text-zinc-300 text-base sm:text-lg font-sans leading-relaxed max-w-xl">
-                Engineering student with consistent academic growth (Sem 2 SGPA: 8.05, up from 7.2 in Sem 1). College basics in C, C++, Python, active DSA learner in C++ (20+ LeetCode solved in 2 weeks), and AI-assisted frontend builder.
-              </p>
+              <div className="space-y-4 text-zinc-300 text-base sm:text-lg font-sans leading-relaxed max-w-2xl">
+                <p>
+                  I'm a Computer Science Engineering student at St. Joseph Engineering College, Mangaluru, currently in my 2nd Semester. I enjoy turning ideas into practical software solutions and continuously improving my technical skills.
+                </p>
+                <p>
+                  I'm currently exploring Python, Web Development, Artificial Intelligence, and Data Structures & Algorithms (DSA) while building projects that strengthen my understanding of software development.
+                </p>
+                
+                <div className="pt-2 space-y-2">
+                  <h3 className="font-mono text-sm uppercase tracking-wider text-white font-bold">// What I Enjoy</h3>
+                  <ul className="space-y-1.5 text-sm font-sans text-zinc-300">
+                    <li className="flex items-center gap-2"><span>💻</span> Building responsive and modern web applications.</li>
+                    <li className="flex items-center gap-2"><span>🤖</span> Exploring Artificial Intelligence and Computer Vision projects.</li>
+                    <li className="flex items-center gap-2"><span>🚀</span> Solving programming challenges and learning new technologies.</li>
+                    <li className="flex items-center gap-2"><span>🌱</span> Continuously improving through real-world projects, workshops, and hackathons.</li>
+                    <li className="flex items-center gap-2"><span>🤝</span> Open to internships, collaborations, and networking opportunities.</li>
+                  </ul>
+                </div>
+              </div>
 
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <a
