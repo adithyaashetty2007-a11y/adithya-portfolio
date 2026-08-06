@@ -574,20 +574,15 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Column: Profile Photo inside Clean Circular Frame */}
-            <div className="lg:col-span-5 flex justify-center relative">
-              <div className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[450px] lg:h-[450px] rounded-full border border-white/20 relative flex items-center justify-center shadow-[0_0_80px_rgba(255,255,255,0.12)]">
-                <div className="absolute inset-6 rounded-full border border-dashed border-white/15 animate-spin-slow"></div>
-                
-                {/* Profile Photo Card with White Edge Light */}
-                <div className="w-[260px] h-[260px] sm:w-[350px] sm:h-[350px] lg:w-[390px] lg:h-[390px] rounded-full overflow-hidden border-2 border-white bg-[#141416] relative shadow-[0_0_30px_rgba(255,255,255,0.35)] ring-4 ring-white/20">
-                  <img 
-                    src="/manus-storage/WhatsAppImage2026-07-27at17.09.12_0f7a6855.jpeg" 
-                    alt="Adithya A Shetty" 
-                    className="w-full h-full object-cover object-top grayscale contrast-125 brightness-95"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-                </div>
+            {/* Right Column: Profile Photo with White Edge Light standalone */}
+            <div className="lg:col-span-5 flex justify-center relative items-center py-6">
+              <div className="w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] lg:w-[410px] lg:h-[410px] rounded-full overflow-hidden border-2 border-white bg-[#141416] relative shadow-[0_0_40px_rgba(255,255,255,0.4)] ring-4 ring-white/20">
+                <img 
+                  src="/manus-storage/WhatsAppImage2026-07-27at17.09.12_0f7a6855.jpeg" 
+                  alt="Adithya A Shetty" 
+                  className="w-full h-full object-cover object-top grayscale contrast-125 brightness-95"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
               </div>
             </div>
 
