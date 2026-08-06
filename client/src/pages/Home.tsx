@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { 
   Terminal, Github, Linkedin, Phone, Mail, FileText, ExternalLink, 
   Code2, Cpu, Layers, Award, GraduationCap, User, Home as HomeIcon, 
@@ -242,81 +242,77 @@ export default function Home() {
 
       {/* Main Container */}
       <main className="lg:pl-16 pt-16">
-        {/* HERO SECTION WITH CENTERED PROFILE PHOTO & GLOWING RING (EXACT SENIOR REFERENCE STYLE) */}
+        {/* HERO SECTION - CLEAN STANDARD TWO-COLUMN LAYOUT (NO OVERLAPPING) */}
         <section id="home" className="min-h-[calc(100vh-4rem)] flex items-center justify-center relative overflow-hidden py-16 px-4 sm:px-8 border-b border-white/10">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a0a]/30 to-[#0a0a0a] pointer-events-none"></div>
-          
-          {/* Glowing Circular Background Ring (Senior Reference Style) */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-            <div className="w-[380px] h-[380px] sm:w-[540px] sm:h-[540px] lg:w-[640px] lg:h-[640px] rounded-full border border-white/25 relative flex items-center justify-center shadow-[0_0_120px_rgba(255,255,255,0.18)] animate-pulse">
-              <div className="absolute inset-10 rounded-full border border-dashed border-white/15"></div>
-            </div>
-          </div>
-
-          {/* User Photo Centerpiece (Grayscale + High Contrast matching reference perfectly) */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-            <div className="w-[300px] sm:w-[420px] lg:w-[500px] h-[380px] sm:h-[520px] lg:h-[600px] relative overflow-hidden flex items-end justify-center">
-              <img 
-                src="/manus-storage/WhatsAppImage2026-07-27at17.09.12_0f7a6855.jpeg" 
-                alt="Adithya A Shetty" 
-                className="w-full h-full object-cover object-top grayscale contrast-125 brightness-95 opacity-90"
-                style={{
-                  maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0.2) 85%, rgba(0,0,0,0) 100%)',
-                  WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0.2) 85%, rgba(0,0,0,0) 100%)'
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent"></div>
-            </div>
-          </div>
-          
-          {/* Hero Content Overlay */}
-          <div className="max-w-6xl w-full mx-auto flex flex-col items-center text-center relative z-10 space-y-8 pt-12 sm:pt-20">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs sm:text-sm font-mono text-white backdrop-blur-md shadow-lg">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              Engineering Student (2nd Sem Completed) & Aspiring Developer
-            </div>
-
-            <div className="space-y-3">
-              <p className="text-zinc-400 font-mono text-sm sm:text-lg">Hello, I'm</p>
-              <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold font-mono tracking-tight text-white glow-text drop-shadow-2xl">
-                Adithya A Shetty<span className="text-zinc-500">.</span>
-              </h1>
-            </div>
-
-            <p className="text-zinc-300 text-base sm:text-xl max-w-2xl font-sans leading-relaxed drop-shadow-md bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-white/10">
-              Completed 2nd semester of engineering. College-level basics in C, C++, and Python, started DSA in C++ (20+ LeetCode solved), and building web projects with AI assistance (~60% frontend accuracy).
-            </p>
-
-            <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-              <button 
-                onClick={() => {
-                  toast.success("Downloading resume: Adithya_A_Shetty_Resume.pdf");
-                }}
-                className="px-8 py-4 bg-white text-black font-mono font-bold text-xs sm:text-sm rounded hover:bg-zinc-200 transition flex items-center gap-2 shadow-2xl"
-              >
-                <Download className="w-4 h-4" />
-                DOWNLOAD RESUME
-              </button>
-              <button 
-                onClick={() => scrollToSection("contact")}
-                className="px-8 py-4 bg-black/60 backdrop-blur border border-white/30 text-white font-mono font-bold text-xs sm:text-sm rounded hover:bg-white/10 transition flex items-center gap-2 shadow-2xl"
-              >
-                <span>Contact Me</span>
-                <ChevronRight className="w-4 h-4" />
-              </button>
-            </div>
-
-            <div className="pt-8 flex flex-wrap items-center justify-center gap-8 text-xs sm:text-sm font-mono text-zinc-300 bg-black/60 backdrop-blur-md px-6 py-3 rounded-xl border border-white/10">
-              <div className="flex items-center gap-2">
-                <span className="text-white font-bold">20+</span> LeetCode Solved
+          <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            
+            {/* Left Column: Text & CTAs */}
+            <div className="lg:col-span-7 space-y-6 text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-zinc-300">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Engineering Student (2nd Sem Completed) & Aspiring Developer
               </div>
-              <div className="flex items-center gap-2">
-                <span className="text-white font-bold">10+</span> GitHub Repos
+
+              <div className="space-y-2">
+                <p className="text-zinc-400 font-mono text-sm sm:text-base">Hello, I'm</p>
+                <h1 className="text-4xl sm:text-6xl font-bold font-mono tracking-tight text-white">
+                  Adithya A Shetty<span className="text-zinc-500">.</span>
+                </h1>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="text-white font-bold">2nd Sem</span> Completed
+
+              <p className="text-zinc-300 text-base sm:text-lg font-sans leading-relaxed max-w-xl">
+                Completed 2nd semester of engineering. College-level basics in C, C++, and Python, started DSA in C++ (20+ LeetCode solved), and building web projects with AI assistance (~60% frontend accuracy).
+              </p>
+
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <button 
+                  onClick={() => {
+                    toast.success("Downloading resume: Adithya_A_Shetty_Resume.pdf");
+                  }}
+                  className="px-6 py-3 bg-white text-black font-mono font-bold text-xs sm:text-sm rounded hover:bg-zinc-200 transition flex items-center gap-2 shadow-lg"
+                >
+                  <Download className="w-4 h-4" />
+                  DOWNLOAD RESUME
+                </button>
+                <button 
+                  onClick={() => scrollToSection("contact")}
+                  className="px-6 py-3 bg-white/5 border border-white/20 text-white font-mono font-bold text-xs sm:text-sm rounded hover:bg-white/10 transition flex items-center gap-2"
+                >
+                  <span>Contact Me</span>
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
+
+              <div className="pt-4 flex flex-wrap items-center gap-6 text-xs font-mono text-zinc-400 border-t border-white/10">
+                <div className="flex items-center gap-2">
+                  <span className="text-white font-bold">20+</span> LeetCode Solved
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-white font-bold">10+</span> GitHub Repos
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-white font-bold">2nd Sem</span> Completed
+                </div>
               </div>
             </div>
+
+            {/* Right Column: Profile Photo inside Glowing Ring Frame */}
+            <div className="lg:col-span-5 flex justify-center relative">
+              <div className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[450px] lg:h-[450px] rounded-full border border-white/20 relative flex items-center justify-center shadow-[0_0_80px_rgba(255,255,255,0.12)]">
+                <div className="absolute inset-6 rounded-full border border-dashed border-white/15 animate-spin-slow"></div>
+                
+                {/* Profile Photo Card */}
+                <div className="w-[260px] h-[260px] sm:w-[350px] sm:h-[350px] lg:w-[390px] lg:h-[390px] rounded-full overflow-hidden border-2 border-white/20 bg-[#141416] relative shadow-2xl">
+                  <img 
+                    src="/manus-storage/WhatsAppImage2026-07-27at17.09.12_0f7a6855.jpeg" 
+                    alt="Adithya A Shetty" 
+                    className="w-full h-full object-cover object-top grayscale contrast-125 brightness-95"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
@@ -515,7 +511,7 @@ export default function Home() {
             {[
               {
                 title: "Portfolio Website",
-                desc: "My interactive developer portfolio website built with AI assistance, featuring glowing ring hero portrait and clean dark aesthetic.",
+                desc: "My interactive developer portfolio website built with AI assistance, featuring clean two-column hero layout and dark aesthetic.",
                 tech: ["React", "Tailwind CSS", "TypeScript", "AI-Assisted"],
                 github: "https://github.com/adithyaashetty2007-a11y",
                 live: "#"
