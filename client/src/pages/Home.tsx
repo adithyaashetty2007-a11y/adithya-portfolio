@@ -579,8 +579,8 @@ export default function Home() {
               <div className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[450px] lg:h-[450px] rounded-full border border-white/20 relative flex items-center justify-center shadow-[0_0_80px_rgba(255,255,255,0.12)]">
                 <div className="absolute inset-6 rounded-full border border-dashed border-white/15 animate-spin-slow"></div>
                 
-                {/* Profile Photo Card */}
-                <div className="w-[260px] h-[260px] sm:w-[350px] sm:h-[350px] lg:w-[390px] lg:h-[390px] rounded-full overflow-hidden border-2 border-white/20 bg-[#141416] relative shadow-2xl">
+                {/* Profile Photo Card with White Edge Light */}
+                <div className="w-[260px] h-[260px] sm:w-[350px] sm:h-[350px] lg:w-[390px] lg:h-[390px] rounded-full overflow-hidden border-2 border-white bg-[#141416] relative shadow-[0_0_30px_rgba(255,255,255,0.35)] ring-4 ring-white/20">
                   <img 
                     src="/manus-storage/WhatsAppImage2026-07-27at17.09.12_0f7a6855.jpeg" 
                     alt="Adithya A Shetty" 
