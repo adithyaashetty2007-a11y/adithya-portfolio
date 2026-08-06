@@ -985,7 +985,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-bold font-mono text-white">Raghavendra Sooda</h3>
                 <p className="text-zinc-300 text-sm sm:text-base font-sans leading-relaxed">
-                  A mentor who shows the right path to achieve my career goals and engineering milestones. Their invaluable guidance inspires my academic growth, C++ problem-solving, and continuous learning journey.
+                  Mentors including college mentors and guides who show the right path to achieve my career goals and engineering milestones. Their invaluable guidance inspires my academic growth, C++ problem-solving, and continuous learning journey.
                 </p>
               </div>
 
