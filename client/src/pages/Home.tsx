@@ -33,24 +33,7 @@ export default function Home() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   
   // Certificate management state
-  const [certificates, setCertificates] = useState<Certificate[]>([
-    {
-      id: "1",
-      title: "Programming Fundamentals (C/C++/Python)",
-      issuer: "Engineering College Coursework",
-      date: "2026",
-      imageUrl: "",
-      credentialUrl: "https://www.linkedin.com/in/adithya-a-shetty-421097382"
-    },
-    {
-      id: "2",
-      title: "Data Structures & Algorithms in C++",
-      issuer: "Self-Driven / LeetCode (20+ Solved)",
-      date: "2026",
-      imageUrl: "",
-      credentialUrl: "https://www.linkedin.com/in/adithya-a-shetty-421097382"
-    }
-  ]);
+  const [certificates, setCertificates] = useState<Certificate[]>([]);
   const [selectedCertImage, setSelectedCertImage] = useState<string | null>(null);
   const [isAddCertModalOpen, setIsAddCertModalOpen] = useState(false);
   const [newCert, setNewCert] = useState({ title: "", issuer: "", date: "", imageUrl: "", credentialUrl: "" });
