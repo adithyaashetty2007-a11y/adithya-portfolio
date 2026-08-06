@@ -413,15 +413,62 @@ export default function Home() {
               </p>
 
               <div className="flex flex-wrap items-center gap-4 pt-2">
-                <button 
-                  onClick={() => {
-                    toast.success("Downloading resume: Adithya_A_Shetty_Resume.pdf");
+                <a
+                  href="#resume-download"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    // Generate professional resume text & trigger download
+                    const resumeContent = `ADITHYA A SHETTY
+Software Engineer & Frontend Developer | Mangalore, India
+Phone: 8088814686 | GitHub: github.com/adithyaashetty2007-a11y | LinkedIn: linkedin.com/in/adithya-a-shetty-421097382
+
+--------------------------------------------------
+SUMMARY
+--------------------------------------------------
+Second-semester engineering student with consistent academic growth (SGPA: 8.05, up from 7.2 in Sem 1). Building robust frontend web applications with AI assistance (~60% accuracy). Solid college-level basics in C, C++, and Python, with an active C++ Data Structures & Algorithms problem-solving streak (20+ LeetCode problems solved).
+
+--------------------------------------------------
+EDUCATION
+--------------------------------------------------
+Bachelor of Engineering (B.E.) - 2nd Semester Completed
+- Semester 2 SGPA: 8.05 (Significant Improvement from 7.2 in Sem 1)
+- Core Coursework: C Programming, C++ & Data Structures, Python Fundamentals, Engineering Mathematics, Computer Architecture.
+
+--------------------------------------------------
+SKILLS & PROFICIENCIES
+--------------------------------------------------
+- Languages: C (College Basics), C++ (DSA Active), Python (College Basics)
+- Frontend Development: AI-Assisted UI/UX Construction, React, Tailwind CSS, HTML5, CSS3, JavaScript
+- Tools & Environment: Git, GitHub (10+ Repositories), VS Code, Terminal
+- Problem Solving: 20+ LeetCode Problems Solved in C++ (2 Weeks Active)
+
+--------------------------------------------------
+PROJECTS & REPOSITORIES (10+ GitHub Repos)
+--------------------------------------------------
+- Retro-Terminal Portfolio Web App: Dark obsidian retro-terminal portfolio featuring interactive modals, dynamic certificate galleries, project screenshot showcases, and smooth navigation. (Tech: React, TypeScript, Tailwind CSS)
+- C++ Algorithm Practice & DSA Tracker: Daily algorithmic problem-solving repository covering arrays, strings, searching, and sorting algorithms in C++.
+
+--------------------------------------------------
+MENTORSHIP & GUIDANCE
+--------------------------------------------------
+- Guided by professional mentors and college guides including Raghavendra Sooda (linkedin.com/in/raghavendra-sooda-808bab239), shaping career goals and engineering standards.
+`;
+                    const blob = new Blob([resumeContent], { type: "text/plain;charset=utf-8" });
+                    const url = URL.createObjectURL(blob);
+                    const link = document.createElement("a");
+                    link.href = url;
+                    link.download = "Adithya_A_Shetty_Resume.txt";
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    URL.revokeObjectURL(url);
+                    toast.success("Resume downloaded successfully! (Adithya_A_Shetty_Resume.txt)");
                   }}
-                  className="px-6 py-3 bg-white text-black font-mono font-bold text-xs sm:text-sm rounded hover:bg-zinc-200 transition flex items-center gap-2 shadow-lg"
+                  className="px-6 py-3 bg-white text-black font-mono font-bold text-xs sm:text-sm rounded hover:bg-zinc-200 transition flex items-center gap-2 shadow-lg cursor-pointer"
                 >
                   <Download className="w-4 h-4" />
                   DOWNLOAD RESUME
-                </button>
+                </a >
                 <button 
                   onClick={() => scrollToSection("contact")}
                   className="px-6 py-3 bg-white/5 border border-white/20 text-white font-mono font-bold text-xs sm:text-sm rounded hover:bg-white/10 transition flex items-center gap-2"
