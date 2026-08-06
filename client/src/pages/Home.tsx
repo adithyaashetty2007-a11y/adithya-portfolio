@@ -24,6 +24,15 @@ interface LinkedInPost {
   postUrl: string;
 }
 
+interface ProjectItem {
+  id: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  githubUrl: string;
+  techStack: string;
+}
+
 export default function Home() {
   const [showIntro, setShowIntro] = useState(true);
   const [activeSection, setActiveSection] = useState("home");
@@ -57,6 +66,13 @@ export default function Home() {
   ]);
   const [isAddPostModalOpen, setIsAddPostModalOpen] = useState(false);
   const [newPost, setNewPost] = useState({ title: "", summary: "", date: "", postUrl: "" });
+  
+  // Projects showcase state
+  const [projects, setProjects] = useState<ProjectItem[]>([]);
+  const [selectedProjectImage, setSelectedProjectImage] = useState<string | null>(null);
+  const [isAddProjModalOpen, setIsAddProjModalOpen] = useState(false);
+  const [newProj, setNewProj] = useState({ title: "", description: "", imageUrl: "", githubUrl: "", techStack: "" });
+
   const [showBackToTop, setShowBackToTop] = useState(false);
 
   // Intro animation timer
@@ -159,6 +175,26 @@ export default function Home() {
     setNewPost({ title: "", summary: "", date: "", postUrl: "" });
     setIsAddPostModalOpen(false);
     toast.success("LinkedIn post added successfully!");
+  };
+
+  const handleAddProject = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newProj.title || !newProj.description) {
+      toast.error("Please provide at least a project title and description.");
+      return;
+    }
+    const proj: ProjectItem = {
+      id: Date.now().toString(),
+      title: newProj.title,
+      description: newProj.description,
+      imageUrl: newProj.imageUrl || "",
+      githubUrl: newProj.githubUrl || "https://github.com/adithyaashetty2007-a11y",
+      techStack: newProj.techStack || "React, TypeScript"
+    };
+    setProjects([...projects, proj]);
+    setNewProj({ title: "", description: "", imageUrl: "", githubUrl: "", techStack: "" });
+    setIsAddProjModalOpen(false);
+    toast.success("Project added successfully!");
   };
 
   return (
@@ -808,6 +844,100 @@ export default function Home() {
           </div>
         </section>
 
+        {/* PROJECTS & SCREENSHOTS SHOWCASE SECTION */}
+        <section id="projects" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
+            <div>
+              <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 06. PORTFOLIO PROJECTS</span>
+              <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Projects & Screenshots Showcase</h2>
+            </div>
+            <button
+              onClick={() => setIsAddProjModalOpen(true)}
+              className="px-4 py-2 bg-white text-black font-mono text-xs font-bold rounded hover:bg-zinc-200 transition flex items-center gap-2 w-fit"
+            >
+              <Plus className="w-4 h-4" />
+              <span>Add Project Screenshot</span>
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projects.length > 0 ? (
+              projects.map((proj) => (
+                <div key={proj.id} className="bg-[#141416] border border-white/10 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-white/30 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)] transition duration-300">
+                  <div className="space-y-4">
+                    {/* Project Screenshot Thumbnail */}
+                    {proj.imageUrl ? (
+                      <div 
+                        onClick={() => setSelectedProjectImage(proj.imageUrl)}
+                        className="h-56 bg-black overflow-hidden relative cursor-pointer border-b border-white/10 group/img"
+                      >
+                        <img src={proj.imageUrl} alt={proj.title} className="w-full h-full object-cover group-hover/img:scale-105 transition duration-500" />
+                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-xs font-mono text-white gap-1.5">
+                          <ImageIcon className="w-4 h-4" /> View Full Screenshot
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="h-44 bg-black/40 border-b border-white/10 flex flex-col items-center justify-center text-zinc-500 text-xs font-mono gap-2 p-4 text-center">
+                        <Code2 className="w-8 h-8 opacity-40 text-emerald-400" />
+                        <span>No project screenshot uploaded</span>
+                        <button
+                          onClick={() => setIsAddProjModalOpen(true)}
+                          className="text-white underline hover:text-zinc-300 text-[11px]"
+                        >
+                          Upload Screenshot Image
+                        </button>
+                      </div>
+                    )}
+
+                    <div className="p-6 pt-2 space-y-3">
+                      <div className="flex items-center justify-between">
+                        <span className="text-[11px] font-mono text-emerald-400 px-2.5 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full">{proj.techStack}</span>
+                      </div>
+                      <h3 className="text-xl font-bold font-mono text-white">{proj.title}</h3>
+                      <p className="text-xs text-zinc-400 leading-relaxed font-mono">{proj.description}</p>
+                    </div>
+                  </div>
+
+                  <div className="px-6 pb-6 pt-2 flex items-center justify-between border-t border-white/5 mt-4">
+                    <a
+                      href={proj.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs font-mono text-zinc-300 hover:text-white flex items-center gap-1.5 bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded transition border border-white/10"
+                    >
+                      <Github className="w-3.5 h-3.5" />
+                      <span>GitHub Repository</span>
+                      <ExternalLink className="w-3 h-3 ml-0.5" />
+                    </a>
+                    {proj.imageUrl && (
+                      <button
+                        onClick={() => setSelectedProjectImage(proj.imageUrl)}
+                        className="text-xs font-mono text-zinc-400 hover:text-white"
+                      >
+                        Preview Image
+                      </button>
+                    )}
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="col-span-full py-16 text-center border border-dashed border-white/15 rounded-2xl bg-black/30 space-y-4">
+                <Code2 className="w-12 h-12 mx-auto text-emerald-400 opacity-60" />
+                <div className="space-y-1">
+                  <h3 className="text-lg font-bold font-mono text-white">No Projects Added Yet</h3>
+                  <p className="text-xs text-zinc-400 font-mono max-w-md mx-auto">Upload screenshots, add titles, descriptions, and GitHub links for your 10+ repositories.</p>
+                </div>
+                <button
+                  onClick={() => setIsAddProjModalOpen(true)}
+                  className="px-4 py-2.5 bg-white text-black font-mono text-xs font-bold rounded hover:bg-zinc-200 transition inline-flex items-center gap-2 shadow-lg"
+                >
+                  <Plus className="w-4 h-4" /> Add Your First Project
+                </button>
+              </div>
+            )}
+          </div>
+        </section>
+
         {/* LINKEDIN POSTS SECTION */}
         <section id="posts" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
@@ -1287,6 +1417,115 @@ export default function Home() {
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      )}
+
+      {/* ADD PROJECT MODAL */}
+      {isAddProjModalOpen && (
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-[#141416] border border-white/20 rounded-xl p-6 space-y-6 shadow-2xl">
+            <div className="flex items-center justify-between border-b border-white/10 pb-4">
+              <h3 className="font-mono text-base font-bold text-white">Add Project Screenshot</h3>
+              <button onClick={() => setIsAddProjModalOpen(false)} className="text-zinc-400 hover:text-white">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <form onSubmit={handleAddProject} className="space-y-4 font-mono text-xs">
+              <div className="space-y-1">
+                <label className="text-zinc-400 uppercase">Project Title *</label>
+                <input
+                  type="text"
+                  required
+                  value={newProj.title}
+                  onChange={(e) => setNewProj({ ...newProj, title: e.target.value })}
+                  placeholder="e.g. Retro Portfolio Web App"
+                  className="w-full bg-black/50 border border-white/15 rounded px-3 py-2 text-white outline-none focus:border-white"
+                />
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-zinc-400 uppercase">Description *</label>
+                <textarea
+                  rows={3}
+                  required
+                  value={newProj.description}
+                  onChange={(e) => setNewProj({ ...newProj, description: e.target.value })}
+                  placeholder="Describe your project, features, and tech..."
+                  className="w-full bg-black/50 border border-white/15 rounded px-3 py-2 text-white outline-none focus:border-white resize-none"
+                />
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-zinc-400 uppercase">Tech Stack Badge</label>
+                <input
+                  type="text"
+                  value={newProj.techStack}
+                  onChange={(e) => setNewProj({ ...newProj, techStack: e.target.value })}
+                  placeholder="e.g. React, TypeScript, Tailwind"
+                  className="w-full bg-black/50 border border-white/15 rounded px-3 py-2 text-white outline-none focus:border-white"
+                />
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-zinc-400 uppercase">Screenshot Image URL</label>
+                <input
+                  type="url"
+                  value={newProj.imageUrl}
+                  onChange={(e) => setNewProj({ ...newProj, imageUrl: e.target.value })}
+                  placeholder="https://example.com/screenshot.jpg"
+                  className="w-full bg-black/50 border border-white/15 rounded px-3 py-2 text-white outline-none focus:border-white"
+                />
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-zinc-400 uppercase">GitHub Repository URL</label>
+                <input
+                  type="url"
+                  value={newProj.githubUrl}
+                  onChange={(e) => setNewProj({ ...newProj, githubUrl: e.target.value })}
+                  placeholder="https://github.com/adithyaashetty2007-a11y/..."
+                  className="w-full bg-black/50 border border-white/15 rounded px-3 py-2 text-white outline-none focus:border-white"
+                />
+              </div>
+
+              <div className="flex items-center gap-3 pt-4">
+                <button
+                  type="button"
+                  onClick={() => setIsAddProjModalOpen(false)}
+                  className="w-1/2 py-2.5 bg-white/5 hover:bg-white/10 text-white rounded border border-white/10 transition"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="w-1/2 py-2.5 bg-white text-black font-bold rounded hover:bg-zinc-200 transition"
+                >
+                  Save Project
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* PROJECT IMAGE LIGHTBOX MODAL */}
+      {selectedProjectImage && (
+        <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+          <div className="relative max-w-4xl w-full bg-[#141416] border border-white/20 rounded-2xl overflow-hidden p-4 shadow-2xl">
+            <div className="flex items-center justify-between mb-3 px-2">
+              <span className="font-mono text-xs text-zinc-400">// Project Screenshot Preview</span>
+              <button 
+                onClick={() => setSelectedProjectImage(null)}
+                className="p-1.5 bg-white/10 hover:bg-white/20 text-white rounded-full transition"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="max-h-[80vh] overflow-auto flex items-center justify-center bg-black rounded-xl p-2 border border-white/10">
+              <img src={selectedProjectImage} alt="Project Preview" className="max-w-full max-h-[75vh] object-contain rounded" />
+            </div>
           </div>
         </div>
       )}
