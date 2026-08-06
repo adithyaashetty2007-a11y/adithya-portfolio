@@ -10,18 +10,9 @@ import { toast } from "sonner";
 export default function Home() {
   const [activeSection, setActiveSection] = useState("home");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [terminalInput, setTerminalInput] = useState("");
-  const [terminalLogs, setTerminalLogs] = useState<string[]>([
-    "AdithyaOS v2.0 (Engineering 2nd Sem Student)",
-    "Type 'help' to see available commands or click navigation tabs.",
-    "--------------------------------------------------",
-    "SUCCESS: Loaded profile [Adithya A Shetty - Engineering Student]",
-    "SYSTEM READY."
-  ]);
   const [isCopiedPhone, setIsCopiedPhone] = useState(false);
   const [contactForm, setContactForm] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const terminalEndRef = useRef<HTMLDivElement>(null);
 
   // Scroll spy
   useEffect(() => {
@@ -46,10 +37,6 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    terminalEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [terminalLogs]);
-
   const scrollToSection = (id: string) => {
     setActiveSection(id);
     setMobileMenuOpen(false);
@@ -57,40 +44,6 @@ export default function Home() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-  };
-
-  const handleTerminalSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!terminalInput.trim()) return;
-
-    const cmd = terminalInput.trim().toLowerCase();
-    const newLogs = [...terminalLogs, `$ ${terminalInput}`];
-
-    if (cmd === "help") {
-      newLogs.push("Available commands: about, skills, certs, projects, contact, clear, resume");
-    } else if (cmd === "about") {
-      newLogs.push("Adithya A Shetty: Engineering student (2nd sem completed). Learning C, C++, Python basics & DSA in C++.");
-    } else if (cmd === "skills") {
-      newLogs.push("Languages: C, C++, Python (College level basics) | Frontend: ~60% accuracy, AI-assisted builder | Repos: 10+ on GitHub");
-    } else if (cmd === "certs") {
-      newLogs.push("Certifications & Achievements: View verified badges and certificates on LinkedIn (/in/adithya-a-shetty-421097382)");
-    } else if (cmd === "projects") {
-      newLogs.push("1. Portfolio Website | 2. 10+ GitHub Repositories | 3. AI-assisted Web Apps");
-    } else if (cmd === "contact") {
-      newLogs.push("Phone: 8088814686 | LinkedIn: /in/adithya-a-shetty-421097382");
-    } else if (cmd === "resume") {
-      newLogs.push("Downloading Adithya_A_Shetty_Resume.pdf...");
-      toast.success("Resume downloaded successfully!");
-    } else if (cmd === "clear") {
-      setTerminalLogs(["AdithyaOS terminal session cleared."]);
-      setTerminalInput("");
-      return;
-    } else {
-      newLogs.push(`Command not recognized: '${cmd}'. Type 'help' for available commands.`);
-    }
-
-    setTerminalLogs(newLogs);
-    setTerminalInput("");
   };
 
   const handleContactSubmit = (e: React.FormEvent) => {
@@ -289,118 +242,79 @@ export default function Home() {
 
       {/* Main Container */}
       <main className="lg:pl-16 pt-16">
-        {/* HERO SECTION WITH USER PHOTO & GLOWING RING BACKGROUND (EXACT SENIOR REFERENCE STYLE) */}
+        {/* HERO SECTION WITH CENTERED PROFILE PHOTO & GLOWING RING (EXACT SENIOR REFERENCE STYLE) */}
         <section id="home" className="min-h-[calc(100vh-4rem)] flex items-center justify-center relative overflow-hidden py-16 px-4 sm:px-8 border-b border-white/10">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a0a]/50 to-[#0a0a0a] pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a0a]/30 to-[#0a0a0a] pointer-events-none"></div>
           
           {/* Glowing Circular Background Ring (Senior Reference Style) */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40 z-0">
-            <div className="w-[500px] h-[500px] sm:w-[650px] sm:h-[650px] rounded-full border border-white/20 relative flex items-center justify-center shadow-[0_0_100px_rgba(255,255,255,0.15)] animate-pulse">
-              <div className="absolute inset-8 rounded-full border border-dashed border-white/15"></div>
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+            <div className="w-[380px] h-[380px] sm:w-[540px] sm:h-[540px] lg:w-[640px] lg:h-[640px] rounded-full border border-white/25 relative flex items-center justify-center shadow-[0_0_120px_rgba(255,255,255,0.18)] animate-pulse">
+              <div className="absolute inset-10 rounded-full border border-dashed border-white/15"></div>
             </div>
           </div>
 
-          {/* User Photo Centerpiece (Grayscale + High Contrast matching reference) */}
+          {/* User Photo Centerpiece (Grayscale + High Contrast matching reference perfectly) */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-            <div className="w-[320px] sm:w-[420px] h-[400px] sm:h-[500px] relative overflow-hidden flex items-end justify-center">
+            <div className="w-[300px] sm:w-[420px] lg:w-[500px] h-[380px] sm:h-[520px] lg:h-[600px] relative overflow-hidden flex items-end justify-center">
               <img 
                 src="/manus-storage/WhatsAppImage2026-07-27at17.09.12_0f7a6855.jpeg" 
                 alt="Adithya A Shetty" 
-                className="w-full h-full object-cover object-top grayscale contrast-125 brightness-90 mask-image-gradient opacity-85"
+                className="w-full h-full object-cover object-top grayscale contrast-125 brightness-95 opacity-90"
                 style={{
-                  maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)',
-                  WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)'
+                  maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0.2) 85%, rgba(0,0,0,0) 100%)',
+                  WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0.2) 85%, rgba(0,0,0,0) 100%)'
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent"></div>
             </div>
           </div>
           
-          <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-            <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-zinc-300">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                Engineering Student (2nd Sem Completed) & Aspiring Developer
-              </div>
-
-              <div className="space-y-2">
-                <p className="text-zinc-400 font-mono text-sm sm:text-base">Hello, I'm</p>
-                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold font-mono tracking-tight text-white glow-text">
-                  Adithya A<br />Shetty<span className="text-zinc-500">.</span>
-                </h1>
-              </div>
-
-              <p className="text-zinc-400 text-base sm:text-lg max-w-xl font-sans leading-relaxed">
-                I have just completed my second semester of engineering. I have college-level basics in C, C++, and Python, started DSA in C++ 3 days ago (20+ LeetCode solved), and I build web projects with AI assistance (~60% frontend accuracy).
-              </p>
-
-              <div className="flex flex-wrap items-center gap-4 pt-2">
-                <button 
-                  onClick={() => {
-                    toast.success("Downloading resume: Adithya_A_Shetty_Resume.pdf");
-                  }}
-                  className="px-6 py-3 bg-white text-black font-mono font-semibold text-xs sm:text-sm rounded hover:bg-zinc-200 transition flex items-center gap-2 shadow-lg"
-                >
-                  <Download className="w-4 h-4" />
-                  DOWNLOAD RESUME
-                </button>
-                <button 
-                  onClick={() => scrollToSection("contact")}
-                  className="px-6 py-3 bg-white/5 border border-white/20 text-white font-mono font-semibold text-xs sm:text-sm rounded hover:bg-white/10 transition flex items-center gap-2"
-                >
-                  <span>Contact Me</span>
-                  <ChevronRight className="w-4 h-4" />
-                </button>
-              </div>
-
-              <div className="pt-4 flex items-center gap-6 text-xs font-mono text-zinc-500">
-                <div className="flex items-center gap-2">
-                  <span className="text-white font-bold">20+</span> LeetCode Solved
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-white font-bold">10+</span> GitHub Repos
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-white font-bold">2nd Sem</span> Completed
-                </div>
-              </div>
+          {/* Hero Content Overlay */}
+          <div className="max-w-6xl w-full mx-auto flex flex-col items-center text-center relative z-10 space-y-8 pt-12 sm:pt-20">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs sm:text-sm font-mono text-white backdrop-blur-md shadow-lg">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              Engineering Student (2nd Sem Completed) & Aspiring Developer
             </div>
 
-            {/* Hero Visual Card / Retro Terminal Display */}
-            <div className="lg:col-span-5">
-              <div className="bg-[#141416]/90 backdrop-blur border border-white/15 rounded-xl p-5 glow-box relative overflow-hidden shadow-2xl">
-                <div className="absolute top-0 right-0 px-4 py-1 bg-white/10 text-[10px] font-mono text-zinc-300 rounded-bl-lg">
-                  ADITHYA_TERMINAL // v2.0
-                </div>
-                <div className="flex items-center space-x-2 mb-4">
-                  <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
-                  <span className="text-xs font-mono text-zinc-500 ml-2">adithya@shetty-pc:~</span>
-                </div>
+            <div className="space-y-3">
+              <p className="text-zinc-400 font-mono text-sm sm:text-lg">Hello, I'm</p>
+              <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold font-mono tracking-tight text-white glow-text drop-shadow-2xl">
+                Adithya A Shetty<span className="text-zinc-500">.</span>
+              </h1>
+            </div>
 
-                <div className="space-y-2 font-mono text-xs sm:text-sm text-zinc-300 h-64 overflow-y-auto pr-2 bg-black/40 p-3 rounded border border-white/5">
-                  {terminalLogs.map((log, idx) => (
-                    <div key={idx} className={log.startsWith("$") ? "text-white font-semibold" : "text-zinc-400"}>
-                      {log}
-                    </div>
-                  ))}
-                  <div ref={terminalEndRef} />
-                </div>
+            <p className="text-zinc-300 text-base sm:text-xl max-w-2xl font-sans leading-relaxed drop-shadow-md bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-white/10">
+              Completed 2nd semester of engineering. College-level basics in C, C++, and Python, started DSA in C++ (20+ LeetCode solved), and building web projects with AI assistance (~60% frontend accuracy).
+            </p>
 
-                <form onSubmit={handleTerminalSubmit} className="mt-3 flex items-center gap-2 bg-black/60 border border-white/10 rounded px-3 py-2">
-                  <span className="text-emerald-400 font-mono text-xs">$</span>
-                  <input
-                    type="text"
-                    value={terminalInput}
-                    onChange={(e) => setTerminalInput(e.target.value)}
-                    placeholder="Type 'help' or command..."
-                    className="bg-transparent border-none outline-none text-xs font-mono text-white w-full placeholder:text-zinc-600"
-                  />
-                  <button type="submit" className="text-xs font-mono text-zinc-400 hover:text-white">
-                    <Send className="w-3.5 h-3.5" />
-                  </button>
-                </form>
+            <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
+              <button 
+                onClick={() => {
+                  toast.success("Downloading resume: Adithya_A_Shetty_Resume.pdf");
+                }}
+                className="px-8 py-4 bg-white text-black font-mono font-bold text-xs sm:text-sm rounded hover:bg-zinc-200 transition flex items-center gap-2 shadow-2xl"
+              >
+                <Download className="w-4 h-4" />
+                DOWNLOAD RESUME
+              </button>
+              <button 
+                onClick={() => scrollToSection("contact")}
+                className="px-8 py-4 bg-black/60 backdrop-blur border border-white/30 text-white font-mono font-bold text-xs sm:text-sm rounded hover:bg-white/10 transition flex items-center gap-2 shadow-2xl"
+              >
+                <span>Contact Me</span>
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
+
+            <div className="pt-8 flex flex-wrap items-center justify-center gap-8 text-xs sm:text-sm font-mono text-zinc-300 bg-black/60 backdrop-blur-md px-6 py-3 rounded-xl border border-white/10">
+              <div className="flex items-center gap-2">
+                <span className="text-white font-bold">20+</span> LeetCode Solved
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-white font-bold">10+</span> GitHub Repos
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-white font-bold">2nd Sem</span> Completed
               </div>
             </div>
           </div>
@@ -600,8 +514,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                title: "Portfolio & Terminal UI",
-                desc: "My interactive developer portfolio website built with AI assistance, featuring retro-terminal command line simulator and clean dark aesthetic.",
+                title: "Portfolio Website",
+                desc: "My interactive developer portfolio website built with AI assistance, featuring glowing ring hero portrait and clean dark aesthetic.",
                 tech: ["React", "Tailwind CSS", "TypeScript", "AI-Assisted"],
                 github: "https://github.com/adithyaashetty2007-a11y",
                 live: "#"
