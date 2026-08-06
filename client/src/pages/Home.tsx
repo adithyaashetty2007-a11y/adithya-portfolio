@@ -546,7 +546,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-6 space-y-6 bg-[#141416] border border-white/10 rounded-2xl p-8">
+            <div className="lg:col-span-6 space-y-6 bg-[#141416] border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:border-white/30 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)]">
               <h3 className="font-mono text-lg font-bold text-white mb-6 flex items-center gap-2">
                 <Code2 className="w-5 h-5 text-emerald-400" />
                 Programming Languages
@@ -595,7 +595,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="lg:col-span-6 space-y-6 bg-[#141416] border border-white/10 rounded-2xl p-8">
+            <div className="lg:col-span-6 space-y-6 bg-[#141416] border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:border-white/30 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)]">
               <h3 className="font-mono text-lg font-bold text-white mb-6 flex items-center gap-2">
                 <TrendingUp className="w-5 h-5 text-emerald-400" />
                 Academic & Problem Solving Metrics
