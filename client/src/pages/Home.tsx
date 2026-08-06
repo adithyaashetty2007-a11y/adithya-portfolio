@@ -3,7 +3,7 @@ import {
   Terminal, Github, Linkedin, Phone, Mail, FileText, ExternalLink, 
   Code2, Cpu, Layers, Award, GraduationCap, User, Home as HomeIcon, 
   BookOpen, Briefcase, Radio, Send, CheckCircle2, Sparkles, Command, 
-  ChevronRight, Download, Menu, X, ArrowUpRight, ShieldCheck, TerminalSquare, Plus, Image as ImageIcon, MessageSquare, TrendingUp, Compass
+  ChevronRight, Download, Menu, X, ArrowUpRight, ArrowUp, ShieldCheck, TerminalSquare, Plus, Image as ImageIcon, MessageSquare, TrendingUp, Compass
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -74,6 +74,7 @@ export default function Home() {
   ]);
   const [isAddPostModalOpen, setIsAddPostModalOpen] = useState(false);
   const [newPost, setNewPost] = useState({ title: "", summary: "", date: "", postUrl: "" });
+  const [showBackToTop, setShowBackToTop] = useState(false);
 
   // Intro animation timer
   useEffect(() => {
@@ -83,9 +84,11 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Scroll spy
+  // Scroll spy & back to top visibility
   useEffect(() => {
     const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 400);
+
       const sections = ["home", "about", "dsa", "visual-skills", "skills", "certifications", "posts", "projects", "education", "mentor", "contact"];
       const scrollPosition = window.scrollY + 200;
 
@@ -1303,6 +1306,17 @@ export default function Home() {
             </form>
           </div>
         </div>
+      )}
+
+      {/* FLOATING BACK TO TOP BUTTON */}
+      {showBackToTop && (
+        <button
+          onClick={() => scrollToSection("home")}
+          className="fixed bottom-6 right-6 z-50 p-3 bg-white text-black rounded-full shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:bg-zinc-200 transition-all duration-300 hover:scale-110 flex items-center justify-center"
+          title="Back to Top"
+        >
+          <ArrowUp className="w-5 h-5" />
+        </button>
       )}
     </div>
   );
