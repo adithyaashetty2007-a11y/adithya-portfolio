@@ -415,59 +415,126 @@ export default function Home() {
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <a
                   href="#resume-download"
-                  onClick={(e) => {
+                  onClick={async (e) => {
                     e.preventDefault();
-                    // Generate professional resume text & trigger download
-                    const resumeContent = `ADITHYA A SHETTY
-Software Engineer & Frontend Developer | Mangalore, India
-Phone: 8088814686 | GitHub: github.com/adithyaashetty2007-a11y | LinkedIn: linkedin.com/in/adithya-a-shetty-421097382
+                    try {
+                      const { jsPDF } = await import("jspdf");
+                      const doc = new jsPDF({ unit: "mm", format: "a4" });
+                      
+                      // Page margins & dimensions
+                      const margin = 15;
+                      const pageWidth = 210;
+                      const contentWidth = pageWidth - (margin * 2);
+                      let y = 20;
 
---------------------------------------------------
-SUMMARY
---------------------------------------------------
-Second-semester engineering student with consistent academic growth (SGPA: 8.05, up from 7.2 in Sem 1). Building robust frontend web applications with AI assistance (~60% accuracy). Solid college-level basics in C, C++, and Python, with an active C++ Data Structures & Algorithms problem-solving streak (20+ LeetCode problems solved).
+                      // Header Name
+                      doc.setFont("Helvetica", "bold");
+                      doc.setFontSize(22);
+                      doc.setTextColor(20, 20, 20);
+                      doc.text("ADITHYA A SHETTY", margin, y);
+                      y += 7;
 
---------------------------------------------------
-EDUCATION
---------------------------------------------------
-Bachelor of Engineering (B.E.) - 2nd Semester Completed
-- Semester 2 SGPA: 8.05 (Significant Improvement from 7.2 in Sem 1)
-- Core Coursework: C Programming, C++ & Data Structures, Python Fundamentals, Engineering Mathematics, Computer Architecture.
+                      // Subtitle
+                      doc.setFont("Helvetica", "normal");
+                      doc.setFontSize(10);
+                      doc.setTextColor(80, 80, 80);
+                      doc.text("Software Engineer & Frontend Developer  |  Mangalore, India", margin, y);
+                      y += 5;
+                      doc.text("Phone: 8088814686  |  GitHub: github.com/adithyaashetty2007-a11y", margin, y);
+                      y += 5;
+                      doc.text("LinkedIn: linkedin.com/in/adithya-a-shetty-421097382", margin, y);
+                      y += 8;
 
---------------------------------------------------
-SKILLS & PROFICIENCIES
---------------------------------------------------
-- Languages: C (College Basics), C++ (DSA Active), Python (College Basics)
-- Frontend Development: AI-Assisted UI/UX Construction, React, Tailwind CSS, HTML5, CSS3, JavaScript
-- Tools & Environment: Git, GitHub (10+ Repositories), VS Code, Terminal
-- Problem Solving: 20+ LeetCode Problems Solved in C++ (2 Weeks Active)
+                      // Divider Line
+                      doc.setDrawColor(200, 200, 200);
+                      doc.setLineWidth(0.5);
+                      doc.line(margin, y, pageWidth - margin, y);
+                      y += 8;
 
---------------------------------------------------
-PROJECTS & REPOSITORIES (10+ GitHub Repos)
---------------------------------------------------
-- Retro-Terminal Portfolio Web App: Dark obsidian retro-terminal portfolio featuring interactive modals, dynamic certificate galleries, project screenshot showcases, and smooth navigation. (Tech: React, TypeScript, Tailwind CSS)
-- C++ Algorithm Practice & DSA Tracker: Daily algorithmic problem-solving repository covering arrays, strings, searching, and sorting algorithms in C++.
+                      // Section Title Helper
+                      const addSectionTitle = (title: string) => {
+                        if (y > 270) { doc.addPage(); y = 20; }
+                        doc.setFont("Helvetica", "bold");
+                        doc.setFontSize(12);
+                        doc.setTextColor(20, 20, 20);
+                        doc.text(title.toUpperCase(), margin, y);
+                        y += 3;
+                        doc.setDrawColor(50, 50, 50);
+                        doc.setLineWidth(0.3);
+                        doc.line(margin, y, pageWidth - margin, y);
+                        y += 6;
+                      };
 
---------------------------------------------------
-MENTORSHIP & GUIDANCE
---------------------------------------------------
-- Guided by professional mentors and college guides including Raghavendra Sooda (linkedin.com/in/raghavendra-sooda-808bab239), shaping career goals and engineering standards.
-`;
-                    const blob = new Blob([resumeContent], { type: "text/plain;charset=utf-8" });
-                    const url = URL.createObjectURL(blob);
-                    const link = document.createElement("a");
-                    link.href = url;
-                    link.download = "Adithya_A_Shetty_Resume.txt";
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                    URL.revokeObjectURL(url);
-                    toast.success("Resume downloaded successfully! (Adithya_A_Shetty_Resume.txt)");
+                      // SUMMARY
+                      addSectionTitle("Professional Summary");
+                      doc.setFont("Helvetica", "normal");
+                      doc.setFontSize(10);
+                      doc.setTextColor(50, 50, 50);
+                      const summaryText = "Second-semester engineering student with consistent academic growth (SGPA: 8.05, up from 7.2 in Sem 1). Building robust frontend web applications with AI assistance (~60% accuracy). Solid college-level basics in C, C++, and Python, with an active C++ Data Structures & Algorithms problem-solving streak (20+ LeetCode problems solved).";
+                      const splitSummary = doc.splitTextToSize(summaryText, contentWidth);
+                      doc.text(splitSummary, margin, y);
+                      y += (splitSummary.length * 5) + 6;
+
+                      // EDUCATION
+                      addSectionTitle("Education");
+                      doc.setFont("Helvetica", "bold");
+                      doc.setFontSize(10);
+                      doc.setTextColor(30, 30, 30);
+                      doc.text("Bachelor of Engineering (B.E.) - 2nd Semester Completed", margin, y);
+                      y += 5;
+                      doc.setFont("Helvetica", "normal");
+                      doc.setTextColor(50, 50, 50);
+                      doc.text("- Semester 2 SGPA: 8.05 (Significant Improvement from 7.2 in Sem 1)", margin, y);
+                      y += 5;
+                      doc.text("- Core Coursework: C Programming, C++ & Data Structures, Python Fundamentals, Mathematics.", margin, y);
+                      y += 8;
+
+                      // SKILLS
+                      addSectionTitle("Skills & Proficiencies");
+                      doc.setFont("Helvetica", "normal");
+                      doc.text("- Programming Languages: C (College Basics), C++ (DSA Active), Python (College Basics)", margin, y);
+                      y += 5;
+                      doc.text("- Frontend Development: AI-Assisted UI/UX Construction, React, Tailwind CSS, HTML5, CSS3", margin, y);
+                      y += 5;
+                      doc.text("- Tools & Environment: Git, GitHub (10+ Repositories), VS Code, Terminal", margin, y);
+                      y += 5;
+                      doc.text("- Problem Solving & DSA: 20+ LeetCode Problems Solved in C++ (2 Weeks Active)", margin, y);
+                      y += 8;
+
+                      // PROJECTS
+                      addSectionTitle("Projects & Repositories (10+ GitHub Repos)");
+                      doc.setFont("Helvetica", "bold");
+                      doc.text("1. Retro-Terminal Portfolio Web App", margin, y);
+                      y += 5;
+                      doc.setFont("Helvetica", "normal");
+                      doc.text("Dark obsidian retro-terminal portfolio featuring interactive modals, dynamic certificate galleries, project screenshot showcases, and smooth navigation. (Tech: React, TypeScript, Tailwind)", margin, y);
+                      y += 7;
+                      doc.setFont("Helvetica", "bold");
+                      doc.text("2. C++ Algorithm Practice & DSA Tracker", margin, y);
+                      y += 5;
+                      doc.setFont("Helvetica", "normal");
+                      doc.text("Daily algorithmic problem-solving repository covering arrays, strings, searching, and sorting algorithms in C++.", margin, y);
+                      y += 8;
+
+                      // MENTORSHIP
+                      addSectionTitle("Mentorship & Guidance");
+                      doc.setFont("Helvetica", "normal");
+                      doc.text("Guided by professional mentors and college guides including Raghavendra Sooda,", margin, y);
+                      y += 5;
+                      doc.text("shaping career goals and engineering standards.", margin, y);
+
+                      // Save PDF
+                      doc.save("Adithya_A_Shetty_Resume.pdf");
+                      toast.success("Professional PDF Resume downloaded successfully!");
+                    } catch (err) {
+                      console.error(err);
+                      toast.error("Failed to generate PDF. Please try again.");
+                    }
                   }}
                   className="px-6 py-3 bg-white text-black font-mono font-bold text-xs sm:text-sm rounded hover:bg-zinc-200 transition flex items-center gap-2 shadow-lg cursor-pointer"
                 >
                   <Download className="w-4 h-4" />
-                  DOWNLOAD RESUME
+                  DOWNLOAD RESUME (PDF)
                 </a >
                 <button 
                   onClick={() => scrollToSection("contact")}
