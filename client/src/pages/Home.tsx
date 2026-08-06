@@ -574,25 +574,17 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Column: Profile Photo inside Glowing Ring Light Frame & Backlight Aura */}
+            {/* Right Column: Profile Photo inside Clean Circular Frame */}
             <div className="lg:col-span-5 flex justify-center relative">
-              {/* Luminous Backlight Aura */}
-              <div className="absolute w-[350px] h-[350px] sm:w-[450px] sm:h-[450px] lg:w-[520px] lg:h-[520px] rounded-full bg-gradient-to-tr from-white/20 via-zinc-400/10 to-transparent blur-3xl animate-pulse pointer-events-none -z-10"></div>
-              <div className="absolute w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] lg:w-[420px] lg:h-[420px] rounded-full bg-white/10 blur-2xl pointer-events-none -z-10"></div>
-
-              {/* Outer pulsing ring light effect */}
-              <div className="absolute w-[320px] h-[320px] sm:w-[420px] sm:h-[420px] lg:w-[470px] lg:h-[470px] rounded-full border-2 border-white/40 animate-pulse shadow-[0_0_120px_rgba(255,255,255,0.3)] pointer-events-none"></div>
-              <div className="absolute w-[340px] h-[340px] sm:w-[440px] sm:h-[440px] lg:w-[490px] lg:h-[490px] rounded-full border border-white/20 animate-ping opacity-25 pointer-events-none duration-1000"></div>
-
-              <div className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[450px] lg:h-[450px] rounded-full border-2 border-white/30 relative flex items-center justify-center shadow-[0_0_90px_rgba(255,255,255,0.2)] bg-gradient-to-tr from-white/10 to-transparent">
-                <div className="absolute inset-6 rounded-full border border-dashed border-white/30 animate-spin-slow"></div>
+              <div className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[450px] lg:h-[450px] rounded-full border border-white/20 relative flex items-center justify-center shadow-[0_0_80px_rgba(255,255,255,0.12)]">
+                <div className="absolute inset-6 rounded-full border border-dashed border-white/15 animate-spin-slow"></div>
                 
                 {/* Profile Photo Card */}
-                <div className="w-[260px] h-[260px] sm:w-[350px] sm:h-[350px] lg:w-[390px] lg:h-[390px] rounded-full overflow-hidden border-2 border-white/30 bg-[#141416] relative shadow-2xl">
+                <div className="w-[260px] h-[260px] sm:w-[350px] sm:h-[350px] lg:w-[390px] lg:h-[390px] rounded-full overflow-hidden border-2 border-white/20 bg-[#141416] relative shadow-2xl">
                   <img 
                     src="/manus-storage/WhatsAppImage2026-07-27at17.09.12_0f7a6855.jpeg" 
                     alt="Adithya A Shetty" 
-                    className="w-full h-full object-cover object-top grayscale contrast-125 brightness-95 hover:scale-105 transition duration-500"
+                    className="w-full h-full object-cover object-top grayscale contrast-125 brightness-95"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
                 </div>
