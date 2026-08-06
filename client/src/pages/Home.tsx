@@ -574,13 +574,17 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Column: Profile Photo inside Glowing Ring Light Frame */}
+            {/* Right Column: Profile Photo inside Glowing Ring Light Frame & Backlight Aura */}
             <div className="lg:col-span-5 flex justify-center relative">
-              {/* Outer pulsing ring light effect */}
-              <div className="absolute w-[320px] h-[320px] sm:w-[420px] sm:h-[420px] lg:w-[470px] lg:h-[470px] rounded-full border-2 border-white/40 animate-pulse shadow-[0_0_100px_rgba(255,255,255,0.25)] pointer-events-none"></div>
-              <div className="absolute w-[340px] h-[340px] sm:w-[440px] sm:h-[440px] lg:w-[490px] lg:h-[490px] rounded-full border border-white/20 animate-ping opacity-20 pointer-events-none duration-1000"></div>
+              {/* Luminous Backlight Aura */}
+              <div className="absolute w-[350px] h-[350px] sm:w-[450px] sm:h-[450px] lg:w-[520px] lg:h-[520px] rounded-full bg-gradient-to-tr from-white/20 via-zinc-400/10 to-transparent blur-3xl animate-pulse pointer-events-none -z-10"></div>
+              <div className="absolute w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] lg:w-[420px] lg:h-[420px] rounded-full bg-white/10 blur-2xl pointer-events-none -z-10"></div>
 
-              <div className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[450px] lg:h-[450px] rounded-full border-2 border-white/30 relative flex items-center justify-center shadow-[0_0_80px_rgba(255,255,255,0.15)] bg-gradient-to-tr from-white/5 to-transparent">
+              {/* Outer pulsing ring light effect */}
+              <div className="absolute w-[320px] h-[320px] sm:w-[420px] sm:h-[420px] lg:w-[470px] lg:h-[470px] rounded-full border-2 border-white/40 animate-pulse shadow-[0_0_120px_rgba(255,255,255,0.3)] pointer-events-none"></div>
+              <div className="absolute w-[340px] h-[340px] sm:w-[440px] sm:h-[440px] lg:w-[490px] lg:h-[490px] rounded-full border border-white/20 animate-ping opacity-25 pointer-events-none duration-1000"></div>
+
+              <div className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[450px] lg:h-[450px] rounded-full border-2 border-white/30 relative flex items-center justify-center shadow-[0_0_90px_rgba(255,255,255,0.2)] bg-gradient-to-tr from-white/10 to-transparent">
                 <div className="absolute inset-6 rounded-full border border-dashed border-white/30 animate-spin-slow"></div>
                 
                 {/* Profile Photo Card */}
