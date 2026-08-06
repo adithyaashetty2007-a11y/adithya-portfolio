@@ -86,7 +86,7 @@ export default function Home() {
   // Scroll spy
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "dsa", "skills", "certifications", "posts", "projects", "education", "contact"];
+      const sections = ["home", "about", "dsa", "visual-skills", "skills", "certifications", "posts", "projects", "education", "contact"];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -207,12 +207,12 @@ export default function Home() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1 lg:space-x-1.5">
+          <nav className="hidden md:flex items-center space-x-1 lg:space-x-1">
             {[
               { id: "home", label: "Home" },
               { id: "about", label: "About" },
               { id: "dsa", label: "DSA" },
-              { id: "skills", label: "Skills" },
+              { id: "visual-skills", label: "Visual Skills" },
               { id: "certifications", label: "Certifications" },
               { id: "posts", label: "LinkedIn Posts" },
               { id: "projects", label: "Projects" },
@@ -263,7 +263,7 @@ export default function Home() {
               { id: "home", label: "Home" },
               { id: "about", label: "About" },
               { id: "dsa", label: "DSA" },
-              { id: "skills", label: "Skills" },
+              { id: "visual-skills", label: "Visual Skills" },
               { id: "certifications", label: "Certifications" },
               { id: "posts", label: "LinkedIn Posts" },
               { id: "projects", label: "Projects" },
@@ -319,13 +319,13 @@ export default function Home() {
           </span>
         </a>
         <button 
-          onClick={() => scrollToSection("skills")} 
+          onClick={() => scrollToSection("visual-skills")} 
           className="p-2.5 rounded-lg text-zinc-400 hover:text-white hover:bg-white/10 transition group relative"
-          title="Skills"
+          title="Visual Skills"
         >
           <Code2 className="w-5 h-5" />
           <span className="absolute left-full ml-3 px-2 py-1 bg-zinc-900 border border-white/20 text-white text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap z-50">
-            Skills
+            Visual Skills
           </span>
         </button>
         <button 
@@ -522,10 +522,102 @@ export default function Home() {
           </div>
         </section>
 
+        {/* NEW VISUAL SKILLS SECTION */}
+        <section id="visual-skills" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
+          <div className="space-y-2 mb-12">
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 03. VISUAL SKILLS & PROFICIENCY</span>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Language & DSA Proficiency</h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-6 space-y-6 bg-[#141416] border border-white/10 rounded-2xl p-8">
+              <h3 className="font-mono text-lg font-bold text-white mb-6 flex items-center gap-2">
+                <Code2 className="w-5 h-5 text-emerald-400" />
+                Programming Languages
+              </h3>
+
+              <div className="space-y-5 font-mono text-xs">
+                <div>
+                  <div className="flex justify-between mb-2">
+                    <span className="text-white font-bold">C Programming (College Basics)</span>
+                    <span className="text-zinc-400">75%</span>
+                  </div>
+                  <div className="w-full h-2.5 bg-black/60 rounded-full overflow-hidden border border-white/10">
+                    <div className="h-full bg-white rounded-full" style={{ width: "75%" }}></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="flex justify-between mb-2">
+                    <span className="text-white font-bold">C++ & DSA (3 Days Active)</span>
+                    <span className="text-zinc-400">65%</span>
+                  </div>
+                  <div className="w-full h-2.5 bg-black/60 rounded-full overflow-hidden border border-white/10">
+                    <div className="h-full bg-emerald-400 rounded-full" style={{ width: "65%" }}></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="flex justify-between mb-2">
+                    <span className="text-white font-bold">Python (College Basics)</span>
+                    <span className="text-zinc-400">70%</span>
+                  </div>
+                  <div className="w-full h-2.5 bg-black/60 rounded-full overflow-hidden border border-white/10">
+                    <div className="h-full bg-blue-400 rounded-full" style={{ width: "70%" }}></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="flex justify-between mb-2">
+                    <span className="text-white font-bold">Frontend / Web Dev (AI-Assisted)</span>
+                    <span className="text-zinc-400">60%</span>
+                  </div>
+                  <div className="w-full h-2.5 bg-black/60 rounded-full overflow-hidden border border-white/10">
+                    <div className="h-full bg-purple-400 rounded-full" style={{ width: "60%" }}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-6 space-y-6 bg-[#141416] border border-white/10 rounded-2xl p-8">
+              <h3 className="font-mono text-lg font-bold text-white mb-6 flex items-center gap-2">
+                <Cpu className="w-5 h-5 text-emerald-400" />
+                DSA & Problem Solving Metrics
+              </h3>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div className="p-5 bg-black/50 border border-white/10 rounded-xl text-center">
+                  <span className="text-zinc-500 font-mono text-xs uppercase block mb-1">LeetCode Solved</span>
+                  <span className="text-3xl font-bold font-mono text-white">20+</span>
+                  <span className="text-[10px] font-mono text-emerald-400 block mt-1">Started 3 days ago</span>
+                </div>
+
+                <div className="p-5 bg-black/50 border border-white/10 rounded-xl text-center">
+                  <span className="text-zinc-500 font-mono text-xs uppercase block mb-1">GitHub Repos</span>
+                  <span className="text-3xl font-bold font-mono text-white">10+</span>
+                  <span className="text-[10px] font-mono text-blue-400 block mt-1">Active commits</span>
+                </div>
+
+                <div className="p-5 bg-black/50 border border-white/10 rounded-xl text-center">
+                  <span className="text-zinc-500 font-mono text-xs uppercase block mb-1">Engineering Year</span>
+                  <span className="text-xl font-bold font-mono text-white">2nd Sem Done</span>
+                  <span className="text-[10px] font-mono text-zinc-400 block mt-1">Building foundation</span>
+                </div>
+
+                <div className="p-5 bg-black/50 border border-white/10 rounded-xl text-center">
+                  <span className="text-zinc-500 font-mono text-xs uppercase block mb-1">Builder Mode</span>
+                  <span className="text-xl font-bold font-mono text-white">AI-Assisted</span>
+                  <span className="text-[10px] font-mono text-purple-400 block mt-1">~60% Frontend Accuracy</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* SKILLS SECTION */}
         <section id="skills" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 03. TECHNICAL SKILLS</span>
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 04. TECHNICAL SKILLS</span>
             <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Programming & Development</h2>
           </div>
 
@@ -584,7 +676,7 @@ export default function Home() {
         <section id="certifications" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
             <div>
-              <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 04. CREDENTIALS & GALLERY</span>
+              <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 05. CREDENTIALS & GALLERY</span>
               <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Certifications & Image Gallery</h2>
             </div>
             <button
@@ -718,7 +810,7 @@ export default function Home() {
         <section id="posts" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
             <div>
-              <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 05. SOCIAL FEED & INSIGHTS</span>
+              <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 06. SOCIAL FEED & INSIGHTS</span>
               <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">LinkedIn Posts & Articles</h2>
             </div>
             <button
@@ -766,7 +858,7 @@ export default function Home() {
         {/* PROJECTS SECTION */}
         <section id="projects" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 06. PRACTICE WORK</span>
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 07. PRACTICE WORK</span>
             <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Featured Practice Work</h2>
           </div>
 
@@ -818,7 +910,7 @@ export default function Home() {
         {/* EDUCATION SECTION */}
         <section id="education" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 07. ACADEMIC STATUS</span>
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 08. ACADEMIC STATUS</span>
             <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Education</h2>
           </div>
 
@@ -846,7 +938,7 @@ export default function Home() {
         {/* CONTACT SECTION */}
         <section id="contact" className="py-24 px-4 sm:px-8 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 08. TRANSMIT MESSAGE</span>
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 09. TRANSMIT MESSAGE</span>
             <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Get In Touch</h2>
           </div>
 
