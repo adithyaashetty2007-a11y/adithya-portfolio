@@ -17,6 +17,7 @@ interface Certificate {
 }
 
 export default function Home() {
+  const [showIntro, setShowIntro] = useState(true);
   const [activeSection, setActiveSection] = useState("home");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isCopiedPhone, setIsCopiedPhone] = useState(false);
@@ -45,6 +46,14 @@ export default function Home() {
   const [selectedCertImage, setSelectedCertImage] = useState<string | null>(null);
   const [isAddCertModalOpen, setIsAddCertModalOpen] = useState(false);
   const [newCert, setNewCert] = useState({ title: "", issuer: "", date: "", imageUrl: "", credentialUrl: "" });
+
+  // Intro animation timer
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowIntro(false);
+    }, 2800);
+    return () => clearTimeout(timer);
+  }, []);
 
   // Scroll spy
   useEffect(() => {
@@ -121,11 +130,25 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-[#ededed] font-sans relative selection:bg-white/20 selection:text-white">
+      {/* INTRO CURSIVE SIGNATURE OVERLAY */}
+      {showIntro && (
+        <div className="fixed inset-0 z-50 bg-[#0a0a0a] flex flex-col items-center justify-center transition-opacity duration-700">
+          <div className="text-center space-y-4 px-4">
+            <h1 className="font-cursive text-6xl sm:text-8xl text-white tracking-wide animate-pulse drop-shadow-[0_0_25px_rgba(255,255,255,0.4)]">
+              Adithya A Shetty
+            </h1>
+            <p className="font-mono text-xs uppercase tracking-widest text-zinc-500 animate-fade-in">
+              Initializing Developer Portfolio...
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* CRT Scanline Overlay */}
-      <div className="fixed inset-0 crt-scanline z-50 pointer-events-none opacity-40"></div>
+      <div className="fixed inset-0 crt-scanline z-40 pointer-events-none opacity-40"></div>
 
       {/* Top Navbar */}
-      <header className="fixed top-0 left-0 right-0 z-40 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/10">
+      <header className="fixed top-0 left-0 right-0 z-30 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection("home")}>
             <div className="w-8 h-8 rounded bg-white/10 border border-white/20 flex items-center justify-center font-mono text-sm font-bold text-white">
@@ -221,7 +244,7 @@ export default function Home() {
       </header>
 
       {/* Fixed Left Vertical Dock (Reference Style) */}
-      <aside className="hidden lg:flex fixed left-0 top-1/2 -translate-y-1/2 z-30 flex-col items-center py-6 px-3 bg-[#141416]/80 backdrop-blur-md border-r border-y border-white/10 rounded-r-xl space-y-6 shadow-2xl">
+      <aside className="hidden lg:flex fixed left-0 top-1/2 -translate-y-1/2 z-20 flex-col items-center py-6 px-3 bg-[#141416]/80 backdrop-blur-md border-r border-y border-white/10 rounded-r-xl space-y-6 shadow-2xl">
         <a 
           href="https://github.com/adithyaashetty2007-a11y" 
           target="_blank" 
@@ -518,7 +541,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CERTIFICATIONS & ACHIEVEMENTS SECTION (WITH CERTIFICATE IMAGE GALLERY & ADD BUTTON) */}
+        {/* CERTIFICATIONS & ACHIEVEMENTS SECTION */}
         <section id="certifications" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
             <div>
