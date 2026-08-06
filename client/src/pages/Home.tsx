@@ -12,10 +12,10 @@ export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [terminalInput, setTerminalInput] = useState("");
   const [terminalLogs, setTerminalLogs] = useState<string[]>([
-    "AdithyaOS v4.2.0 (x86_64-pc-terminal)",
+    "AdithyaOS v2.0 (Engineering 2nd Sem Student)",
     "Type 'help' to see available commands or click navigation tabs.",
     "--------------------------------------------------",
-    "SUCCESS: Loaded kernel profile [Adithya A Shetty]",
+    "SUCCESS: Loaded profile [Adithya A Shetty - Engineering Student]",
     "SYSTEM READY."
   ]);
   const [isCopiedPhone, setIsCopiedPhone] = useState(false);
@@ -67,24 +67,22 @@ export default function Home() {
     const newLogs = [...terminalLogs, `$ ${terminalInput}`];
 
     if (cmd === "help") {
-      newLogs.push("Available commands: about, skills, projects, contact, clear, resume, sudo rm -rf /");
+      newLogs.push("Available commands: about, skills, projects, contact, clear, resume");
     } else if (cmd === "about") {
-      newLogs.push("Adithya A Shetty: Software Engineer, Full Stack Web Developer & AIML enthusiast specializing in scalable backend systems and high-performance frontend architectures.");
+      newLogs.push("Adithya A Shetty: Engineering student (completed 2nd sem), building frontend web development skills and starting DSA journey.");
     } else if (cmd === "skills") {
-      newLogs.push("Languages: TypeScript, JavaScript, Python, C++, Java, SQL | Frontend: React 19, Tailwind CSS, Next.js | Backend: Node.js, Express, Docker, REST APIs, PostgreSQL, MongoDB");
+      newLogs.push("Frontend: HTML, CSS, JavaScript, React basics (60% accuracy) | Tools: Git, GitHub (10+ repos)");
     } else if (cmd === "projects") {
-      newLogs.push("1. DevPulse OS | 2. NeuralSynth AI | 3. Algorithmic Vision | 4. Nexus Cloud Engine");
+      newLogs.push("1. Portfolio Website | 2. Student Web Projects | 3. Frontend UI Experiments");
     } else if (cmd === "contact") {
-      newLogs.push("Phone: 8088814686 | Email: adithya@shetty.dev | LinkedIn: /in/adithya-a-shetty-421097382");
+      newLogs.push("Phone: 8088814686 | LinkedIn: /in/adithya-a-shetty-421097382");
     } else if (cmd === "resume") {
       newLogs.push("Downloading Adithya_A_Shetty_Resume.pdf...");
       toast.success("Resume downloaded successfully!");
     } else if (cmd === "clear") {
-      setTerminalLogs(["AdithyaOS v4.2.0 terminal session cleared."]);
+      setTerminalLogs(["AdithyaOS terminal session cleared."]);
       setTerminalInput("");
       return;
-    } else if (cmd.includes("sudo")) {
-      newLogs.push("Permission denied: Root access requires coffee and GitHub contribution streaks.");
     } else {
       newLogs.push(`Command not recognized: '${cmd}'. Type 'help' for available commands.`);
     }
@@ -138,7 +136,6 @@ export default function Home() {
               { id: "about", label: "About" },
               { id: "dsa", label: "DSA" },
               { id: "development", label: "Development" },
-              { id: "leadership", label: "Leadership" },
               { id: "projects", label: "Projects" },
               { id: "education", label: "Education" },
               { id: "contact", label: "Contact" },
@@ -188,7 +185,6 @@ export default function Home() {
               { id: "about", label: "About" },
               { id: "dsa", label: "DSA" },
               { id: "development", label: "Development" },
-              { id: "leadership", label: "Leadership" },
               { id: "projects", label: "Projects" },
               { id: "education", label: "Education" },
               { id: "contact", label: "Contact" },
@@ -254,11 +250,11 @@ export default function Home() {
         <button 
           onClick={() => scrollToSection("dsa")} 
           className="p-2.5 rounded-lg text-zinc-400 hover:text-white hover:bg-white/10 transition group relative"
-          title="DSA & Algorithms"
+          title="DSA Journey"
         >
           <Cpu className="w-5 h-5" />
           <span className="absolute left-full ml-3 px-2 py-1 bg-zinc-900 border border-white/20 text-white text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap z-50">
-            DSA Stats
+            DSA Journey
           </span>
         </button>
         <button 
@@ -273,7 +269,7 @@ export default function Home() {
         </button>
         <div className="w-6 h-[1px] bg-white/10"></div>
         <div className="text-[10px] font-mono text-zinc-500 writing-mode-vertical tracking-widest uppercase">
-          0(1)
+          DEV
         </div>
       </aside>
 
@@ -287,7 +283,7 @@ export default function Home() {
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-zinc-300">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                Software Engineer & Web Developer
+                Engineering Student (2nd Sem Completed) & Aspiring Frontend Developer
               </div>
 
               <div className="space-y-2">
@@ -298,7 +294,7 @@ export default function Home() {
               </div>
 
               <p className="text-zinc-400 text-base sm:text-lg max-w-xl font-sans leading-relaxed">
-                I build robust full-stack web applications, architect high-performance backend systems, and solve complex algorithmic problems with clean, scalable code.
+                I have just completed my second semester of engineering. I am building my foundation in frontend web development (~60% accuracy) and recently started my DSA journey 3 days ago.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -322,13 +318,13 @@ export default function Home() {
 
               <div className="pt-4 flex items-center gap-6 text-xs font-mono text-zinc-500">
                 <div className="flex items-center gap-2">
-                  <span className="text-white font-bold">350+</span> LeetCode Solved
+                  <span className="text-white font-bold">20+</span> LeetCode Solved
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-white font-bold">45+</span> Repositories
+                  <span className="text-white font-bold">10+</span> Repositories
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-white font-bold">100%</span> Reliable
+                  <span className="text-white font-bold">2nd Sem</span> Engineering
                 </div>
               </div>
             </div>
@@ -337,13 +333,13 @@ export default function Home() {
             <div className="lg:col-span-5">
               <div className="bg-[#141416] border border-white/15 rounded-xl p-5 glow-box relative overflow-hidden">
                 <div className="absolute top-0 right-0 px-4 py-1 bg-white/10 text-[10px] font-mono text-zinc-300 rounded-bl-lg">
-                  PORTFOLIO_OS // v4.2
+                  ADITHYA_TERMINAL // v2.0
                 </div>
                 <div className="flex items-center space-x-2 mb-4">
                   <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
                   <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
                   <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
-                  <span className="text-xs font-mono text-zinc-500 ml-2">adithya@shetty-mbp:~</span>
+                  <span className="text-xs font-mono text-zinc-500 ml-2">adithya@shetty-pc:~</span>
                 </div>
 
                 <div className="space-y-2 font-mono text-xs sm:text-sm text-zinc-300 h-64 overflow-y-auto pr-2 bg-black/40 p-3 rounded border border-white/5">
@@ -383,19 +379,19 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-7 space-y-6 text-zinc-300 leading-relaxed font-sans text-base sm:text-lg">
               <p>
-                I am <strong className="text-white font-semibold">Adithya A Shetty</strong>, a passionate software engineer and full-stack web developer dedicated to building exceptional digital experiences. My journey in technology is driven by curiosity, mathematical precision, and an unrelenting pursuit of clean code architecture.
+                Hello! I am <strong className="text-white font-semibold">Adithya A Shetty</strong>. I have just completed my second semester of engineering. I am currently learning and growing as an aspiring frontend developer, continuously refining my coding accuracy and building user interfaces.
               </p>
               <p>
-                Whether crafting lightning-fast React frontends, engineering resilient Node.js backends, or training intelligent machine learning models, I focus on performance, accessibility (<span className="text-mono text-xs bg-white/10 px-2 py-0.5 rounded text-white">a11y</span>), and maintainability.
+                I am not yet a full-stack developer, but I am putting in consistent daily practice. I started my Data Structures and Algorithms (DSA) journey just 3 days ago, solving problems and building my analytical foundation step by step.
               </p>
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="p-4 rounded-lg bg-[#141416] border border-white/10">
-                  <h4 className="text-white font-mono text-sm font-bold mb-1">Full Stack Craft</h4>
-                  <p className="text-xs text-zinc-400">End-to-end web architectures using modern TypeScript & Python toolchains.</p>
+                  <h4 className="text-white font-mono text-sm font-bold mb-1">Frontend Focus</h4>
+                  <p className="text-xs text-zinc-400">Building responsive web pages and components with ~60% accuracy, learning every day.</p>
                 </div>
                 <div className="p-4 rounded-lg bg-[#141416] border border-white/10">
-                  <h4 className="text-white font-mono text-sm font-bold mb-1">Algorithm Mastery</h4>
-                  <p className="text-xs text-zinc-400">Deep foundation in data structures, time complexity optimization, and problem solving.</p>
+                  <h4 className="text-white font-mono text-sm font-bold mb-1">DSA Journey</h4>
+                  <p className="text-xs text-zinc-400">Started solving LeetCode problems 3 days ago with 20+ solved so far.</p>
                 </div>
               </div>
             </div>
@@ -411,8 +407,8 @@ export default function Home() {
                   <span className="text-white font-semibold">Adithya A Shetty</span>
                 </li>
                 <li className="flex justify-between border-b border-white/5 pb-2">
-                  <span className="text-zinc-500">Role:</span>
-                  <span className="text-white">Software Engineer</span>
+                  <span className="text-zinc-500">Stage:</span>
+                  <span className="text-white">Engineering 2nd Sem Completed</span>
                 </li>
                 <li className="flex justify-between border-b border-white/5 pb-2">
                   <span className="text-zinc-500">Phone:</span>
@@ -438,39 +434,28 @@ export default function Home() {
         {/* DSA & COMPETITIVE PROGRAMMING SECTION */}
         <section id="dsa" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 02. ALGORITHMIC PROBLEM SOLVING</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">DSA & Competitive Programming</h2>
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 02. DSA JOURNEY</span>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">DSA & Practice</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             <div className="bg-[#141416] border border-white/10 rounded-xl p-6 relative overflow-hidden">
-              <div className="text-zinc-500 font-mono text-xs uppercase mb-2">LeetCode Profile</div>
-              <div className="text-3xl font-bold font-mono text-white mb-1">350+ Solved</div>
-              <p className="text-xs text-zinc-400">Consistent solver across Easy, Medium, and Hard algorithmic problems with optimized runtime.</p>
+              <div className="text-zinc-500 font-mono text-xs uppercase mb-2">LeetCode Progress</div>
+              <div className="text-3xl font-bold font-mono text-white mb-1">20+ Solved</div>
+              <p className="text-xs text-zinc-400">Started DSA just 3 days ago. Building problem-solving momentum and consistency every day.</p>
               <div className="mt-4 pt-4 border-t border-white/10 flex justify-between text-xs font-mono">
-                <span className="text-emerald-400">Easy: 120+</span>
-                <span className="text-yellow-400">Medium: 185+</span>
-                <span className="text-red-400">Hard: 45+</span>
+                <span className="text-emerald-400">Status: Active & Learning</span>
+                <span className="text-zinc-300">Target: 100+</span>
               </div>
             </div>
 
             <div className="bg-[#141416] border border-white/10 rounded-xl p-6 relative overflow-hidden">
-              <div className="text-zinc-500 font-mono text-xs uppercase mb-2">GitHub Activity</div>
-              <div className="text-3xl font-bold font-mono text-white mb-1">45+ Repos</div>
-              <p className="text-xs text-zinc-400">Active commit history, robust pull requests, and production-grade open source contributions.</p>
+              <div className="text-zinc-500 font-mono text-xs uppercase mb-2">GitHub Repositories</div>
+              <div className="text-3xl font-bold font-mono text-white mb-1">10+ Repos</div>
+              <p className="text-xs text-zinc-400">Created 10+ public repositories experimenting with frontend layouts, HTML/CSS, and JavaScript projects.</p>
               <div className="mt-4 pt-4 border-t border-white/10 flex justify-between text-xs font-mono">
-                <span className="text-zinc-300">Public Repos: 45</span>
-                <span className="text-emerald-400">Status: Active</span>
-              </div>
-            </div>
-
-            <div className="bg-[#141416] border border-white/10 rounded-xl p-6 relative overflow-hidden">
-              <div className="text-zinc-500 font-mono text-xs uppercase mb-2">Core Competencies</div>
-              <div className="text-3xl font-bold font-mono text-white mb-1">O(1) Optimized</div>
-              <p className="text-xs text-zinc-400">Specialized in dynamic programming, graph theory, trees, greedy algorithms, and bit manipulation.</p>
-              <div className="mt-4 pt-4 border-t border-white/10 flex justify-between text-xs font-mono">
-                <span className="text-zinc-300">Complexity: O(n log n)</span>
-                <span className="text-emerald-400">Verified</span>
+                <span className="text-zinc-300">Public Repos: 10+</span>
+                <span className="text-emerald-400">Growing</span>
               </div>
             </div>
           </div>
@@ -479,79 +464,41 @@ export default function Home() {
         {/* DEVELOPMENT & SKILLS SECTION */}
         <section id="development" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 03. TECHNICAL EXPERTISE</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Development & Engineering Stack</h2>
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 03. LEARNING STACK</span>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Frontend & Tools</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: "Frontend Engineering",
-                icon: <Code2 className="w-5 h-5 text-white" />,
-                skills: ["React 19", "TypeScript", "Tailwind CSS v4", "Next.js", "HTML5/CSS3", "Vite"]
-              },
-              {
-                title: "Backend Systems",
-                icon: <Layers className="w-5 h-5 text-white" />,
-                skills: ["Node.js", "Express", "RESTful APIs", "PostgreSQL", "MongoDB", "Redis"]
-              },
-              {
-                title: "DevOps & Tools",
-                icon: <Cpu className="w-5 h-5 text-white" />,
-                skills: ["Git & GitHub", "Docker", "Linux / Unix", "Vercel", "Postman", "CI/CD Pipelines"]
-              },
-              {
-                title: "Languages & Core",
-                icon: <TerminalSquare className="w-5 h-5 text-white" />,
-                skills: ["JavaScript (ES6+)", "Python", "C++", "Java", "SQL", "Data Structures"]
-              }
-            ].map((cat, idx) => (
-              <div key={idx} className="bg-[#141416] border border-white/10 rounded-xl p-6 hover:border-white/30 transition group">
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-4 group-hover:bg-white/10 transition">
-                  {cat.icon}
-                </div>
-                <h3 className="text-lg font-mono font-bold text-white mb-4">{cat.title}</h3>
-                <ul className="space-y-2">
-                  {cat.skills.map((skill, sIdx) => (
-                    <li key={sIdx} className="flex items-center gap-2 text-xs font-mono text-zinc-400">
-                      <span className="w-1.5 h-1.5 rounded-full bg-zinc-600"></span>
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-[#141416] border border-white/10 rounded-xl p-6 hover:border-white/30 transition">
+              <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-4">
+                <Code2 className="w-5 h-5 text-white" />
               </div>
-            ))}
-          </div>
-        </section>
-
-        {/* LEADERSHIP SECTION */}
-        <section id="leadership" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
-          <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 04. LEADERSHIP & COLLABORATION</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Leadership & Community</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-[#141416] border border-white/10 rounded-xl p-8 space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-mono px-3 py-1 bg-white/10 text-white rounded">Tech Lead & Coordinator</span>
-                <Award className="w-5 h-5 text-zinc-400" />
-              </div>
-              <h3 className="text-xl font-bold font-mono text-white">Coding Society & Hackathons</h3>
-              <p className="text-zinc-400 text-sm font-sans leading-relaxed">
-                Spearheaded technical workshops on data structures, web development, and modern JavaScript frameworks. Mentored junior engineering students and organized collegiate hackathons.
-              </p>
+              <h3 className="text-lg font-mono font-bold text-white mb-2">Frontend Development (~60% Accuracy)</h3>
+              <p className="text-xs text-zinc-400 mb-4">Learning HTML, CSS, JavaScript, and React basics. Building responsive pages with steady improvement.</p>
+              <ul className="space-y-2">
+                {["HTML5 & CSS3 Basics", "JavaScript Fundamentals", "React Components", "Responsive Layouts"].map((skill, sIdx) => (
+                  <li key={sIdx} className="flex items-center gap-2 text-xs font-mono text-zinc-300">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                    {skill}
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            <div className="bg-[#141416] border border-white/10 rounded-xl p-8 space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-mono px-3 py-1 bg-white/10 text-white rounded">Open Source Contributor</span>
-                <ShieldCheck className="w-5 h-5 text-zinc-400" />
+            <div className="bg-[#141416] border border-white/10 rounded-xl p-6 hover:border-white/30 transition">
+              <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-4">
+                <Github className="w-5 h-5 text-white" />
               </div>
-              <h3 className="text-xl font-bold font-mono text-white">Collaborative Software Engineering</h3>
-              <p className="text-zinc-400 text-sm font-sans leading-relaxed">
-                Contributed to accessibility (<span className="font-mono text-xs text-white">a11y</span>) standards and developer tooling repositories on GitHub, maintaining high code quality and test coverage.
-              </p>
+              <h3 className="text-lg font-mono font-bold text-white mb-2">Version Control & Practice</h3>
+              <p className="text-xs text-zinc-400 mb-4">Using Git and GitHub to manage 10+ personal practice repositories and academic assignments.</p>
+              <ul className="space-y-2">
+                {["Git Version Control", "GitHub Repositories (10+)", "Code Organization", "Continuous Practice"].map((skill, sIdx) => (
+                  <li key={sIdx} className="flex items-center gap-2 text-xs font-mono text-zinc-300">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                    {skill}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
@@ -559,37 +506,23 @@ export default function Home() {
         {/* PROJECTS SECTION */}
         <section id="projects" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 05. FEATURED WORK</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Software Engineering Projects</h2>
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 04. PRACTICE PROJECTS</span>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Featured Practice Work</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                title: "DevPulse OS",
-                desc: "A browser-based retro terminal operating system featuring command-line execution, real-time code runner, and stateful workspace management.",
-                tech: ["React", "TypeScript", "Tailwind CSS", "Node.js"],
+                title: "Portfolio & Terminal UI",
+                desc: "My interactive developer portfolio website featuring retro-terminal command line simulator, responsive design, and clean dark aesthetic.",
+                tech: ["React", "Tailwind CSS", "TypeScript"],
                 github: "https://github.com/adithyaashetty2007-a11y",
                 live: "#"
               },
               {
-                title: "NeuralSynth AI Dashboard",
-                desc: "Full-stack AI model training and tensor inference dashboard with live performance metrics, latency benchmarks, and RESTful API integration.",
-                tech: ["React", "Python", "FastAPI", "Tailwind CSS"],
-                github: "https://github.com/adithyaashetty2007-a11y",
-                live: "#"
-              },
-              {
-                title: "Algorithmic Vision (DSA Hub)",
-                desc: "Interactive data structures and algorithms visualizer built for sorting trees, Dijkstra's pathfinding, and dynamic programming state tables.",
-                tech: ["TypeScript", "HTML5 Canvas", "Tailwind CSS"],
-                github: "https://github.com/adithyaashetty2007-a11y",
-                live: "#"
-              },
-              {
-                title: "Nexus Cloud Engine",
-                desc: "Scalable microservices backend engine with containerized Docker deployment, Redis caching layers, and robust JWT authentication.",
-                tech: ["Node.js", "Express", "Docker", "Redis", "PostgreSQL"],
+                title: "Frontend Practice Repos (10+)",
+                desc: "A collection of 10+ GitHub repositories containing small web apps, UI components, and JavaScript practice exercises.",
+                tech: ["HTML/CSS", "JavaScript", "Git"],
                 github: "https://github.com/adithyaashetty2007-a11y",
                 live: "#"
               }
@@ -625,7 +558,7 @@ export default function Home() {
         {/* EDUCATION SECTION */}
         <section id="education" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 06. ACADEMIC CREDENTIALS</span>
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 05. ACADEMIC STATUS</span>
             <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Education</h2>
           </div>
 
@@ -635,15 +568,15 @@ export default function Home() {
                 <GraduationCap className="w-6 h-6 text-white" />
               </div>
               <div className="space-y-2">
-                <span className="text-xs font-mono text-zinc-500">Computer Science & Engineering</span>
-                <h3 className="text-xl font-bold font-mono text-white">Bachelor of Technology (B.Tech)</h3>
+                <span className="text-xs font-mono text-zinc-500">Engineering Undergraduate</span>
+                <h3 className="text-xl font-bold font-mono text-white">Completed 2nd Semester</h3>
                 <p className="text-zinc-400 text-sm font-sans">
-                  Specialized in Software Engineering, Data Structures, Algorithms, and Artificial Intelligence & Machine Learning (AIML).
+                  Currently pursuing engineering studies, building core programming competencies, and actively developing web development skills.
                 </p>
                 <div className="pt-2 flex items-center gap-4 text-xs font-mono text-zinc-400">
-                  <span>Status: Pursuing / Completed</span>
+                  <span>Student: Adithya A Shetty</span>
                   <span>•</span>
-                  <span className="text-white">Adithya A Shetty</span>
+                  <span className="text-emerald-400">Motivated Learner</span>
                 </div>
               </div>
             </div>
@@ -653,14 +586,14 @@ export default function Home() {
         {/* CONTACT SECTION */}
         <section id="contact" className="py-24 px-4 sm:px-8 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 07. TRANSMIT MESSAGE</span>
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 06. TRANSMIT MESSAGE</span>
             <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Get In Touch</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5 space-y-6">
               <p className="text-zinc-400 text-base font-sans leading-relaxed">
-                Looking for a dedicated software engineer or web developer? Feel free to reach out via phone, email, LinkedIn, or send a direct transmission below.
+                I am eager to connect with peers, mentors, and developers. Feel free to reach out via phone, LinkedIn, GitHub, or send a direct message below.
               </p>
 
               <div className="space-y-4 font-mono text-sm">
@@ -669,14 +602,6 @@ export default function Home() {
                   <div>
                     <div className="text-xs text-zinc-500">Direct Phone</div>
                     <button onClick={copyPhone} className="text-white hover:underline font-bold">8088814686</button>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4 p-4 rounded-xl bg-[#141416] border border-white/10">
-                  <Mail className="w-5 h-5 text-zinc-400" />
-                  <div>
-                    <div className="text-xs text-zinc-500">Email Address</div>
-                    <span className="text-white font-bold">adithya@shetty.dev</span>
                   </div>
                 </div>
 
@@ -710,7 +635,7 @@ export default function Home() {
                     type="text"
                     value={contactForm.name}
                     onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
-                    placeholder="e.g. Recruiter / Collaborator"
+                    placeholder="e.g. Peer / Mentor / Recruiter"
                     className="w-full bg-black/50 border border-white/15 rounded px-4 py-3 text-sm font-mono text-white focus:border-white outline-none transition"
                   />
                 </div>
@@ -732,7 +657,7 @@ export default function Home() {
                     rows={4}
                     value={contactForm.message}
                     onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
-                    placeholder="Write your project inquiry or collaboration message here..."
+                    placeholder="Write your message here..."
                     className="w-full bg-black/50 border border-white/15 rounded px-4 py-3 text-sm font-mono text-white focus:border-white outline-none transition resize-none"
                   />
                 </div>
@@ -760,7 +685,7 @@ export default function Home() {
         <footer className="py-8 px-4 sm:px-8 border-t border-white/10 text-center text-xs font-mono text-zinc-500">
           <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
-              © {new Date().getFullYear()} Adithya A Shetty. Built with precision & retro-terminal aesthetic.
+              © {new Date().getFullYear()} Adithya A Shetty. Engineering Student (2nd Sem Completed).
             </div>
             <div className="flex items-center gap-4">
               <a href="https://github.com/adithyaashetty2007-a11y" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">GitHub</a>
