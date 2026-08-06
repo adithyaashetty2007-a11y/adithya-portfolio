@@ -3,9 +3,18 @@ import {
   Terminal, Github, Linkedin, Phone, Mail, FileText, ExternalLink, 
   Code2, Cpu, Layers, Award, GraduationCap, User, Home as HomeIcon, 
   BookOpen, Briefcase, Radio, Send, CheckCircle2, Sparkles, Command, 
-  ChevronRight, Download, Menu, X, ArrowUpRight, ShieldCheck, TerminalSquare
+  ChevronRight, Download, Menu, X, ArrowUpRight, ShieldCheck, TerminalSquare, Plus, Image as ImageIcon
 } from "lucide-react";
 import { toast } from "sonner";
+
+interface Certificate {
+  id: string;
+  title: string;
+  issuer: string;
+  date: string;
+  imageUrl?: string;
+  credentialUrl?: string;
+}
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("home");
@@ -13,6 +22,29 @@ export default function Home() {
   const [isCopiedPhone, setIsCopiedPhone] = useState(false);
   const [contactForm, setContactForm] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Certificate management state
+  const [certificates, setCertificates] = useState<Certificate[]>([
+    {
+      id: "1",
+      title: "Programming Fundamentals (C/C++/Python)",
+      issuer: "Engineering College Coursework",
+      date: "2026",
+      imageUrl: "",
+      credentialUrl: "https://www.linkedin.com/in/adithya-a-shetty-421097382"
+    },
+    {
+      id: "2",
+      title: "Data Structures & Algorithms in C++",
+      issuer: "Self-Driven / LeetCode (20+ Solved)",
+      date: "2026",
+      imageUrl: "",
+      credentialUrl: "https://www.linkedin.com/in/adithya-a-shetty-421097382"
+    }
+  ]);
+  const [selectedCertImage, setSelectedCertImage] = useState<string | null>(null);
+  const [isAddCertModalOpen, setIsAddCertModalOpen] = useState(false);
+  const [newCert, setNewCert] = useState({ title: "", issuer: "", date: "", imageUrl: "", credentialUrl: "" });
 
   // Scroll spy
   useEffect(() => {
@@ -65,6 +97,26 @@ export default function Home() {
     setIsCopiedPhone(true);
     toast.success("Phone number copied to clipboard: 8088814686");
     setTimeout(() => setIsCopiedPhone(false), 3000);
+  };
+
+  const handleAddCertificate = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newCert.title || !newCert.issuer) {
+      toast.error("Please provide at least a title and issuer.");
+      return;
+    }
+    const cert: Certificate = {
+      id: Date.now().toString(),
+      title: newCert.title,
+      issuer: newCert.issuer,
+      date: newCert.date || "2026",
+      imageUrl: newCert.imageUrl || "",
+      credentialUrl: newCert.credentialUrl || "https://www.linkedin.com/in/adithya-a-shetty-421097382"
+    };
+    setCertificates([...certificates, cert]);
+    setNewCert({ title: "", issuer: "", date: "", imageUrl: "", credentialUrl: "" });
+    setIsAddCertModalOpen(false);
+    toast.success("Certificate added successfully!");
   };
 
   return (
@@ -242,7 +294,7 @@ export default function Home() {
 
       {/* Main Container */}
       <main className="lg:pl-16 pt-16">
-        {/* HERO SECTION - CLEAN STANDARD TWO-COLUMN LAYOUT (NO OVERLAPPING) */}
+        {/* HERO SECTION - STANDARD TWO-COLUMN LAYOUT */}
         <section id="home" className="min-h-[calc(100vh-4rem)] flex items-center justify-center relative overflow-hidden py-16 px-4 sm:px-8 border-b border-white/10">
           <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
             
@@ -466,37 +518,82 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CERTIFICATIONS & ACHIEVEMENTS SECTION */}
+        {/* CERTIFICATIONS & ACHIEVEMENTS SECTION (WITH CERTIFICATE IMAGE GALLERY & ADD BUTTON) */}
         <section id="certifications" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
-          <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 04. CREDENTIALS</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Certifications & Achievements</h2>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
+            <div>
+              <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 04. CREDENTIALS</span>
+              <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Certifications & Achievements</h2>
+            </div>
+            <button
+              onClick={() => setIsAddCertModalOpen(true)}
+              className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-mono text-xs rounded transition flex items-center gap-2 w-fit"
+            >
+              <Plus className="w-4 h-4" />
+              <span>Add Certificate Image</span>
+            </button>
           </div>
 
-          <div className="bg-[#141416] border border-white/10 rounded-xl p-8 max-w-3xl space-y-6">
-            <div className="flex items-start gap-4">
-              <div className="p-3 bg-white/5 border border-white/10 rounded-lg">
-                <Award className="w-6 h-6 text-white" />
-              </div>
-              <div className="space-y-3">
-                <h3 className="text-xl font-bold font-mono text-white">Verified Certifications & Badges</h3>
-                <p className="text-zinc-400 text-sm font-sans leading-relaxed">
-                  I have earned various certifications and academic achievements during my engineering studies. You can view all verified certificates, badges, and professional updates directly on my LinkedIn profile.
-                </p>
-                <div className="pt-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {certificates.map((cert) => (
+              <div key={cert.id} className="bg-[#141416] border border-white/10 rounded-xl p-6 flex flex-col justify-between group hover:border-white/30 transition">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div className="p-2.5 bg-white/5 border border-white/10 rounded-lg">
+                      <Award className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="text-xs font-mono text-zinc-500">{cert.date}</span>
+                  </div>
+
+                  <h3 className="text-lg font-bold font-mono text-white">{cert.title}</h3>
+                  <p className="text-xs text-zinc-400">{cert.issuer}</p>
+
+                  {/* Certificate Image Thumbnail / Preview */}
+                  {cert.imageUrl ? (
+                    <div 
+                      onClick={() => setSelectedCertImage(cert.imageUrl || null)}
+                      className="mt-4 rounded-lg overflow-hidden border border-white/15 h-36 bg-black cursor-pointer relative group/img"
+                    >
+                      <img src={cert.imageUrl} alt={cert.title} className="w-full h-full object-cover group-hover/img:scale-105 transition duration-300" />
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-xs font-mono text-white gap-1">
+                        <ImageIcon className="w-4 h-4" /> View Full Image
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="mt-4 rounded-lg border border-dashed border-white/15 h-28 bg-black/30 flex flex-col items-center justify-center text-zinc-500 text-xs font-mono gap-1">
+                      <ImageIcon className="w-5 h-5 opacity-40" />
+                      <span>No certificate image added</span>
+                      <button 
+                        onClick={() => setIsAddCertModalOpen(true)}
+                        className="text-white underline hover:text-zinc-300 text-[10px] mt-1"
+                      >
+                        Upload / Link Image
+                      </button>
+                    </div>
+                  )}
+                </div>
+
+                <div className="pt-4 mt-4 border-t border-white/10 flex items-center justify-between">
                   <a 
-                    href="https://www.linkedin.com/in/adithya-a-shetty-421097382" 
+                    href={cert.credentialUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 text-white text-xs font-mono rounded hover:bg-white/20 transition"
+                    className="text-xs font-mono text-zinc-400 hover:text-white flex items-center gap-1"
                   >
-                    <Linkedin className="w-4 h-4" />
-                    <span>View Certifications on LinkedIn</span>
-                    <ExternalLink className="w-3 h-3 ml-1" />
+                    <span>LinkedIn Credential</span>
+                    <ExternalLink className="w-3 h-3" />
                   </a>
+                  {cert.imageUrl && (
+                    <button 
+                      onClick={() => setSelectedCertImage(cert.imageUrl || null)}
+                      className="text-xs font-mono text-white bg-white/10 px-2.5 py-1 rounded hover:bg-white/20 transition"
+                    >
+                      Preview
+                    </button>
+                  )}
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </section>
 
@@ -692,6 +789,116 @@ export default function Home() {
           </div>
         </footer>
       </main>
+
+      {/* CERTIFICATE IMAGE LIGHTBOX MODAL */}
+      {selectedCertImage && (
+        <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+          <div className="relative max-w-4xl w-full bg-[#141416] border border-white/20 rounded-xl overflow-hidden p-4 shadow-2xl">
+            <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
+              <span className="font-mono text-sm text-white font-bold">Certificate Preview</span>
+              <button 
+                onClick={() => setSelectedCertImage(null)}
+                className="p-2 text-zinc-400 hover:text-white rounded bg-white/5"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="flex justify-center max-h-[75vh] overflow-auto">
+              <img src={selectedCertImage} alt="Certificate" className="max-w-full object-contain rounded" />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ADD CERTIFICATE MODAL */}
+      {isAddCertModalOpen && (
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-[#141416] border border-white/20 rounded-xl p-6 space-y-6 shadow-2xl">
+            <div className="flex items-center justify-between border-b border-white/10 pb-4">
+              <h3 className="font-mono text-base font-bold text-white">Add Certificate Image</h3>
+              <button onClick={() => setIsAddCertModalOpen(false)} className="text-zinc-400 hover:text-white">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <form onSubmit={handleAddCertificate} className="space-y-4 font-mono text-xs">
+              <div className="space-y-1">
+                <label className="text-zinc-400 uppercase">Certificate Title *</label>
+                <input
+                  type="text"
+                  required
+                  value={newCert.title}
+                  onChange={(e) => setNewCert({ ...newCert, title: e.target.value })}
+                  placeholder="e.g. Python Advanced Bootcamp"
+                  className="w-full bg-black/50 border border-white/15 rounded px-3 py-2 text-white outline-none focus:border-white"
+                />
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-zinc-400 uppercase">Issuer *</label>
+                <input
+                  type="text"
+                  required
+                  value={newCert.issuer}
+                  onChange={(e) => setNewCert({ ...newCert, issuer: e.target.value })}
+                  placeholder="e.g. Coursera / LinkedIn / College"
+                  className="w-full bg-black/50 border border-white/15 rounded px-3 py-2 text-white outline-none focus:border-white"
+                />
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-zinc-400 uppercase">Date / Year</label>
+                <input
+                  type="text"
+                  value={newCert.date}
+                  onChange={(e) => setNewCert({ ...newCert, date: e.target.value })}
+                  placeholder="e.g. 2026"
+                  className="w-full bg-black/50 border border-white/15 rounded px-3 py-2 text-white outline-none focus:border-white"
+                />
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-zinc-400 uppercase">Certificate Image URL</label>
+                <input
+                  type="url"
+                  value={newCert.imageUrl}
+                  onChange={(e) => setNewCert({ ...newCert, imageUrl: e.target.value })}
+                  placeholder="https://example.com/certificate.jpg"
+                  className="w-full bg-black/50 border border-white/15 rounded px-3 py-2 text-white outline-none focus:border-white"
+                />
+                <p className="text-[10px] text-zinc-500">Tip: You can upload your certificate image using the chat or paste a direct image URL.</p>
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-zinc-400 uppercase">LinkedIn Credential URL</label>
+                <input
+                  type="url"
+                  value={newCert.credentialUrl}
+                  onChange={(e) => setNewCert({ ...newCert, credentialUrl: e.target.value })}
+                  placeholder="https://linkedin.com/in/..."
+                  className="w-full bg-black/50 border border-white/15 rounded px-3 py-2 text-white outline-none focus:border-white"
+                />
+              </div>
+
+              <div className="flex items-center gap-3 pt-4">
+                <button
+                  type="button"
+                  onClick={() => setIsAddCertModalOpen(false)}
+                  className="w-1/2 py-2.5 bg-white/5 hover:bg-white/10 text-white rounded border border-white/10 transition"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="w-1/2 py-2.5 bg-white text-black font-bold rounded hover:bg-zinc-200 transition"
+                >
+                  Add Certificate
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
