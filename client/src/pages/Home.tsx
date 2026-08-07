@@ -73,6 +73,12 @@ export default function Home() {
   const [isAddProjModalOpen, setIsAddProjModalOpen] = useState(false);
   const [newProj, setNewProj] = useState({ title: "", description: "", imageUrl: "", githubUrl: "", techStack: "" });
 
+  // Admin PIN Protection State
+  const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
+  const [isAdminModalOpen, setIsAdminModalOpen] = useState(false);
+  const [adminPinInput, setAdminPinInput] = useState("");
+  const [pendingActionType, setPendingActionType] = useState<"cert" | "post" | "proj" | null>(null);
+
   const [showBackToTop, setShowBackToTop] = useState(false);
 
   // Intro animation timer
@@ -195,6 +201,34 @@ export default function Home() {
     setNewProj({ title: "", description: "", imageUrl: "", githubUrl: "", techStack: "" });
     setIsAddProjModalOpen(false);
     toast.success("Project added successfully!");
+  };
+
+  const handleProtectedAction = (type: "cert" | "post" | "proj") => {
+    if (isAdminAuthenticated) {
+      if (type === "cert") setIsAddCertModalOpen(true);
+      if (type === "post") setIsAddPostModalOpen(true);
+      if (type === "proj") setIsAddProjModalOpen(true);
+    } else {
+      setPendingActionType(type);
+      setIsAdminModalOpen(true);
+    }
+  };
+
+  const verifyAdminPin = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Default secret admin PIN for Adithya is "2026"
+    if (adminPinInput === "2026") {
+      setIsAdminAuthenticated(true);
+      setIsAdminModalOpen(false);
+      setAdminPinInput("");
+      toast.success("Admin authenticated successfully!");
+      if (pendingActionType === "cert") setIsAddCertModalOpen(true);
+      if (pendingActionType === "post") setIsAddPostModalOpen(true);
+      if (pendingActionType === "proj") setIsAddProjModalOpen(true);
+      setPendingActionType(null);
+    } else {
+      toast.error("Incorrect admin PIN. Access denied.");
+    }
   };
 
   return (
@@ -843,7 +877,7 @@ export default function Home() {
               <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Certifications & Image Gallery</h2>
             </div>
             <button
-              onClick={() => setIsAddCertModalOpen(true)}
+              onClick={() => handleProtectedAction("cert")}
               className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-mono text-xs rounded transition flex items-center gap-2 w-fit"
             >
               <Plus className="w-4 h-4" />
@@ -977,7 +1011,7 @@ export default function Home() {
               <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Projects & Screenshots Showcase</h2>
             </div>
             <button
-              onClick={() => setIsAddProjModalOpen(true)}
+              onClick={() => handleProtectedAction("proj")}
               className="px-4 py-2 bg-white text-black font-mono text-xs font-bold rounded hover:bg-zinc-200 transition flex items-center gap-2 w-fit"
             >
               <Plus className="w-4 h-4" />
@@ -1071,7 +1105,7 @@ export default function Home() {
               <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">LinkedIn Posts & Articles</h2>
             </div>
             <button
-              onClick={() => setIsAddPostModalOpen(true)}
+              onClick={() => handleProtectedAction("post")}
               className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-mono text-xs rounded transition flex items-center gap-2 w-fit"
             >
               <Plus className="w-4 h-4" />
@@ -1661,6 +1695,55 @@ export default function Home() {
             <div className="max-h-[80vh] overflow-auto flex items-center justify-center bg-black rounded-xl p-2 border border-white/10">
               <img src={selectedProjectImage} alt="Project Preview" className="max-w-full max-h-[75vh] object-contain rounded" />
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* ADMIN PIN AUTHENTICATION MODAL */}
+      {isAdminModalOpen && (
+        <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+          <div className="max-w-sm w-full bg-[#141416] border border-white/20 rounded-xl p-6 space-y-6 shadow-2xl">
+            <div className="flex items-center justify-between border-b border-white/10 pb-4">
+              <h3 className="font-mono text-sm font-bold text-white">🔒 Admin Authentication</h3>
+              <button onClick={() => setIsAdminModalOpen(false)} className="text-zinc-400 hover:text-white">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <form onSubmit={verifyAdminPin} className="space-y-4 font-mono text-xs">
+              <p className="text-zinc-400 text-xs">
+                Enter your secure admin passcode to unlock certificate, post, and project uploads.
+              </p>
+
+              <div className="space-y-1">
+                <label className="text-zinc-400 uppercase">Admin Passcode (PIN)</label>
+                <input
+                  type="password"
+                  required
+                  autoFocus
+                  value={adminPinInput}
+                  onChange={(e) => setAdminPinInput(e.target.value)}
+                  placeholder="Enter passcode (default: 2026)"
+                  className="w-full bg-black/50 border border-white/15 rounded px-3 py-2 text-white outline-none focus:border-white tracking-widest text-center text-sm"
+                />
+              </div>
+
+              <div className="flex items-center gap-3 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setIsAdminModalOpen(false)}
+                  className="w-1/2 py-2.5 bg-white/5 hover:bg-white/10 text-white rounded border border-white/10 transition"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="w-1/2 py-2.5 bg-white text-black font-bold rounded hover:bg-zinc-200 transition"
+                >
+                  Unlock
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       )}
