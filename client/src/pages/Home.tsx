@@ -1383,6 +1383,32 @@ export default function Home() {
                     </>
                   )}
                 </button>
+
+                <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-400">
+                  <span>Connect Directly:</span>
+                  <div className="flex items-center gap-3">
+                    <a
+                      href="https://www.linkedin.com/in/adithya-a-shetty-421097382"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-2 rounded bg-white/5 hover:bg-white/15 border border-white/10 text-white flex items-center gap-1.5 transition"
+                      title="LinkedIn Profile"
+                    >
+                      <Linkedin className="w-4 h-4 text-blue-400" />
+                      <span>LinkedIn</span>
+                    </a>
+                    <a
+                      href="https://github.com/adithyaashetty2007-a11y"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-2 rounded bg-white/5 hover:bg-white/15 border border-white/10 text-white flex items-center gap-1.5 transition"
+                      title="GitHub Profile"
+                    >
+                      <Github className="w-4 h-4 text-emerald-400" />
+                      <span>GitHub</span>
+                    </a>
+                  </div>
+                </div>
               </form>
             </div>
           </div>
