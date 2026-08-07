@@ -52,7 +52,7 @@ export default function Home() {
     {
       id: "1",
       title: "SGPA Jump to 8.05 in 2nd Semester!",
-      summary: "Thrilled to share my academic progress! Improved my SGPA from 7.2 in 1st sem to 8.05 in 2nd sem, alongside solving 20+ LeetCode problems in C++ over the last 2 weeks.",
+      summary: "Thrilled to share my academic progress! Improved my SGPA from 7.5 in 1st sem to 8.05 in 2nd sem, alongside solving 20+ LeetCode problems in C++ over the last 2 weeks.",
       date: "August 2026",
       postUrl: "https://www.linkedin.com/in/adithya-a-shetty-421097382"
     },
@@ -432,7 +432,7 @@ export default function Home() {
             <div className="lg:col-span-7 space-y-6 text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-zinc-300">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                SGPA Improved: 7.2 (Sem 1) → 8.05 (Sem 2)
+                SGPA Improved: 7.5 (Sem 1) → 8.05 (Sem 2)
               </div>
 
               <div className="space-y-2">
@@ -520,7 +520,7 @@ export default function Home() {
                       doc.setFont("Helvetica", "normal");
                       doc.setFontSize(10);
                       doc.setTextColor(50, 50, 50);
-                      const summaryText = "Second-semester engineering student with consistent academic growth (SGPA: 8.05, up from 7.2 in Sem 1). Building robust frontend web applications with AI assistance (~60% accuracy). Solid college-level basics in C, C++, and Python, with an active C++ Data Structures & Algorithms problem-solving streak (20+ LeetCode problems solved).";
+                      const summaryText = "Second-semester engineering student with consistent academic growth (SGPA: 8.05, up from 7.5 in Sem 1). Building robust frontend web applications with AI assistance (~60% accuracy). Solid college-level basics in C, C++, and Python, with an active C++ Data Structures & Algorithms problem-solving streak (20+ LeetCode problems solved).";
                       const splitSummary = doc.splitTextToSize(summaryText, contentWidth);
                       doc.text(splitSummary, margin, y);
                       y += (splitSummary.length * 5) + 6;
@@ -534,7 +534,7 @@ export default function Home() {
                       y += 5;
                       doc.setFont("Helvetica", "normal");
                       doc.setTextColor(50, 50, 50);
-                      doc.text("- Semester 2 SGPA: 8.05 (Significant Improvement from 7.2 in Sem 1)", margin, y);
+                      doc.text("- Semester 2 SGPA: 8.05 (Significant Improvement from 7.5 in Sem 1)", margin, y);
                       y += 5;
                       doc.text("- Core Coursework: C Programming, C++ & Data Structures, Python Fundamentals, Mathematics.", margin, y);
                       y += 8;
@@ -633,7 +633,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-7 space-y-6 text-zinc-300 leading-relaxed font-sans text-base sm:text-lg">
               <p>
-                Hello! I am <strong className="text-white font-semibold">Adithya A Shetty</strong>. I have successfully completed my second semester of engineering, showing consistent academic improvement with an <strong className="text-emerald-400 font-semibold">8.05 SGPA in Sem 2</strong> (up from <strong className="text-white">7.2 SGPA in Sem 1</strong>).
+                Hello! I am <strong className="text-white font-semibold">Adithya A Shetty</strong>. I have successfully completed my second semester of engineering, showing consistent academic improvement with an <strong className="text-emerald-400 font-semibold">8.05 SGPA in Sem 2</strong> (up from <strong className="text-white">7.5 SGPA in Sem 1</strong>).
               </p>
               <p>
                 I am building my foundation in programming with college-level basics in C, C++, and Python. I started practicing Data Structures and Algorithms (DSA) in C++ 2 weeks ago, and I have already solved 20+ problems on LeetCode.
@@ -641,7 +641,7 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="p-4 rounded-lg bg-[#141416] border border-white/10">
                   <h4 className="text-white font-mono text-sm font-bold mb-1">Academic Growth</h4>
-                  <p className="text-xs text-zinc-400">Sem 1: 7.2 SGPA → Sem 2: 8.05 SGPA (Consistent improvement).</p>
+                  <p className="text-xs text-zinc-400">Sem 1: 7.5 SGPA → Sem 2: 8.05 SGPA (Consistent improvement).</p>
                 </div>
                 <div className="p-4 rounded-lg bg-[#141416] border border-white/10">
                   <h4 className="text-white font-mono text-sm font-bold mb-1">DSA in C++ (2 Weeks)</h4>
@@ -666,7 +666,7 @@ export default function Home() {
                 </li>
                 <li className="flex justify-between border-b border-white/5 pb-2">
                   <span className="text-zinc-500">Sem 1 SGPA:</span>
-                  <span className="text-white">7.2</span>
+                  <span className="text-white">7.5</span>
                 </li>
                 <li className="flex justify-between border-b border-white/5 pb-2">
                   <span className="text-zinc-500">Phone:</span>
@@ -786,7 +786,7 @@ export default function Home() {
                 <div className="p-5 bg-black/50 border border-white/10 rounded-xl text-center">
                   <span className="text-zinc-500 font-mono text-xs uppercase block mb-1">Sem 2 SGPA</span>
                   <span className="text-3xl font-bold font-mono text-emerald-400">8.05</span>
-                  <span className="text-[10px] font-mono text-zinc-400 block mt-1">Up from 7.2 in Sem 1</span>
+                  <span className="text-[10px] font-mono text-zinc-400 block mt-1">Up from 7.5 in Sem 1</span>
                 </div>
 
                 <div className="p-5 bg-black/50 border border-white/10 rounded-xl text-center">
@@ -1210,7 +1210,7 @@ export default function Home() {
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-mono text-zinc-500">First Semester</span>
-                  <span className="text-lg font-bold font-mono text-white">7.2 SGPA</span>
+                  <span className="text-lg font-bold font-mono text-white">7.5 SGPA</span>
                 </div>
                 <p className="text-zinc-400 text-xs font-sans">
                   Built foundational engineering concepts and programming basics in C and Python.
