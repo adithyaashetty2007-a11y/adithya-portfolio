@@ -129,6 +129,11 @@ export default function Home() {
       toast.error("Please fill in all fields before transmitting.");
       return;
     }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(contactForm.email)) {
+      toast.error("Please enter a valid email address (e.g., name@domain.com).");
+      return;
+    }
     setIsSubmitting(true);
     setTimeout(() => {
       setIsSubmitting(false);
