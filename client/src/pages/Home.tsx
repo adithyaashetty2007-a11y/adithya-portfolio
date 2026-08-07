@@ -1322,11 +1322,11 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 p-4 rounded-xl bg-[#141416] border border-white/10">
-                  <Mail className="w-5 h-5 text-zinc-400" />
+                <div className="flex items-center gap-4 p-4 rounded-xl bg-[#141416] border border-white/10 group hover:border-white/30 transition">
+                  <Mail className="w-5 h-5 text-emerald-400" />
                   <div>
-                    <div className="text-xs text-zinc-500">Email Address</div>
-                    <a href="mailto:adithyaashetty2007@gmail.com" className="text-white hover:underline font-bold text-xs">
+                    <div className="text-xs text-zinc-500">Email Address (Click to Email)</div>
+                    <a href="mailto:adithyaashetty2007@gmail.com" className="text-white hover:underline font-bold text-xs block mt-0.5">
                       adithyaashetty2007@gmail.com
                     </a>
                   </div>
