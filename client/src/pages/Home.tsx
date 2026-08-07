@@ -1329,15 +1329,21 @@ export default function Home() {
 
                 <div 
                   onClick={() => {
-                    window.location.href = "mailto:adithyaashetty2007@gmail.com";
+                    window.open("https://mail.google.com/mail/?view=cm&fs=1&to=adithyaashetty2007@gmail.com", "_blank");
                   }}
                   className="flex items-center gap-4 p-4 rounded-xl bg-[#141416] border border-white/10 group hover:border-white/30 transition cursor-pointer"
-                  title="Click to send email"
+                  title="Click to open Gmail compose"
                 >
                   <Mail className="w-5 h-5 text-emerald-400 flex-shrink-0" />
                   <div className="min-w-0">
-                    <div className="text-xs text-zinc-500">Email Address (Click to Email)</div>
-                    <a href="mailto:adithyaashetty2007@gmail.com" onClick={(e) => e.stopPropagation()} className="text-white hover:underline font-bold text-xs block mt-0.5 truncate">
+                    <div className="text-xs text-zinc-500">Email Address (Click to Open Gmail)</div>
+                    <a 
+                      href="https://mail.google.com/mail/?view=cm&fs=1&to=adithyaashetty2007@gmail.com" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      onClick={(e) => e.stopPropagation()} 
+                      className="text-white hover:underline font-bold text-xs block mt-0.5 truncate"
+                    >
                       adithyaashetty2007@gmail.com
                     </a>
                   </div>
