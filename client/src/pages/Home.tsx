@@ -1024,7 +1024,50 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {/* FEATURED 'LEVEL UP: GAMIFIED LEARNING' POSTER CARD */}
+            <div className="bg-[#141416] border border-cyan-500/30 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-cyan-400/60 hover:shadow-[0_0_35px_rgba(6,182,212,0.2)] transition duration-300">
+              <div className="space-y-4">
+                <div 
+                  onClick={() => setSelectedProjectImage("/manus-storage/level_up_gamified_learning_poster_006c5b64.png")}
+                  className="h-64 bg-black overflow-hidden relative cursor-pointer border-b border-white/10 group/img"
+                >
+                  <img 
+                    src="/manus-storage/level_up_gamified_learning_poster_006c5b64.png" 
+                    alt="Level Up: Gamified Learning Poster" 
+                    className="w-full h-full object-cover group-hover/img:scale-105 transition duration-500" 
+                  />
+                  <div className="absolute top-3 right-3 bg-cyan-500/20 border border-cyan-400/40 text-cyan-300 text-[10px] font-mono px-2.5 py-1 rounded-full backdrop-blur-md">
+                    Featured Poster
+                  </div>
+                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-xs font-mono text-cyan-300 gap-2">
+                    <ImageIcon className="w-5 h-5" /> Click to View Full Screen Lightbox
+                  </div>
+                </div>
+
+                <div className="p-6 pt-2 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] font-mono text-cyan-400 px-2.5 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full">3D Isometric Design</span>
+                  </div>
+                  <h3 className="text-xl font-bold font-mono text-white">Level Up: Gamified Learning</h3>
+                  <p className="text-xs text-zinc-400 leading-relaxed font-mono">
+                    A vibrant 3D isometric poster featuring a glowing neon video game controller transforming into an open magical book with floating educational symbols and claymation render style.
+                  </p>
+                </div>
+              </div>
+
+              <div className="px-6 pb-6 pt-2 flex items-center justify-between border-t border-white/5 mt-4">
+                <span className="text-xs font-mono text-zinc-500">High-Res Render</span>
+                <button
+                  onClick={() => setSelectedProjectImage("/manus-storage/level_up_gamified_learning_poster_006c5b64.png")}
+                  className="text-xs font-mono text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5 bg-cyan-500/10 hover:bg-cyan-500/20 px-3 py-1.5 rounded transition border border-cyan-500/30"
+                >
+                  <ImageIcon className="w-3.5 h-3.5" />
+                  <span>View Lightbox</span>
+                </button>
+              </div>
+            </div>
+
             {projects.length > 0 ? (
               projects.map((proj) => (
                 <div key={proj.id} className="bg-[#141416] border border-white/10 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-white/30 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)] transition duration-300">
