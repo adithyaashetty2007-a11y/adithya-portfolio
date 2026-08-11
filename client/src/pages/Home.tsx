@@ -111,7 +111,24 @@ export default function Home() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    
+    // Escape key listener for lightboxes and modals
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setSelectedProjectImage(null);
+        setSelectedCertImage(null);
+        setIsAddCertModalOpen(false);
+        setIsAddPostModalOpen(false);
+        setIsAddProjModalOpen(false);
+        setIsAdminModalOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
 
   const scrollToSection = (id: string) => {
@@ -1491,8 +1508,14 @@ export default function Home() {
 
       {/* CERTIFICATE IMAGE LIGHTBOX MODAL */}
       {selectedCertImage && (
-        <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
-          <div className="relative max-w-4xl w-full bg-[#141416] border border-white/20 rounded-xl overflow-hidden p-4 shadow-2xl">
+        <div 
+          onClick={() => setSelectedCertImage(null)}
+          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4"
+        >
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            className="relative max-w-4xl w-full bg-[#141416] border border-white/20 rounded-xl overflow-hidden p-4 shadow-2xl"
+          >
             <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
               <span className="font-mono text-sm text-white font-bold">Certificate Preview</span>
               <button 
@@ -1767,8 +1790,14 @@ export default function Home() {
 
       {/* PROJECT IMAGE LIGHTBOX MODAL */}
       {selectedProjectImage && (
-        <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
-          <div className="relative max-w-4xl w-full bg-[#141416] border border-white/20 rounded-2xl overflow-hidden p-4 shadow-2xl">
+        <div 
+          onClick={() => setSelectedProjectImage(null)}
+          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4"
+        >
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            className="relative max-w-4xl w-full bg-[#141416] border border-white/20 rounded-2xl overflow-hidden p-4 shadow-2xl"
+          >
             <div className="flex items-center justify-between mb-3 px-2">
               <span className="font-mono text-xs text-zinc-400">// Project Screenshot Preview</span>
               <button 
