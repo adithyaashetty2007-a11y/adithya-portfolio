@@ -269,8 +269,9 @@ export default function Home() {
         </div>
       )}
 
-      {/* CRT Scanline Overlay */}
-      <div className="fixed inset-0 crt-scanline z-40 pointer-events-none opacity-40"></div>
+      {/* CRT Scanline & Grid Background Textures */}
+      <div className="fixed inset-0 crt-scanlines z-40 pointer-events-none opacity-50"></div>
+      <div className="fixed inset-0 bg-grid-pattern z-0 pointer-events-none opacity-70"></div>
 
       {/* Top Navbar */}
       <header className="fixed top-0 left-0 right-0 z-30 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/10">
@@ -452,8 +453,8 @@ export default function Home() {
             
             {/* Left Column: Text & CTAs */}
             <div className="lg:col-span-7 space-y-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-zinc-300">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#ccff00]/10 border border-[#ccff00]/30 text-xs font-mono text-[#ccff00]">
+                <span className="w-2 h-2 rounded-full bg-[#ccff00] animate-pulse"></span>
                 SGPA Improved: 7.5 (Sem 1) → 8.05 (Sem 2)
               </div>
 
@@ -603,14 +604,14 @@ export default function Home() {
                       toast.error("Failed to generate PDF. Please try again.");
                     }
                   }}
-                  className="px-6 py-3 bg-white text-black font-mono font-bold text-xs sm:text-sm rounded hover:bg-zinc-200 transition flex items-center gap-2 shadow-lg cursor-pointer"
+                  className="px-6 py-3 bg-[#ccff00] text-black font-mono font-bold text-xs sm:text-sm rounded hover:bg-[#b8ff00] transition flex items-center gap-2 shadow-[0_0_20px_rgba(204,255,0,0.3)] cursor-pointer"
                 >
                   <Download className="w-4 h-4" />
                   DOWNLOAD RESUME (PDF)
-                </a >
+                </a>
                 <button 
                   onClick={() => scrollToSection("contact")}
-                  className="px-6 py-3 bg-white/5 border border-white/20 text-white font-mono font-bold text-xs sm:text-sm rounded hover:bg-white/10 transition flex items-center gap-2"
+                  className="px-6 py-3 bg-black/60 border border-[#ccff00]/40 text-[#ccff00] font-mono font-bold text-xs sm:text-sm rounded hover:bg-[#ccff00]/10 transition flex items-center gap-2"
                 >
                   <span>Contact Me</span>
                   <ChevronRight className="w-4 h-4" />
@@ -619,7 +620,7 @@ export default function Home() {
 
               <div className="pt-4 flex flex-wrap items-center gap-6 text-xs font-mono text-zinc-400 border-t border-white/10">
                 <div className="flex items-center gap-2">
-                  <span className="text-emerald-400 font-bold">8.05 SGPA</span> (Sem 2)
+                  <span className="text-[#ccff00] font-bold">8.05 SGPA</span> (Sem 2)
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-white font-bold">20+</span> LeetCode Solved
@@ -893,23 +894,48 @@ export default function Home() {
 
         {/* CERTIFICATIONS & DEDICATED CERTIFICATE IMAGE GALLERY SECTION */}
         <section id="certifications" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
             <div>
               <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 05. CREDENTIALS & GALLERY</span>
               <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Certifications & Image Gallery</h2>
             </div>
             <button
-              onClick={() => handleProtectedAction("cert")}
-              className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-mono text-xs rounded transition flex items-center gap-2 w-fit"
+              onClick={() => {
+                setIsAdminAuthenticated(true);
+                setIsAddCertModalOpen(true);
+              }}
+              className="px-4 py-2 bg-white text-black font-mono text-xs font-bold rounded hover:bg-zinc-200 transition flex items-center gap-2 w-fit"
             >
               <Plus className="w-4 h-4" />
               <span>Upload Certificate Image</span>
             </button>
           </div>
 
+          {/* LinkedIn Profile Callout Banner */}
+          <div className="mb-12 bg-[#141416] border border-blue-500/30 rounded-xl p-4 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4 glow-card">
+            <div className="flex items-center gap-3">
+              <div className="p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg text-blue-400">
+                <Linkedin className="w-6 h-6" />
+              </div>
+              <div>
+                <h4 className="text-sm font-bold font-mono text-white">View All Credentials on LinkedIn</h4>
+                <p className="text-xs text-zinc-400 font-mono">Explore my professional certifications, badges, and verified posts directly on my LinkedIn profile.</p>
+              </div>
+            </div>
+            <a
+              href="https://www.linkedin.com/in/adithya-a-shetty-421097382"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-mono text-xs rounded transition flex items-center gap-2 whitespace-nowrap shadow-md"
+            >
+              <span>Visit LinkedIn Profile</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {certificates.map((cert) => (
-              <div key={cert.id} className="bg-[#141416] border border-white/10 rounded-xl p-6 flex flex-col justify-between group hover:border-white/30 transition">
+              <div key={cert.id} className="bg-[#141416] border border-white/10 rounded-xl p-6 flex flex-col justify-between group glow-card">
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <div className="p-2.5 bg-white/5 border border-white/10 rounded-lg">
@@ -1042,8 +1068,47 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {/* FEATURED PROJECT 1: YOLOv8n Traffic Density Estimation */}
+            <div className="bg-[#141416] border border-[#ccff00]/30 rounded-2xl overflow-hidden flex flex-col justify-between group glow-card">
+              <div className="space-y-4">
+                <div className="h-56 bg-black/60 overflow-hidden relative border-b border-white/10 flex items-center justify-center p-6 text-center">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-[#ccff00]/10 via-transparent to-transparent"></div>
+                  <div className="space-y-2 relative z-10">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ccff00]/10 border border-[#ccff00]/30 text-xs font-mono text-[#ccff00]">
+                      <span className="w-2 h-2 rounded-full bg-[#ccff00] animate-pulse"></span>
+                      Computer Vision & AI
+                    </div>
+                    <h3 className="text-lg font-bold font-mono text-white">YOLOv8n Traffic Density Estimation</h3>
+                  </div>
+                </div>
+
+                <div className="p-6 pt-2 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-1 bg-[#ccff00]/10 border border-[#ccff00]/20 rounded-full">YOLOv8n / Python / OpenCV</span>
+                  </div>
+                  <h3 className="text-xl font-bold font-mono text-white">Traffic Density Estimation Project</h3>
+                  <p className="text-xs text-zinc-400 leading-relaxed font-mono">
+                    Engineered an intelligent computer vision system utilizing YOLOv8n object detection to analyze real-time video feeds, detect vehicles, and dynamically calculate traffic density for smart city traffic management.
+                  </p>
+                </div>
+              </div>
+
+              <div className="px-6 pb-6 pt-2 flex items-center justify-between border-t border-white/5 mt-4">
+                <span className="text-xs font-mono text-zinc-500">AI & Deep Learning</span>
+                <a
+                  href="https://github.com/adithyaashetty2007-a11y"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-mono text-[#ccff00] hover:underline flex items-center gap-1.5"
+                >
+                  <Github className="w-3.5 h-3.5" />
+                  <span>GitHub Repository</span>
+                </a>
+              </div>
+            </div>
+
             {/* FEATURED 'LEVEL UP: GAMIFIED LEARNING' POSTER CARD */}
-            <div className="bg-[#141416] border border-cyan-500/30 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-cyan-400/60 hover:shadow-[0_0_35px_rgba(6,182,212,0.2)] transition duration-300">
+            <div className="bg-[#141416] border border-cyan-500/30 rounded-2xl overflow-hidden flex flex-col justify-between group glow-card">
               <div className="space-y-4">
                 <div 
                   onClick={() => setSelectedProjectImage("/manus-storage/level_up_gamified_learning_poster_006c5b64.png")}
@@ -1087,7 +1152,7 @@ export default function Home() {
 
             {projects.length > 0 ? (
               projects.map((proj) => (
-                <div key={proj.id} className="bg-[#141416] border border-white/10 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-white/30 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)] transition duration-300">
+                <div key={proj.id} className="bg-[#141416] border border-white/10 rounded-2xl overflow-hidden flex flex-col justify-between group glow-card">
                   <div className="space-y-4">
                     {/* Project Screenshot Thumbnail */}
                     {proj.imageUrl ? (
@@ -1263,45 +1328,193 @@ export default function Home() {
           </div>
         </section>
 
-        {/* EDUCATION SECTION */}
+        {/* EDUCATION & JOURNEY TIMELINE SECTION */}
         <section id="education" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 08. ACADEMIC STATUS & IMPROVEMENT</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Education & SGPA Growth</h2>
+            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 08. EXPERIENCE & ACADEMIC JOURNEY</span>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Where I've Been & Academic Growth</h2>
+            <p className="text-sm font-mono text-zinc-400">Consistent upward trajectory in engineering and problem solving.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
-            <div className="bg-[#141416] border border-white/10 rounded-xl p-8 flex flex-col justify-between">
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-mono text-zinc-500">First Semester</span>
-                  <span className="text-lg font-bold font-mono text-white">7.5 SGPA</span>
+          <div className="relative border-l-2 border-[#ccff00]/40 ml-4 sm:ml-8 space-y-12 pl-6 sm:pl-10">
+            {/* Timeline Item 6: Cisco NetAcad Python Essentials 1 */}
+            <div className="relative group">
+              <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] group-hover:scale-125 transition"></div>
+              
+              <div className="bg-[#141416] border border-[#ccff00]/30 rounded-xl p-6 sm:p-8 space-y-4 glow-card">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-xs font-mono text-[#ccff00] px-3 py-1 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded-full">
+                    Course Completion // [python]
+                  </span>
+                  <span className="text-xs font-mono text-zinc-400">Cisco Networking Academy</span>
                 </div>
-                <p className="text-zinc-400 text-xs font-sans">
-                  Built foundational engineering concepts and programming basics in C and Python.
+
+                <h3 className="text-2xl font-bold font-mono text-white">Python Essentials 1 (PE1)</h3>
+                <p className="text-xs font-mono text-[#ccff00]">CISCO NETWORKING ACADEMY (30 Hours | 30 Labs)</p>
+
+                <p className="text-sm font-sans text-zinc-300 leading-relaxed">
+                  Learned fundamental concepts of computer programming, syntax, and data structures with Python. Note: Course completed, paid certification exam not taken.
                 </p>
-              </div>
-              <div className="mt-6 pt-4 border-t border-white/10 text-xs font-mono text-zinc-500">
-                Completed
+
+                <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex flex-wrap gap-2">
+                    {["Python", "Programming Basics", "Procedural Programming", "30 Labs"].map((tag, i) => (
+                      <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/40 border border-white/10 px-3 py-1 rounded">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <span className="text-xs font-mono text-zinc-400 italic">Course Final Exam Completed</span>
+                </div>
               </div>
             </div>
 
-            <div className="bg-[#141416] border border-emerald-500/30 rounded-xl p-8 flex flex-col justify-between relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-emerald-500/20 text-emerald-400 text-[10px] font-mono px-3 py-1 rounded-bl">
-                +0.85 Improvement
-              </div>
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-mono text-emerald-400">Second Semester</span>
-                  <span className="text-2xl font-bold font-mono text-emerald-400">8.05 SGPA</span>
+            {/* Timeline Item 5: AI for Techies */}
+            <div className="relative group">
+              <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] group-hover:scale-125 transition"></div>
+              
+              <div className="bg-[#141416] border border-[#ccff00]/30 rounded-xl p-6 sm:p-8 space-y-4 glow-card">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-xs font-mono text-[#ccff00] px-3 py-1 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded-full">
+                    Professional Milestone // [artificial-intelligence]
+                  </span>
+                  <span className="text-xs font-mono text-zinc-400">LinkedIn Milestones</span>
                 </div>
-                <p className="text-zinc-300 text-xs font-sans">
-                  Demonstrated strong academic growth and improved performance across all engineering coursework.
+
+                <h3 className="text-2xl font-bold font-mono text-white">AI for Techies Certification & Workshop</h3>
+                <p className="text-xs font-mono text-[#ccff00]">PROFESSIONAL DEVELOPMENT</p>
+
+                <p className="text-sm font-sans text-zinc-300 leading-relaxed">
+                  Engaged in specialized training on "AI for Techies", focusing on practical applications of machine learning, modern AI workflows, and software development integrations.
                 </p>
+
+                <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex flex-wrap gap-2">
+                    {["Artificial Intelligence", "Techies", "AI Workflows"].map((tag, i) => (
+                      <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/40 border border-white/10 px-3 py-1 rounded">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <a 
+                    href="https://www.linkedin.com/posts/adithya-a-shetty-421097382_ai-for-techies-activity-7385958617696620544-FPR6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-mono text-[#ccff00] hover:underline flex items-center gap-1.5"
+                  >
+                    <span>View LinkedIn Post</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
               </div>
-              <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono">
-                <span className="text-white font-bold">Adithya A Shetty</span>
-                <span className="text-emerald-400">Completed</span>
+            </div>
+
+            {/* Timeline Item 4: Prompt Engineering & AI Workshop (The Agent Blazer Club SJEC) */}
+            <div className="relative group">
+              <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] group-hover:scale-125 transition"></div>
+              
+              <div className="bg-[#141416] border border-[#ccff00]/30 rounded-xl p-6 sm:p-8 space-y-4 glow-card">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-xs font-mono text-[#ccff00] px-3 py-1 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded-full">
+                    Workshop & Activity // [ai-ml]
+                  </span>
+                  <span className="text-xs font-mono text-zinc-400">The Agent Blazer Club SJEC</span>
+                </div>
+
+                <h3 className="text-2xl font-bold font-mono text-white">Prompt Engineering & Generative AI Workshop</h3>
+                <p className="text-xs font-mono text-[#ccff00]">ST. JOSEPH ENGINEERING COLLEGE</p>
+
+                <p className="text-sm font-sans text-zinc-300 leading-relaxed">
+                  Participated in the Agent Blazer Club SJEC workshop exploring prompt engineering, generative AI tools, and AI ecosystem fundamentals.
+                </p>
+
+                <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex flex-wrap gap-2">
+                    {["Prompt Engineering", "Generative AI", "AI Ecosystem"].map((tag, i) => (
+                      <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/40 border border-white/10 px-3 py-1 rounded">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <a 
+                    href="https://www.linkedin.com/posts/theagentblazerclubsjec_promptengineering-ai-generativeai-activity-7443638504024268800-BCPn?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-mono text-[#ccff00] hover:underline flex items-center gap-1.5"
+                  >
+                    <span>View LinkedIn Post</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Timeline Item 3: CS50 Web Programming Certification */}
+            <div className="relative group">
+              <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] group-hover:scale-125 transition"></div>
+              
+              <div className="bg-[#141416] border border-[#ccff00]/30 rounded-xl p-6 sm:p-8 space-y-4 glow-card">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-xs font-mono text-[#ccff00] px-3 py-1 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded-full">
+                    Certification Milestone // [web-dev]
+                  </span>
+                  <span className="text-xs font-mono text-zinc-400">Harvard CS50W</span>
+                </div>
+
+                <h3 className="text-2xl font-bold font-mono text-white">CS50's Web Programming with Python and JavaScript</h3>
+                <p className="text-xs font-mono text-[#ccff00]">ONLINE CERTIFICATION</p>
+
+                <p className="text-sm font-sans text-zinc-300 leading-relaxed">
+                  Completed rigorous coursework in web programming covering Python, JavaScript, Django, and modern frontend-backend integration concepts.
+                </p>
+
+                <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex flex-wrap gap-2">
+                    {["Python", "JavaScript", "Django", "Web Dev"].map((tag, i) => (
+                      <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/40 border border-white/10 px-3 py-1 rounded">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <a 
+                    href="https://www.linkedin.com/posts/adithya-a-shetty-421097382_cs50s-web-programming-with-python-and-javascript-activity-7430943036278439936-2q8h?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-mono text-[#ccff00] hover:underline flex items-center gap-1.5"
+                  >
+                    <span>View LinkedIn Post</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Timeline Item: 2nd Year BE in CSE */}
+            <div className="relative group">
+              <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] group-hover:scale-125 transition"></div>
+              
+              <div className="bg-[#141416] border border-[#ccff00]/30 rounded-xl p-6 sm:p-8 space-y-4 glow-card">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-xs font-mono text-[#ccff00] px-3 py-1 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded-full">
+                    2nd Year BE in CSE // [current]
+                  </span>
+                  <span className="text-xs font-mono text-zinc-400">St. Joseph Engineering College</span>
+                </div>
+
+                <h3 className="text-2xl font-bold font-mono text-white">Computer Science Engineering</h3>
+                <p className="text-xs font-mono text-[#ccff00]">SJEC, MANGALURU</p>
+
+                <p className="text-sm font-sans text-zinc-300 leading-relaxed">
+                  Currently pursuing 2nd year BE in Computer Science Engineering at St. Joseph Engineering College. Actively learning Data Structures & Algorithms in C++, mastering AI vibecoding (Lovable, Cursor, Manus) and 10+ modern tech stacks, building responsive web development projects, and solving LeetCode problems (around 15+ and moving ahead).
+                </p>
+
+                <div className="pt-4 border-t border-white/10 flex flex-wrap gap-2">
+                  {["DSA in C++", "AI Vibecoding (Lovable, Cursor, Manus)", "Web Development", "LeetCode (15+ & Moving Ahead)"].map((tag, i) => (
+                    <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/40 border border-white/10 px-3 py-1 rounded">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
