@@ -42,7 +42,16 @@ export default function Home() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   
   // Certificate management state
-  const [certificates, setCertificates] = useState<Certificate[]>([]);
+  const [certificates, setCertificates] = useState<Certificate[]>([
+    {
+      id: "internshala-inamigos",
+      title: "AI Web Development Internship Selection",
+      issuer: "Internshala & InAmigos Foundation",
+      date: "July 07, 2026",
+      imageUrl: "/manus-storage/pasted_file_MOykvO_image_b0082005.png",
+      credentialUrl: "https://internshala.com/verify_certificate"
+    }
+  ]);
   const [selectedCertImage, setSelectedCertImage] = useState<string | null>(null);
   const [isAddCertModalOpen, setIsAddCertModalOpen] = useState(false);
   const [newCert, setNewCert] = useState({ title: "", issuer: "", date: "", imageUrl: "", credentialUrl: "" });
@@ -578,6 +587,16 @@ export default function Home() {
                       doc.text("https://www.skills.google/public_profiles/da312414-e867-4b0d-b22f-3c22a89c9c40/badges/26703417", margin, y + 4);
                       doc.setTextColor(50, 50, 50);
                       y += 12;
+
+                      // CERTIFICATIONS & EXPERIENCE
+                      addSectionTitle("Certifications & Internships");
+                      doc.setFont("Helvetica", "bold");
+                      doc.text("AI Web Development Internship Selection", margin, y);
+                      doc.setFont("Helvetica", "normal");
+                      doc.text("Internshala & InAmigos Foundation (July 2026)", margin + 60, y);
+                      y += 5;
+                      doc.text("Secured AI Web Development internship focused on AI-assisted web development, rapid prototyping, debugging, and modern AI coding tools.", margin, y);
+                      y += 8;
 
                       // PROJECTS
                       addSectionTitle("Projects & Repositories (10+ GitHub Repos)");
