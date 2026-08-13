@@ -6,7 +6,7 @@ import {
   ChevronRight, Download, Menu, X, ArrowUpRight, ArrowUp, ShieldCheck, TerminalSquare, Plus, Image as ImageIcon, MessageSquare, TrendingUp, Compass
 } from "lucide-react";
 import { toast } from "sonner";
-import { PROFILE_PHOTO_BASE64, INTERNSHALA_CERT_BASE64 } from "@/lib/assets";
+import { PROFILE_PHOTO_BASE64, INTERNSHALA_CERT_BASE64, CS50W_CERT_BASE64 } from "@/lib/assets";
 
 interface Certificate {
   id: string;
@@ -51,6 +51,14 @@ export default function Home() {
       date: "July 07, 2026",
       imageUrl: INTERNSHALA_CERT_BASE64,
       credentialUrl: "https://internshala.com/verify_certificate"
+    },
+    {
+      id: "cs50w-harvard",
+      title: "CS50's Web Programming with Python and JavaScript",
+      issuer: "HarvardX (Harvard University)",
+      date: "Verified Certificate",
+      imageUrl: CS50W_CERT_BASE64,
+      credentialUrl: "https://cs50.edx.org/web"
     }
   ]);
   const [selectedCertImage, setSelectedCertImage] = useState<string | null>(null);
