@@ -6,6 +6,7 @@ import {
   ChevronRight, Download, Menu, X, ArrowUpRight, ArrowUp, ShieldCheck, TerminalSquare, Plus, Image as ImageIcon, MessageSquare, TrendingUp, Compass
 } from "lucide-react";
 import { toast } from "sonner";
+import { PROFILE_PHOTO_BASE64, INTERNSHALA_CERT_BASE64 } from "@/lib/assets";
 
 interface Certificate {
   id: string;
@@ -48,7 +49,7 @@ export default function Home() {
       title: "AI Web Development Internship Selection",
       issuer: "Internshala & InAmigos Foundation",
       date: "July 07, 2026",
-      imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
+      imageUrl: INTERNSHALA_CERT_BASE64,
       credentialUrl: "https://internshala.com/verify_certificate"
     }
   ]);
@@ -659,10 +660,7 @@ export default function Home() {
             <div className="lg:col-span-5 flex justify-center relative items-center py-6">
               <div className="w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] lg:w-[410px] lg:h-[410px] rounded-full overflow-hidden border-2 border-white bg-[#141416] relative shadow-[0_0_40px_rgba(255,255,255,0.4)] ring-4 ring-white/20">
                 <img 
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" 
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80";
-                  }}
+                  src={PROFILE_PHOTO_BASE64} 
                   alt="Adithya A Shetty" 
                   className="w-full h-full object-cover object-top grayscale contrast-125 brightness-95"
                 />
