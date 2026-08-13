@@ -659,7 +659,11 @@ export default function Home() {
             <div className="lg:col-span-5 flex justify-center relative items-center py-6">
               <div className="w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] lg:w-[410px] lg:h-[410px] rounded-full overflow-hidden border-2 border-white bg-[#141416] relative shadow-[0_0_40px_rgba(255,255,255,0.4)] ring-4 ring-white/20">
                 <img 
-                  src="/manus-storage/WhatsAppImage2026-07-27at17.09.12_0f7a6855.jpeg" 
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" 
+                  onError={(e) => {
+                    // Fallback to high quality developer avatar if needed
+                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80";
+                  }}
                   alt="Adithya A Shetty" 
                   className="w-full h-full object-cover object-top grayscale contrast-125 brightness-95"
                 />
