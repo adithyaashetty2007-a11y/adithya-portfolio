@@ -659,7 +659,7 @@ export default function Home() {
             <div className="lg:col-span-5 flex justify-center relative items-center py-6">
               <div className="w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] lg:w-[410px] lg:h-[410px] rounded-full overflow-hidden border-2 border-white bg-[#141416] relative shadow-[0_0_40px_rgba(255,255,255,0.4)] ring-4 ring-white/20">
                 <img 
-                  src="/manus-storage/pasted_file_EuEtEt_image_beb7b491.webp" 
+                  src="/manus-storage/WhatsAppImage2026-07-27at17.09.12_d77c0fc0.jpeg" 
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80";
                   }}
