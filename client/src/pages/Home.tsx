@@ -48,7 +48,7 @@ export default function Home() {
       title: "AI Web Development Internship Selection",
       issuer: "Internshala & InAmigos Foundation",
       date: "July 07, 2026",
-      imageUrl: "/manus-storage/pasted_file_MOykvO_image_b0082005.png",
+      imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
       credentialUrl: "https://internshala.com/verify_certificate"
     }
   ]);
@@ -659,7 +659,7 @@ export default function Home() {
             <div className="lg:col-span-5 flex justify-center relative items-center py-6">
               <div className="w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] lg:w-[410px] lg:h-[410px] rounded-full overflow-hidden border-2 border-white bg-[#141416] relative shadow-[0_0_40px_rgba(255,255,255,0.4)] ring-4 ring-white/20">
                 <img 
-                  src="/manus-storage/WhatsAppImage2026-07-27at17.09.12_d77c0fc0.jpeg" 
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" 
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80";
                   }}
@@ -1116,11 +1116,11 @@ export default function Home() {
             <div className="bg-[#141416] border border-cyan-500/30 rounded-2xl overflow-hidden flex flex-col justify-between group glow-card">
               <div className="space-y-4">
                 <div 
-                  onClick={() => setSelectedProjectImage("/manus-storage/level_up_gamified_learning_poster_006c5b64.png")}
+                  onClick={() => setSelectedProjectImage("https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80")}
                   className="h-64 bg-black overflow-hidden relative cursor-pointer border-b border-white/10 group/img"
                 >
                   <img 
-                    src="/manus-storage/level_up_gamified_learning_poster_006c5b64.png" 
+                    src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80" 
                     alt="Level Up: Gamified Learning Poster" 
                     className="w-full h-full object-cover group-hover/img:scale-105 transition duration-500" 
                   />
@@ -1146,7 +1146,7 @@ export default function Home() {
               <div className="px-6 pb-6 pt-2 flex items-center justify-between border-t border-white/5 mt-4">
                 <span className="text-xs font-mono text-zinc-500">High-Res Render</span>
                 <button
-                  onClick={() => setSelectedProjectImage("/manus-storage/level_up_gamified_learning_poster_006c5b64.png")}
+                  onClick={() => setSelectedProjectImage("https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80")}
                   className="text-xs font-mono text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5 bg-cyan-500/10 hover:bg-cyan-500/20 px-3 py-1.5 rounded transition border border-cyan-500/30"
                 >
                   <ImageIcon className="w-3.5 h-3.5" />
