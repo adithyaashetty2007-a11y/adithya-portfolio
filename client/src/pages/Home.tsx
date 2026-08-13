@@ -917,26 +917,16 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CERTIFICATIONS & DEDICATED CERTIFICATE IMAGE GALLERY SECTION */}
+        {/* CERTIFICATIONS SECTION */}
         <section id="certifications" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
             <div>
               <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 05. CREDENTIALS & GALLERY</span>
-              <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Certifications & Image Gallery</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Certifications</h2>
             </div>
-            <button
-              onClick={() => {
-                setIsAdminAuthenticated(true);
-                setIsAddCertModalOpen(true);
-              }}
-              className="px-4 py-2 bg-white text-black font-mono text-xs font-bold rounded hover:bg-zinc-200 transition flex items-center gap-2 w-fit"
-            >
-              <Plus className="w-4 h-4" />
-              <span>Upload Certificate Image</span>
-            </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certificates.map((cert) => (
               <div key={cert.id} className="bg-[#141416] border border-white/10 rounded-xl p-6 flex flex-col justify-between group glow-card">
                 <div className="space-y-4">
@@ -961,18 +951,7 @@ export default function Home() {
                         <ImageIcon className="w-4 h-4" /> View Full Image
                       </div>
                     </div>
-                  ) : (
-                    <div className="mt-4 rounded-lg border border-dashed border-white/15 h-28 bg-black/30 flex flex-col items-center justify-center text-zinc-500 text-xs font-mono gap-1">
-                      <ImageIcon className="w-5 h-5 opacity-40" />
-                      <span>No certificate image added</span>
-                      <button 
-                        onClick={() => setIsAddCertModalOpen(true)}
-                        className="text-white underline hover:text-zinc-300 text-[10px] mt-1"
-                      >
-                        Upload / Link Image
-                      </button>
-                    </div>
-                  )}
+                  ) : null}
                 </div>
 
                 <div className="pt-4 mt-4 border-t border-white/10 flex items-center justify-between">
@@ -996,61 +975,6 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Dedicated Certificate Image Gallery Grid */}
-          <div className="bg-[#141416] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-6">
-            <div className="flex items-center justify-between border-b border-white/10 pb-4">
-              <div>
-                <h3 className="text-xl font-bold font-mono text-white flex items-center gap-2">
-                  <ImageIcon className="w-5 h-5 text-zinc-400" />
-                  Certificate Image Showcase Gallery
-                </h3>
-                <p className="text-xs text-zinc-400 font-mono mt-1">All uploaded and verified certificates displayed in high-resolution grid.</p>
-              </div>
-              <button
-                onClick={() => setIsAddCertModalOpen(true)}
-                className="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/20 text-white font-mono text-xs rounded transition flex items-center gap-1"
-              >
-                <Plus className="w-3.5 h-3.5" />
-                <span>Add Image</span>
-              </button>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {certificates.filter(c => c.imageUrl).length > 0 ? (
-                certificates.filter(c => c.imageUrl).map((cert) => (
-                  <div 
-                    key={cert.id + "-gallery"} 
-                    onClick={() => setSelectedCertImage(cert.imageUrl || null)}
-                    className="group relative rounded-xl overflow-hidden border border-white/15 bg-black h-48 cursor-pointer shadow-lg"
-                  >
-                    <img src={cert.imageUrl} alt={cert.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-90 group-hover:opacity-100 transition flex flex-col justify-end p-4">
-                      <span className="text-[10px] font-mono text-emerald-400 uppercase">{cert.issuer}</span>
-                      <h4 className="text-sm font-bold font-mono text-white truncate">{cert.title}</h4>
-                      <span className="text-[10px] font-mono text-zinc-400 mt-1 flex items-center gap-1">
-                        <ExternalLink className="w-3 h-3" /> Click to expand image
-                      </span>
-                    </div>
-                  </div>
-                ))
-              ) : (
-                <div className="col-span-full py-12 text-center border border-dashed border-white/15 rounded-xl bg-black/20 space-y-3">
-                  <ImageIcon className="w-10 h-10 mx-auto text-zinc-600" />
-                  <div className="space-y-1">
-                    <p className="text-sm font-mono text-zinc-300">No certificate images uploaded yet</p>
-                    <p className="text-xs text-zinc-500 font-mono">Click the button above to add your first certificate image URL or upload.</p>
-                  </div>
-                  <button
-                    onClick={() => setIsAddCertModalOpen(true)}
-                    className="px-4 py-2 bg-white text-black font-mono text-xs font-bold rounded hover:bg-zinc-200 transition inline-flex items-center gap-1.5"
-                  >
-                    <Plus className="w-4 h-4" /> Upload Certificate Image
-                  </button>
-                </div>
-              )}
-            </div>
           </div>
         </section>
 
