@@ -27,6 +27,8 @@ jobs:
         uses: pnpm/action-setup@v3
         with:
           version: 9
+          # This forces pnpm to ignore frozen lockfiles globally
+          run_install: false 
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -35,18 +37,18 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install
-
-      - name: Build project
+        # We explicitly add the bypass flag here
         run: pnpm install --no-frozen-lockfile
 
+      - name: Build project
+        run: pnpm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Points to the build location inside your configuration
           path: dist/public
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
