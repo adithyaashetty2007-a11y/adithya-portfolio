@@ -899,7 +899,7 @@ export default function Home() {
 
         {/* CERTIFICATIONS & DEDICATED CERTIFICATE IMAGE GALLERY SECTION */}
         <section id="certifications" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
             <div>
               <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 05. CREDENTIALS & GALLERY</span>
               <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Certifications & Image Gallery</h2>
@@ -914,28 +914,6 @@ export default function Home() {
               <Plus className="w-4 h-4" />
               <span>Upload Certificate Image</span>
             </button>
-          </div>
-
-          {/* LinkedIn Profile Callout Banner */}
-          <div className="mb-12 bg-[#141416] border border-blue-500/30 rounded-xl p-4 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4 glow-card">
-            <div className="flex items-center gap-3">
-              <div className="p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg text-blue-400">
-                <Linkedin className="w-6 h-6" />
-              </div>
-              <div>
-                <h4 className="text-sm font-bold font-mono text-white">View All Credentials on LinkedIn</h4>
-                <p className="text-xs text-zinc-400 font-mono">Explore my professional certifications, badges, and verified posts directly on my LinkedIn profile.</p>
-              </div>
-            </div>
-            <a
-              href="https://www.linkedin.com/in/adithya-a-shetty-421097382"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-mono text-xs rounded transition flex items-center gap-2 whitespace-nowrap shadow-md"
-            >
-              <span>Visit LinkedIn Profile</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
