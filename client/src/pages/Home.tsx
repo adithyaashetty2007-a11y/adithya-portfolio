@@ -1110,48 +1110,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* FEATURED 'LEVEL UP: GAMIFIED LEARNING' POSTER CARD */}
-            <div className="bg-[#141416] border border-cyan-500/30 rounded-2xl overflow-hidden flex flex-col justify-between group glow-card">
-              <div className="space-y-4">
-                <div 
-                  onClick={() => setSelectedProjectImage("https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80")}
-                  className="h-64 bg-black overflow-hidden relative cursor-pointer border-b border-white/10 group/img"
-                >
-                  <img 
-                    src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80" 
-                    alt="Level Up: Gamified Learning Poster" 
-                    className="w-full h-full object-cover group-hover/img:scale-105 transition duration-500" 
-                  />
-                  <div className="absolute top-3 right-3 bg-cyan-500/20 border border-cyan-400/40 text-cyan-300 text-[10px] font-mono px-2.5 py-1 rounded-full backdrop-blur-md">
-                    Featured Poster
-                  </div>
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-xs font-mono text-cyan-300 gap-2">
-                    <ImageIcon className="w-5 h-5" /> Click to View Full Screen Lightbox
-                  </div>
-                </div>
 
-                <div className="p-6 pt-2 space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[11px] font-mono text-cyan-400 px-2.5 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full">3D Isometric Design</span>
-                  </div>
-                  <h3 className="text-xl font-bold font-mono text-white">Level Up: Gamified Learning</h3>
-                  <p className="text-xs text-zinc-400 leading-relaxed font-mono">
-                    A vibrant 3D isometric poster featuring a glowing neon video game controller transforming into an open magical book with floating educational symbols and claymation render style.
-                  </p>
-                </div>
-              </div>
-
-              <div className="px-6 pb-6 pt-2 flex items-center justify-between border-t border-white/5 mt-4">
-                <span className="text-xs font-mono text-zinc-500">High-Res Render</span>
-                <button
-                  onClick={() => setSelectedProjectImage("https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80")}
-                  className="text-xs font-mono text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5 bg-cyan-500/10 hover:bg-cyan-500/20 px-3 py-1.5 rounded transition border border-cyan-500/30"
-                >
-                  <ImageIcon className="w-3.5 h-3.5" />
-                  <span>View Lightbox</span>
-                </button>
-              </div>
-            </div>
 
             {projects.length > 0 ? (
               projects.map((proj) => (
