@@ -1519,6 +1519,46 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            {/* Timeline Item: Internshala AI Web Development Internship */}
+            <div className="relative group">
+              <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] group-hover:scale-125 transition"></div>
+              
+              <div className="bg-[#141416] border border-[#ccff00]/30 rounded-xl p-6 sm:p-8 space-y-4 glow-card">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-xs font-mono text-[#ccff00] px-3 py-1 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded-full">
+                    Internship Selection // [experience]
+                  </span>
+                  <span className="text-xs font-mono text-zinc-400">July 07, 2026</span>
+                </div>
+
+                <h3 className="text-2xl font-bold font-mono text-white">AI Web Development Internship</h3>
+                <p className="text-xs font-mono text-[#ccff00]">INTERNSHALA & INAMIGOS FOUNDATION</p>
+
+                <p className="text-sm font-sans text-zinc-300 leading-relaxed">
+                  Contributed to a practical AI Web Development program through Internshala in collaboration with InAmigos Foundation. Focused on AI-assisted web development, rapid prototyping, debugging, and modern AI coding tools.
+                </p>
+
+                <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex flex-wrap gap-2">
+                    {["AI Web Dev", "InAmigos Foundation", "Internshala", "Rapid Prototyping"].map((tag, i) => (
+                      <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/40 border border-white/10 px-3 py-1 rounded">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <a 
+                    href="https://internshala.com/verify_certificate"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-mono text-[#ccff00] hover:underline flex items-center gap-1.5"
+                  >
+                    <span>Verify Certificate</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
