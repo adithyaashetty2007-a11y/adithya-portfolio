@@ -6,7 +6,7 @@ import {
   ChevronRight, Download, Menu, X, ArrowUpRight, ArrowUp, ShieldCheck, TerminalSquare, Plus, Image as ImageIcon, MessageSquare, TrendingUp, Compass
 } from "lucide-react";
 import { toast } from "sonner";
-import { PROFILE_PHOTO_BASE64, INTERNSHALA_CERT_BASE64, CS50W_CERT_BASE64 } from "@/lib/assets";
+import { PROFILE_PHOTO_BASE64, INTERNSHALA_CERT_BASE64, CS50W_CERT_BASE64, VIBEATHON_CERT_BASE64 } from "@/lib/assets";
 
 interface Certificate {
   id: string;
@@ -59,6 +59,14 @@ export default function Home() {
       date: "Verified Certificate",
       imageUrl: CS50W_CERT_BASE64,
       credentialUrl: "https://cs50.edx.org/web"
+    },
+    {
+      id: "vibeathon-replit-polaris",
+      title: "36-Hour Vibeathon Certificate of Participation",
+      issuer: "Polaris School of Technology & Replit",
+      date: "Milestone Achievement",
+      imageUrl: VIBEATHON_CERT_BASE64,
+      credentialUrl: "https://www.linkedin.com/in/adithya-a-shetty-421097382"
     }
   ]);
   const [selectedCertImage, setSelectedCertImage] = useState<string | null>(null);
