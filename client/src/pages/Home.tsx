@@ -572,7 +572,12 @@ export default function Home() {
                       doc.text("- Tools & Environment: Git, GitHub (10+ Repositories), VS Code, Terminal", margin, y);
                       y += 5;
                       doc.text("- Problem Solving & DSA: 20+ LeetCode Problems Solved in C++ (2 Weeks Active)", margin, y);
-                      y += 8;
+                      y += 5;
+                      doc.text("- Verified Badges: Google Cloud Skills Boost Badge (ID: 26703417)", margin, y);
+                      doc.setTextColor(0, 102, 204);
+                      doc.text("https://www.skills.google/public_profiles/da312414-e867-4b0d-b22f-3c22a89c9c40/badges/26703417", margin, y + 4);
+                      doc.setTextColor(50, 50, 50);
+                      y += 12;
 
                       // PROJECTS
                       addSectionTitle("Projects & Repositories (10+ GitHub Repos)");
