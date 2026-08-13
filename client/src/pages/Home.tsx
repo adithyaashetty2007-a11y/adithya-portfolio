@@ -284,8 +284,8 @@ export default function Home() {
       {/* INTRO CURSIVE SIGNATURE OVERLAY */}
       {showIntro && (
         <div className="fixed inset-0 z-50 bg-[#0a0a0a] flex flex-col items-center justify-center transition-opacity duration-700">
-          <div className="text-center space-y-4 px-4">
-            <h1 className="font-cursive text-6xl sm:text-8xl text-white tracking-wide animate-pulse drop-shadow-[0_0_25px_rgba(255,255,255,0.4)]">
+            <div className="text-center space-y-4 px-4">
+            <h1 className="font-cursive text-6xl sm:text-8xl text-[#ccff00] tracking-wide animate-pulse drop-shadow-[0_0_25px_rgba(204,255,0,0.5)]">
               Adithya A Shetty
             </h1>
             <p className="font-mono text-xs uppercase tracking-widest text-zinc-500 animate-fade-in">
@@ -303,10 +303,10 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 z-30 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection("home")}>
-            <div className="w-8 h-8 rounded bg-white/10 border border-white/20 flex items-center justify-center font-mono text-sm font-bold text-white">
+            <div className="w-8 h-8 rounded bg-[#ccff00]/10 border border-[#ccff00]/30 flex items-center justify-center font-mono text-sm font-bold text-[#ccff00]">
               A
             </div>
-            <span className="font-mono font-bold tracking-wider text-sm sm:text-base text-white">
+            <span className="font-mono font-bold tracking-wider text-sm sm:text-base text-[#ccff00]">
               ADITHYA<span className="text-zinc-400">.SHETTY</span>
             </span>
           </div>
@@ -486,7 +486,7 @@ export default function Home() {
 
               <div className="space-y-2">
                 <p className="text-zinc-400 font-mono text-sm sm:text-base">Hello, I'm</p>
-                <h1 className="text-4xl sm:text-6xl font-bold font-mono tracking-tight text-white">
+                <h1 className="text-4xl sm:text-6xl font-bold font-mono tracking-tight text-[#ccff00]">
                   Adithya A Shetty<span className="text-zinc-500">.</span>
                 </h1>
               </div>
@@ -690,8 +690,8 @@ export default function Home() {
         {/* ABOUT SECTION */}
         <section id="about" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 01. BACKGROUND & GROWTH</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">About Adithya</h2>
+            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 01. BACKGROUND & GROWTH</span>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-[#ccff00]">About Adithya</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -756,8 +756,8 @@ export default function Home() {
         {/* DSA SECTION */}
         <section id="dsa" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 02. DSA IN C++</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">DSA Journey (2 Weeks In)</h2>
+            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 02. DSA IN C++</span>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-[#ccff00]">DSA Journey (2 Weeks In)</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
@@ -786,8 +786,8 @@ export default function Home() {
         {/* VISUAL SKILLS SECTION */}
         <section id="visual-skills" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 03. VISUAL SKILLS & PROFICIENCY</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Language & Academic Metrics</h2>
+            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 03. VISUAL SKILLS & PROFICIENCY</span>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-[#ccff00]">Language & Academic Metrics</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -878,8 +878,8 @@ export default function Home() {
         {/* SKILLS SECTION */}
         <section id="skills" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 04. TECHNICAL SKILLS</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Programming & Development</h2>
+            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 04. TECHNICAL SKILLS</span>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-[#ccff00]">Programming & Development</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -937,8 +937,8 @@ export default function Home() {
         <section id="certifications" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
             <div>
-              <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 05. CREDENTIALS & GALLERY</span>
-              <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Certifications</h2>
+              <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 05. CREDENTIALS & GALLERY</span>
+              <h2 className="text-3xl sm:text-4xl font-bold font-mono text-[#ccff00]">Certifications</h2>
             </div>
           </div>
 
@@ -998,8 +998,8 @@ export default function Home() {
         <section id="projects" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
             <div>
-              <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 06. PORTFOLIO PROJECTS</span>
-              <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Projects & Screenshots Showcase</h2>
+              <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 06. PORTFOLIO PROJECTS</span>
+              <h2 className="text-3xl sm:text-4xl font-bold font-mono text-[#ccff00]">Projects & Screenshots Showcase</h2>
             </div>
             <button
               onClick={() => handleProtectedAction("proj")}
