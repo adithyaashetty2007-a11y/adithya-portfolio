@@ -8,9 +8,12 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 
 function AppRouter() {
+  // Determine base path dynamically for GitHub Pages vs custom domain / local dev
+  const isGithubPages = window.location.hostname.includes('github.io');
+  const basePath = isGithubPages ? '/adithya-portfolio' : '';
+  
   return (
-    // Wrap with the base path parameter so GitHub Pages resolves URLs smoothly
-    <WouterRouter base="/adithya-portfolio">
+    <WouterRouter base={basePath}>
       <Switch>
         <Route path={"/"} component={Home} />
         <Route path={"/404"} component={NotFound} />

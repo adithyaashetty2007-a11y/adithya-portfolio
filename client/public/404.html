@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Adithya A Shetty - Portfolio</title>
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafgraph/spa-github-pages
+      // This script takes the current URL and redirects to the index.html page
+      // with the query parameters and path preserved in the hash.
+      var pathSegmentsToKeep = 1; // For repo /adithya-portfolio/
+      var l = window.location;
+      var repo = l.pathname.split('/')[1];
+      var base = '/' + repo + '/';
+      var rest = l.pathname.slice(base.length).split('/').filter(Boolean).join('/');
+      
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        base + '?p=/' + rest + (l.search ? '&' + l.search.slice(1) : '') + l.hash
+      );
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
