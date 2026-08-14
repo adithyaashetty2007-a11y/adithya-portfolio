@@ -155,7 +155,7 @@ export default function Home() {
     const handleScroll = () => {
       setShowBackToTop(window.scrollY > 400);
 
-      const sections = ["home", "about", "dsa", "visual-skills", "skills", "certifications", "posts", "projects", "education", "mentor", "contact"];
+      const sections = ["home", "about", "dsa", "visual-skills", "skills", "certifications", "posts", "projects", "education", "contact"];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -457,7 +457,6 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               { id: "posts", label: "LinkedIn Posts" },
               { id: "projects", label: "Projects" },
               { id: "education", label: "Education" },
-              { id: "mentor", label: "Mentor" },
               { id: "contact", label: "Contact" },
             ].map((item) => (
               <button
@@ -528,16 +527,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             Certifications Gallery
           </span>
         </button>
-        <button 
-          onClick={() => scrollToSection("mentor")} 
-          className="p-2.5 rounded-lg text-zinc-400 hover:text-white hover:bg-white/10 transition group relative"
-          title="Career Mentor"
-        >
-          <Compass className="w-5 h-5" />
-          <span className="absolute left-full ml-3 px-2 py-1 bg-zinc-900 border border-white/20 text-white text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap z-50">
-            Career Mentor
-          </span>
-        </button>
+
         <button 
           onClick={() => scrollToSection("contact")} 
           className="p-2.5 rounded-lg text-zinc-400 hover:text-white hover:bg-white/10 transition group relative"
@@ -726,12 +716,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                         doc.text(splitP2, margin, y);
                         y += (splitP2.length * 5) + 8;
 
-                        // MENTORSHIP & GUIDANCE
-                        addSectionTitle("Mentorship & Guidance");
-                        doc.setFont("Helvetica", "normal");
-                        const mentorDesc = "Guided by professional mentors and college faculty, including Raghavendra Sooda, in shaping career goals and engineering standards.";
-                        const splitMentor = doc.splitTextToSize(mentorDesc, contentWidth);
-                        doc.text(splitMentor, margin, y);
+
 
                         // Save PDF
                         doc.save("Adithya_A_Shetty_Resume.pdf");
@@ -1580,43 +1565,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           </div>
         </section>
 
-        {/* MENTOR & CAREER GUIDE SECTION */}
-        <section id="mentor" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
-          <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 09. MENTORSHIP & GUIDANCE</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Career Mentor & Guide</h2>
-          </div>
 
-          <div className="bg-[#141416] border border-white/20 rounded-2xl p-8 sm:p-10 relative overflow-hidden shadow-2xl">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
-              <div className="lg:col-span-8 space-y-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-white/10 text-xs font-mono text-zinc-300">
-                  <Compass className="w-3.5 h-3.5 text-emerald-400" />
-                  Guiding Light & Career Direction
-                </div>
-                <h3 className="text-2xl sm:text-3xl font-bold font-mono text-white">Raghavendra Sooda</h3>
-                <p className="text-zinc-300 text-sm sm:text-base font-sans leading-relaxed">
-                  Mentors including college mentors and guides who show the right path to achieve my career goals and engineering milestones. Their invaluable guidance inspires my academic growth, C++ problem-solving, and continuous learning journey.
-                </p>
-              </div>
-
-              <div className="lg:col-span-4 flex lg:justify-end">
-                <a 
-                  href="https://www.linkedin.com/in/raghavendra-sooda-808bab239/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="px-6 py-4 bg-white text-black font-mono font-bold text-xs sm:text-sm rounded hover:bg-zinc-200 transition flex items-center gap-2 shadow-xl w-full sm:w-auto justify-center"
-                >
-                  <Linkedin className="w-4 h-4 text-blue-700" />
-                  <span>Connect with Raghavendra Sooda</span>
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* CONTACT SECTION */}
         <section id="contact" className="py-24 px-4 sm:px-8 max-w-6xl mx-auto">
