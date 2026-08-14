@@ -189,6 +189,15 @@ export default function Home() {
   const [projects, setProjects] = useState<ProjectItem[]>([]);
   const [selectedProjectImage, setSelectedProjectImage] = useState<string | null>(null);
   const [selectedProfileImage, setSelectedProfileImage] = useState<string | null>(null);
+  const [selectedTimelineItem, setSelectedTimelineItem] = useState<{
+    title: string;
+    subtitle: string;
+    date: string;
+    badge: string;
+    description: string;
+    tags: string[];
+    link?: string;
+  } | null>(null);
   const [isAddProjModalOpen, setIsAddProjModalOpen] = useState(false);
   const [newProj, setNewProj] = useState({ title: "", description: "", imageUrl: "", githubUrl: "", techStack: "" });
 
@@ -1525,7 +1534,21 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             <div className="relative group">
               <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
               
-              <div className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300">
+              <div 
+                onClick={() => setSelectedTimelineItem({
+                  title: "AI Web Development Intern",
+                  subtitle: "INTERNSHALA & INAMIGOS FOUNDATION",
+                  date: "July 2026 – Present",
+                  badge: "[main]",
+                  description: "Contributed to a practical AI Web Development program focused on AI-assisted web development, rapid prototyping, debugging, and modern AI coding tools.",
+                  tags: ["AI Web Dev", "InAmigos Foundation", "Internshala", "Rapid Prototyping"],
+                  link: "https://internshala.com/verify_certificate"
+                })}
+                className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
+              >
+                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ccff00]/60 group-hover/card:text-[#ccff00] flex items-center gap-1">
+                  <span>[CLICK TO INSPECT]</span>
+                </div>
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <span className="text-xs font-mono text-zinc-400">July 2026 – Present</span>
                   <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-0.5 bg-[#ccff00]/10 border border-[#ccff00]/25 rounded">
@@ -1556,7 +1579,20 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             <div className="relative group">
               <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
               
-              <div className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300">
+              <div 
+                onClick={() => setSelectedTimelineItem({
+                  title: "2nd Year Computer Science Engineering",
+                  subtitle: "ST. JOSEPH ENGINEERING COLLEGE, MANGALURU",
+                  date: "September 2026 – Present",
+                  badge: "[current]",
+                  description: "Currently pursuing 2nd year BE in Computer Science Engineering. Actively mastering Data Structures & Algorithms in C++, AI vibecoding, and building modern web applications.",
+                  tags: ["DSA in C++", "AI Vibecoding", "Web Development", "LeetCode"]
+                })}
+                className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
+              >
+                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ccff00]/60 group-hover/card:text-[#ccff00] flex items-center gap-1">
+                  <span>[CLICK TO INSPECT]</span>
+                </div>
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <span className="text-xs font-mono text-zinc-400">September 2026 – Present</span>
                   <span className="text-[11px] font-mono text-emerald-400 px-2.5 py-0.5 bg-emerald-400/10 border border-emerald-400/25 rounded">
@@ -1587,7 +1623,21 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             <div className="relative group">
               <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
               
-              <div className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300">
+              <div 
+                onClick={() => setSelectedTimelineItem({
+                  title: "CS50's Web Programming with Python and JavaScript",
+                  subtitle: "HARVARDX (HARVARD UNIVERSITY)",
+                  date: "2026",
+                  badge: "[certified]",
+                  description: "Completed rigorous coursework in web programming covering Python, JavaScript, Django, and modern frontend-backend integration concepts.",
+                  tags: ["Python", "JavaScript", "Django", "Web Dev"],
+                  link: "https://www.linkedin.com/posts/adithya-a-shetty-421097382_cs50s-web-programming-with-python-and-javascript-activity-7430943036278439936-2q8h?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
+                })}
+                className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
+              >
+                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ccff00]/60 group-hover/card:text-[#ccff00] flex items-center gap-1">
+                  <span>[CLICK TO INSPECT]</span>
+                </div>
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <span className="text-xs font-mono text-zinc-400">2026</span>
                   <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-0.5 bg-[#ccff00]/10 border border-[#ccff00]/25 rounded">
@@ -1604,7 +1654,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   Completed rigorous coursework in web programming covering Python, JavaScript, Django, and modern frontend-backend integration concepts.
                 </p>
 
-                <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+                <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4" onClick={(e) => e.stopPropagation()}>
                   <div className="flex flex-wrap gap-2">
                     {["Python", "JavaScript", "Django", "Web Dev"].map((tag, i) => (
                       <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/60 border border-white/10 px-3 py-1 rounded">
@@ -1629,7 +1679,21 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             <div className="relative group">
               <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
               
-              <div className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300">
+              <div 
+                onClick={() => setSelectedTimelineItem({
+                  title: "Prompt Engineering & Generative AI Workshop",
+                  subtitle: "THE AGENT BLAZER CLUB SJEC",
+                  date: "2026",
+                  badge: "[workshop]",
+                  description: "Participated in the Agent Blazer Club SJEC workshop exploring prompt engineering, generative AI tools, and AI ecosystem fundamentals.",
+                  tags: ["Prompt Engineering", "Generative AI", "AI Ecosystem"],
+                  link: "https://www.linkedin.com/posts/theagentblazerclubsjec_promptengineering-ai-generativeai-activity-7443638504024268800-BCPn?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
+                })}
+                className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
+              >
+                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ccff00]/60 group-hover/card:text-[#ccff00] flex items-center gap-1">
+                  <span>[CLICK TO INSPECT]</span>
+                </div>
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <span className="text-xs font-mono text-zinc-400">2026</span>
                   <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-0.5 bg-[#ccff00]/10 border border-[#ccff00]/25 rounded">
@@ -1646,7 +1710,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   Participated in the Agent Blazer Club SJEC workshop exploring prompt engineering, generative AI tools, and AI ecosystem fundamentals.
                 </p>
 
-                <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+                <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4" onClick={(e) => e.stopPropagation()}>
                   <div className="flex flex-wrap gap-2">
                     {["Prompt Engineering", "Generative AI", "AI Ecosystem"].map((tag, i) => (
                       <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/60 border border-white/10 px-3 py-1 rounded">
@@ -1671,7 +1735,21 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             <div className="relative group">
               <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
               
-              <div className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300">
+              <div 
+                onClick={() => setSelectedTimelineItem({
+                  title: "AI for Techies Certification & Workshop",
+                  subtitle: "PROFESSIONAL DEVELOPMENT",
+                  date: "2025 – 2026",
+                  badge: "[milestone]",
+                  description: "Engaged in specialized training on 'AI for Techies', focusing on practical applications of machine learning, modern AI workflows, and software development integrations.",
+                  tags: ["Artificial Intelligence", "Techies", "AI Workflows"],
+                  link: "https://www.linkedin.com/posts/adithya-a-shetty-421097382_ai-for-techies-activity-7385958617696620544-FPR6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
+                })}
+                className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
+              >
+                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ccff00]/60 group-hover/card:text-[#ccff00] flex items-center gap-1">
+                  <span>[CLICK TO INSPECT]</span>
+                </div>
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <span className="text-xs font-mono text-zinc-400">2025 – 2026</span>
                   <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-0.5 bg-[#ccff00]/10 border border-[#ccff00]/25 rounded">
@@ -1688,7 +1766,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   Engaged in specialized training on "AI for Techies", focusing on practical applications of machine learning, modern AI workflows, and software development integrations.
                 </p>
 
-                <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+                <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4" onClick={(e) => e.stopPropagation()}>
                   <div className="flex flex-wrap gap-2">
                     {["Artificial Intelligence", "Techies", "AI Workflows"].map((tag, i) => (
                       <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/60 border border-white/10 px-3 py-1 rounded">
@@ -1713,7 +1791,20 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             <div className="relative group">
               <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
               
-              <div className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300">
+              <div 
+                onClick={() => setSelectedTimelineItem({
+                  title: "Python Essentials 1 (PE1)",
+                  subtitle: "CISCO NETWORKING ACADEMY (30 Hours | 30 Labs)",
+                  date: "Foundation",
+                  badge: "[python]",
+                  description: "Learned fundamental concepts of computer programming, syntax, and data structures with Python. Note: Course completed, paid certification exam not taken.",
+                  tags: ["Python", "Programming Basics", "Procedural Programming", "30 Labs"]
+                })}
+                className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
+              >
+                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ccff00]/60 group-hover/card:text-[#ccff00] flex items-center gap-1">
+                  <span>[CLICK TO INSPECT]</span>
+                </div>
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <span className="text-xs font-mono text-zinc-400">Foundation</span>
                   <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-0.5 bg-[#ccff00]/10 border border-[#ccff00]/25 rounded">
@@ -1930,6 +2021,65 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             </div>
             <div className="flex justify-center max-h-[75vh] overflow-auto">
               <img src={selectedCertImage} alt="Certificate" className="max-w-full object-contain rounded" />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* TIMELINE ITEM DETAIL MODAL */}
+      {selectedTimelineItem && (
+        <div 
+          onClick={() => setSelectedTimelineItem(null)}
+          className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4"
+        >
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            className="relative max-w-2xl w-full bg-[#141416] border border-[#ccff00]/40 rounded-2xl overflow-hidden p-6 sm:p-8 shadow-[0_0_50px_rgba(204,255,0,0.15)] space-y-6"
+          >
+            <div className="flex items-center justify-between pb-4 border-b border-white/15">
+              <div className="space-y-1">
+                <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-0.5 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded">
+                  {selectedTimelineItem.badge}
+                </span>
+                <div className="text-xs font-mono text-zinc-400 mt-1">{selectedTimelineItem.date}</div>
+              </div>
+              <button 
+                onClick={() => setSelectedTimelineItem(null)}
+                className="p-2 text-zinc-400 hover:text-white rounded-lg bg-white/5 border border-white/10 hover:border-white/30 transition"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="space-y-3">
+              <h3 className="text-2xl font-bold font-mono text-white">{selectedTimelineItem.title}</h3>
+              <p className="text-xs font-mono text-[#ccff00] uppercase tracking-wider">{selectedTimelineItem.subtitle}</p>
+              <p className="text-sm font-sans text-zinc-300 leading-relaxed pt-2">{selectedTimelineItem.description}</p>
+            </div>
+
+            <div className="pt-4 border-t border-white/10 space-y-4">
+              <div className="text-xs font-mono text-zinc-400 uppercase tracking-widest">Key Tags & Technologies</div>
+              <div className="flex flex-wrap gap-2">
+                {selectedTimelineItem.tags.map((tag, idx) => (
+                  <span key={idx} className="text-xs font-mono text-[#ccff00] bg-black/60 border border-[#ccff00]/30 px-3 py-1 rounded">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {selectedTimelineItem.link && (
+                <div className="pt-2">
+                  <a
+                    href={selectedTimelineItem.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#ccff00] text-black font-mono text-xs font-bold rounded hover:bg-white transition shadow-lg"
+                  >
+                    <span>View Reference / Verification Link</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </div>
