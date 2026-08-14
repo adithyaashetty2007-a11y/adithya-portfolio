@@ -3,7 +3,7 @@ import {
   Terminal, Github, Linkedin, Phone, Mail, FileText, ExternalLink, 
   Code2, Cpu, Layers, Award, GraduationCap, User, Home as HomeIcon, 
   BookOpen, Briefcase, Radio, Send, CheckCircle2, Sparkles, Command, 
-  ChevronRight, Download, Menu, X, ArrowUpRight, ArrowUp, ShieldCheck, TerminalSquare, Plus, Image as ImageIcon, MessageSquare, TrendingUp, Compass
+  ChevronRight, Download, Menu, X, ArrowUpRight, ArrowUp, ShieldCheck, TerminalSquare, Plus, Image as ImageIcon, MessageSquare, TrendingUp, Compass, RefreshCw
 } from "lucide-react";
 import { toast } from "sonner";
 import { 
@@ -39,17 +39,20 @@ interface ProjectItem {
   techStack: string;
 }
 
-function TerminalTypingText({ text, speed = 12, delay = 0 }: { text: string; speed?: number; delay?: number }) {
+function TerminalTypingText({ text, speed = 12, delay = 0, resetKey = 0 }: { text: string; speed?: number; delay?: number; resetKey?: number }) {
   const [displayedText, setDisplayedText] = useState("");
   const [isComplete, setIsComplete] = useState(false);
   const [started, setStarted] = useState(false);
 
   useEffect(() => {
+    setDisplayedText("");
+    setIsComplete(false);
+    setStarted(false);
     const delayTimer = setTimeout(() => {
       setStarted(true);
     }, delay);
     return () => clearTimeout(delayTimer);
-  }, [delay]);
+  }, [delay, resetKey]);
 
   useEffect(() => {
     if (!started) return;
@@ -64,7 +67,7 @@ function TerminalTypingText({ text, speed = 12, delay = 0 }: { text: string; spe
       }
     }, speed);
     return () => clearInterval(timer);
-  }, [text, speed, started]);
+  }, [text, speed, started, resetKey]);
 
   return (
     <span>
@@ -81,6 +84,7 @@ export default function Home() {
   const [isCopiedPhone, setIsCopiedPhone] = useState(false);
   const [contactForm, setContactForm] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [typingKey, setTypingKey] = useState(0);
 
   // Typewriter placeholder for contact form
   const [namePlaceholder, setNamePlaceholder] = useState("e.g. Peer / Mentor");
@@ -612,14 +616,25 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 </h1>
               </div>
 
-              <div className="space-y-4 text-zinc-300 text-base sm:text-lg font-sans leading-relaxed max-w-2xl font-mono">
+              <div className="space-y-4 text-zinc-300 text-base sm:text-lg font-sans leading-relaxed max-w-2xl font-mono relative">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-xs text-zinc-500">// SYSTEM_BIO.LOG</span>
+                  <button
+                    onClick={() => setTypingKey(k => k + 1)}
+                    className="px-2.5 py-1 bg-black/60 hover:bg-[#ccff00]/10 border border-white/20 hover:border-[#ccff00] text-zinc-300 hover:text-[#ccff00] text-xs rounded transition flex items-center gap-1.5 font-mono shadow"
+                    title="Replay Terminal Typing"
+                  >
+                    <RefreshCw className="w-3.5 h-3.5 animate-spin-hover" />
+                    <span>REPLAY TYPING</span>
+                  </button>
+                </div>
                 <p className="text-zinc-200">
                   <span className="text-[#ccff00] mr-2">&gt;</span>
-                  <TerminalTypingText text="I'M A COMPUTER SCIENCE ENGINEERING STUDENT AT ST. JOSEPH ENGINEERING COLLEGE, MANGALURU, CURRENTLY IN MY 2ND SEMESTER. I ENJOY TURNING IDEAS INTO PRACTICAL SOFTWARE SOLUTIONS AND CONTINUOUSLY IMPROVING MY TECHNICAL SKILLS." speed={8} delay={500} />
+                  <TerminalTypingText key={`t1-${typingKey}`} text="I'M A COMPUTER SCIENCE ENGINEERING STUDENT AT ST. JOSEPH ENGINEERING COLLEGE, MANGALURU, CURRENTLY IN MY 2ND SEMESTER. I ENJOY TURNING IDEAS INTO PRACTICAL SOFTWARE SOLUTIONS AND CONTINUOUSLY IMPROVING MY TECHNICAL SKILLS." speed={8} delay={200} resetKey={typingKey} />
                 </p>
                 <p className="text-zinc-300 pt-2">
                   <span className="text-[#ccff00] mr-2">&gt;</span>
-                  <TerminalTypingText text="I'M CURRENTLY EXPLORING PYTHON, WEB DEVELOPMENT, ARTIFICIAL INTELLIGENCE, AND DATA STRUCTURES & ALGORITHMS (DSA) WHILE BUILDING PROJECTS THAT STRENGTHEN MY UNDERSTANDING OF SOFTWARE DEVELOPMENT." speed={8} delay={2200} />
+                  <TerminalTypingText key={`t2-${typingKey}`} text="I'M CURRENTLY EXPLORING PYTHON, WEB DEVELOPMENT, ARTIFICIAL INTELLIGENCE, AND DATA STRUCTURES & ALGORITHMS (DSA) WHILE BUILDING PROJECTS THAT STRENGTHEN MY UNDERSTANDING OF SOFTWARE DEVELOPMENT." speed={8} delay={1800} resetKey={typingKey} />
                 </p>
                 
                 <div className="pt-2 space-y-2">
