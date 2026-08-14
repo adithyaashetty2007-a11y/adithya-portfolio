@@ -1249,10 +1249,10 @@ export default function Home() {
 
         {/* EDUCATION & JOURNEY TIMELINE SECTION */}
         <section id="education" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
-          <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 08. EXPERIENCE & ACADEMIC JOURNEY</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Where I've Been & Academic Growth</h2>
-            <p className="text-sm font-mono text-zinc-400">Consistent upward trajectory in engineering and problem solving.</p>
+          <div className="space-y-2 mb-16">
+            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 08. SYSTEM_LOGS</span>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-[#ccff00]">System Logs & Timeline</h2>
+            <p className="text-sm font-mono text-zinc-400">Chronological history of academic milestones, certifications, and technical experience.</p>
           </div>
 
           <div className="relative border-l-2 border-[#ccff00]/40 ml-4 sm:ml-8 space-y-12 pl-6 sm:pl-10">
