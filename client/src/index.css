@@ -213,3 +213,35 @@
 .animate-hex-scroll {
   animation: hexScroll 25s linear infinite;
 }
+
+@keyframes glitchAnim {
+  0% {
+    transform: translate(0);
+    text-shadow: none;
+  }
+  20% {
+    transform: translate(-2px, 2px);
+    text-shadow: 2px 0 #00ffff, -2px 0 #ccff00;
+  }
+  40% {
+    transform: translate(-2px, -2px);
+    text-shadow: -2px -2px #00ffff, 2px 2px #ccff00;
+  }
+  60% {
+    transform: translate(2px, 2px);
+    text-shadow: 2px 2px #00ffff, -2px -2px #ccff00;
+  }
+  80% {
+    transform: translate(2px, -2px);
+    text-shadow: -2px 0 #00ffff, 2px 0 #ccff00;
+  }
+  100% {
+    transform: translate(0);
+    text-shadow: none;
+  }
+}
+
+.glitch-hover:hover {
+  animation: glitchAnim 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  cursor: pointer;
+}

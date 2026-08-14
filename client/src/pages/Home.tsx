@@ -41,6 +41,41 @@ export default function Home() {
   const [isCopiedPhone, setIsCopiedPhone] = useState(false);
   const [contactForm, setContactForm] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Typewriter placeholder for contact form
+  const [namePlaceholder, setNamePlaceholder] = useState("e.g. Peer / Mentor");
+  useEffect(() => {
+    const namePrompts = ["e.g. Peer / Mentor", "e.g. Recruiter", "e.g. Tech Lead", "e.g. Fellow Developer"];
+    let nameIdx = 0;
+    let charIdx = 0;
+    let isDeleting = false;
+    let timer: NodeJS.Timeout;
+
+    const typeName = () => {
+      const current = namePrompts[nameIdx];
+      if (isDeleting) {
+        setNamePlaceholder(current.substring(0, charIdx - 1));
+        charIdx--;
+      } else {
+        setNamePlaceholder(current.substring(0, charIdx + 1));
+        charIdx++;
+      }
+
+      let speed = isDeleting ? 40 : 80;
+      if (!isDeleting && charIdx === current.length) {
+        speed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIdx === 0) {
+        isDeleting = false;
+        nameIdx = (nameIdx + 1) % namePrompts.length;
+        speed = 400;
+      }
+      timer = setTimeout(typeName, speed);
+    };
+
+    timer = setTimeout(typeName, 1000);
+    return () => clearTimeout(timer);
+  }, []);
   
   // Certificate management state
   const [certificates, setCertificates] = useState<Certificate[]>([
@@ -531,7 +566,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
               <div className="space-y-2">
                 <p className="text-zinc-400 font-mono text-sm sm:text-base">Hello, I'm</p>
-                <h1 className="text-4xl sm:text-6xl font-bold font-mono tracking-tight text-[#ccff00]">
+                <h1 className="text-4xl sm:text-6xl font-bold font-mono tracking-tight text-[#ccff00] glitch-hover inline-block">
                   Adithya A Shetty<span className="text-zinc-500">.</span>
                 </h1>
               </div>
@@ -1646,7 +1681,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     type="text"
                     value={contactForm.name}
                     onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
-                    placeholder="e.g. Peer / Mentor / Recruiter"
+                    placeholder={namePlaceholder}
                     className="w-full bg-black/50 border border-white/15 rounded px-4 py-3 text-sm font-mono text-white focus:border-white outline-none transition"
                   />
                 </div>
