@@ -1016,31 +1016,51 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           </div>
         </section>
 
-        {/* DSA SECTION */}
+        {/* FUTURE ROADMAP & TARGETS SECTION */}
         <section id="dsa" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 02. DSA IN C++</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">DSA Journey (2 Weeks In)</h2>
+            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 02. FUTURE_ROADMAP & TARGETS</span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">2nd Year Engineering Goals</h2>
+            <p className="text-sm font-mono text-zinc-400">Strategic roadmap for mastering Data Structures, LeetCode milestones, and Core CS engineering.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            <div className="bg-[#141416] border border-white/10 rounded-xl p-6 relative overflow-hidden">
-              <div className="text-zinc-500 font-mono text-xs uppercase mb-2">LeetCode Progress</div>
-              <div className="text-3xl font-bold font-mono text-white mb-1">20+ Solved</div>
-              <p className="text-xs text-zinc-400">Started practicing Data Structures and Algorithms in C++ 2 weeks ago. Solving problems daily to build solid fundamentals.</p>
-              <div className="mt-4 pt-4 border-t border-white/10 flex justify-between text-xs font-mono">
-                <span className="text-emerald-400">Language: C++</span>
-                <span className="text-zinc-300">Active Streak</span>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-[#141416] border border-white/10 rounded-xl p-6 relative overflow-hidden group hover:border-[#ccff00]/50 transition">
+              <div className="absolute top-3 right-3 text-[#ccff00]/20 font-mono text-xs">TARGET_01</div>
+              <div className="text-emerald-400 font-mono text-xs uppercase mb-2 font-semibold">DSA Mastery in C++</div>
+              <div className="text-xl font-bold font-mono text-white mb-2">Advanced Structures</div>
+              <p className="text-xs text-zinc-400 leading-relaxed mb-4">
+                Transitioning from basic arrays and strings to advanced data structures (Trees, Graphs, Heaps, Dynamic Programming) with rigorous C++ implementation.
+              </p>
+              <div className="pt-4 border-t border-white/10 flex justify-between text-[11px] font-mono">
+                <span className="text-[#ccff00]">Target: 150+ LeetCode</span>
+                <span className="text-zinc-400">In Progress</span>
               </div>
             </div>
 
-            <div className="bg-[#141416] border border-white/10 rounded-xl p-6 relative overflow-hidden">
-              <div className="text-zinc-500 font-mono text-xs uppercase mb-2">GitHub Repositories</div>
-              <div className="text-3xl font-bold font-mono text-white mb-1">10+ Repos</div>
-              <p className="text-xs text-zinc-400">Created 10+ public repositories containing college practice assignments, C/C++/Python code, and frontend web pages.</p>
-              <div className="mt-4 pt-4 border-t border-white/10 flex justify-between text-xs font-mono">
-                <span className="text-zinc-300">Public Repos: 10+</span>
-                <span className="text-emerald-400">Growing</span>
+            <div className="bg-[#141416] border border-white/10 rounded-xl p-6 relative overflow-hidden group hover:border-[#ccff00]/50 transition">
+              <div className="absolute top-3 right-3 text-[#ccff00]/20 font-mono text-xs">TARGET_02</div>
+              <div className="text-blue-400 font-mono text-xs uppercase mb-2 font-semibold">Core CS & System Design</div>
+              <div className="text-xl font-bold font-mono text-white mb-2">OS & Architecture</div>
+              <p className="text-xs text-zinc-400 leading-relaxed mb-4">
+                Deepening understanding of Operating Systems, Database Management Systems (DBMS), Computer Networks, and low-level software execution principles at SJEC.
+              </p>
+              <div className="pt-4 border-t border-white/10 flex justify-between text-[11px] font-mono">
+                <span className="text-blue-400">Semester Focus</span>
+                <span className="text-zinc-400">Upcoming</span>
+              </div>
+            </div>
+
+            <div className="bg-[#141416] border border-white/10 rounded-xl p-6 relative overflow-hidden group hover:border-[#ccff00]/50 transition">
+              <div className="absolute top-3 right-3 text-[#ccff00]/20 font-mono text-xs">TARGET_03</div>
+              <div className="text-purple-400 font-mono text-xs uppercase mb-2 font-semibold">AI & Full-Stack Prototyping</div>
+              <div className="text-xl font-bold font-mono text-white mb-2">Applied AI Systems</div>
+              <p className="text-xs text-zinc-400 leading-relaxed mb-4">
+                Building production-grade AI tools, computer vision scripts (YOLOv8), and modern web applications with responsive interfaces and robust backend integration.
+              </p>
+              <div className="pt-4 border-t border-white/10 flex justify-between text-[11px] font-mono">
+                <span className="text-purple-400">Goal: 5+ Major Apps</span>
+                <span className="text-zinc-400">Active</span>
               </div>
             </div>
           </div>
