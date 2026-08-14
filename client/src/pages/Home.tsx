@@ -591,29 +591,32 @@ export default function Home() {
                       // SKILLS
                       addSectionTitle("Skills & Proficiencies");
                       doc.setFont("Helvetica", "normal");
-                      doc.text("- Programming Languages: C (College Basics), C++ (DSA Active), Python (College Basics)", margin, y);
-                      y += 5;
-                      doc.text("- Frontend Development: AI-Assisted UI/UX Construction, React, Tailwind CSS, HTML5, CSS3", margin, y);
-                      y += 5;
+                      doc.text("- Programming Languages: C (College Basics), C++ (DSA Active), Python", margin, y);
+                      y += 6;
+                      doc.text("- Frontend Development: AI-Assisted UI/UX, React, Tailwind CSS, HTML5, CSS3", margin, y);
+                      y += 6;
                       doc.text("- Tools & Environment: Git, GitHub (10+ Repositories), VS Code, Terminal", margin, y);
-                      y += 5;
+                      y += 6;
                       doc.text("- Problem Solving & DSA: 20+ LeetCode Problems Solved in C++ (2 Weeks Active)", margin, y);
+                      y += 6;
+                      doc.text("- Google Cloud Skills Boost Badge:", margin, y);
                       y += 5;
-                      doc.text("- Verified Badges: Google Cloud Skills Boost Badge (ID: 26703417)", margin, y);
                       doc.setTextColor(0, 102, 204);
-                      doc.text("https://www.skills.google/public_profiles/da312414-e867-4b0d-b22f-3c22a89c9c40/badges/26703417", margin, y + 4);
+                      doc.text("https://www.skills.google/public_profiles/da312414-e867-4b0d-b22f-3c22a89c9c40/badges/26703417", margin + 4, y);
                       doc.setTextColor(50, 50, 50);
-                      y += 12;
+                      y += 8;
 
-                      // CERTIFICATIONS & EXPERIENCE
+                      // CERTIFICATIONS & INTERNSHIPS
                       addSectionTitle("Certifications & Internships");
                       doc.setFont("Helvetica", "bold");
                       doc.text("AI Web Development Internship Selection", margin, y);
                       doc.setFont("Helvetica", "normal");
-                      doc.text("Internshala & InAmigos Foundation (July 2026)", margin + 60, y);
+                      doc.text("Internshala & InAmigos Foundation (July 2026)", margin + 72, y);
                       y += 5;
-                      doc.text("Secured AI Web Development internship focused on AI-assisted web development, rapid prototyping, debugging, and modern AI coding tools.", margin, y);
-                      y += 8;
+                      const internDesc = "Secured AI Web Development internship focused on AI-assisted web development, rapid prototyping, debugging, and modern AI coding tools.";
+                      const splitIntern = doc.splitTextToSize(internDesc, contentWidth);
+                      doc.text(splitIntern, margin, y);
+                      y += (splitIntern.length * 5) + 6;
 
                       // PROJECTS
                       addSectionTitle("Projects & Repositories (10+ GitHub Repos)");
@@ -621,14 +624,19 @@ export default function Home() {
                       doc.text("1. Retro-Terminal Portfolio Web App", margin, y);
                       y += 5;
                       doc.setFont("Helvetica", "normal");
-                      doc.text("Dark obsidian retro-terminal portfolio featuring interactive modals, dynamic certificate galleries, project screenshot showcases, and smooth navigation. (Tech: React, TypeScript, Tailwind)", margin, y);
-                      y += 7;
+                      const proj1Desc = "Dark obsidian retro-terminal portfolio featuring interactive modals, certificate showcase, and smooth navigation. (Tech: React, TypeScript, Tailwind)";
+                      const splitProj1 = doc.splitTextToSize(proj1Desc, contentWidth);
+                      doc.text(splitProj1, margin, y);
+                      y += (splitProj1.length * 5) + 6;
+
                       doc.setFont("Helvetica", "bold");
                       doc.text("2. C++ Algorithm Practice & DSA Tracker", margin, y);
                       y += 5;
                       doc.setFont("Helvetica", "normal");
-                      doc.text("Daily algorithmic problem-solving repository covering arrays, strings, searching, and sorting algorithms in C++.", margin, y);
-                      y += 8;
+                      const proj2Desc = "Daily algorithmic problem-solving repository covering arrays, strings, searching, and sorting algorithms in C++.";
+                      const splitProj2 = doc.splitTextToSize(proj2Desc, contentWidth);
+                      doc.text(splitProj2, margin, y);
+                      y += (splitProj2.length * 5) + 6;
 
                       // MENTORSHIP
                       addSectionTitle("Mentorship & Guidance");
