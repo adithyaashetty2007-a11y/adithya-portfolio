@@ -378,7 +378,7 @@ export default function Home() {
         <div className="fixed inset-0 z-50 bg-[#0a0a0a] flex flex-col items-center justify-center transition-opacity duration-700">
             <div className="text-center space-y-4 px-4">
             <h1 className="font-cursive text-6xl sm:text-8xl text-[#ccff00] tracking-wide animate-pulse drop-shadow-[0_0_25px_rgba(204,255,0,0.5)]">
-              Adithya A Shetty
+              Adithya A <span className="text-white drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]">Shetty</span>
             </h1>
             <p className="font-mono text-xs uppercase tracking-widest text-zinc-500 animate-fade-in">
               Initializing Developer Portfolio...
