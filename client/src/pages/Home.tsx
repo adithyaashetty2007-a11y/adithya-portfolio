@@ -113,6 +113,15 @@ export default function Home() {
       imageUrl: "/manus-storage/WhatsAppImage2026-08-14at1.57.41PM_dd3f4c9c.jpeg",
       credentialUrl: "https://www.linkedin.com/in/adithya-a-shetty-421097382",
       description: "Successfully participated in The Vanguard ARG challenge organized by The Sceptix Club at St. Joseph Engineering College."
+    },
+    {
+      id: "prompt-ops-2k26",
+      title: "Prompt-Ops 2K26 - Prompt Engineering",
+      issuer: "Agentblazer Club & HOD CSE, SJEC",
+      date: "March 25, 2026",
+      imageUrl: "/manus-storage/WhatsAppImage2026-08-14at1.58.25PM_1191131f.jpeg",
+      credentialUrl: "https://www.linkedin.com/in/adithya-a-shetty-421097382",
+      description: "Successfully participated in Prompt-Ops 2K26, exploring emerging trends in Artificial Intelligence, Prompt Engineering, and Agentic Technologies."
     }
   ]);
   const [selectedCertImage, setSelectedCertImage] = useState<string | null>(null);
