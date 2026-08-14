@@ -39,6 +39,41 @@ interface ProjectItem {
   techStack: string;
 }
 
+function TerminalTypingText({ text, speed = 12, delay = 0 }: { text: string; speed?: number; delay?: number }) {
+  const [displayedText, setDisplayedText] = useState("");
+  const [isComplete, setIsComplete] = useState(false);
+  const [started, setStarted] = useState(false);
+
+  useEffect(() => {
+    const delayTimer = setTimeout(() => {
+      setStarted(true);
+    }, delay);
+    return () => clearTimeout(delayTimer);
+  }, [delay]);
+
+  useEffect(() => {
+    if (!started) return;
+    let i = 0;
+    const timer = setInterval(() => {
+      if (i < text.length) {
+        setDisplayedText(text.substring(0, i + 1));
+        i++;
+      } else {
+        setIsComplete(true);
+        clearInterval(timer);
+      }
+    }, speed);
+    return () => clearInterval(timer);
+  }, [text, speed, started]);
+
+  return (
+    <span>
+      {displayedText}
+      {!isComplete && <span className="inline-block w-2 h-4 bg-[#ccff00] ml-1 animate-pulse align-middle"></span>}
+    </span>
+  );
+}
+
 export default function Home() {
   const [showIntro, setShowIntro] = useState(true);
   const [activeSection, setActiveSection] = useState("home");
@@ -577,12 +612,14 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 </h1>
               </div>
 
-              <div className="space-y-4 text-zinc-300 text-base sm:text-lg font-sans leading-relaxed max-w-2xl">
-                <p>
-                  I'M A COMPUTER SCIENCE ENGINEERING STUDENT AT ST. JOSEPH ENGINEERING COLLEGE, MANGALURU, CURRENTLY IN MY 2ND SEMESTER. I ENJOY TURNING IDEAS INTO PRACTICAL SOFTWARE SOLUTIONS AND CONTINUOUSLY IMPROVING MY TECHNICAL SKILLS.
+              <div className="space-y-4 text-zinc-300 text-base sm:text-lg font-sans leading-relaxed max-w-2xl font-mono">
+                <p className="text-zinc-200">
+                  <span className="text-[#ccff00] mr-2">&gt;</span>
+                  <TerminalTypingText text="I'M A COMPUTER SCIENCE ENGINEERING STUDENT AT ST. JOSEPH ENGINEERING COLLEGE, MANGALURU, CURRENTLY IN MY 2ND SEMESTER. I ENJOY TURNING IDEAS INTO PRACTICAL SOFTWARE SOLUTIONS AND CONTINUOUSLY IMPROVING MY TECHNICAL SKILLS." speed={8} delay={500} />
                 </p>
-                <p>
-                  I'M CURRENTLY EXPLORING PYTHON, WEB DEVELOPMENT, ARTIFICIAL INTELLIGENCE, AND DATA STRUCTURES & ALGORITHMS (DSA) WHILE BUILDING PROJECTS THAT STRENGTHEN MY UNDERSTANDING OF SOFTWARE DEVELOPMENT.
+                <p className="text-zinc-300 pt-2">
+                  <span className="text-[#ccff00] mr-2">&gt;</span>
+                  <TerminalTypingText text="I'M CURRENTLY EXPLORING PYTHON, WEB DEVELOPMENT, ARTIFICIAL INTELLIGENCE, AND DATA STRUCTURES & ALGORITHMS (DSA) WHILE BUILDING PROJECTS THAT STRENGTHEN MY UNDERSTANDING OF SOFTWARE DEVELOPMENT." speed={8} delay={2200} />
                 </p>
                 
                 <div className="pt-2 space-y-2">
