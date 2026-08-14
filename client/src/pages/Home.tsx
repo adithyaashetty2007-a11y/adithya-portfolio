@@ -420,7 +420,6 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               { id: "visual-skills", label: "SKILLS" },
               { id: "certifications", label: "CERTS" },
               { id: "dsa", label: "ACHIEVEMENTS" },
-              { id: "posts", label: "ACTIVITY" },
               { id: "projects", label: "PROJECTS" },
               { id: "education", label: "LOGS" },
               { id: "contact", label: "CONTACT" },
@@ -1291,69 +1290,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           </div>
         </section>
 
-        {/* LINKEDIN POSTS SECTION */}
-        <section id="posts" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
-            <div>
-              <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 06. SOCIAL FEED & INSIGHTS</span>
-              <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">LinkedIn Posts & Articles</h2>
-            </div>
-            <button
-              onClick={() => handleProtectedAction("post")}
-              className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-mono text-xs rounded transition flex items-center gap-2 w-fit"
-            >
-              <Plus className="w-4 h-4" />
-              <span>Add LinkedIn Post</span>
-            </button>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {linkedinPosts.map((post) => (
-              <div key={post.id} className="bg-[#141416] border border-white/15 rounded-xl p-6 flex flex-col justify-between group hover:border-[#ccff00]/40 transition relative overflow-hidden">
-                <div className="absolute top-2 right-2 text-[#ccff00] font-mono text-[10px] opacity-40">+</div>
-
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-xs font-mono text-zinc-400">
-                      <Linkedin className="w-4 h-4 text-[#ccff00]" />
-                      <span>LinkedIn Update</span>
-                    </div>
-                    <span className="text-xs font-mono text-zinc-500">{post.date}</span>
-                  </div>
-
-                  <h3 className="text-lg font-bold font-mono text-white group-hover:text-[#ccff00] transition">{post.title}</h3>
-                  <p className="text-xs sm:text-sm text-zinc-300 font-sans leading-relaxed">{post.summary}</p>
-
-                  {/* Hover Image Preview for Prompt Engineering post */}
-                  {post.imageUrl && (
-                    <div 
-                      onClick={() => setSelectedCertImage(post.imageUrl || null)}
-                      className="mt-4 rounded-lg overflow-hidden border border-white/20 h-44 bg-black cursor-pointer relative group/img shadow-md"
-                    >
-                      <img src={post.imageUrl} alt={post.title} className="w-full h-full object-cover object-center group-hover/img:scale-105 transition duration-300" />
-                      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-xs font-mono text-[#ccff00] gap-1.5 font-bold">
-                        <ImageIcon className="w-4 h-4" /> CLICK TO EXPAND WORKSHOP PHOTO
-                      </div>
-                    </div>
-                  )}
-                </div>
-
-                <div className="pt-4 mt-6 border-t border-white/10 flex items-center justify-between">
-                  <a 
-                    href={post.postUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-xs font-mono text-[#ccff00] hover:underline flex items-center gap-1.5 font-bold"
-                  >
-                    <span>VIEW ON LINKEDIN</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
-                  <span className="text-[10px] font-mono text-zinc-500">ADITHYA_A_SHETTY</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
 
         {/* PROJECTS SECTION */}
         <section id="projects" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
