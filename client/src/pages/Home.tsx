@@ -184,6 +184,7 @@ export default function Home() {
   ]);
   const [isAddPostModalOpen, setIsAddPostModalOpen] = useState(false);
   const [newPost, setNewPost] = useState({ title: "", summary: "", date: "", postUrl: "" });
+  const [timelineCategory, setTimelineCategory] = useState<string>("all");
   
   // Projects showcase state
   const [projects, setProjects] = useState<ProjectItem[]>([]);
@@ -1531,6 +1532,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           <div className="relative border-l-2 border-[#ccff00]/40 ml-4 sm:ml-12 space-y-12 pl-6 sm:pl-12">
             
             {/* Timeline Item 1: Internshala AI Web Development Internship */}
+            {(timelineCategory === "all" || timelineCategory === "experience") && (
             <div className="relative group">
               <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
               
@@ -1574,8 +1576,10 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 </div>
               </div>
             </div>
+            )}
 
             {/* Timeline Item 2: 2nd Year BE in CSE */}
+            {(timelineCategory === "all" || timelineCategory === "education") && (
             <div className="relative group">
               <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
               
@@ -1618,8 +1622,10 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 </div>
               </div>
             </div>
+            )}
 
             {/* Timeline Item 3: CS50 Web Programming Certification */}
+            {(timelineCategory === "all" || timelineCategory === "certified") && (
             <div className="relative group">
               <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
               
@@ -1674,8 +1680,10 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 </div>
               </div>
             </div>
+            )}
 
             {/* Timeline Item 4: Prompt Engineering & AI Workshop */}
+            {(timelineCategory === "all" || timelineCategory === "workshop") && (
             <div className="relative group">
               <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
               
@@ -1730,8 +1738,10 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 </div>
               </div>
             </div>
+            )}
 
             {/* Timeline Item 5: AI for Techies */}
+            {(timelineCategory === "all" || timelineCategory === "workshop" || timelineCategory === "certified") && (
             <div className="relative group">
               <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
               
@@ -1786,8 +1796,10 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 </div>
               </div>
             </div>
+            )}
 
             {/* Timeline Item 6: Cisco NetAcad Python Essentials 1 */}
+            {(timelineCategory === "all" || timelineCategory === "education" || timelineCategory === "certified") && (
             <div className="relative group">
               <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
               
@@ -1833,6 +1845,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 </div>
               </div>
             </div>
+            )}
 
           </div>
         </section>
