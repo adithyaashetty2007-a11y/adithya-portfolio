@@ -377,8 +377,8 @@ export default function Home() {
       {showIntro && (
         <div className="fixed inset-0 z-50 bg-[#0a0a0a] flex flex-col items-center justify-center transition-opacity duration-700">
             <div className="text-center space-y-4 px-4">
-            <h1 className="font-mono text-4xl sm:text-7xl font-extrabold text-[#ccff00] tracking-wider animate-pulse drop-shadow-[0_0_25px_rgba(204,255,0,0.6)] uppercase">
-              ADITHYA A SHETTY
+            <h1 className="font-cursive text-6xl sm:text-8xl text-[#ccff00] tracking-wide animate-pulse drop-shadow-[0_0_25px_rgba(204,255,0,0.5)]">
+              Adithya A Shetty
             </h1>
             <p className="font-mono text-xs uppercase tracking-widest text-zinc-500 animate-fade-in">
               Initializing Developer Portfolio...
