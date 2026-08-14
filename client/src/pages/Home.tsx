@@ -613,7 +613,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
               <div className="space-y-2">
                 <p className="text-zinc-400 font-mono text-sm sm:text-base">Hello, I'm</p>
-                <h1 className="text-4xl sm:text-6xl font-bold font-mono tracking-tight text-[#ccff00] glitch-hover inline-block">
+                <h1 className="text-4xl sm:text-6xl font-extrabold font-almie tracking-tight text-[#ccff00] glitch-hover inline-block">
                   Adithya A Shetty<span className="text-zinc-500">.</span>
                 </h1>
               </div>
