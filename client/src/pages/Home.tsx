@@ -603,8 +603,10 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
       {/* Main Container */}
       <main className="lg:pl-16 pt-16">
-        {/* HERO SECTION - STANDARD TWO-COLUMN LAYOUT */}
-        <section id="home" className="min-h-[calc(100vh-4rem)] flex items-center justify-center relative overflow-hidden py-16 px-4 sm:px-8 border-b border-white/10">
+        {/* HERO SECTION - STANDARD TWO-COLUMN LAYOUT WITH PARALLAX BACKGROUND */}
+        <section id="home" className="min-h-[calc(100vh-4rem)] flex items-center justify-center relative overflow-hidden py-16 px-4 sm:px-8 border-b border-white/10 bg-hex-grid">
+          <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-[#09090b]/60 to-[#09090b] z-0"></div>
+          <div className="absolute inset-0 pointer-events-none opacity-20 bg-[radial-gradient(circle_at_50%_50%,rgba(204,255,0,0.15),transparent_70%)] animate-pulse z-0"></div>
           <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
             
             {/* Left Column: Text & CTAs */}
