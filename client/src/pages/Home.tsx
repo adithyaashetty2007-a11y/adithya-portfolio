@@ -562,86 +562,85 @@ export default function Home() {
                         y += 6;
                       };
 
-                      // SUMMARY
-                      addSectionTitle("Professional Summary");
-                      doc.setFont("Helvetica", "normal");
-                      doc.setFontSize(10);
-                      doc.setTextColor(50, 50, 50);
-                      const summaryText = "Second-semester engineering student with consistent academic growth (SGPA: 8.05, up from 7.5 in Sem 1). Building robust frontend web applications with AI assistance (~60% accuracy). Solid college-level basics in C, C++, and Python, with an active C++ Data Structures & Algorithms problem-solving streak (20+ LeetCode problems solved).";
-                      const splitSummary = doc.splitTextToSize(summaryText, contentWidth);
-                      doc.text(splitSummary, margin, y);
-                      y += (splitSummary.length * 5) + 6;
-
                       // EDUCATION
                       addSectionTitle("Education");
                       doc.setFont("Helvetica", "bold");
                       doc.setFontSize(10);
                       doc.setTextColor(30, 30, 30);
-                      doc.text("Bachelor of Engineering (B.E.) - 2nd Semester Completed", margin, y);
+                      doc.text("Bachelor of Engineering (B.E.)", margin, y);
+                      doc.text("2nd Semester Completed", pageWidth - margin - 45, y);
                       y += 5;
                       doc.setFont("Helvetica", "normal");
                       doc.setTextColor(50, 50, 50);
-                      doc.text("- Semester 2 SGPA: 8.05 (Significant Improvement from 7.5 in Sem 1)", margin, y);
+                      doc.text("SGPA: 8.05 (Semester 2) — improved from 7.5 in Semester 1", margin, y);
                       y += 5;
-                      doc.text("- Core Coursework: C Programming, C++ & Data Structures, Python Fundamentals, Mathematics.", margin, y);
+                      doc.text("Core coursework: C Programming, C++ & Data Structures, Python Fundamentals, Mathematics", margin, y);
                       y += 8;
+
+                      // EXPERIENCE
+                      addSectionTitle("Experience");
+                      doc.setFont("Helvetica", "bold");
+                      doc.setTextColor(30, 30, 30);
+                      doc.text("AI Web Development Internship", margin, y);
+                      doc.text("July 2026", pageWidth - margin - 22, y);
+                      y += 5;
+                      doc.setFont("Helvetica", "italic");
+                      doc.text("Internshala & InAmigos Foundation", margin, y);
+                      y += 5;
+                      doc.setFont("Helvetica", "normal");
+                      doc.setTextColor(50, 50, 50);
+                      const expDesc = "Selected for an internship focused on AI-assisted web development, rapid prototyping, debugging, and modern AI coding tools.";
+                      const splitExp = doc.splitTextToSize(expDesc, contentWidth);
+                      doc.text(splitExp, margin, y);
+                      y += (splitExp.length * 5) + 8;
 
                       // SKILLS
-                      addSectionTitle("Skills & Proficiencies");
+                      addSectionTitle("Skills");
                       doc.setFont("Helvetica", "normal");
-                      doc.text("- Programming Languages: C (College Basics), C++ (DSA Active), Python", margin, y);
-                      y += 6;
-                      doc.text("- Frontend Development: AI-Assisted UI/UX, React, Tailwind CSS, HTML5, CSS3", margin, y);
-                      y += 6;
-                      doc.text("- Tools & Environment: Git, GitHub (10+ Repositories), VS Code, Terminal", margin, y);
-                      y += 6;
-                      doc.text("- Problem Solving & DSA: 20+ LeetCode Problems Solved in C++ (2 Weeks Active)", margin, y);
-                      y += 6;
-                      doc.text("- Google Cloud Skills Boost Badge:", margin, y);
+                      doc.text("Programming: C, C++, Python", margin, y);
                       y += 5;
+                      doc.text("Frontend Development: React, Tailwind CSS, HTML5, CSS3", margin, y);
+                      y += 5;
+                      doc.text("Development Tools: Git, GitHub, VS Code, Terminal", margin, y);
+                      y += 5;
+                      doc.text("Problem Solving: Data Structures & Algorithms (C++), 20+ LeetCode problems solved", margin, y);
+                      y += 5;
+                      doc.text("Certifications: Google Cloud Skills Boost Badge", margin, y);
+                      y += 4;
                       doc.setTextColor(0, 102, 204);
-                      doc.text("https://www.skills.google/public_profiles/da312414-e867-4b0d-b22f-3c22a89c9c40/badges/26703417", margin + 4, y);
+                      doc.text("https://www.skills.google/public_profiles/da312414-e867-4b0d-b22f-3c22a89c9c40/badges/26703417", margin, y);
                       doc.setTextColor(50, 50, 50);
                       y += 8;
 
-                      // CERTIFICATIONS & INTERNSHIPS
-                      addSectionTitle("Certifications & Internships");
-                      doc.setFont("Helvetica", "bold");
-                      doc.text("AI Web Development Internship Selection", margin, y);
-                      doc.setFont("Helvetica", "normal");
-                      doc.text("Internshala & InAmigos Foundation (July 2026)", margin + 72, y);
-                      y += 5;
-                      const internDesc = "Secured AI Web Development internship focused on AI-assisted web development, rapid prototyping, debugging, and modern AI coding tools.";
-                      const splitIntern = doc.splitTextToSize(internDesc, contentWidth);
-                      doc.text(splitIntern, margin, y);
-                      y += (splitIntern.length * 5) + 6;
-
                       // PROJECTS
-                      addSectionTitle("Projects & Repositories (10+ GitHub Repos)");
+                      addSectionTitle("Projects");
                       doc.setFont("Helvetica", "bold");
-                      doc.text("1. Retro-Terminal Portfolio Web App", margin, y);
-                      y += 5;
+                      doc.setTextColor(30, 30, 30);
+                      doc.text("Retro-Terminal Portfolio Web App", margin, y);
                       doc.setFont("Helvetica", "normal");
-                      const proj1Desc = "Dark obsidian retro-terminal portfolio featuring interactive modals, certificate showcase, and smooth navigation. (Tech: React, TypeScript, Tailwind)";
-                      const splitProj1 = doc.splitTextToSize(proj1Desc, contentWidth);
-                      doc.text(splitProj1, margin, y);
-                      y += (splitProj1.length * 5) + 6;
+                      doc.text("React, TypeScript, Tailwind", pageWidth - margin - 52, y);
+                      y += 5;
+                      const p1Desc = "Built a dark, obsidian-themed retro-terminal-style portfolio featuring interactive modals, a certificate showcase, and smooth navigation.";
+                      const splitP1 = doc.splitTextToSize(p1Desc, contentWidth);
+                      doc.text(splitP1, margin, y);
+                      y += (splitP1.length * 5) + 5;
 
                       doc.setFont("Helvetica", "bold");
-                      doc.text("2. C++ Algorithm Practice & DSA Tracker", margin, y);
-                      y += 5;
+                      doc.text("C++ Algorithm Practice & DSA Tracker", margin, y);
                       doc.setFont("Helvetica", "normal");
-                      const proj2Desc = "Daily algorithmic problem-solving repository covering arrays, strings, searching, and sorting algorithms in C++.";
-                      const splitProj2 = doc.splitTextToSize(proj2Desc, contentWidth);
-                      doc.text(splitProj2, margin, y);
-                      y += (splitProj2.length * 5) + 6;
+                      doc.text("C++", pageWidth - margin - 10, y);
+                      y += 5;
+                      const p2Desc = "Maintain a daily algorithmic problem-solving repository covering arrays, strings, searching, and sorting algorithms. Maintains 10+ public repositories on GitHub showcasing ongoing frontend and DSA work.";
+                      const splitP2 = doc.splitTextToSize(p2Desc, contentWidth);
+                      doc.text(splitP2, margin, y);
+                      y += (splitP2.length * 5) + 8;
 
-                      // MENTORSHIP
+                      // MENTORSHIP & GUIDANCE
                       addSectionTitle("Mentorship & Guidance");
                       doc.setFont("Helvetica", "normal");
-                      doc.text("Guided by professional mentors and college guides including Raghavendra Sooda,", margin, y);
-                      y += 5;
-                      doc.text("shaping career goals and engineering standards.", margin, y);
+                      const mentorDesc = "Guided by professional mentors and college faculty, including Raghavendra Sooda, in shaping career goals and engineering standards.";
+                      const splitMentor = doc.splitTextToSize(mentorDesc, contentWidth);
+                      doc.text(splitMentor, margin, y);
 
                       // Save PDF
                       doc.save("Adithya_A_Shetty_Resume.pdf");
