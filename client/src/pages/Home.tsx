@@ -1168,7 +1168,10 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
             {projects.length > 0 ? (
               projects.map((proj) => (
-                <div key={proj.id} className="bg-[#141416] border border-white/10 rounded-2xl overflow-hidden flex flex-col justify-between group glow-card">
+                <div key={proj.id} className="bg-[#141416] border border-white/15 rounded-xl overflow-hidden flex flex-col justify-between group glow-card relative">
+                  <div className="absolute top-2 right-2 text-[#ccff00] font-mono text-[10px] z-10">+</div>
+                  <div className="absolute bottom-2 left-2 text-[#ccff00] font-mono text-[10px] z-10">+</div>
+
                   <div className="space-y-4">
                     {/* Project Screenshot Thumbnail */}
                     {proj.imageUrl ? (
@@ -1177,17 +1180,17 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                         className="h-56 bg-black overflow-hidden relative cursor-pointer border-b border-white/10 group/img"
                       >
                         <img src={proj.imageUrl} alt={proj.title} className="w-full h-full object-cover group-hover/img:scale-105 transition duration-500" />
-                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-xs font-mono text-white gap-1.5">
-                          <ImageIcon className="w-4 h-4" /> View Full Screenshot
+                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-xs font-mono text-[#ccff00] gap-1.5 font-bold">
+                          <ImageIcon className="w-4 h-4" /> VIEW FULL SCREENSHOT
                         </div>
                       </div>
                     ) : (
                       <div className="h-44 bg-black/40 border-b border-white/10 flex flex-col items-center justify-center text-zinc-500 text-xs font-mono gap-2 p-4 text-center">
-                        <Code2 className="w-8 h-8 opacity-40 text-emerald-400" />
+                        <Code2 className="w-8 h-8 opacity-40 text-[#ccff00]" />
                         <span>No project screenshot uploaded</span>
                         <button
                           onClick={() => setIsAddProjModalOpen(true)}
-                          className="text-white underline hover:text-zinc-300 text-[11px]"
+                          className="text-[#ccff00] underline hover:text-white text-[11px]"
                         >
                           Upload Screenshot Image
                         </button>
@@ -1195,33 +1198,39 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     )}
 
                     <div className="p-6 pt-2 space-y-3">
-                      <div className="flex items-center justify-between">
-                        <span className="text-[11px] font-mono text-emerald-400 px-2.5 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full">{proj.techStack}</span>
+                      <div className="flex flex-wrap gap-1.5 mb-2">
+                        {proj.techStack.split(',').map((tech, i) => (
+                          <span key={i} className="text-[10px] font-mono text-[#ccff00] px-2 py-0.5 bg-[#ccff00]/10 border border-[#ccff00]/20 rounded">
+                            {tech.trim()}
+                          </span>
+                        ))}
                       </div>
                       <h3 className="text-xl font-bold font-mono text-white">{proj.title}</h3>
                       <p className="text-xs text-zinc-400 leading-relaxed font-mono">{proj.description}</p>
                     </div>
                   </div>
 
-                  <div className="px-6 pb-6 pt-2 flex items-center justify-between border-t border-white/5 mt-4">
-                    <a
-                      href={proj.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs font-mono text-zinc-300 hover:text-white flex items-center gap-1.5 bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded transition border border-white/10"
-                    >
-                      <Github className="w-3.5 h-3.5" />
-                      <span>GitHub Repository</span>
-                      <ExternalLink className="w-3 h-3 ml-0.5" />
-                    </a>
-                    {proj.imageUrl && (
-                      <button
-                        onClick={() => setSelectedProjectImage(proj.imageUrl)}
-                        className="text-xs font-mono text-zinc-400 hover:text-white"
+                  <div className="px-6 pb-6 pt-4 flex items-center justify-between border-t border-white/10 mt-4">
+                    <span className="text-[11px] font-mono text-zinc-500">SYSTEM_REPO</span>
+                    <div className="flex items-center gap-3">
+                      <a
+                        href={proj.githubUrl || "https://github.com/adithyaashetty2007-a11y"}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#ccff00] hover:underline flex items-center gap-1 font-mono text-xs font-bold"
                       >
-                        Preview Image
-                      </button>
-                    )}
+                        <Github className="w-4 h-4" />
+                        <span>GITHUB</span>
+                      </a>
+                      <a
+                        href={proj.githubUrl || "https://github.com/adithyaashetty2007-a11y"}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-zinc-400 hover:text-white flex items-center"
+                      >
+                        <ArrowUpRight className="w-4 h-4" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               ))
