@@ -477,9 +477,9 @@ export default function Home() {
             
             {/* Left Column: Text & CTAs */}
             <div className="lg:col-span-7 space-y-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-red-950/40 border border-red-500/50 text-xs font-mono text-red-400">
-                <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-                NOT AVAILABLE FOR HIRE // AVAILABLE FOR INTERNSHIPS
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#ccff00]/10 border border-[#ccff00]/30 text-xs font-mono text-[#ccff00]">
+                <span className="w-2 h-2 rounded-full bg-[#ccff00] animate-pulse"></span>
+                AVAILABLE FOR INTERNSHIPS & COLLABORATIONS
               </div>
 
               <div className="space-y-2">
