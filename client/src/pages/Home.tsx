@@ -209,6 +209,29 @@ export default function Home() {
   const [pendingActionType, setPendingActionType] = useState<"cert" | "post" | "proj" | null>(null);
 
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
+  const [isHoveringLink, setIsHoveringLink] = useState(false);
+
+  // Custom cursor tracker
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setCursorPos({ x: e.clientX, y: e.clientY });
+    };
+    const handleMouseOver = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.closest('a') || target.closest('button') || target.getAttribute('role') === 'button') {
+        setIsHoveringLink(true);
+      } else {
+        setIsHoveringLink(false);
+      }
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseover', handleMouseOver);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseover', handleMouseOver);
+    };
+  }, []);
 
   // Intro animation timer
   useEffect(() => {
@@ -383,7 +406,20 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-[#ededed] font-sans relative selection:bg-white/20 selection:text-white">
+    <div className="min-h-screen bg-[#0a0a0a] text-[#ededed] font-sans relative selection:bg-white/20 selection:text-white cursor-none sm:cursor-none">
+      {/* Custom Cyberpunk Cursor */}
+      <div 
+        className={`fixed pointer-events-none z-50 transition-transform duration-75 ease-out hidden sm:block ${
+          isHoveringLink ? 'scale-150 rotate-45' : 'scale-100'
+        }`}
+        style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px`, transform: 'translate(-50%, -50%)' }}
+      >
+        <div className={`w-6 h-6 border-2 ${isHoveringLink ? 'border-[#ff0055] bg-[#ff0055]/20 shadow-[0_0_15px_#ff0055]' : 'border-[#ccff00] bg-[#ccff00]/10 shadow-[0_0_10px_#ccff00]'} rounded-sm flex items-center justify-center relative`}>
+          <div className={`w-1.5 h-1.5 ${isHoveringLink ? 'bg-[#ff0055]' : 'bg-[#ccff00]'} rounded-full animate-ping absolute`}></div>
+          <div className={`w-1 h-1 ${isHoveringLink ? 'bg-white' : 'bg-[#ccff00]'}`}></div>
+        </div>
+      </div>
+
       {/* INTRO CURSIVE SIGNATURE OVERLAY */}
       {showIntro && (
         <div className="fixed inset-0 z-50 bg-[#0a0a0a] flex flex-col items-center justify-center transition-opacity duration-700">
