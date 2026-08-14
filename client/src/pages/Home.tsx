@@ -592,159 +592,170 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               </div>
 
               <div className="flex flex-wrap items-center gap-4 pt-2">
-                <a
-                  href="#resume-download"
-                  onClick={async (e) => {
-                    e.preventDefault();
-                    try {
-                      const { jsPDF } = await import("jspdf");
-                      const doc = new jsPDF({ unit: "mm", format: "a4" });
-                      
-                      // Page margins & dimensions
-                      const margin = 15;
-                      const pageWidth = 210;
-                      const contentWidth = pageWidth - (margin * 2);
-                      let y = 20;
+                <div className="flex flex-wrap items-center gap-3">
+                  <a
+                    href="#resume-download"
+                    onClick={async (e) => {
+                      e.preventDefault();
+                      try {
+                        const { jsPDF } = await import("jspdf");
+                        const doc = new jsPDF({ unit: "mm", format: "a4" });
+                        
+                        // Page margins & dimensions
+                        const margin = 15;
+                        const pageWidth = 210;
+                        const contentWidth = pageWidth - (margin * 2);
+                        let y = 20;
 
-                      // Header Name
-                      doc.setFont("Helvetica", "bold");
-                      doc.setFontSize(22);
-                      doc.setTextColor(20, 20, 20);
-                      doc.text("ADITHYA A SHETTY", margin, y);
-                      y += 7;
-
-                      // Subtitle
-                      doc.setFont("Helvetica", "normal");
-                      doc.setFontSize(10);
-                      doc.setTextColor(80, 80, 80);
-                      doc.text("Software Engineer & Frontend Developer  |  Mangalore, India", margin, y);
-                      y += 5;
-                      doc.text("Phone: 8088814686  |  GitHub: github.com/adithyaashetty2007-a11y", margin, y);
-                      y += 5;
-                      doc.text("LinkedIn: linkedin.com/in/adithya-a-shetty-421097382", margin, y);
-                      y += 8;
-
-                      // Divider Line
-                      doc.setDrawColor(200, 200, 200);
-                      doc.setLineWidth(0.5);
-                      doc.line(margin, y, pageWidth - margin, y);
-                      y += 8;
-
-                      // Section Title Helper
-                      const addSectionTitle = (title: string) => {
-                        if (y > 270) { doc.addPage(); y = 20; }
+                        // Header Name
                         doc.setFont("Helvetica", "bold");
-                        doc.setFontSize(12);
+                        doc.setFontSize(22);
                         doc.setTextColor(20, 20, 20);
-                        doc.text(title.toUpperCase(), margin, y);
-                        y += 3;
-                        doc.setDrawColor(50, 50, 50);
-                        doc.setLineWidth(0.3);
+                        doc.text("ADITHYA A SHETTY", margin, y);
+                        y += 7;
+
+                        // Subtitle
+                        doc.setFont("Helvetica", "normal");
+                        doc.setFontSize(10);
+                        doc.setTextColor(80, 80, 80);
+                        doc.text("Software Engineer & Frontend Developer  |  Mangalore, India", margin, y);
+                        y += 5;
+                        doc.text("Phone: 8088814686  |  GitHub: github.com/adithyaashetty2007-a11y", margin, y);
+                        y += 5;
+                        doc.text("LinkedIn: linkedin.com/in/adithya-a-shetty-421097382", margin, y);
+                        y += 8;
+
+                        // Divider Line
+                        doc.setDrawColor(200, 200, 200);
+                        doc.setLineWidth(0.5);
                         doc.line(margin, y, pageWidth - margin, y);
+                        y += 8;
+
+                        // Section Title Helper
+                        const addSectionTitle = (title: string) => {
+                          if (y > 270) { doc.addPage(); y = 20; }
+                          doc.setFont("Helvetica", "bold");
+                          doc.setFontSize(12);
+                          doc.setTextColor(20, 20, 20);
+                          doc.text(title.toUpperCase(), margin, y);
+                          y += 3;
+                          doc.setDrawColor(50, 50, 50);
+                          doc.setLineWidth(0.3);
+                          doc.line(margin, y, pageWidth - margin, y);
+                          y += 6;
+                        };
+
+                        // EDUCATION
+                        addSectionTitle("Education");
+                        doc.setFont("Helvetica", "bold");
+                        doc.setFontSize(10);
+                        doc.setTextColor(30, 30, 30);
+                        doc.text("St Joseph Engineering College (SJEC), Mangalore", margin, y);
+                        doc.text("2025 – 2029 (Expected)", pageWidth - margin - 45, y);
+                        y += 5;
+                        doc.setFont("Helvetica", "normal");
+                        doc.setTextColor(50, 50, 50);
+                        doc.text("Bachelor of Engineering (B.E.) in Computer Science & Engineering — SGPA: 8.05 (Semester 2)", margin, y);
+                        y += 5;
+                        doc.text("Semester 2 SGPA: 8.05 — improved from 7.5 in Semester 1", margin, y);
+                        y += 5;
+                        doc.text("Core coursework: C Programming, C++ & Data Structures, Python Fundamentals, Mathematics", margin, y);
                         y += 6;
-                      };
+                        doc.setFont("Helvetica", "bold");
+                        doc.text("GM Vidyanikethan Public School, Brahmavara, Udupi", margin, y);
+                        y += 5;
+                        doc.setFont("Helvetica", "normal");
+                        doc.text("Class 10, CBSE  |  Pre-University (PCMC Science) — Aggregate: 80%", margin, y);
+                        y += 8;
 
-                      // EDUCATION
-                      addSectionTitle("Education");
-                      doc.setFont("Helvetica", "bold");
-                      doc.setFontSize(10);
-                      doc.setTextColor(30, 30, 30);
-                      doc.text("St Joseph Engineering College (SJEC), Mangalore", margin, y);
-                      doc.text("2025 – 2029 (Expected)", pageWidth - margin - 45, y);
-                      y += 5;
-                      doc.setFont("Helvetica", "normal");
-                      doc.setTextColor(50, 50, 50);
-                      doc.text("Bachelor of Engineering (B.E.) in Computer Science & Engineering — SGPA: 8.05 (Semester 2)", margin, y);
-                      y += 5;
-                      doc.text("Semester 2 SGPA: 8.05 — improved from 7.5 in Semester 1", margin, y);
-                      y += 5;
-                      doc.text("Core coursework: C Programming, C++ & Data Structures, Python Fundamentals, Mathematics", margin, y);
-                      y += 6;
-                      doc.setFont("Helvetica", "bold");
-                      doc.text("GM Vidyanikethan Public School, Brahmavara, Udupi", margin, y);
-                      y += 5;
-                      doc.setFont("Helvetica", "normal");
-                      doc.text("Class 10, CBSE  |  Pre-University (PCMC Science) — Aggregate: 80%", margin, y);
-                      y += 8;
+                        // EXPERIENCE
+                        addSectionTitle("Experience");
+                        doc.setFont("Helvetica", "bold");
+                        doc.setTextColor(30, 30, 30);
+                        doc.text("AI Web Development Internship", margin, y);
+                        doc.text("July 2026", pageWidth - margin - 22, y);
+                        y += 5;
+                        doc.setFont("Helvetica", "italic");
+                        doc.text("Internshala & InAmigos Foundation", margin, y);
+                        y += 5;
+                        doc.setFont("Helvetica", "normal");
+                        doc.setTextColor(50, 50, 50);
+                        const expDesc = "Selected for an internship focused on AI-assisted web development, rapid prototyping, debugging, and modern AI coding tools.";
+                        const splitExp = doc.splitTextToSize(expDesc, contentWidth);
+                        doc.text(splitExp, margin, y);
+                        y += (splitExp.length * 5) + 8;
 
-                      // EXPERIENCE
-                      addSectionTitle("Experience");
-                      doc.setFont("Helvetica", "bold");
-                      doc.setTextColor(30, 30, 30);
-                      doc.text("AI Web Development Internship", margin, y);
-                      doc.text("July 2026", pageWidth - margin - 22, y);
-                      y += 5;
-                      doc.setFont("Helvetica", "italic");
-                      doc.text("Internshala & InAmigos Foundation", margin, y);
-                      y += 5;
-                      doc.setFont("Helvetica", "normal");
-                      doc.setTextColor(50, 50, 50);
-                      const expDesc = "Selected for an internship focused on AI-assisted web development, rapid prototyping, debugging, and modern AI coding tools.";
-                      const splitExp = doc.splitTextToSize(expDesc, contentWidth);
-                      doc.text(splitExp, margin, y);
-                      y += (splitExp.length * 5) + 8;
+                        // SKILLS
+                        addSectionTitle("Skills");
+                        doc.setFont("Helvetica", "normal");
+                        doc.text("Programming: C, C++, Python", margin, y);
+                        y += 5;
+                        doc.text("Frontend Development: React, Tailwind CSS, HTML5, CSS3", margin, y);
+                        y += 5;
+                        doc.text("Development Tools: Git, GitHub, VS Code, Terminal", margin, y);
+                        y += 5;
+                        doc.text("Problem Solving: Data Structures & Algorithms (C++), 20+ LeetCode problems solved", margin, y);
+                        y += 5;
+                        doc.text("Certifications: Google Cloud Skills Boost Badge", margin, y);
+                        y += 4;
+                        doc.setTextColor(0, 102, 204);
+                        doc.text("https://www.skills.google/public_profiles/da312414-e867-4b0d-b22f-3c22a89c9c40/badges/26703417", margin, y);
+                        doc.setTextColor(50, 50, 50);
+                        y += 8;
 
-                      // SKILLS
-                      addSectionTitle("Skills");
-                      doc.setFont("Helvetica", "normal");
-                      doc.text("Programming: C, C++, Python", margin, y);
-                      y += 5;
-                      doc.text("Frontend Development: React, Tailwind CSS, HTML5, CSS3", margin, y);
-                      y += 5;
-                      doc.text("Development Tools: Git, GitHub, VS Code, Terminal", margin, y);
-                      y += 5;
-                      doc.text("Problem Solving: Data Structures & Algorithms (C++), 20+ LeetCode problems solved", margin, y);
-                      y += 5;
-                      doc.text("Certifications: Google Cloud Skills Boost Badge", margin, y);
-                      y += 4;
-                      doc.setTextColor(0, 102, 204);
-                      doc.text("https://www.skills.google/public_profiles/da312414-e867-4b0d-b22f-3c22a89c9c40/badges/26703417", margin, y);
-                      doc.setTextColor(50, 50, 50);
-                      y += 8;
+                        // PROJECTS
+                        addSectionTitle("Projects");
+                        doc.setFont("Helvetica", "bold");
+                        doc.setTextColor(30, 30, 30);
+                        doc.text("Retro-Terminal Portfolio Web App", margin, y);
+                        doc.setFont("Helvetica", "normal");
+                        doc.text("React, TypeScript, Tailwind", pageWidth - margin - 52, y);
+                        y += 5;
+                        const p1Desc = "Built a dark, obsidian-themed retro-terminal-style portfolio featuring interactive modals, a certificate showcase, and smooth navigation.";
+                        const splitP1 = doc.splitTextToSize(p1Desc, contentWidth);
+                        doc.text(splitP1, margin, y);
+                        y += (splitP1.length * 5) + 5;
 
-                      // PROJECTS
-                      addSectionTitle("Projects");
-                      doc.setFont("Helvetica", "bold");
-                      doc.setTextColor(30, 30, 30);
-                      doc.text("Retro-Terminal Portfolio Web App", margin, y);
-                      doc.setFont("Helvetica", "normal");
-                      doc.text("React, TypeScript, Tailwind", pageWidth - margin - 52, y);
-                      y += 5;
-                      const p1Desc = "Built a dark, obsidian-themed retro-terminal-style portfolio featuring interactive modals, a certificate showcase, and smooth navigation.";
-                      const splitP1 = doc.splitTextToSize(p1Desc, contentWidth);
-                      doc.text(splitP1, margin, y);
-                      y += (splitP1.length * 5) + 5;
+                        doc.setFont("Helvetica", "bold");
+                        doc.text("C++ Algorithm Practice & DSA Tracker", margin, y);
+                        doc.setFont("Helvetica", "normal");
+                        doc.text("C++", pageWidth - margin - 10, y);
+                        y += 5;
+                        const p2Desc = "Maintain a daily algorithmic problem-solving repository covering arrays, strings, searching, and sorting algorithms. Maintains 10+ public repositories on GitHub showcasing ongoing frontend and DSA work.";
+                        const splitP2 = doc.splitTextToSize(p2Desc, contentWidth);
+                        doc.text(splitP2, margin, y);
+                        y += (splitP2.length * 5) + 8;
 
-                      doc.setFont("Helvetica", "bold");
-                      doc.text("C++ Algorithm Practice & DSA Tracker", margin, y);
-                      doc.setFont("Helvetica", "normal");
-                      doc.text("C++", pageWidth - margin - 10, y);
-                      y += 5;
-                      const p2Desc = "Maintain a daily algorithmic problem-solving repository covering arrays, strings, searching, and sorting algorithms. Maintains 10+ public repositories on GitHub showcasing ongoing frontend and DSA work.";
-                      const splitP2 = doc.splitTextToSize(p2Desc, contentWidth);
-                      doc.text(splitP2, margin, y);
-                      y += (splitP2.length * 5) + 8;
+                        // MENTORSHIP & GUIDANCE
+                        addSectionTitle("Mentorship & Guidance");
+                        doc.setFont("Helvetica", "normal");
+                        const mentorDesc = "Guided by professional mentors and college faculty, including Raghavendra Sooda, in shaping career goals and engineering standards.";
+                        const splitMentor = doc.splitTextToSize(mentorDesc, contentWidth);
+                        doc.text(splitMentor, margin, y);
 
-                      // MENTORSHIP & GUIDANCE
-                      addSectionTitle("Mentorship & Guidance");
-                      doc.setFont("Helvetica", "normal");
-                      const mentorDesc = "Guided by professional mentors and college faculty, including Raghavendra Sooda, in shaping career goals and engineering standards.";
-                      const splitMentor = doc.splitTextToSize(mentorDesc, contentWidth);
-                      doc.text(splitMentor, margin, y);
+                        // Save PDF
+                        doc.save("Adithya_A_Shetty_Resume.pdf");
+                        toast.success("Professional PDF Resume downloaded successfully!");
+                      } catch (err) {
+                        console.error(err);
+                        toast.error("Failed to generate PDF. Please try again.");
+                      }
+                    }}
+                    className="px-5 py-3 bg-[#ccff00] text-black font-mono font-bold text-xs sm:text-sm rounded hover:bg-[#b8ff00] transition flex items-center gap-2 shadow-[0_0_20px_rgba(204,255,0,0.3)] cursor-pointer"
+                  >
+                    <Download className="w-4 h-4" />
+                    DOWNLOAD RESUME (PDF)
+                  </a>
 
-                      // Save PDF
-                      doc.save("Adithya_A_Shetty_Resume.pdf");
-                      toast.success("Professional PDF Resume downloaded successfully!");
-                    } catch (err) {
-                      console.error(err);
-                      toast.error("Failed to generate PDF. Please try again.");
-                    }
-                  }}
-                  className="px-6 py-3 bg-[#ccff00] text-black font-mono font-bold text-xs sm:text-sm rounded hover:bg-[#b8ff00] transition flex items-center gap-2 shadow-[0_0_20px_rgba(204,255,0,0.3)] cursor-pointer"
-                >
-                  <Download className="w-4 h-4" />
-                  DOWNLOAD RESUME (PDF)
-                </a>
+                  <a
+                    href="/Adithya_A_Shetty_Resume.docx"
+                    download="Adithya_A_Shetty_Resume.docx"
+                    className="px-5 py-3 bg-zinc-900 border border-[#ccff00]/40 text-[#ccff00] font-mono font-bold text-xs sm:text-sm rounded hover:bg-zinc-800 transition flex items-center gap-2 cursor-pointer"
+                  >
+                    <FileText className="w-4 h-4" />
+                    DOWNLOAD DOCX
+                  </a>
+                </div>
                 <button 
                   onClick={() => scrollToSection("contact")}
                   className="px-6 py-3 bg-black/60 border border-[#ccff00]/40 text-[#ccff00] font-mono font-bold text-xs sm:text-sm rounded hover:bg-[#ccff00]/10 transition flex items-center gap-2"
