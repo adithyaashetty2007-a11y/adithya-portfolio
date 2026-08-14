@@ -1101,15 +1101,18 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     <div className="text-[10px] font-mono text-zinc-400">Styling & UI</div>
                   </div>
                   <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
-                    <div className="text-lg font-bold font-mono text-yellow-400 mb-1">JS</div>
-                    <div className="text-[10px] font-mono text-zinc-400">Scripting</div>
+                    <div className="text-lg font-bold font-mono text-red-400 mb-1">JS</div>
+                    <div className="text-[10px] font-mono text-zinc-400">Using AI</div>
                   </div>
                 </div>
               </div>
 
               {/* FRAMEWORKS & TOOLS */}
               <div>
-                <div className="text-xs font-mono text-[#ccff00] uppercase tracking-widest mb-4 pb-2 border-b border-white/10">Frameworks & Tools</div>
+                <div className="text-xs font-mono text-[#ccff00] uppercase tracking-widest mb-4 pb-2 border-b border-white/10 flex justify-between items-center">
+                  <span>Frameworks & Tools</span>
+                  <span className="text-[10px] bg-[#ccff00]/10 text-[#ccff00] px-2 py-0.5 rounded border border-[#ccff00]/30 font-mono">Fully AI-Assisted</span>
+                </div>
                 <div className="grid grid-cols-5 gap-3">
                   <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
                     <div className="text-sm font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">SCRIPTING W/ AI</div>
