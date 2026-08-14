@@ -85,6 +85,7 @@ export default function Home() {
   const [contactForm, setContactForm] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [typingKey, setTypingKey] = useState(0);
+  const [activeShellTab, setActiveShellTab] = useState(0);
 
   // Typewriter placeholder for contact form
   const [namePlaceholder, setNamePlaceholder] = useState("e.g. Peer / Mentor");
@@ -638,81 +639,94 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 </p>
                 
                 <div className="pt-6">
-                  <div className="mb-3 flex items-center justify-between">
-                    <span className="text-xs font-mono text-[#ccff00] uppercase tracking-wider">// HEX_NODE_CONSTELLATION.HUD</span>
-                    <span className="text-[10px] font-mono text-zinc-500">PULSING_LASER_MATRIX :: 5_NODES</span>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 relative">
-                    {[
-                      {
-                        id: "NODE_01",
-                        icon: "💻",
-                        title: "WEB ENGINEERING",
-                        desc: "BUILDING RESPONSIVE AND MODERN WEB APPLICATIONS.",
-                        tag: "FRONTEND // REACT"
-                      },
-                      {
-                        id: "NODE_02",
-                        icon: "🤖",
-                        title: "AI & COMPUTER VISION",
-                        desc: "EXPLORING ARTIFICIAL INTELLIGENCE AND COMPUTER VISION PROJECTS.",
-                        tag: "YOLOv8 // OPENCV"
-                      },
-                      {
-                        id: "NODE_03",
-                        icon: "🚀",
-                        title: "ALGORITHMIC OPS",
-                        desc: "SOLVING PROGRAMMING CHALLENGES AND LEARNING NEW TECHNOLOGIES.",
-                        tag: "DSA // C++ // LEETCODE"
-                      },
-                      {
-                        id: "NODE_04",
-                        icon: "🌱",
-                        title: "INNOVATION & GROWTH",
-                        desc: "CONTINUOUSLY IMPROVING THROUGH REAL-WORLD PROJECTS, WORKSHOPS, AND HACKATHONS.",
-                        tag: "HACKATHONS // SCEPTIX"
-                      },
-                      {
-                        id: "NODE_05",
-                        icon: "🤝",
-                        title: "COLLABORATION",
-                        desc: "OPEN TO INTERNSHIPS, COLLABORATIONS, AND NETWORKING OPPORTUNITIES.",
-                        tag: "NETWORKING // SJEC"
-                      }
-                    ].map((node, i) => (
-                      <div 
-                        key={node.id} 
-                        className={`bg-[#141416]/90 border border-white/15 hover:border-[#ccff00] rounded-xl p-5 relative group transition-all duration-300 hover:shadow-[0_0_25px_rgba(204,255,0,0.2)] hover:-translate-y-1 ${i === 4 ? 'sm:col-span-2' : ''}`}
-                      >
-                        {/* Laser pulse corner accent */}
-                        <div className="absolute top-0 right-0 w-12 h-12 overflow-hidden pointer-events-none rounded-tr-xl">
-                          <div className="absolute top-0 right-0 w-3 h-3 bg-[#ccff00]/40 group-hover:bg-[#ccff00] transition animate-pulse"></div>
-                        </div>
-
-                        <div className="flex items-start gap-4">
-                          <div className="w-12 h-12 rounded-lg bg-black border border-white/20 group-hover:border-[#ccff00] flex items-center justify-center text-2xl shadow-inner transition shrink-0">
-                            {node.icon}
-                          </div>
-
-                          <div className="space-y-1.5 flex-1">
-                            <div className="flex items-center justify-between">
-                              <span className="text-[10px] font-mono text-[#ccff00] tracking-widest">{node.id}</span>
-                              <span className="text-[9px] font-mono text-zinc-500 bg-black/60 px-2 py-0.5 rounded border border-white/10">{node.tag}</span>
-                            </div>
-
-                            <h4 className="text-sm font-bold font-mono text-white group-hover:text-[#ccff00] transition">{node.title}</h4>
-                            
-                            <p className="text-xs font-sans text-zinc-300 leading-relaxed">
-                              <TerminalTypingText key={`node-${i}-${typingKey}`} text={node.desc} speed={5} delay={400 + (i * 400)} resetKey={typingKey} />
-                            </p>
-                          </div>
-                        </div>
-
-                        {/* Animated Laser Data Stream Indicator */}
-                        <div className="absolute bottom-0 left-4 right-4 h-[1px] bg-gradient-to-r from-transparent via-[#ccff00]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="bg-[#121214] border border-[#ccff00]/30 rounded-xl overflow-hidden shadow-2xl">
+                    {/* Terminal Title Bar */}
+                    <div className="bg-black/90 px-4 py-2.5 border-b border-white/10 flex flex-wrap items-center justify-between gap-2">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
+                        <div className="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
+                        <span className="text-[11px] font-mono text-zinc-400 ml-2">adithya@portfolio ~ what_i_enjoy_shell</span>
                       </div>
-                    ))}
+                      <span className="text-[10px] font-mono text-[#ccff00] bg-[#ccff00]/10 px-2 py-0.5 rounded border border-[#ccff00]/30">INTERACTIVE_SHELL</span>
+                    </div>
+
+                    {/* Command Tabs */}
+                    <div className="bg-zinc-950 px-3 py-2 border-b border-white/10 flex flex-wrap gap-1.5 overflow-x-auto">
+                      {[
+                        { file: "web_eng.sh", label: "WEB ENG" },
+                        { file: "ai_vision.sh", label: "AI & VISION" },
+                        { file: "dsa_ops.sh", label: "DSA & OPS" },
+                        { file: "innovation.sh", label: "INNOVATION" },
+                        { file: "collab.sh", label: "COLLAB" }
+                      ].map((tab, idx) => (
+                        <button
+                          key={tab.file}
+                          onClick={() => setActiveShellTab(idx)}
+                          className={`px-3 py-1.5 rounded text-xs font-mono transition flex items-center gap-1.5 border ${
+                            activeShellTab === idx 
+                              ? "bg-[#ccff00]/15 border-[#ccff00] text-[#ccff00] shadow-[0_0_10px_rgba(204,255,0,0.2)]" 
+                              : "bg-black/40 border-white/10 text-zinc-400 hover:text-zinc-200 hover:border-white/30"
+                          }`}
+                        >
+                          <span>{tab.file}</span>
+                          {activeShellTab === idx && <span className="w-1.5 h-1.5 rounded-full bg-[#ccff00] animate-pulse"></span>}
+                        </button>
+                      ))}
+                    </div>
+
+                    {/* Terminal Output Area */}
+                    <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm text-zinc-300 space-y-4 min-h-[160px]">
+                      <div className="flex items-center gap-2 text-zinc-500 text-xs">
+                        <span>$</span>
+                        <span className="text-[#ccff00]">./execute_{['web_eng', 'ai_vision', 'dsa_ops', 'innovation', 'collab'][activeShellTab]}.sh --interactive</span>
+                      </div>
+
+                      <div className="bg-black/60 border border-white/10 rounded-lg p-4 space-y-3 relative overflow-hidden">
+                        {/* Background watermark */}
+                        <div className="absolute right-3 bottom-2 text-6xl opacity-5 pointer-events-none select-none font-bold">
+                          {['💻', '🤖', '🚀', '🌱', '🤝'][activeShellTab]}
+                        </div>
+
+                        <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                          <span className="text-[#ccff00] font-bold tracking-wide">
+                            {
+                              [
+                                "MODULE // 01: WEB ENGINEERING",
+                                "MODULE // 02: ARTIFICIAL INTELLIGENCE & COMPUTER VISION",
+                                "MODULE // 03: ALGORITHMIC OPS & DATA STRUCTURES",
+                                "MODULE // 04: INNOVATION, WORKSHOPS & HACKATHONS",
+                                "MODULE // 05: INTERNSHIPS & COLLABORATIONS"
+                              ][activeShellTab]
+                            }
+                          </span>
+                          <span className="text-[10px] text-zinc-500 bg-white/5 px-2 py-0.5 rounded">STATUS: EXECUTING</span>
+                        </div>
+
+                        <p className="text-zinc-200 text-sm leading-relaxed font-sans pt-1">
+                          <TerminalTypingText 
+                            key={`shell-tab-${activeShellTab}-${typingKey}`} 
+                            text={
+                              [
+                                "BUILDING RESPONSIVE AND MODERN WEB APPLICATIONS WITH CLEAN ARCHITECTURE, ACCESSIBILITY (A11Y), AND SEAMLESS USER INTERFACES.",
+                                "EXPLORING ARTIFICIAL INTELLIGENCE AND COMPUTER VISION PROJECTS LIKE YOLOv8n TRAFFIC DENSITY ESTIMATION AND REAL-TIME DATA PROCESSING.",
+                                "SOLVING PROGRAMMING CHALLENGES AND LEARNING NEW TECHNOLOGIES. ACTIVELY SOLVING LEETCODE PROBLEMS AND STRENGTHENING C++ FUNDAMENTALS.",
+                                "CONTINUOUSLY IMPROVING THROUGH REAL-WORLD PROJECTS, WORKSHOPS, AND HACKATHONS SUCH AS REPOLIS VIBEATHON AND SCEPTIX CLUB EVENTS.",
+                                "OPEN TO INTERNSHIPS, COLLABORATIONS, AND NETWORKING OPPORTUNITIES. CONNECTING WITH INDUSTRY MENTORS TO ACCELERATE SOFTWARE ENGINEERING GROWTH."
+                              ][activeShellTab]
+                            } 
+                            speed={5} 
+                            delay={100} 
+                            resetKey={typingKey + activeShellTab} 
+                          />
+                        </p>
+
+                        <div className="pt-2 flex items-center justify-between text-[11px] text-zinc-500 border-t border-white/5">
+                          <span>EXIT_CODE: 0 (SUCCESS)</span>
+                          <span className="text-[#ccff00] animate-pulse">_</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
