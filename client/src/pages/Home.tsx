@@ -299,9 +299,9 @@ export default function Home() {
       <div className="fixed inset-0 crt-scanlines z-40 pointer-events-none opacity-50"></div>
       <div className="fixed inset-0 bg-grid-pattern z-0 pointer-events-none opacity-70"></div>
 
-      {/* Global Side Background Animated Hacker Data Streams (Left & Right) */}
-      <div className="fixed top-0 left-0 bottom-0 w-24 md:w-48 pointer-events-none overflow-hidden opacity-15 select-none z-0 hidden sm:block">
-        <div className="absolute inset-0 font-mono text-xs text-[#ccff00] leading-relaxed whitespace-pre animate-hex-scroll">
+      {/* Global Side Background Animated Hacker Data Streams (Left & Right) - Interactive Hover Effect */}
+      <div className="fixed top-0 left-0 bottom-0 w-24 md:w-48 pointer-events-auto overflow-hidden opacity-15 hover:opacity-50 transition-opacity duration-300 select-none z-0 hidden sm:block group cursor-pointer" title="Hacker Data Stream - Hover to accelerate">
+        <div className="absolute inset-0 font-mono text-xs text-[#ccff00] leading-relaxed whitespace-pre animate-hex-scroll group-hover:[animation-duration:3s]">
           {`48 65 6C 6C 6F 20 57 6F 72 6C 64 20 // ADITHYA A SHETTY // SYSTEM INIT...
 73 74 61 72 74 20 70 79 74 68 6f 6e 33 2e 70 79 // PYTHON ESSENTIALS 1
 0x7fff5fbff800 0x7fff5fbff808 0x7fff5fbff810 // MEMORY DUMP
@@ -324,8 +324,8 @@ C++ DSA 20+ LEETCODE 8.05 SGPA ST. JOSEPH ENGINEERING COLLEGE
 YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         </div>
       </div>
-      <div className="fixed top-0 right-0 bottom-0 w-24 md:w-48 pointer-events-none overflow-hidden opacity-15 select-none z-0 hidden sm:block">
-        <div className="absolute inset-0 font-mono text-xs text-[#ccff00] leading-relaxed whitespace-pre animate-hex-scroll">
+      <div className="fixed top-0 right-0 bottom-0 w-24 md:w-48 pointer-events-auto overflow-hidden opacity-15 hover:opacity-50 transition-opacity duration-300 select-none z-0 hidden sm:block group cursor-pointer" title="Hacker Data Stream - Hover to accelerate">
+        <div className="absolute inset-0 font-mono text-xs text-[#ccff00] leading-relaxed whitespace-pre animate-hex-scroll group-hover:[animation-duration:3s]">
           {`48 65 6C 6C 6F 20 57 6F 72 6C 64 20 // ADITHYA A SHETTY // SYSTEM INIT...
 73 74 61 72 74 20 70 79 74 68 6f 6e 33 2e 70 79 // PYTHON ESSENTIALS 1
 0x7fff5fbff800 0x7fff5fbff808 0x7fff5fbff810 // MEMORY DUMP
