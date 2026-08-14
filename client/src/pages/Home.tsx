@@ -954,7 +954,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         <section id="about" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
             <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 01. BACKGROUND & GROWTH</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-[#ccff00]">About Adithya</h2>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">About Adithya</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -1020,7 +1020,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         <section id="dsa" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
             <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 02. DSA IN C++</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-[#ccff00]">DSA Journey (2 Weeks In)</h2>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">DSA Journey (2 Weeks In)</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
@@ -1050,7 +1050,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         <section id="visual-skills" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
             <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 03. VISUAL SKILLS & PROFICIENCY</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-[#ccff00]">Language & Academic Metrics</h2>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Language & Academic Metrics</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -1142,7 +1142,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         <section id="skills" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
             <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 04. TECHNICAL SKILLS</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-[#ccff00]">Programming & Development</h2>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Programming & Development</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1202,7 +1202,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
             <div>
               <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 05. CREDENTIALS_VAULT</span>
-              <h2 className="text-3xl sm:text-4xl font-bold font-mono text-[#ccff00]">Certifications</h2>
+              <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Certifications</h2>
             </div>
             <div className="hidden sm:flex items-center gap-2 text-xs font-mono text-zinc-400 bg-white/5 px-3 py-1.5 rounded border border-white/10">
               <span className="w-2 h-2 rounded-full bg-[#ccff00] animate-pulse"></span>
@@ -1276,7 +1276,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
             <div>
               <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 06. PORTFOLIO PROJECTS</span>
-              <h2 className="text-3xl sm:text-4xl font-bold font-mono text-[#ccff00]">Projects & Screenshots Showcase</h2>
+              <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Projects & Screenshots Showcase</h2>
             </div>
             <button
               onClick={() => handleProtectedAction("proj")}
@@ -1492,7 +1492,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         <section id="education" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-16">
             <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 08. SYSTEM_LOGS</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-[#ccff00]">System Logs & Timeline</h2>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">System Logs & Timeline</h2>
             <p className="text-sm font-mono text-zinc-400">Chronological history of academic milestones, certifications, and technical experience.</p>
           </div>
 
