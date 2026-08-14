@@ -314,24 +314,22 @@ export default function Home() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
             {[
-              { id: "home", label: "Home" },
-              { id: "about", label: "About" },
-              { id: "dsa", label: "DSA" },
-              { id: "visual-skills", label: "Visual Skills" },
-              { id: "certifications", label: "Certifications" },
-              { id: "posts", label: "LinkedIn Posts" },
-              { id: "projects", label: "Projects" },
-              { id: "education", label: "Education" },
-              { id: "mentor", label: "Mentor" },
-              { id: "contact", label: "Contact" },
+              { id: "home", label: "ABOUT" },
+              { id: "visual-skills", label: "SKILLS" },
+              { id: "certifications", label: "CERTS" },
+              { id: "dsa", label: "ACHIEVEMENTS" },
+              { id: "posts", label: "ACTIVITY" },
+              { id: "projects", label: "PROJECTS" },
+              { id: "education", label: "LOGS" },
+              { id: "contact", label: "CONTACT" },
             ].map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`px-2.5 py-1.5 rounded text-xs font-mono transition-all ${
+                className={`px-3 py-1.5 text-xs font-mono uppercase tracking-wider transition-all ${
                   activeSection === item.id
-                    ? "bg-white text-black font-semibold shadow-sm"
-                    : "text-zinc-400 hover:text-white hover:bg-white/5"
+                    ? "bg-[#ccff00] text-black font-bold shadow-[0_0_15px_rgba(204,255,0,0.4)]"
+                    : "text-zinc-400 hover:text-[#ccff00] hover:bg-white/5"
                 }`}
               >
                 {item.label}
@@ -479,9 +477,9 @@ export default function Home() {
             
             {/* Left Column: Text & CTAs */}
             <div className="lg:col-span-7 space-y-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#ccff00]/10 border border-[#ccff00]/30 text-xs font-mono text-[#ccff00]">
-                <span className="w-2 h-2 rounded-full bg-[#ccff00] animate-pulse"></span>
-                SGPA Improved: 7.5 (Sem 1) → 8.05 (Sem 2)
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-red-950/40 border border-red-500/50 text-xs font-mono text-red-400">
+                <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                NOT AVAILABLE FOR HIRE // AVAILABLE FOR INTERNSHIPS
               </div>
 
               <div className="space-y-2">
@@ -680,15 +678,27 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Column: Profile Photo with White Edge Light standalone */}
+            {/* Right Column: Profile Photo Framed with Hacker HUD crosshairs */}
             <div className="lg:col-span-5 flex justify-center relative items-center py-6">
-              <div className="w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] lg:w-[410px] lg:h-[410px] rounded-full overflow-hidden border-2 border-white bg-[#141416] relative shadow-[0_0_40px_rgba(255,255,255,0.4)] ring-4 ring-white/20">
-                <img 
-                  src={PROFILE_PHOTO_BASE64} 
-                  alt="Adithya A Shetty" 
-                  className="w-full h-full object-cover object-top grayscale contrast-125 brightness-95"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+              <div className="relative p-3 bg-[#111] border border-[#ccff00]/40 shadow-[0_0_30px_rgba(204,255,0,0.15)] w-full max-w-md">
+                {/* Corner Crosshairs */}
+                <div className="absolute -top-2 -left-2 text-[#ccff00] font-mono text-lg">+</div>
+                <div className="absolute -top-2 -right-2 text-[#ccff00] font-mono text-lg">+</div>
+                <div className="absolute -bottom-2 -left-2 text-[#ccff00] font-mono text-lg">+</div>
+                <div className="absolute -bottom-2 -right-2 text-[#ccff00] font-mono text-lg">+</div>
+                
+                <div className="w-full h-[360px] sm:h-[400px] overflow-hidden bg-black relative border border-white/10">
+                  <img 
+                    src={PROFILE_PHOTO_BASE64} 
+                    alt="Adithya A Shetty" 
+                    className="w-full h-full object-cover object-top grayscale contrast-125 brightness-95"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[11px] font-mono text-[#ccff00]">
+                    <span className="bg-black/80 px-2 py-0.5 border border-[#ccff00]/30">ID // VERIFIED</span>
+                    <span className="bg-black/80 px-2 py-0.5 border border-[#ccff00]/30">MANGALORE_INDIA</span>
+                  </div>
+                </div>
               </div>
             </div>
 
