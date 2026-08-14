@@ -1100,18 +1100,18 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     <div className="text-lg font-bold font-mono text-pink-400 mb-1">CSS</div>
                     <div className="text-[10px] font-mono text-zinc-400">Styling & UI</div>
                   </div>
-                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
+                  <div className="bg-[#ccff00]/10 border-2 border-[#ccff00] rounded-xl p-4 text-center shadow-[0_0_15px_rgba(204,255,0,0.3)] transition group">
                     <div className="text-lg font-bold font-mono text-red-400 mb-1">JS</div>
-                    <div className="text-[10px] font-mono text-zinc-400">Using AI</div>
+                    <div className="text-[10px] font-mono text-[#ccff00] font-semibold">Using AI</div>
                   </div>
                 </div>
               </div>
 
               {/* FRAMEWORKS & TOOLS */}
-              <div>
-                <div className="text-xs font-mono text-[#ccff00] uppercase tracking-widest mb-4 pb-2 border-b border-white/10 flex justify-between items-center">
-                  <span>Frameworks & Tools</span>
-                  <span className="text-[10px] bg-[#ccff00]/10 text-[#ccff00] px-2 py-0.5 rounded border border-[#ccff00]/30 font-mono">Fully AI-Assisted</span>
+              <div className="bg-[#ccff00]/5 border border-[#ccff00]/40 rounded-2xl p-5 shadow-[0_0_20px_rgba(204,255,0,0.15)]">
+                <div className="text-xs font-mono text-[#ccff00] uppercase tracking-widest mb-4 pb-2 border-b border-[#ccff00]/20 flex justify-between items-center">
+                  <span className="font-bold">Frameworks & Tools</span>
+                  <span className="text-[10px] bg-[#ccff00]/20 text-[#ccff00] px-2.5 py-1 rounded-md border border-[#ccff00]/50 font-mono font-bold animate-pulse">Fully AI-Assisted</span>
                 </div>
                 <div className="grid grid-cols-5 gap-3">
                   <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
