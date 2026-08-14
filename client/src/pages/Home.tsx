@@ -1110,21 +1110,25 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               {/* FRAMEWORKS & TOOLS */}
               <div>
                 <div className="text-xs font-mono text-[#ccff00] uppercase tracking-widest mb-4 pb-2 border-b border-white/10">Frameworks & Tools</div>
-                <div className="grid grid-cols-4 gap-3">
+                <div className="grid grid-cols-5 gap-3">
                   <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
-                    <div className="text-base font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">AI WEB DEV</div>
+                    <div className="text-sm font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">SCRIPTING W/ AI</div>
+                    <div className="text-[10px] font-mono text-zinc-400">Automated scripting & logic</div>
+                  </div>
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
+                    <div className="text-sm font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">AI WEB DEV</div>
                     <div className="text-[10px] font-mono text-zinc-400">Full-stack rapid prototyping</div>
                   </div>
                   <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
-                    <div className="text-base font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">PORTFOLIOS</div>
+                    <div className="text-sm font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">PORTFOLIOS</div>
                     <div className="text-[10px] font-mono text-zinc-400">Fully functioning UI/UX</div>
                   </div>
                   <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
-                    <div className="text-base font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">REACT</div>
+                    <div className="text-sm font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">REACT</div>
                     <div className="text-[10px] font-mono text-zinc-400">Component architecture</div>
                   </div>
                   <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
-                    <div className="text-base font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">TAILWIND</div>
+                    <div className="text-sm font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">TAILWIND</div>
                     <div className="text-[10px] font-mono text-zinc-400">Responsive styling</div>
                   </div>
                 </div>
