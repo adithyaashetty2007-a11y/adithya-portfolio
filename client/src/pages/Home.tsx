@@ -1511,141 +1511,94 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           </div>
         </section>
 
-        {/* EDUCATION & JOURNEY TIMELINE SECTION */}
-        <section id="education" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
-          <div className="space-y-2 mb-16">
-            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 08. SYSTEM_LOGS</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">System Logs & Timeline</h2>
-            <p className="text-sm font-mono text-zinc-400">Chronological history of academic milestones, certifications, and technical experience.</p>
+        {/* EDUCATION & JOURNEY TIMELINE SECTION - REFERENCE STYLE */}
+        <section id="education" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-5xl mx-auto relative">
+          <div className="space-y-2 mb-16 text-center sm:text-left">
+            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 08. SYSTEM_LOGS & JOURNEY</span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Experience & Timeline</h2>
+            <p className="text-sm font-mono text-zinc-400">Where I've been and what I've built along the way.</p>
           </div>
 
-          <div className="relative border-l-2 border-[#ccff00]/40 ml-4 sm:ml-8 space-y-12 pl-6 sm:pl-10">
-            {/* Timeline Item 6: Cisco NetAcad Python Essentials 1 */}
+          <div className="relative border-l-2 border-[#ccff00]/40 ml-4 sm:ml-12 space-y-12 pl-6 sm:pl-12">
+            
+            {/* Timeline Item 1: Internshala AI Web Development Internship */}
             <div className="relative group">
-              <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] group-hover:scale-125 transition"></div>
+              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
               
-              <div className="bg-[#141416] border border-[#ccff00]/30 rounded-xl p-6 sm:p-8 space-y-4 glow-card">
+              <div className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300">
                 <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="text-xs font-mono text-[#ccff00] px-3 py-1 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded-full">
-                    Course Completion // [python]
+                  <span className="text-xs font-mono text-zinc-400">July 2026 – Present</span>
+                  <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-0.5 bg-[#ccff00]/10 border border-[#ccff00]/25 rounded">
+                    [main]
                   </span>
-                  <span className="text-xs font-mono text-zinc-400">Cisco Networking Academy</span>
                 </div>
 
-                <h3 className="text-2xl font-bold font-mono text-white">Python Essentials 1 (PE1)</h3>
-                <p className="text-xs font-mono text-[#ccff00]">CISCO NETWORKING ACADEMY (30 Hours | 30 Labs)</p>
+                <div className="space-y-1">
+                  <h3 className="text-2xl font-bold font-mono text-white">AI Web Development Intern</h3>
+                  <p className="text-xs font-mono text-[#ccff00]">INTERNSHALA & INAMIGOS FOUNDATION</p>
+                </div>
 
                 <p className="text-sm font-sans text-zinc-300 leading-relaxed">
-                  Learned fundamental concepts of computer programming, syntax, and data structures with Python. Note: Course completed, paid certification exam not taken.
+                  Contributed to a practical AI Web Development program focused on AI-assisted web development, rapid prototyping, debugging, and modern AI coding tools.
                 </p>
 
-                <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
-                  <div className="flex flex-wrap gap-2">
-                    {["Python", "Programming Basics", "Procedural Programming", "30 Labs"].map((tag, i) => (
-                      <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/40 border border-white/10 px-3 py-1 rounded">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <span className="text-xs font-mono text-zinc-400 italic">Course Final Exam Completed</span>
+                <div className="pt-4 border-t border-white/10 flex flex-wrap gap-2">
+                  {["AI Web Dev", "InAmigos Foundation", "Internshala", "Rapid Prototyping"].map((tag, i) => (
+                    <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/60 border border-white/10 px-3 py-1 rounded">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
 
-            {/* Timeline Item 5: AI for Techies */}
+            {/* Timeline Item 2: 2nd Year BE in CSE */}
             <div className="relative group">
-              <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] group-hover:scale-125 transition"></div>
+              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
               
-              <div className="bg-[#141416] border border-[#ccff00]/30 rounded-xl p-6 sm:p-8 space-y-4 glow-card">
+              <div className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300">
                 <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="text-xs font-mono text-[#ccff00] px-3 py-1 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded-full">
-                    Professional Milestone // [artificial-intelligence]
+                  <span className="text-xs font-mono text-zinc-400">September 2026 – Present</span>
+                  <span className="text-[11px] font-mono text-emerald-400 px-2.5 py-0.5 bg-emerald-400/10 border border-emerald-400/25 rounded">
+                    [current]
                   </span>
-                  <span className="text-xs font-mono text-zinc-400">LinkedIn Milestones</span>
                 </div>
 
-                <h3 className="text-2xl font-bold font-mono text-white">AI for Techies Certification & Workshop</h3>
-                <p className="text-xs font-mono text-[#ccff00]">PROFESSIONAL DEVELOPMENT</p>
+                <div className="space-y-1">
+                  <h3 className="text-2xl font-bold font-mono text-white">2nd Year Computer Science Engineering</h3>
+                  <p className="text-xs font-mono text-[#ccff00]">ST. JOSEPH ENGINEERING COLLEGE, MANGALURU</p>
+                </div>
 
                 <p className="text-sm font-sans text-zinc-300 leading-relaxed">
-                  Engaged in specialized training on "AI for Techies", focusing on practical applications of machine learning, modern AI workflows, and software development integrations.
+                  Currently pursuing 2nd year BE in Computer Science Engineering. Actively mastering Data Structures & Algorithms in C++, AI vibecoding, and building modern web applications.
                 </p>
 
-                <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
-                  <div className="flex flex-wrap gap-2">
-                    {["Artificial Intelligence", "Techies", "AI Workflows"].map((tag, i) => (
-                      <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/40 border border-white/10 px-3 py-1 rounded">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <a 
-                    href="https://www.linkedin.com/posts/adithya-a-shetty-421097382_ai-for-techies-activity-7385958617696620544-FPR6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs font-mono text-[#ccff00] hover:underline flex items-center gap-1.5"
-                  >
-                    <span>View LinkedIn Post</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Timeline Item 4: Prompt Engineering & AI Workshop (The Agent Blazer Club SJEC) */}
-            <div className="relative group">
-              <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] group-hover:scale-125 transition"></div>
-              
-              <div className="bg-[#141416] border border-[#ccff00]/30 rounded-xl p-6 sm:p-8 space-y-4 glow-card">
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="text-xs font-mono text-[#ccff00] px-3 py-1 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded-full">
-                    Workshop & Activity // [ai-ml]
-                  </span>
-                  <span className="text-xs font-mono text-zinc-400">The Agent Blazer Club SJEC</span>
-                </div>
-
-                <h3 className="text-2xl font-bold font-mono text-white">Prompt Engineering & Generative AI Workshop</h3>
-                <p className="text-xs font-mono text-[#ccff00]">ST. JOSEPH ENGINEERING COLLEGE</p>
-
-                <p className="text-sm font-sans text-zinc-300 leading-relaxed">
-                  Participated in the Agent Blazer Club SJEC workshop exploring prompt engineering, generative AI tools, and AI ecosystem fundamentals.
-                </p>
-
-                <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
-                  <div className="flex flex-wrap gap-2">
-                    {["Prompt Engineering", "Generative AI", "AI Ecosystem"].map((tag, i) => (
-                      <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/40 border border-white/10 px-3 py-1 rounded">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <a 
-                    href="https://www.linkedin.com/posts/theagentblazerclubsjec_promptengineering-ai-generativeai-activity-7443638504024268800-BCPn?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs font-mono text-[#ccff00] hover:underline flex items-center gap-1.5"
-                  >
-                    <span>View LinkedIn Post</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
+                <div className="pt-4 border-t border-white/10 flex flex-wrap gap-2">
+                  {["DSA in C++", "AI Vibecoding", "Web Development", "LeetCode"].map((tag, i) => (
+                    <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/60 border border-white/10 px-3 py-1 rounded">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
 
             {/* Timeline Item 3: CS50 Web Programming Certification */}
             <div className="relative group">
-              <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] group-hover:scale-125 transition"></div>
+              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
               
-              <div className="bg-[#141416] border border-[#ccff00]/30 rounded-xl p-6 sm:p-8 space-y-4 glow-card">
+              <div className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300">
                 <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="text-xs font-mono text-[#ccff00] px-3 py-1 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded-full">
-                    Certification Milestone // [web-dev]
+                  <span className="text-xs font-mono text-zinc-400">2026</span>
+                  <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-0.5 bg-[#ccff00]/10 border border-[#ccff00]/25 rounded">
+                    [certified]
                   </span>
-                  <span className="text-xs font-mono text-zinc-400">Harvard CS50W</span>
                 </div>
 
-                <h3 className="text-2xl font-bold font-mono text-white">CS50's Web Programming with Python and JavaScript</h3>
-                <p className="text-xs font-mono text-[#ccff00]">ONLINE CERTIFICATION</p>
+                <div className="space-y-1">
+                  <h3 className="text-2xl font-bold font-mono text-white">CS50's Web Programming with Python and JavaScript</h3>
+                  <p className="text-xs font-mono text-[#ccff00]">HARVARDX (HARVARD UNIVERSITY)</p>
+                </div>
 
                 <p className="text-sm font-sans text-zinc-300 leading-relaxed">
                   Completed rigorous coursework in web programming covering Python, JavaScript, Django, and modern frontend-backend integration concepts.
@@ -1654,7 +1607,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
                   <div className="flex flex-wrap gap-2">
                     {["Python", "JavaScript", "Django", "Web Dev"].map((tag, i) => (
-                      <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/40 border border-white/10 px-3 py-1 rounded">
+                      <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/60 border border-white/10 px-3 py-1 rounded">
                         {tag}
                       </span>
                     ))}
@@ -1672,74 +1625,124 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               </div>
             </div>
 
-            {/* Timeline Item: 2nd Year BE in CSE */}
+            {/* Timeline Item 4: Prompt Engineering & AI Workshop */}
             <div className="relative group">
-              <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] group-hover:scale-125 transition"></div>
+              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
               
-              <div className="bg-[#141416] border border-[#ccff00]/30 rounded-xl p-6 sm:p-8 space-y-4 glow-card">
+              <div className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300">
                 <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="text-xs font-mono text-[#ccff00] px-3 py-1 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded-full">
-                    2nd Year BE in CSE // [current]
+                  <span className="text-xs font-mono text-zinc-400">2026</span>
+                  <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-0.5 bg-[#ccff00]/10 border border-[#ccff00]/25 rounded">
+                    [workshop]
                   </span>
-                  <span className="text-xs font-mono text-zinc-400">St. Joseph Engineering College</span>
                 </div>
 
-                <h3 className="text-2xl font-bold font-mono text-white">Computer Science Engineering</h3>
-                <p className="text-xs font-mono text-[#ccff00]">SJEC, MANGALURU</p>
+                <div className="space-y-1">
+                  <h3 className="text-2xl font-bold font-mono text-white">Prompt Engineering & Generative AI Workshop</h3>
+                  <p className="text-xs font-mono text-[#ccff00]">THE AGENT BLAZER CLUB SJEC</p>
+                </div>
 
                 <p className="text-sm font-sans text-zinc-300 leading-relaxed">
-                  Currently pursuing 2nd year BE in Computer Science Engineering at St. Joseph Engineering College. Actively learning Data Structures & Algorithms in C++, mastering AI vibecoding (Lovable, Cursor, Manus) and 10+ modern tech stacks, building responsive web development projects, and solving LeetCode problems (around 15+ and moving ahead).
-                </p>
-
-                <div className="pt-4 border-t border-white/10 flex flex-wrap gap-2">
-                  {["DSA in C++", "AI Vibecoding (Lovable, Cursor, Manus)", "Web Development", "LeetCode (15+ & Moving Ahead)"].map((tag, i) => (
-                    <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/40 border border-white/10 px-3 py-1 rounded">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Timeline Item: Internshala AI Web Development Internship */}
-            <div className="relative group">
-              <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] group-hover:scale-125 transition"></div>
-              
-              <div className="bg-[#141416] border border-[#ccff00]/30 rounded-xl p-6 sm:p-8 space-y-4 glow-card">
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="text-xs font-mono text-[#ccff00] px-3 py-1 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded-full">
-                    Internship Selection // [experience]
-                  </span>
-                  <span className="text-xs font-mono text-zinc-400">July 07, 2026</span>
-                </div>
-
-                <h3 className="text-2xl font-bold font-mono text-white">AI Web Development Internship</h3>
-                <p className="text-xs font-mono text-[#ccff00]">INTERNSHALA & INAMIGOS FOUNDATION</p>
-
-                <p className="text-sm font-sans text-zinc-300 leading-relaxed">
-                  Contributed to a practical AI Web Development program through Internshala in collaboration with InAmigos Foundation. Focused on AI-assisted web development, rapid prototyping, debugging, and modern AI coding tools.
+                  Participated in the Agent Blazer Club SJEC workshop exploring prompt engineering, generative AI tools, and AI ecosystem fundamentals.
                 </p>
 
                 <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
                   <div className="flex flex-wrap gap-2">
-                    {["AI Web Dev", "InAmigos Foundation", "Internshala", "Rapid Prototyping"].map((tag, i) => (
-                      <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/40 border border-white/10 px-3 py-1 rounded">
+                    {["Prompt Engineering", "Generative AI", "AI Ecosystem"].map((tag, i) => (
+                      <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/60 border border-white/10 px-3 py-1 rounded">
                         {tag}
                       </span>
                     ))}
                   </div>
                   <a 
-                    href="https://internshala.com/verify_certificate"
+                    href="https://www.linkedin.com/posts/theagentblazerclubsjec_promptengineering-ai-generativeai-activity-7443638504024268800-BCPn?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs font-mono text-[#ccff00] hover:underline flex items-center gap-1.5"
                   >
-                    <span>Verify Certificate</span>
+                    <span>View LinkedIn Post</span>
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 </div>
               </div>
             </div>
+
+            {/* Timeline Item 5: AI for Techies */}
+            <div className="relative group">
+              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
+              
+              <div className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-xs font-mono text-zinc-400">2025 – 2026</span>
+                  <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-0.5 bg-[#ccff00]/10 border border-[#ccff00]/25 rounded">
+                    [milestone]
+                  </span>
+                </div>
+
+                <div className="space-y-1">
+                  <h3 className="text-2xl font-bold font-mono text-white">AI for Techies Certification & Workshop</h3>
+                  <p className="text-xs font-mono text-[#ccff00]">PROFESSIONAL DEVELOPMENT</p>
+                </div>
+
+                <p className="text-sm font-sans text-zinc-300 leading-relaxed">
+                  Engaged in specialized training on "AI for Techies", focusing on practical applications of machine learning, modern AI workflows, and software development integrations.
+                </p>
+
+                <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex flex-wrap gap-2">
+                    {["Artificial Intelligence", "Techies", "AI Workflows"].map((tag, i) => (
+                      <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/60 border border-white/10 px-3 py-1 rounded">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <a 
+                    href="https://www.linkedin.com/posts/adithya-a-shetty-421097382_ai-for-techies-activity-7385958617696620544-FPR6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-mono text-[#ccff00] hover:underline flex items-center gap-1.5"
+                  >
+                    <span>View LinkedIn Post</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Timeline Item 6: Cisco NetAcad Python Essentials 1 */}
+            <div className="relative group">
+              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
+              
+              <div className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-xs font-mono text-zinc-400">Foundation</span>
+                  <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-0.5 bg-[#ccff00]/10 border border-[#ccff00]/25 rounded">
+                    [python]
+                  </span>
+                </div>
+
+                <div className="space-y-1">
+                  <h3 className="text-2xl font-bold font-mono text-white">Python Essentials 1 (PE1)</h3>
+                  <p className="text-xs font-mono text-[#ccff00]">CISCO NETWORKING ACADEMY (30 Hours | 30 Labs)</p>
+                </div>
+
+                <p className="text-sm font-sans text-zinc-300 leading-relaxed">
+                  Learned fundamental concepts of computer programming, syntax, and data structures with Python. Note: Course completed, paid certification exam not taken.
+                </p>
+
+                <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex flex-wrap gap-2">
+                    {["Python", "Programming Basics", "Procedural Programming", "30 Labs"].map((tag, i) => (
+                      <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/60 border border-white/10 px-3 py-1 rounded">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <span className="text-xs font-mono text-zinc-400 italic">Course Final Exam Completed</span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
