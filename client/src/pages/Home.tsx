@@ -299,6 +299,56 @@ export default function Home() {
       <div className="fixed inset-0 crt-scanlines z-40 pointer-events-none opacity-50"></div>
       <div className="fixed inset-0 bg-grid-pattern z-0 pointer-events-none opacity-70"></div>
 
+      {/* Global Side Background Animated Hacker Data Streams (Left & Right) */}
+      <div className="fixed top-0 left-0 bottom-0 w-24 md:w-48 pointer-events-none overflow-hidden opacity-15 select-none z-0 hidden sm:block">
+        <div className="absolute inset-0 font-mono text-xs text-[#ccff00] leading-relaxed whitespace-pre animate-hex-scroll">
+          {`48 65 6C 6C 6F 20 57 6F 72 6C 64 20 // ADITHYA A SHETTY // SYSTEM INIT...
+73 74 61 72 74 20 70 79 74 68 6f 6e 33 2e 70 79 // PYTHON ESSENTIALS 1
+0x7fff5fbff800 0x7fff5fbff808 0x7fff5fbff810 // MEMORY DUMP
+C++ DSA 20+ LEETCODE 8.05 SGPA ST. JOSEPH ENGINEERING COLLEGE
+YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION
+48 65 6C 6C 6F 20 57 6F 72 6C 64 20 // ADITHYA A SHETTY // SYSTEM INIT...
+73 74 61 72 74 20 70 79 74 68 6f 6e 33 2e 70 79 // PYTHON ESSENTIALS 1
+0x7fff5fbff800 0x7fff5fbff808 0x7fff5fbff810 // MEMORY DUMP
+C++ DSA 20+ LEETCODE 8.05 SGPA ST. JOSEPH ENGINEERING COLLEGE
+YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION
+48 65 6C 6C 6F 20 57 6F 72 6C 64 20 // ADITHYA A SHETTY // SYSTEM INIT...
+73 74 61 72 74 20 70 79 74 68 6f 6e 33 2e 70 79 // PYTHON ESSENTIALS 1
+0x7fff5fbff800 0x7fff5fbff808 0x7fff5fbff810 // MEMORY DUMP
+C++ DSA 20+ LEETCODE 8.05 SGPA ST. JOSEPH ENGINEERING COLLEGE
+YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION
+48 65 6C 6C 6F 20 57 6F 72 6C 64 20 // ADITHYA A SHETTY // SYSTEM INIT...
+73 74 61 72 74 20 70 79 74 68 6f 6e 33 2e 70 79 // PYTHON ESSENTIALS 1
+0x7fff5fbff800 0x7fff5fbff808 0x7fff5fbff810 // MEMORY DUMP
+C++ DSA 20+ LEETCODE 8.05 SGPA ST. JOSEPH ENGINEERING COLLEGE
+YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
+        </div>
+      </div>
+      <div className="fixed top-0 right-0 bottom-0 w-24 md:w-48 pointer-events-none overflow-hidden opacity-15 select-none z-0 hidden sm:block">
+        <div className="absolute inset-0 font-mono text-xs text-[#ccff00] leading-relaxed whitespace-pre animate-hex-scroll">
+          {`48 65 6C 6C 6F 20 57 6F 72 6C 64 20 // ADITHYA A SHETTY // SYSTEM INIT...
+73 74 61 72 74 20 70 79 74 68 6f 6e 33 2e 70 79 // PYTHON ESSENTIALS 1
+0x7fff5fbff800 0x7fff5fbff808 0x7fff5fbff810 // MEMORY DUMP
+C++ DSA 20+ LEETCODE 8.05 SGPA ST. JOSEPH ENGINEERING COLLEGE
+YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION
+48 65 6C 6C 6F 20 57 6F 72 6C 64 20 // ADITHYA A SHETTY // SYSTEM INIT...
+73 74 61 72 74 20 70 79 74 68 6f 6e 33 2e 70 79 // PYTHON ESSENTIALS 1
+0x7fff5fbff800 0x7fff5fbff808 0x7fff5fbff810 // MEMORY DUMP
+C++ DSA 20+ LEETCODE 8.05 SGPA ST. JOSEPH ENGINEERING COLLEGE
+YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION
+48 65 6C 6C 6F 20 57 6F 72 6C 64 20 // ADITHYA A SHETTY // SYSTEM INIT...
+73 74 61 72 74 20 70 79 74 68 6f 6e 33 2e 70 79 // PYTHON ESSENTIALS 1
+0x7fff5fbff800 0x7fff5fbff808 0x7fff5fbff810 // MEMORY DUMP
+C++ DSA 20+ LEETCODE 8.05 SGPA ST. JOSEPH ENGINEERING COLLEGE
+YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION
+48 65 6C 6C 6F 20 57 6F 72 6C 64 20 // ADITHYA A SHETTY // SYSTEM INIT...
+73 74 61 72 74 20 70 79 74 68 6f 6e 33 2e 70 79 // PYTHON ESSENTIALS 1
+0x7fff5fbff800 0x7fff5fbff808 0x7fff5fbff810 // MEMORY DUMP
+C++ DSA 20+ LEETCODE 8.05 SGPA ST. JOSEPH ENGINEERING COLLEGE
+YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
+        </div>
+      </div>
+
       {/* Top Navbar */}
       <header className="fixed top-0 left-0 right-0 z-30 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
@@ -473,26 +523,6 @@ export default function Home() {
       <main className="lg:pl-16 pt-16">
         {/* HERO SECTION - STANDARD TWO-COLUMN LAYOUT */}
         <section id="home" className="min-h-[calc(100vh-4rem)] flex items-center justify-center relative overflow-hidden py-16 px-4 sm:px-8 border-b border-white/10">
-          {/* Animated Terminal / Hex Dump Background Data Stream */}
-          <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-10 select-none z-0">
-            <div className="absolute inset-0 font-mono text-xs text-[#ccff00] leading-relaxed whitespace-pre animate-hex-scroll">
-              {`48 65 6C 6C 6F 20 57 6F 72 6C 64 20 // ADITHYA A SHETTY // SYSTEM INIT...
-73 74 61 72 74 20 70 79 74 68 6f 6e 33 2e 70 79 // PYTHON ESSENTIALS 1
-0x7fff5fbff800 0x7fff5fbff808 0x7fff5fbff810 // MEMORY DUMP
-C++ DSA 20+ LEETCODE 8.05 SGPA ST. JOSEPH ENGINEERING COLLEGE
-YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION
-48 65 6C 6C 6F 20 57 6F 72 6C 64 20 // ADITHYA A SHETTY // SYSTEM INIT...
-73 74 61 72 74 20 70 79 74 68 6f 6e 33 2e 70 79 // PYTHON ESSENTIALS 1
-0x7fff5fbff800 0x7fff5fbff808 0x7fff5fbff810 // MEMORY DUMP
-C++ DSA 20+ LEETCODE 8.05 SGPA ST. JOSEPH ENGINEERING COLLEGE
-YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION
-48 65 6C 6C 6F 20 57 6F 72 6C 64 20 // ADITHYA A SHETTY // SYSTEM INIT...
-73 74 61 72 74 20 70 79 74 68 6f 6e 33 2e 70 79 // PYTHON ESSENTIALS 1
-0x7fff5fbff800 0x7fff5fbff808 0x7fff5fbff810 // MEMORY DUMP
-C++ DSA 20+ LEETCODE 8.05 SGPA ST. JOSEPH ENGINEERING COLLEGE
-YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
-            </div>
-          </div>
           <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
             
             {/* Left Column: Text & CTAs */}
