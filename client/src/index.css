@@ -200,3 +200,16 @@
 .border-neon {
   border-color: rgba(204, 255, 0, 0.4);
 }
+
+@keyframes hexScroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-hex-scroll {
+  animation: hexScroll 25s linear infinite;
+}

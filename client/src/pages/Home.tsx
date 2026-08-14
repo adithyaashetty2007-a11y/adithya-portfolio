@@ -473,6 +473,26 @@ export default function Home() {
       <main className="lg:pl-16 pt-16">
         {/* HERO SECTION - STANDARD TWO-COLUMN LAYOUT */}
         <section id="home" className="min-h-[calc(100vh-4rem)] flex items-center justify-center relative overflow-hidden py-16 px-4 sm:px-8 border-b border-white/10">
+          {/* Animated Terminal / Hex Dump Background Data Stream */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-10 select-none z-0">
+            <div className="absolute inset-0 font-mono text-xs text-[#ccff00] leading-relaxed whitespace-pre animate-hex-scroll">
+              {`48 65 6C 6C 6F 20 57 6F 72 6C 64 20 // ADITHYA A SHETTY // SYSTEM INIT...
+73 74 61 72 74 20 70 79 74 68 6f 6e 33 2e 70 79 // PYTHON ESSENTIALS 1
+0x7fff5fbff800 0x7fff5fbff808 0x7fff5fbff810 // MEMORY DUMP
+C++ DSA 20+ LEETCODE 8.05 SGPA ST. JOSEPH ENGINEERING COLLEGE
+YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION
+48 65 6C 6C 6F 20 57 6F 72 6C 64 20 // ADITHYA A SHETTY // SYSTEM INIT...
+73 74 61 72 74 20 70 79 74 68 6f 6e 33 2e 70 79 // PYTHON ESSENTIALS 1
+0x7fff5fbff800 0x7fff5fbff808 0x7fff5fbff810 // MEMORY DUMP
+C++ DSA 20+ LEETCODE 8.05 SGPA ST. JOSEPH ENGINEERING COLLEGE
+YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION
+48 65 6C 6C 6F 20 57 6F 72 6C 64 20 // ADITHYA A SHETTY // SYSTEM INIT...
+73 74 61 72 74 20 70 79 74 68 6f 6e 33 2e 70 79 // PYTHON ESSENTIALS 1
+0x7fff5fbff800 0x7fff5fbff808 0x7fff5fbff810 // MEMORY DUMP
+C++ DSA 20+ LEETCODE 8.05 SGPA ST. JOSEPH ENGINEERING COLLEGE
+YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
+            </div>
+          </div>
           <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
             
             {/* Left Column: Text & CTAs */}
@@ -491,20 +511,20 @@ export default function Home() {
 
               <div className="space-y-4 text-zinc-300 text-base sm:text-lg font-sans leading-relaxed max-w-2xl">
                 <p>
-                  I'm a Computer Science Engineering student at St. Joseph Engineering College, Mangaluru, currently in my 2nd Semester. I enjoy turning ideas into practical software solutions and continuously improving my technical skills.
+                  I'M A COMPUTER SCIENCE ENGINEERING STUDENT AT ST. JOSEPH ENGINEERING COLLEGE, MANGALURU, CURRENTLY IN MY 2ND SEMESTER. I ENJOY TURNING IDEAS INTO PRACTICAL SOFTWARE SOLUTIONS AND CONTINUOUSLY IMPROVING MY TECHNICAL SKILLS.
                 </p>
                 <p>
-                  I'm currently exploring Python, Web Development, Artificial Intelligence, and Data Structures & Algorithms (DSA) while building projects that strengthen my understanding of software development.
+                  I'M CURRENTLY EXPLORING PYTHON, WEB DEVELOPMENT, ARTIFICIAL INTELLIGENCE, AND DATA STRUCTURES & ALGORITHMS (DSA) WHILE BUILDING PROJECTS THAT STRENGTHEN MY UNDERSTANDING OF SOFTWARE DEVELOPMENT.
                 </p>
                 
                 <div className="pt-2 space-y-2">
-                  <h3 className="font-mono text-sm uppercase tracking-wider text-white font-bold">// What I Enjoy</h3>
+                  <h3 className="font-mono text-sm uppercase tracking-wider text-white font-bold">// WHAT I ENJOY</h3>
                   <ul className="space-y-1.5 text-sm font-sans text-zinc-300">
-                    <li className="flex items-center gap-2"><span>💻</span> Building responsive and modern web applications.</li>
-                    <li className="flex items-center gap-2"><span>🤖</span> Exploring Artificial Intelligence and Computer Vision projects.</li>
-                    <li className="flex items-center gap-2"><span>🚀</span> Solving programming challenges and learning new technologies.</li>
-                    <li className="flex items-center gap-2"><span>🌱</span> Continuously improving through real-world projects, workshops, and hackathons.</li>
-                    <li className="flex items-center gap-2"><span>🤝</span> Open to internships, collaborations, and networking opportunities.</li>
+                    <li className="flex items-center gap-2"><span>💻</span> BUILDING RESPONSIVE AND MODERN WEB APPLICATIONS.</li>
+                    <li className="flex items-center gap-2"><span>🤖</span> EXPLORING ARTIFICIAL INTELLIGENCE AND COMPUTER VISION PROJECTS.</li>
+                    <li className="flex items-center gap-2"><span>🚀</span> SOLVING PROGRAMMING CHALLENGES AND LEARNING NEW TECHNOLOGIES.</li>
+                    <li className="flex items-center gap-2"><span>🌱</span> CONTINUOUSLY IMPROVING THROUGH REAL-WORLD PROJECTS, WORKSHOPS, AND HACKATHONS.</li>
+                    <li className="flex items-center gap-2"><span>🤝</span> OPEN TO INTERNSHIPS, COLLABORATIONS, AND NETWORKING OPPORTUNITIES.</li>
                   </ul>
                 </div>
               </div>
