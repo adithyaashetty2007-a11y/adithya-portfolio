@@ -1066,92 +1066,86 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           </div>
         </section>
 
-        {/* VISUAL SKILLS SECTION */}
+        {/* CORE COMPONENTS SKILLS SECTION */}
         <section id="visual-skills" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 03. VISUAL SKILLS & PROFICIENCY</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Language & Academic Metrics</h2>
+            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 03. CORE_COMPONENTS & SKILLS</span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Technical Stack & Capabilities</h2>
+            <p className="text-sm font-mono text-zinc-400">Comprehensive inventory of programming languages, frameworks, and AI-assisted web development proficiency.</p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-6 space-y-6 bg-[#141416] border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:border-white/30 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)]">
-              <h3 className="font-mono text-lg font-bold text-white mb-6 flex items-center gap-2">
-                <Code2 className="w-5 h-5 text-emerald-400" />
-                Programming Languages
-              </h3>
-
-              <div className="space-y-5 font-mono text-xs">
-                <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-white font-bold">C Programming (College Basics)</span>
-                    <span className="text-zinc-400">75%</span>
+          <div className="bg-[#141416] border border-white/10 rounded-2xl p-6 sm:p-8 overflow-x-auto">
+            <div className="min-w-[650px] space-y-8">
+              {/* LANGUAGES ROW */}
+              <div>
+                <div className="text-xs font-mono text-[#ccff00] uppercase tracking-widest mb-4 pb-2 border-b border-white/10">Languages</div>
+                <div className="grid grid-cols-6 gap-3">
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
+                    <div className="text-lg font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">C</div>
+                    <div className="text-[10px] font-mono text-zinc-400">College Basics</div>
                   </div>
-                  <div className="w-full h-2.5 bg-black/60 rounded-full overflow-hidden border border-white/10">
-                    <div className="h-full bg-white rounded-full" style={{ width: "75%" }}></div>
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
+                    <div className="text-lg font-bold font-mono text-emerald-400 mb-1">C++</div>
+                    <div className="text-[10px] font-mono text-zinc-400">DSA Active</div>
                   </div>
-                </div>
-
-                <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-white font-bold">C++ & DSA (2 Weeks Active)</span>
-                    <span className="text-zinc-400">65%</span>
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
+                    <div className="text-lg font-bold font-mono text-blue-400 mb-1">PYTHON</div>
+                    <div className="text-[10px] font-mono text-zinc-400">College Level</div>
                   </div>
-                  <div className="w-full h-2.5 bg-black/60 rounded-full overflow-hidden border border-white/10">
-                    <div className="h-full bg-emerald-400 rounded-full" style={{ width: "65%" }}></div>
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
+                    <div className="text-lg font-bold font-mono text-purple-400 mb-1">HTML</div>
+                    <div className="text-[10px] font-mono text-zinc-400">Semantic markup</div>
                   </div>
-                </div>
-
-                <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-white font-bold">Python (College Basics)</span>
-                    <span className="text-zinc-400">70%</span>
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
+                    <div className="text-lg font-bold font-mono text-pink-400 mb-1">CSS</div>
+                    <div className="text-[10px] font-mono text-zinc-400">Styling & UI</div>
                   </div>
-                  <div className="w-full h-2.5 bg-black/60 rounded-full overflow-hidden border border-white/10">
-                    <div className="h-full bg-blue-400 rounded-full" style={{ width: "70%" }}></div>
-                  </div>
-                </div>
-
-                <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-white font-bold">Frontend / Web Dev (AI-Assisted)</span>
-                    <span className="text-zinc-400">60%</span>
-                  </div>
-                  <div className="w-full h-2.5 bg-black/60 rounded-full overflow-hidden border border-white/10">
-                    <div className="h-full bg-purple-400 rounded-full" style={{ width: "60%" }}></div>
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
+                    <div className="text-lg font-bold font-mono text-yellow-400 mb-1">JS</div>
+                    <div className="text-[10px] font-mono text-zinc-400">Scripting</div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div className="lg:col-span-6 space-y-6 bg-[#141416] border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:border-white/30 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)]">
-              <h3 className="font-mono text-lg font-bold text-white mb-6 flex items-center gap-2">
-                <TrendingUp className="w-5 h-5 text-emerald-400" />
-                Academic & Problem Solving Metrics
-              </h3>
-
-              <div className="grid grid-cols-2 gap-4">
-                <div className="p-5 bg-black/50 border border-white/10 rounded-xl text-center">
-                  <span className="text-zinc-500 font-mono text-xs uppercase block mb-1">Sem 2 SGPA</span>
-                  <span className="text-3xl font-bold font-mono text-emerald-400">8.05</span>
-                  <span className="text-[10px] font-mono text-zinc-400 block mt-1">Up from 7.5 in Sem 1</span>
+              {/* FRAMEWORKS & TOOLS */}
+              <div>
+                <div className="text-xs font-mono text-[#ccff00] uppercase tracking-widest mb-4 pb-2 border-b border-white/10">Frameworks & Tools</div>
+                <div className="grid grid-cols-4 gap-3">
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
+                    <div className="text-base font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">AI WEB DEV</div>
+                    <div className="text-[10px] font-mono text-zinc-400">Full-stack rapid prototyping</div>
+                  </div>
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
+                    <div className="text-base font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">PORTFOLIOS</div>
+                    <div className="text-[10px] font-mono text-zinc-400">Fully functioning UI/UX</div>
+                  </div>
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
+                    <div className="text-base font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">REACT</div>
+                    <div className="text-[10px] font-mono text-zinc-400">Component architecture</div>
+                  </div>
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
+                    <div className="text-base font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">TAILWIND</div>
+                    <div className="text-[10px] font-mono text-zinc-400">Responsive styling</div>
+                  </div>
                 </div>
+              </div>
 
-                <div className="p-5 bg-black/50 border border-white/10 rounded-xl text-center">
-                  <span className="text-zinc-500 font-mono text-xs uppercase block mb-1">LeetCode Solved</span>
-                  <span className="text-3xl font-bold font-mono text-white">20+</span>
-                  <span className="text-[10px] font-mono text-emerald-400 block mt-1">Started 2 weeks ago</span>
-                </div>
-
-                <div className="p-5 bg-black/50 border border-white/10 rounded-xl text-center">
-                  <span className="text-zinc-500 font-mono text-xs uppercase block mb-1">GitHub Repos</span>
-                  <span className="text-3xl font-bold font-mono text-white">10+</span>
-                  <span className="text-[10px] font-mono text-blue-400 block mt-1">Active commits</span>
-                </div>
-
-                <div className="p-5 bg-black/50 border border-white/10 rounded-xl text-center">
-                  <span className="text-zinc-500 font-mono text-xs uppercase block mb-1">Builder Mode</span>
-                  <span className="text-xl font-bold font-mono text-white">AI-Assisted</span>
-                  <span className="text-[10px] font-mono text-purple-400 block mt-1">~60% Frontend Accuracy</span>
+              {/* INFRASTRUCTURE & VERSION CONTROL */}
+              <div>
+                <div className="text-xs font-mono text-[#ccff00] uppercase tracking-widest mb-4 pb-2 border-b border-white/10">Infrastructure & Version Control</div>
+                <div className="grid grid-cols-3 gap-3">
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
+                    <div className="text-base font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">GIT & GITHUB</div>
+                    <div className="text-[10px] font-mono text-zinc-400">Version control & Pages</div>
+                  </div>
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
+                    <div className="text-base font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">AI ASSISTANTS</div>
+                    <div className="text-[10px] font-mono text-zinc-400">Manus, Cursor, Lovable</div>
+                  </div>
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
+                    <div className="text-base font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">VS CODE</div>
+                    <div className="text-[10px] font-mono text-zinc-400">Development editor</div>
+                  </div>
                 </div>
               </div>
             </div>
