@@ -1469,52 +1469,72 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
 
 
-        {/* PROJECTS SECTION */}
-        <section id="projects" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
+        {/* PRACTICE WORK SECTION - HIGH-END CYBERPUNK STYLE */}
+        <section className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto relative">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 07. PRACTICE WORK</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Featured Practice Work</h2>
+            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 07. PRACTICE WORK</span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Featured Practice Work</h2>
+            <p className="text-sm font-mono text-zinc-400">Core development repositories and interactive web applications.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
                 title: "Portfolio Website",
-                desc: "My interactive developer portfolio website built with AI assistance, featuring clean two-column hero layout and dark aesthetic.",
+                desc: "My interactive developer portfolio website built with AI assistance, featuring a cyberpunk hacker terminal aesthetic, CRT scanlines, and immersive dark mode.",
                 tech: ["React", "Tailwind CSS", "TypeScript", "AI-Assisted"],
-                github: "https://github.com/adithyaashetty2007-a11y",
-                live: "#"
+                github: "https://github.com/adithyaashetty2007-a11y/adithya-portfolio",
+                badge: "[active]"
               },
               {
                 title: "GitHub Repositories (10+)",
-                desc: "A collection of 10+ public repositories containing college assignments, C/C++/Python code snippets, and frontend practice work.",
+                desc: "A collection of 10+ public repositories containing college assignments in C, C++, Python data structures, and responsive frontend experiments.",
                 tech: ["C", "C++", "Python", "HTML/CSS"],
                 github: "https://github.com/adithyaashetty2007-a11y",
-                live: "#"
+                badge: "[10+ repos]"
               }
             ].map((proj, idx) => (
-              <div key={idx} className="bg-[#141416] border border-white/10 rounded-xl p-8 flex flex-col justify-between hover:border-white/30 transition group">
-                <div className="space-y-4">
+              <div 
+                key={idx} 
+                className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/60 rounded-2xl p-8 flex flex-col justify-between glow-card transition duration-300 group relative overflow-hidden"
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#ccff00]/5 rounded-bl-full pointer-events-none group-hover:bg-[#ccff00]/10 transition"></div>
+                
+                <div className="space-y-4 relative z-10">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono text-zinc-500">PROJECT_0{idx + 1}</span>
-                    <div className="flex items-center gap-3">
-                      <a href={proj.github} target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition">
-                        <Github className="w-4 h-4" />
-                      </a>
-                      <a href={proj.github} target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition">
-                        <ExternalLink className="w-4 h-4" />
-                      </a>
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold font-mono text-white group-hover:text-zinc-200 transition">{proj.title}</h3>
-                  <p className="text-zinc-400 text-sm font-sans leading-relaxed">{proj.desc}</p>
-                </div>
-                <div className="pt-6 mt-6 border-t border-white/10 flex flex-wrap gap-2">
-                  {proj.tech.map((t, tIdx) => (
-                    <span key={tIdx} className="px-2.5 py-1 bg-white/5 border border-white/10 text-xs font-mono text-zinc-300 rounded">
-                      {t}
+                    <span className="text-xs font-mono text-zinc-400">PROJECT_0{idx + 1}</span>
+                    <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-0.5 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded">
+                      {proj.badge}
                     </span>
-                  ))}
+                  </div>
+
+                  <h3 className="text-2xl font-bold font-mono text-white group-hover:text-[#ccff00] transition duration-300">
+                    {proj.title}
+                  </h3>
+
+                  <p className="text-sm font-sans text-zinc-300 leading-relaxed">
+                    {proj.desc}
+                  </p>
+                </div>
+
+                <div className="pt-6 mt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 relative z-10">
+                  <div className="flex flex-wrap gap-2">
+                    {proj.tech.map((t, tIdx) => (
+                      <span key={tIdx} className="text-xs font-mono text-[#ccff00] bg-black/60 border border-[#ccff00]/30 px-3 py-1 rounded">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+
+                  <a 
+                    href={proj.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#ccff00] text-black font-mono text-xs font-bold rounded hover:bg-white transition shadow-lg"
+                  >
+                    <Github className="w-3.5 h-3.5" />
+                    <span>GITHUB</span>
+                  </a>
                 </div>
               </div>
             ))}
