@@ -1121,16 +1121,35 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {/* FEATURED PROJECT 1: YOLOv8n Traffic Density Estimation */}
-            <div className="bg-[#141416] border border-[#ccff00]/30 rounded-2xl overflow-hidden flex flex-col justify-between group glow-card">
+            <div className="bg-[#141416] border border-[#ccff00]/30 rounded-2xl overflow-hidden flex flex-col justify-between group glow-card relative">
+              <div className="absolute top-2 right-2 text-[#ccff00] font-mono text-[10px] z-10">+</div>
               <div className="space-y-4">
-                <div className="h-56 bg-black/60 overflow-hidden relative border-b border-white/10 flex items-center justify-center p-6 text-center">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-[#ccff00]/10 via-transparent to-transparent"></div>
-                  <div className="space-y-2 relative z-10">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ccff00]/10 border border-[#ccff00]/30 text-xs font-mono text-[#ccff00]">
-                      <span className="w-2 h-2 rounded-full bg-[#ccff00] animate-pulse"></span>
-                      Computer Vision & AI
+                <div 
+                  onClick={() => setSelectedProjectImage("/manus-storage/pasted_file_aQhCDw_image_aac1af83.webp")}
+                  className="h-56 bg-black overflow-hidden relative border-b border-white/10 cursor-pointer group/img"
+                >
+                  {/* Default State: Terminal / AI Badge banner */}
+                  <div className="absolute inset-0 bg-black/80 flex flex-col items-center justify-center p-6 text-center group-hover/img:opacity-0 transition duration-300">
+                    <div className="absolute inset-0 bg-gradient-to-tr from-[#ccff00]/10 via-transparent to-transparent"></div>
+                    <div className="space-y-2 relative z-10">
+                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ccff00]/10 border border-[#ccff00]/30 text-xs font-mono text-[#ccff00]">
+                        <span className="w-2 h-2 rounded-full bg-[#ccff00] animate-pulse"></span>
+                        Computer Vision & AI
+                      </div>
+                      <h3 className="text-lg font-bold font-mono text-white">YOLOv8n Traffic Density Estimation</h3>
+                      <p className="text-[11px] font-mono text-zinc-400">Hover or click to inspect execution output</p>
                     </div>
-                    <h3 className="text-lg font-bold font-mono text-white">YOLOv8n Traffic Density Estimation</h3>
+                  </div>
+
+                  {/* Hover State: YOLOv8n Terminal Output Screenshot */}
+                  <img 
+                    src="/manus-storage/pasted_file_aQhCDw_image_aac1af83.webp" 
+                    alt="YOLOv8n Traffic Density Estimation Output" 
+                    className="w-full h-full object-cover object-top opacity-0 group-hover/img:opacity-100 transition duration-300 scale-105 group-hover/img:scale-100" 
+                  />
+                  
+                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-xs font-mono text-[#ccff00] gap-1.5 font-bold pointer-events-none">
+                    <ImageIcon className="w-4 h-4" /> CLICK TO EXPAND FULL SCREENSHOT
                   </div>
                 </div>
 
