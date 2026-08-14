@@ -617,14 +617,22 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                       doc.setFont("Helvetica", "bold");
                       doc.setFontSize(10);
                       doc.setTextColor(30, 30, 30);
-                      doc.text("Bachelor of Engineering (B.E.)", margin, y);
-                      doc.text("2nd Semester Completed", pageWidth - margin - 45, y);
+                      doc.text("St Joseph Engineering College (SJEC), Mangalore", margin, y);
+                      doc.text("2025 – 2029 (Expected)", pageWidth - margin - 45, y);
                       y += 5;
                       doc.setFont("Helvetica", "normal");
                       doc.setTextColor(50, 50, 50);
-                      doc.text("SGPA: 8.05 (Semester 2) — improved from 7.5 in Semester 1", margin, y);
+                      doc.text("Bachelor of Engineering (B.E.) in Computer Science & Engineering — SGPA: 8.05 (Semester 2)", margin, y);
+                      y += 5;
+                      doc.text("Semester 2 SGPA: 8.05 — improved from 7.5 in Semester 1", margin, y);
                       y += 5;
                       doc.text("Core coursework: C Programming, C++ & Data Structures, Python Fundamentals, Mathematics", margin, y);
+                      y += 6;
+                      doc.setFont("Helvetica", "bold");
+                      doc.text("GM Vidyanikethan Public School, Brahmavara, Udupi", margin, y);
+                      y += 5;
+                      doc.setFont("Helvetica", "normal");
+                      doc.text("Class 10, CBSE  |  Pre-University (PCMC Science) — Aggregate: 80%", margin, y);
                       y += 8;
 
                       // EXPERIENCE
