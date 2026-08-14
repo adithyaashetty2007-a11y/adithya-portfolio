@@ -632,7 +632,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 </div>
                 <p className="text-zinc-200">
                   <span className="text-[#ccff00] mr-2">&gt;</span>
-                  <TerminalTypingText key={`t1-${typingKey}`} text="I'M A COMPUTER SCIENCE ENGINEERING STUDENT AT ST. JOSEPH ENGINEERING COLLEGE, MANGALURU, CURRENTLY IN MY 2ND SEMESTER. I ENJOY TURNING IDEAS INTO PRACTICAL SOFTWARE SOLUTIONS AND CONTINUOUSLY IMPROVING MY TECHNICAL SKILLS." speed={8} delay={200} resetKey={typingKey} />
+                  <TerminalTypingText key={`t1-${typingKey}`} text="I AM A COMPUTER SCIENCE ENGINEERING STUDENT AT ST. JOSEPH ENGINEERING COLLEGE, MANGALURU, CURRENTLY STUDYING IN MY 2ND YEAR FROM SEPTEMBER 2026. I ENJOY TURNING IDEAS INTO PRACTICAL SOFTWARE SOLUTIONS AND CONTINUOUSLY IMPROVING MY TECHNICAL SKILLS." speed={8} delay={200} resetKey={typingKey} />
                 </p>
                 <p className="text-zinc-300 pt-2">
                   <span className="text-[#ccff00] mr-2">&gt;</span>
