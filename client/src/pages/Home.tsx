@@ -1036,61 +1036,72 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           </div>
         </section>
 
-        {/* CERTIFICATIONS SECTION */}
-        <section id="certifications" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
+        {/* CERTIFICATIONS SECTION - CREDENTIALS_VAULT */}
+        <section id="certifications" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto relative">
+          {/* Top Vault Header Row */}
+          <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
             <div>
-              <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 05. CREDENTIALS & GALLERY</span>
+              <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 05. CREDENTIALS_VAULT</span>
               <h2 className="text-3xl sm:text-4xl font-bold font-mono text-[#ccff00]">Certifications</h2>
+            </div>
+            <div className="hidden sm:flex items-center gap-2 text-xs font-mono text-zinc-400 bg-white/5 px-3 py-1.5 rounded border border-white/10">
+              <span className="w-2 h-2 rounded-full bg-[#ccff00] animate-pulse"></span>
+              AUTHORIZED_CERTIFICATIONS
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {certificates.map((cert) => (
-              <div key={cert.id} className="bg-[#141416] border border-white/10 rounded-xl p-6 flex flex-col justify-between group glow-card">
+            {certificates.map((cert, index) => (
+              <div key={cert.id} className="bg-[#141416] border border-white/15 rounded-xl p-6 flex flex-col justify-between group glow-card relative">
+                <div className="absolute top-2 right-2 text-[#ccff00] font-mono text-[10px] opacity-40">+</div>
+                
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <div className="p-2.5 bg-white/5 border border-white/10 rounded-lg">
-                      <Award className="w-5 h-5 text-white" />
+                    <div className="p-2.5 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded-lg text-[#ccff00]">
+                      <Award className="w-5 h-5" />
                     </div>
-                    <span className="text-xs font-mono text-zinc-500">{cert.date}</span>
+                    <span className="text-[10px] font-mono text-zinc-400 px-2 py-0.5 bg-white/5 rounded border border-white/10">
+                      ID: ADITHYA-0{index + 1}
+                    </span>
                   </div>
 
-                  <h3 className="text-lg font-bold font-mono text-white">{cert.title}</h3>
-                  <p className="text-xs text-zinc-400">{cert.issuer}</p>
+                  <h3 className="text-lg font-bold font-mono text-white group-hover:text-[#ccff00] transition">{cert.title}</h3>
+                  <p className="text-xs font-mono text-zinc-400">{cert.issuer}</p>
 
-                  {/* Certificate Image Thumbnail / Preview */}
+                  {/* Certificate Image Preview */}
                   {cert.imageUrl ? (
                     <div 
                       onClick={() => setSelectedCertImage(cert.imageUrl || null)}
-                      className="mt-4 rounded-lg overflow-hidden border border-white/15 h-36 bg-black cursor-pointer relative group/img"
+                      className="mt-4 rounded-lg overflow-hidden border border-white/20 h-40 bg-black cursor-pointer relative group/img shadow-md"
                     >
                       <img src={cert.imageUrl} alt={cert.title} className="w-full h-full object-cover group-hover/img:scale-105 transition duration-300" />
-                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-xs font-mono text-white gap-1">
-                        <ImageIcon className="w-4 h-4" /> View Full Image
+                      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-xs font-mono text-[#ccff00] gap-1.5 font-bold">
+                        <ImageIcon className="w-4 h-4" /> VIEW FULL CERTIFICATE
                       </div>
                     </div>
                   ) : null}
                 </div>
 
-                <div className="pt-4 mt-4 border-t border-white/10 flex items-center justify-between">
-                  <a 
-                    href={cert.credentialUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-xs font-mono text-zinc-400 hover:text-white flex items-center gap-1"
-                  >
-                    <span>LinkedIn Credential</span>
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
-                  {cert.imageUrl && (
-                    <button 
-                      onClick={() => setSelectedCertImage(cert.imageUrl || null)}
-                      className="text-xs font-mono text-white bg-white/10 px-2.5 py-1 rounded hover:bg-white/20 transition"
+                <div className="pt-5 mt-6 border-t border-white/10 grid grid-cols-2 gap-2 text-[11px] font-mono">
+                  <div>
+                    <div className="text-zinc-500 uppercase text-[9px]">ISSUER</div>
+                    <div className="text-zinc-300 truncate">{cert.issuer.split('&')[0].trim()}</div>
+                  </div>
+                  <div>
+                    <div className="text-zinc-500 uppercase text-[9px]">STATUS</div>
+                    <div className="text-[#ccff00]">VERIFIED</div>
+                  </div>
+                  <div className="col-span-2 pt-3 mt-2 border-t border-white/5 flex items-center justify-between">
+                    <a 
+                      href={cert.credentialUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-[#ccff00] hover:underline flex items-center gap-1 font-bold text-xs"
                     >
-                      Preview
-                    </button>
-                  )}
+                      <span>VERIFY_CREDENTIAL</span>
+                      <ArrowUpRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
