@@ -23,6 +23,7 @@ interface LinkedInPost {
   summary: string;
   date: string;
   postUrl: string;
+  imageUrl?: string;
 }
 
 interface ProjectItem {
@@ -112,16 +113,17 @@ export default function Home() {
   const [linkedinPosts, setLinkedinPosts] = useState<LinkedInPost[]>([
     {
       id: "1",
-      title: "SGPA Jump to 8.05 in 2nd Semester!",
-      summary: "Thrilled to share my academic progress! Improved my SGPA from 7.5 in 1st sem to 8.05 in 2nd sem, alongside solving 20+ LeetCode problems in C++ over the last 2 weeks.",
-      date: "August 2026",
-      postUrl: "https://www.linkedin.com/in/adithya-a-shetty-421097382"
+      title: "Prompt Engineering & Generative AI Workshop at SJEC",
+      summary: "Successfully participated in the Prompt Engineering & Generative AI session hosted by the Department of Computer Science & Engineering and AgentBlazer Club at SJEC.",
+      date: "March 2026",
+      postUrl: "https://www.linkedin.com/posts/theagentblazerclubsjec_promptengineering-ai-generativeai-activity-7443638504024268800-BCPn",
+      imageUrl: "/manus-storage/pasted_file_7u8EpX_image_c96602d2.webp"
     },
     {
       id: "2",
-      title: "Building AI-Assisted Frontend Web Projects",
-      summary: "Exploring web development and building interactive projects with AI assistance. Growing my frontend skills every single day.",
-      date: "July 2026",
+      title: "SGPA Jump to 8.05 in 2nd Semester!",
+      summary: "Thrilled to share my academic progress! Improved my SGPA from 7.5 in 1st sem to 8.05 in 2nd sem, alongside solving 20+ LeetCode problems in C++ over the last 2 weeks.",
+      date: "August 2026",
       postUrl: "https://www.linkedin.com/in/adithya-a-shetty-421097382"
     }
   ]);
@@ -1270,18 +1272,33 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {linkedinPosts.map((post) => (
-              <div key={post.id} className="bg-[#141416] border border-white/10 rounded-xl p-6 flex flex-col justify-between group hover:border-white/30 transition">
-                <div className="space-y-3">
+              <div key={post.id} className="bg-[#141416] border border-white/15 rounded-xl p-6 flex flex-col justify-between group hover:border-[#ccff00]/40 transition relative overflow-hidden">
+                <div className="absolute top-2 right-2 text-[#ccff00] font-mono text-[10px] opacity-40">+</div>
+
+                <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-xs font-mono text-zinc-400">
-                      <Linkedin className="w-4 h-4 text-blue-400" />
+                      <Linkedin className="w-4 h-4 text-[#ccff00]" />
                       <span>LinkedIn Update</span>
                     </div>
                     <span className="text-xs font-mono text-zinc-500">{post.date}</span>
                   </div>
 
-                  <h3 className="text-lg font-bold font-mono text-white">{post.title}</h3>
+                  <h3 className="text-lg font-bold font-mono text-white group-hover:text-[#ccff00] transition">{post.title}</h3>
                   <p className="text-xs sm:text-sm text-zinc-300 font-sans leading-relaxed">{post.summary}</p>
+
+                  {/* Hover Image Preview for Prompt Engineering post */}
+                  {post.imageUrl && (
+                    <div 
+                      onClick={() => setSelectedCertImage(post.imageUrl || null)}
+                      className="mt-4 rounded-lg overflow-hidden border border-white/20 h-44 bg-black cursor-pointer relative group/img shadow-md"
+                    >
+                      <img src={post.imageUrl} alt={post.title} className="w-full h-full object-cover object-center group-hover/img:scale-105 transition duration-300" />
+                      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-xs font-mono text-[#ccff00] gap-1.5 font-bold">
+                        <ImageIcon className="w-4 h-4" /> CLICK TO EXPAND WORKSHOP PHOTO
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <div className="pt-4 mt-6 border-t border-white/10 flex items-center justify-between">
@@ -1289,12 +1306,12 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     href={post.postUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-xs font-mono text-white bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded transition flex items-center gap-1.5"
+                    className="text-xs font-mono text-[#ccff00] hover:underline flex items-center gap-1.5 font-bold"
                   >
-                    <span>View on LinkedIn</span>
+                    <span>VIEW ON LINKEDIN</span>
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>
-                  <span className="text-[10px] font-mono text-zinc-500">Adithya A Shetty</span>
+                  <span className="text-[10px] font-mono text-zinc-500">ADITHYA_A_SHETTY</span>
                 </div>
               </div>
             ))}
