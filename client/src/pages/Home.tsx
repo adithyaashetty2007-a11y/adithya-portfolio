@@ -6,7 +6,10 @@ import {
   ChevronRight, Download, Menu, X, ArrowUpRight, ArrowUp, ShieldCheck, TerminalSquare, Plus, Image as ImageIcon, MessageSquare, TrendingUp, Compass
 } from "lucide-react";
 import { toast } from "sonner";
-import { PROFILE_PHOTO_BASE64, INTERNSHALA_CERT_BASE64, CS50W_CERT_BASE64, VIBEATHON_CERT_BASE64 } from "@/lib/assets";
+import { 
+  PROFILE_PHOTO_BASE64, INTERNSHALA_CERT_BASE64, CS50W_CERT_BASE64, VIBEATHON_CERT_BASE64,
+  SCEPTIX_ARG_CERT_BASE64, PROMPTOPS_CERT_BASE64, WORKSHOP_PHOTO_BASE64, TRAFFIC_SCREENSHOT_BASE64 
+} from "@/lib/assets";
 
 interface Certificate {
   id: string;
@@ -110,7 +113,7 @@ export default function Home() {
       title: "The Vanguard - Alternate Reality Game (ARG)",
       issuer: "The Sceptix Club, SJEC",
       date: "April 30, 2026",
-      imageUrl: "/manus-storage/WhatsAppImage2026-08-14at1.57.41PM_dd3f4c9c.jpeg",
+      imageUrl: SCEPTIX_ARG_CERT_BASE64,
       credentialUrl: "https://www.linkedin.com/in/adithya-a-shetty-421097382",
       description: "Successfully participated in The Vanguard ARG challenge organized by The Sceptix Club at St. Joseph Engineering College."
     },
@@ -119,7 +122,7 @@ export default function Home() {
       title: "Prompt-Ops 2K26 - Prompt Engineering",
       issuer: "Agentblazer Club & HOD CSE, SJEC",
       date: "March 25, 2026",
-      imageUrl: "/manus-storage/WhatsAppImage2026-08-14at1.58.25PM_1191131f.jpeg",
+      imageUrl: PROMPTOPS_CERT_BASE64,
       credentialUrl: "https://www.linkedin.com/in/adithya-a-shetty-421097382",
       description: "Successfully participated in Prompt-Ops 2K26, exploring emerging trends in Artificial Intelligence, Prompt Engineering, and Agentic Technologies."
     }
@@ -136,7 +139,7 @@ export default function Home() {
       summary: "Successfully participated in the Prompt Engineering & Generative AI session hosted by the Department of Computer Science & Engineering and AgentBlazer Club at SJEC.",
       date: "March 2026",
       postUrl: "https://www.linkedin.com/posts/theagentblazerclubsjec_promptengineering-ai-generativeai-activity-7443638504024268800-BCPn",
-      imageUrl: "/manus-storage/pasted_file_7u8EpX_image_c96602d2.webp"
+      imageUrl: WORKSHOP_PHOTO_BASE64
     }
   ]);
   const [isAddPostModalOpen, setIsAddPostModalOpen] = useState(false);
@@ -1147,7 +1150,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               <div className="absolute top-2 right-2 text-[#ccff00] font-mono text-[10px] z-10">+</div>
               <div className="space-y-4">
                 <div 
-                  onClick={() => setSelectedProjectImage("/manus-storage/pasted_file_aQhCDw_image_aac1af83.webp")}
+                  onClick={() => setSelectedProjectImage(TRAFFIC_SCREENSHOT_BASE64)}
                   className="h-56 bg-black overflow-hidden relative border-b border-white/10 cursor-pointer group/img"
                 >
                   {/* Default State: Terminal / AI Badge banner */}
@@ -1165,7 +1168,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
                   {/* Hover State: YOLOv8n Terminal Output Screenshot */}
                   <img 
-                    src="/manus-storage/pasted_file_aQhCDw_image_aac1af83.webp" 
+                    src={TRAFFIC_SCREENSHOT_BASE64} 
                     alt="YOLOv8n Traffic Density Estimation Output" 
                     className="w-full h-full object-cover object-top opacity-0 group-hover/img:opacity-100 transition duration-300 scale-105 group-hover/img:scale-100" 
                   />
