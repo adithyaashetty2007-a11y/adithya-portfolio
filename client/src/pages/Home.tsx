@@ -637,42 +637,82 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   <TerminalTypingText key={`t2-${typingKey}`} text="I'M CURRENTLY EXPLORING PYTHON, WEB DEVELOPMENT, ARTIFICIAL INTELLIGENCE, AND DATA STRUCTURES & ALGORITHMS (DSA) WHILE BUILDING PROJECTS THAT STRENGTHEN MY UNDERSTANDING OF SOFTWARE DEVELOPMENT." speed={8} delay={1800} resetKey={typingKey} />
                 </p>
                 
-                <div className="pt-4">
-                  <div className="bg-[#141416] border border-[#ccff00]/30 rounded-xl overflow-hidden shadow-2xl">
-                    <div className="bg-black/80 px-4 py-2 border-b border-white/10 flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <div className="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
-                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
-                        <div className="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
-                        <span className="text-[11px] font-mono text-zinc-400 ml-2">adithya@portfolio ~ what_i_enjoy.sh</span>
+                <div className="pt-6">
+                  <div className="mb-3 flex items-center justify-between">
+                    <span className="text-xs font-mono text-[#ccff00] uppercase tracking-wider">// HEX_NODE_CONSTELLATION.HUD</span>
+                    <span className="text-[10px] font-mono text-zinc-500">PULSING_LASER_MATRIX :: 5_NODES</span>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 relative">
+                    {[
+                      {
+                        id: "NODE_01",
+                        icon: "💻",
+                        title: "WEB ENGINEERING",
+                        desc: "BUILDING RESPONSIVE AND MODERN WEB APPLICATIONS.",
+                        tag: "FRONTEND // REACT"
+                      },
+                      {
+                        id: "NODE_02",
+                        icon: "🤖",
+                        title: "AI & COMPUTER VISION",
+                        desc: "EXPLORING ARTIFICIAL INTELLIGENCE AND COMPUTER VISION PROJECTS.",
+                        tag: "YOLOv8 // OPENCV"
+                      },
+                      {
+                        id: "NODE_03",
+                        icon: "🚀",
+                        title: "ALGORITHMIC OPS",
+                        desc: "SOLVING PROGRAMMING CHALLENGES AND LEARNING NEW TECHNOLOGIES.",
+                        tag: "DSA // C++ // LEETCODE"
+                      },
+                      {
+                        id: "NODE_04",
+                        icon: "🌱",
+                        title: "INNOVATION & GROWTH",
+                        desc: "CONTINUOUSLY IMPROVING THROUGH REAL-WORLD PROJECTS, WORKSHOPS, AND HACKATHONS.",
+                        tag: "HACKATHONS // SCEPTIX"
+                      },
+                      {
+                        id: "NODE_05",
+                        icon: "🤝",
+                        title: "COLLABORATION",
+                        desc: "OPEN TO INTERNSHIPS, COLLABORATIONS, AND NETWORKING OPPORTUNITIES.",
+                        tag: "NETWORKING // SJEC"
+                      }
+                    ].map((node, i) => (
+                      <div 
+                        key={node.id} 
+                        className={`bg-[#141416]/90 border border-white/15 hover:border-[#ccff00] rounded-xl p-5 relative group transition-all duration-300 hover:shadow-[0_0_25px_rgba(204,255,0,0.2)] hover:-translate-y-1 ${i === 4 ? 'sm:col-span-2' : ''}`}
+                      >
+                        {/* Laser pulse corner accent */}
+                        <div className="absolute top-0 right-0 w-12 h-12 overflow-hidden pointer-events-none rounded-tr-xl">
+                          <div className="absolute top-0 right-0 w-3 h-3 bg-[#ccff00]/40 group-hover:bg-[#ccff00] transition animate-pulse"></div>
+                        </div>
+
+                        <div className="flex items-start gap-4">
+                          <div className="w-12 h-12 rounded-lg bg-black border border-white/20 group-hover:border-[#ccff00] flex items-center justify-center text-2xl shadow-inner transition shrink-0">
+                            {node.icon}
+                          </div>
+
+                          <div className="space-y-1.5 flex-1">
+                            <div className="flex items-center justify-between">
+                              <span className="text-[10px] font-mono text-[#ccff00] tracking-widest">{node.id}</span>
+                              <span className="text-[9px] font-mono text-zinc-500 bg-black/60 px-2 py-0.5 rounded border border-white/10">{node.tag}</span>
+                            </div>
+
+                            <h4 className="text-sm font-bold font-mono text-white group-hover:text-[#ccff00] transition">{node.title}</h4>
+                            
+                            <p className="text-xs font-sans text-zinc-300 leading-relaxed">
+                              <TerminalTypingText key={`node-${i}-${typingKey}`} text={node.desc} speed={5} delay={400 + (i * 400)} resetKey={typingKey} />
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Animated Laser Data Stream Indicator */}
+                        <div className="absolute bottom-0 left-4 right-4 h-[1px] bg-gradient-to-r from-transparent via-[#ccff00]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       </div>
-                      <span className="text-[10px] font-mono text-[#ccff00] bg-[#ccff00]/10 px-2 py-0.5 rounded border border-[#ccff00]/30">ACTIVE</span>
-                    </div>
-                    <div className="p-4 sm:p-5 space-y-3 font-mono text-xs sm:text-sm text-zinc-300">
-                      <div className="text-zinc-500">$ ./execute_what_i_enjoy.sh --verbose</div>
-                      <div className="space-y-2 text-zinc-200">
-                        <div className="flex items-start gap-2">
-                          <span className="text-[#ccff00]">&gt;</span>
-                          <span>💻 <TerminalTypingText key={`item1-${typingKey}`} text="BUILDING RESPONSIVE AND MODERN WEB APPLICATIONS." speed={6} delay={3200} resetKey={typingKey} /></span>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <span className="text-[#ccff00]">&gt;</span>
-                          <span>🤖 <TerminalTypingText key={`item2-${typingKey}`} text="EXPLORING ARTIFICIAL INTELLIGENCE AND COMPUTER VISION PROJECTS." speed={6} delay={5200} resetKey={typingKey} /></span>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <span className="text-[#ccff00]">&gt;</span>
-                          <span>🚀 <TerminalTypingText key={`item3-${typingKey}`} text="SOLVING PROGRAMMING CHALLENGES AND LEARNING NEW TECHNOLOGIES." speed={6} delay={7200} resetKey={typingKey} /></span>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <span className="text-[#ccff00]">&gt;</span>
-                          <span>🌱 <TerminalTypingText key={`item4-${typingKey}`} text="CONTINUOUSLY IMPROVING THROUGH REAL-WORLD PROJECTS, WORKSHOPS, AND HACKATHONS." speed={6} delay={9400} resetKey={typingKey} /></span>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <span className="text-[#ccff00]">&gt;</span>
-                          <span>🤝 <TerminalTypingText key={`item5-${typingKey}`} text="OPEN TO INTERNSHIPS, COLLABORATIONS, AND NETWORKING OPPORTUNITIES." speed={6} delay={12000} resetKey={typingKey} /></span>
-                        </div>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
