@@ -1886,11 +1886,13 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               </p>
 
               <div className="space-y-4 font-mono text-sm">
-                <div className="flex items-center gap-4 p-4 rounded-xl bg-[#141416] border border-white/10">
-                  <Phone className="w-5 h-5 text-zinc-400" />
+                <div className="flex items-center gap-4 p-4 rounded-xl bg-[#141416] border border-white/10 hover:border-[#ccff00]/40 transition group/phone">
+                  <Phone className="w-5 h-5 text-[#ccff00]" />
                   <div>
-                    <div className="text-xs text-zinc-500">Direct Phone</div>
-                    <button onClick={copyPhone} className="text-white hover:underline font-bold">8088814686</button>
+                    <div className="text-xs text-zinc-500">Direct Phone (Tap to Call)</div>
+                    <a href="tel:8088814686" className="text-white group-hover/phone:text-[#ccff00] hover:underline font-bold tracking-wider block transition">
+                      +91 80888 14686
+                    </a>
                   </div>
                 </div>
 
