@@ -637,15 +637,43 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   <TerminalTypingText key={`t2-${typingKey}`} text="I'M CURRENTLY EXPLORING PYTHON, WEB DEVELOPMENT, ARTIFICIAL INTELLIGENCE, AND DATA STRUCTURES & ALGORITHMS (DSA) WHILE BUILDING PROJECTS THAT STRENGTHEN MY UNDERSTANDING OF SOFTWARE DEVELOPMENT." speed={8} delay={1800} resetKey={typingKey} />
                 </p>
                 
-                <div className="pt-2 space-y-2">
-                  <h3 className="font-mono text-sm uppercase tracking-wider text-white font-bold">// WHAT I ENJOY</h3>
-                  <ul className="space-y-1.5 text-sm font-sans text-zinc-300">
-                    <li className="flex items-center gap-2"><span>💻</span> BUILDING RESPONSIVE AND MODERN WEB APPLICATIONS.</li>
-                    <li className="flex items-center gap-2"><span>🤖</span> EXPLORING ARTIFICIAL INTELLIGENCE AND COMPUTER VISION PROJECTS.</li>
-                    <li className="flex items-center gap-2"><span>🚀</span> SOLVING PROGRAMMING CHALLENGES AND LEARNING NEW TECHNOLOGIES.</li>
-                    <li className="flex items-center gap-2"><span>🌱</span> CONTINUOUSLY IMPROVING THROUGH REAL-WORLD PROJECTS, WORKSHOPS, AND HACKATHONS.</li>
-                    <li className="flex items-center gap-2"><span>🤝</span> OPEN TO INTERNSHIPS, COLLABORATIONS, AND NETWORKING OPPORTUNITIES.</li>
-                  </ul>
+                <div className="pt-4">
+                  <div className="bg-[#141416] border border-[#ccff00]/30 rounded-xl overflow-hidden shadow-2xl">
+                    <div className="bg-black/80 px-4 py-2 border-b border-white/10 flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
+                        <div className="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
+                        <span className="text-[11px] font-mono text-zinc-400 ml-2">adithya@portfolio ~ what_i_enjoy.sh</span>
+                      </div>
+                      <span className="text-[10px] font-mono text-[#ccff00] bg-[#ccff00]/10 px-2 py-0.5 rounded border border-[#ccff00]/30">ACTIVE</span>
+                    </div>
+                    <div className="p-4 sm:p-5 space-y-3 font-mono text-xs sm:text-sm text-zinc-300">
+                      <div className="text-zinc-500">$ ./execute_what_i_enjoy.sh --verbose</div>
+                      <div className="space-y-2 text-zinc-200">
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#ccff00]">&gt;</span>
+                          <span>💻 <TerminalTypingText key={`item1-${typingKey}`} text="BUILDING RESPONSIVE AND MODERN WEB APPLICATIONS." speed={6} delay={3200} resetKey={typingKey} /></span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#ccff00]">&gt;</span>
+                          <span>🤖 <TerminalTypingText key={`item2-${typingKey}`} text="EXPLORING ARTIFICIAL INTELLIGENCE AND COMPUTER VISION PROJECTS." speed={6} delay={5200} resetKey={typingKey} /></span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#ccff00]">&gt;</span>
+                          <span>🚀 <TerminalTypingText key={`item3-${typingKey}`} text="SOLVING PROGRAMMING CHALLENGES AND LEARNING NEW TECHNOLOGIES." speed={6} delay={7200} resetKey={typingKey} /></span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#ccff00]">&gt;</span>
+                          <span>🌱 <TerminalTypingText key={`item4-${typingKey}`} text="CONTINUOUSLY IMPROVING THROUGH REAL-WORLD PROJECTS, WORKSHOPS, AND HACKATHONS." speed={6} delay={9400} resetKey={typingKey} /></span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#ccff00]">&gt;</span>
+                          <span>🤝 <TerminalTypingText key={`item5-${typingKey}`} text="OPEN TO INTERNSHIPS, COLLABORATIONS, AND NETWORKING OPPORTUNITIES." speed={6} delay={12000} resetKey={typingKey} /></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
