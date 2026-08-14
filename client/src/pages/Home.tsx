@@ -1214,54 +1214,75 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Programming & Development</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-[#141416] border border-white/10 rounded-xl p-6">
-              <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-4">
-                <Code2 className="w-5 h-5 text-white" />
-              </div>
-              <h3 className="text-lg font-mono font-bold text-white mb-2">College-Level Basics</h3>
-              <p className="text-xs text-zinc-400 mb-4">Learned fundamentals of C, C++, and Python during my engineering coursework.</p>
-              <ul className="space-y-2">
-                {["C Programming Basics", "C++ & DSA Basics", "Python Fundamentals", "Academic Assignments"].map((s, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-xs font-mono text-zinc-300">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                    {s}
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "College-Level Basics",
+                desc: "Learned fundamentals of C, C++, and Python during my engineering coursework at SJEC.",
+                icon: <Code2 className="w-5 h-5 text-[#ccff00]" />,
+                items: ["C Programming Basics", "C++ & DSA Basics", "Python Fundamentals", "Academic Assignments"],
+                backTitle: "CORE_COMPUTING",
+                backDesc: "Building strong computer science foundations with procedural programming, memory pointers, and structured problem solving in C/C++."
+              },
+              {
+                title: "AI-Assisted Frontend",
+                desc: "I build web interfaces and practice pages using AI assistance (~60% frontend accuracy).",
+                icon: <Sparkles className="w-5 h-5 text-[#ccff00]" />,
+                items: ["AI-Assisted Development", "HTML / CSS / JS", "React Components (~60%)", "UI Design & Layouts"],
+                backTitle: "VIBECODING_STACK",
+                backDesc: "Leveraging modern AI tools (Cursor, Manus, Lovable) to rapidly prototype, build, and deploy responsive web applications."
+              },
+              {
+                title: "Tools & Version Control",
+                desc: "Managing code and projects with Git, GitHub, and continuous deployment pipelines.",
+                icon: <Github className="w-5 h-5 text-[#ccff00]" />,
+                items: ["Git Version Control", "10+ GitHub Repositories", "Code Collaboration", "Project Management"],
+                backTitle: "REPO_INFRASTRUCTURE",
+                backDesc: "Maintaining 10+ active GitHub repositories, managing branch synchronization, and ensuring production readiness on GitHub Pages."
+              }
+            ].map((card, idx) => (
+              <div key={idx} className="h-72 perspective-1000 group cursor-pointer">
+                <div className="relative w-full h-full duration-500 transform-style-3d group-hover:rotate-y-180">
+                  {/* Front Side */}
+                  <div className="absolute inset-0 w-full h-full bg-[#141416] border border-white/15 group-hover:border-[#ccff00]/50 rounded-2xl p-6 flex flex-col justify-between backface-hidden glow-card">
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between">
+                        <div className="w-10 h-10 rounded-lg bg-[#ccff00]/10 border border-[#ccff00]/30 flex items-center justify-center">
+                          {card.icon}
+                        </div>
+                        <span className="text-[10px] font-mono text-zinc-500">[HOVER TO FLIP]</span>
+                      </div>
+                      <h3 className="text-lg font-mono font-bold text-white">{card.title}</h3>
+                      <p className="text-xs text-zinc-400 leading-relaxed">{card.desc}</p>
+                    </div>
+                    <ul className="space-y-2 pt-2 border-t border-white/10">
+                      {card.items.map((s, sIdx) => (
+                        <li key={sIdx} className="flex items-center gap-2 text-xs font-mono text-zinc-300">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#ccff00]"></span>
+                          {s}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-            <div className="bg-[#141416] border border-white/10 rounded-xl p-6">
-              <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-4">
-                <Sparkles className="w-5 h-5 text-white" />
+                  {/* Back Side */}
+                  <div className="absolute inset-0 w-full h-full bg-black border-2 border-[#ccff00] rounded-2xl p-6 flex flex-col justify-between backface-hidden rotate-y-180 shadow-[0_0_20px_rgba(204,255,0,0.2)]">
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between border-b border-[#ccff00]/30 pb-2">
+                        <span className="text-xs font-mono text-[#ccff00] font-bold">//{card.backTitle}</span>
+                        <span className="w-2 h-2 rounded-full bg-[#ccff00] animate-ping"></span>
+                      </div>
+                      <h3 className="text-base font-mono font-bold text-white">SYSTEM_INSPECTION</h3>
+                      <p className="text-xs text-zinc-300 font-sans leading-relaxed">{card.backDesc}</p>
+                    </div>
+                    <div className="pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-[#ccff00]">
+                      <span>STATUS: ONLINE</span>
+                      <span>SECURE_NODE</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-lg font-mono font-bold text-white mb-2">AI-Assisted Frontend</h3>
-              <p className="text-xs text-zinc-400 mb-4">I build web interfaces and practice pages using AI assistance (~60% frontend accuracy).</p>
-              <ul className="space-y-2">
-                {["AI-Assisted Development", "HTML / CSS / JS", "React Components (~60%)", "UI Design & Layouts"].map((s, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-xs font-mono text-zinc-300">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                    {s}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="bg-[#141416] border border-white/10 rounded-xl p-6">
-              <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-4">
-                <Github className="w-5 h-5 text-white" />
-              </div>
-              <h3 className="text-lg font-mono font-bold text-white mb-2">Tools & Version Control</h3>
-              <p className="text-xs text-zinc-400 mb-4">Managing code and projects with Git and GitHub.</p>
-              <ul className="space-y-2">
-                {["Git Version Control", "10+ GitHub Repositories", "Code Collaboration", "Project Management"].map((s, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-xs font-mono text-zinc-300">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                    {s}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            ))}
           </div>
         </section>
 
