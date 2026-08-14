@@ -527,10 +527,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             
             {/* Left Column: Text & CTAs */}
             <div className="lg:col-span-7 space-y-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#ccff00]/10 border border-[#ccff00]/30 text-xs font-mono text-[#ccff00]">
-                <span className="w-2 h-2 rounded-full bg-[#ccff00] animate-pulse"></span>
-                AVAILABLE FOR HIRE
-              </div>
+
 
               <div className="space-y-2">
                 <p className="text-zinc-400 font-mono text-sm sm:text-base">Hello, I'm</p>
