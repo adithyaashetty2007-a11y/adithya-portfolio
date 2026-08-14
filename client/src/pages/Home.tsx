@@ -632,11 +632,11 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     <span>REPLAY TYPING</span>
                   </button>
                 </div>
-                <p className="text-zinc-200">
+                <p className="text-zinc-200 font-['Share_Tech_Mono'] tracking-wide text-base sm:text-lg">
                   <span className="text-[#ccff00] mr-2">&gt;</span>
                   <span>I AM A COMPUTER SCIENCE ENGINEERING STUDENT AT ST. JOSEPH ENGINEERING COLLEGE, MANGALURU, <span className="text-red-500 font-bold underline decoration-red-500/50 animate-pulse">SECOND-YEAR STUDENT (AS OF SEPTEMBER 2026)</span>. <TerminalTypingText key={`t1-${typingKey}`} text="I ENJOY TURNING IDEAS INTO PRACTICAL SOFTWARE SOLUTIONS AND CONTINUOUSLY IMPROVING MY TECHNICAL SKILLS." speed={8} delay={2000} resetKey={typingKey} /></span>
                 </p>
-                <p className="text-zinc-300 pt-2">
+                <p className="text-zinc-300 pt-2 font-['Share_Tech_Mono'] tracking-wide text-base sm:text-lg">
                   <span className="text-[#ccff00] mr-2">&gt;</span>
                   <TerminalTypingText key={`t2-${typingKey}`} text="I'M CURRENTLY EXPLORING PYTHON, WEB DEVELOPMENT, ARTIFICIAL INTELLIGENCE, AND DATA STRUCTURES & ALGORITHMS (DSA) WHILE BUILDING PROJECTS THAT STRENGTHEN MY UNDERSTANDING OF SOFTWARE DEVELOPMENT." speed={8} delay={1800} resetKey={typingKey} />
                 </p>
