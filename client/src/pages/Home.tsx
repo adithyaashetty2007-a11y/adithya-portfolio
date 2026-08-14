@@ -15,6 +15,7 @@ interface Certificate {
   date: string;
   imageUrl?: string;
   credentialUrl?: string;
+  description?: string;
 }
 
 interface LinkedInPost {
@@ -103,6 +104,15 @@ export default function Home() {
       date: "Milestone Achievement",
       imageUrl: VIBEATHON_CERT_BASE64,
       credentialUrl: "https://www.linkedin.com/in/adithya-a-shetty-421097382"
+    },
+    {
+      id: "sceptix-vanguard-arg",
+      title: "The Vanguard - Alternate Reality Game (ARG)",
+      issuer: "The Sceptix Club, SJEC",
+      date: "April 30, 2026",
+      imageUrl: "/manus-storage/WhatsAppImage2026-08-14at1.57.41PM_dd3f4c9c.jpeg",
+      credentialUrl: "https://www.linkedin.com/in/adithya-a-shetty-421097382",
+      description: "Successfully participated in The Vanguard ARG challenge organized by The Sceptix Club at St. Joseph Engineering College."
     }
   ]);
   const [selectedCertImage, setSelectedCertImage] = useState<string | null>(null);
@@ -1062,6 +1072,9 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
                   <h3 className="text-lg font-bold font-mono text-white group-hover:text-[#ccff00] transition">{cert.title}</h3>
                   <p className="text-xs font-mono text-zinc-400">{cert.issuer}</p>
+                  {cert.description && (
+                    <p className="text-xs text-zinc-300 font-sans leading-relaxed">{cert.description}</p>
+                  )}
 
                   {/* Certificate Image Preview */}
                   {cert.imageUrl ? (
