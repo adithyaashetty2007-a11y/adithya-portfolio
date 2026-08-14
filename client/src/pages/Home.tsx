@@ -922,11 +922,11 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 <div className="absolute -bottom-2 -left-2 text-[#ccff00] font-mono text-lg">+</div>
                 <div className="absolute -bottom-2 -right-2 text-[#ccff00] font-mono text-lg">+</div>
                 
-                <div className="w-full h-[360px] sm:h-[400px] overflow-hidden bg-black relative border border-white/10">
+                <div className="w-full h-[360px] sm:h-[400px] overflow-hidden bg-black relative border border-white/10 group cursor-pointer">
                   <img 
                     src={PROFILE_PHOTO_BASE64} 
                     alt="Adithya A Shetty" 
-                    className="w-full h-full object-cover object-top grayscale contrast-125 brightness-95"
+                    className="w-full h-full object-cover object-top grayscale contrast-125 brightness-95 transition-transform duration-700 ease-out group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                   <div className="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[11px] font-mono text-[#ccff00]">
