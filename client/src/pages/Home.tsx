@@ -118,13 +118,6 @@ export default function Home() {
       date: "March 2026",
       postUrl: "https://www.linkedin.com/posts/theagentblazerclubsjec_promptengineering-ai-generativeai-activity-7443638504024268800-BCPn",
       imageUrl: "/manus-storage/pasted_file_7u8EpX_image_c96602d2.webp"
-    },
-    {
-      id: "2",
-      title: "SGPA Jump to 8.05 in 2nd Semester!",
-      summary: "Thrilled to share my academic progress! Improved my SGPA from 7.5 in 1st sem to 8.05 in 2nd sem, alongside solving 20+ LeetCode problems in C++ over the last 2 weeks.",
-      date: "August 2026",
-      postUrl: "https://www.linkedin.com/in/adithya-a-shetty-421097382"
     }
   ]);
   const [isAddPostModalOpen, setIsAddPostModalOpen] = useState(false);
