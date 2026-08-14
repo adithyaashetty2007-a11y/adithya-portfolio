@@ -188,6 +188,7 @@ export default function Home() {
   // Projects showcase state
   const [projects, setProjects] = useState<ProjectItem[]>([]);
   const [selectedProjectImage, setSelectedProjectImage] = useState<string | null>(null);
+  const [selectedProfileImage, setSelectedProfileImage] = useState<string | null>(null);
   const [isAddProjModalOpen, setIsAddProjModalOpen] = useState(false);
   const [newProj, setNewProj] = useState({ title: "", description: "", imageUrl: "", githubUrl: "", techStack: "" });
 
@@ -922,13 +923,22 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 <div className="absolute -bottom-2 -left-2 text-[#ccff00] font-mono text-lg">+</div>
                 <div className="absolute -bottom-2 -right-2 text-[#ccff00] font-mono text-lg">+</div>
                 
-                <div className="w-full h-[360px] sm:h-[400px] overflow-hidden bg-black relative border border-white/10 group cursor-pointer">
+                <div 
+                  onClick={() => setSelectedProfileImage(PROFILE_PHOTO_BASE64)}
+                  className="w-full h-[360px] sm:h-[400px] overflow-hidden bg-black relative border border-white/10 group cursor-pointer"
+                  title="Click to expand profile photo"
+                >
                   <img 
                     src={PROFILE_PHOTO_BASE64} 
                     alt="Adithya A Shetty" 
                     className="w-full h-full object-cover object-top grayscale contrast-125 brightness-95 transition-transform duration-700 ease-out group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-[#ccff00]/0 group-hover:bg-[#ccff00]/10 transition-colors flex items-center justify-center">
+                    <span className="opacity-0 group-hover:opacity-100 transition-opacity bg-black/80 text-[#ccff00] font-mono text-xs px-3 py-1.5 border border-[#ccff00]/40 rounded shadow-lg">
+                      [ CLICK TO EXPAND ]
+                    </span>
+                  </div>
                   <div className="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[11px] font-mono text-[#ccff00]">
                     <span className="bg-black/80 px-2 py-0.5 border border-[#ccff00]/30">ID // VERIFIED</span>
                     <span className="bg-black/80 px-2 py-0.5 border border-[#ccff00]/30">MANGALORE_INDIA</span>
@@ -2176,6 +2186,32 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             </div>
             <div className="max-h-[80vh] overflow-auto flex items-center justify-center bg-black rounded-xl p-2 border border-white/10">
               <img src={selectedProjectImage} alt="Project Preview" className="max-w-full max-h-[75vh] object-contain rounded" />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* PROFILE PHOTO LIGHTBOX MODAL */}
+      {selectedProfileImage && (
+        <div 
+          onClick={() => setSelectedProfileImage(null)}
+          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4"
+        >
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            className="relative max-w-2xl w-full bg-[#141416] border border-[#ccff00]/40 rounded-2xl overflow-hidden p-4 shadow-[0_0_50px_rgba(204,255,0,0.2)]"
+          >
+            <div className="flex items-center justify-between mb-3 px-2">
+              <span className="font-mono text-xs text-[#ccff00]">// Adithya A Shetty - Profile Identification</span>
+              <button 
+                onClick={() => setSelectedProfileImage(null)}
+                className="p-1.5 bg-white/10 hover:bg-white/20 text-white rounded-full transition"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="max-h-[80vh] overflow-auto flex items-center justify-center bg-black rounded-xl p-2 border border-white/10">
+              <img src={selectedProfileImage} alt="Adithya A Shetty Profile" className="max-w-full max-h-[75vh] object-contain rounded" />
             </div>
           </div>
         </div>
