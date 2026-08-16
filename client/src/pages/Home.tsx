@@ -473,17 +473,20 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-[#ededed] font-sans relative selection:bg-white/20 selection:text-white cursor-none sm:cursor-none">
-      {/* Custom Cyberpunk Cursor */}
+      {/* Custom Neon Arrow Cursor */}
       <div 
-        className={`fixed pointer-events-none z-50 transition-transform duration-75 ease-out hidden sm:block ${
-          isHoveringLink ? 'scale-150 rotate-45' : 'scale-100'
-        }`}
-        style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px`, transform: 'translate(-50%, -50%)' }}
+        className={`fixed pointer-events-none z-50 transition-transform duration-75 ease-out hidden sm:block`}
+        style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px`, transform: 'translate(0, 0)' }}
       >
-        <div className={`w-6 h-6 border-2 ${isHoveringLink ? 'border-[#ff0055] bg-[#ff0055]/20 shadow-[0_0_15px_#ff0055]' : 'border-[#ccff00] bg-[#ccff00]/10 shadow-[0_0_10px_#ccff00]'} rounded-sm flex items-center justify-center relative`}>
-          <div className={`w-1.5 h-1.5 ${isHoveringLink ? 'bg-[#ff0055]' : 'bg-[#ccff00]'} rounded-full animate-ping absolute`}></div>
-          <div className={`w-1 h-1 ${isHoveringLink ? 'bg-white' : 'bg-[#ccff00]'}`}></div>
-        </div>
+        <svg 
+          className={`w-6 h-6 drop-shadow-[0_0_8px_${isHoveringLink ? '#ff0055' : '#ccff00'}] transition-colors duration-200`} 
+          viewBox="0 0 24 24" 
+          fill={isHoveringLink ? '#ff0055' : '#ccff00'} 
+          stroke="#0a0a0a" 
+          strokeWidth="1.5"
+        >
+          <polygon points="5.5,3 19,12 12,14 17,21 14.5,22.5 9.5,15.5 5.5,19.5" />
+        </svg>
       </div>
 
       {/* INTRO CURSIVE SIGNATURE OVERLAY */}
