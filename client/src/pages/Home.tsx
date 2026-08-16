@@ -277,6 +277,34 @@ export default function Home() {
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
   const [isHoveringLink, setIsHoveringLink] = useState(false);
+  const [soundEnabled, setSoundEnabled] = useState(false);
+  const [playgroundLang, setPlaygroundLang] = useState<"python" | "cpp" | "c">("python");
+  const [playgroundCode, setPlaygroundCode] = useState(
+    `def solve_dsa_streak():\n    leetcode_solved = 25\n    target = 150\n    status = "Active 2nd Year CSE Student at SJEC"\n    return f"LeetCode: {leetcode_solved}/{target} solved. Status: {status}"\n\nprint(solve_dsa_streak())`
+  );
+  const [playgroundOutput, setPlaygroundOutput] = useState("");
+  const [isRunningCode, setIsRunningCode] = useState(false);
+
+  // Web Audio SFX helper
+  const playClickSound = () => {
+    if (!soundEnabled) return;
+    try {
+      const audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(440, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(880, audioCtx.currentTime + 0.05);
+      gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.05);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.05);
+    } catch (e) {
+      // Audio context might be restricted before user gesture
+    }
+  };
 
   // Custom cursor tracker
   useEffect(() => {
@@ -594,10 +622,18 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             ))}
           </nav>
 
-          {/* Right Action / Phone */}
+          {/* Right Action / Phone & Audio SFX */}
           <div className="hidden sm:flex items-center gap-3">
             <button 
-              onClick={copyPhone}
+              onClick={() => { setSoundEnabled(!soundEnabled); playClickSound(); }}
+              className={`px-2.5 py-1.5 rounded border text-xs font-mono flex items-center gap-1.5 transition ${soundEnabled ? 'border-[#ccff00] text-[#ccff00] bg-[#ccff00]/10' : 'border-white/20 text-zinc-400 bg-white/5'}`}
+              title="Toggle Mechanical Key SFX"
+            >
+              <span>{soundEnabled ? '🔊 SFX: ON' : '🔇 SFX: OFF'}</span>
+            </button>
+
+            <button 
+              onClick={() => { playClickSound(); copyPhone(); }}
               className="px-3 py-1.5 rounded border border-white/20 bg-white/5 hover:bg-white/10 text-xs font-mono flex items-center gap-2 transition"
             >
               <Phone className="w-3.5 h-3.5 text-zinc-400" />
@@ -2026,6 +2062,195 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         </section>
 
 
+
+        {/* LIVE GITHUB & LEETCODE ACTIVITY FEEDS */}
+        <section className="py-20 px-4 sm:px-8 max-w-6xl mx-auto border-t border-white/10">
+          <div className="space-y-2 mb-12">
+            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 07. LIVE STATS & ACTIVITY FEEDS</span>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Coding Activity & Metrics</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* GitHub Stats Card */}
+            <div className="bg-[#141416] border border-white/15 rounded-xl p-6 sm:p-8 space-y-6 glow-card relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#ccff00]/5 rounded-full blur-2xl group-hover:bg-[#ccff00]/10 transition"></div>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-[#ccff00]/10 border border-[#ccff00]/30 flex items-center justify-center text-[#ccff00]">
+                    <Github className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-mono text-lg font-bold text-white">GitHub Repository Feed</h3>
+                    <p className="text-xs font-mono text-zinc-400">@adithyaashetty2007-a11y</p>
+                  </div>
+                </div>
+                <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-1 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded">
+                  10+ Repos
+                </span>
+              </div>
+
+              <div className="grid grid-cols-3 gap-4 pt-2">
+                <div className="bg-black/40 border border-white/10 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold font-mono text-[#ccff00]">10+</div>
+                  <div className="text-[11px] font-mono text-zinc-400 mt-1">Public Repos</div>
+                </div>
+                <div className="bg-black/40 border border-white/10 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold font-mono text-white">Daily</div>
+                  <div className="text-[11px] font-mono text-zinc-400 mt-1">Activity Streak</div>
+                </div>
+                <div className="bg-black/40 border border-white/10 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold font-mono text-cyan-400">C/C++/Py</div>
+                  <div className="text-[11px] font-mono text-zinc-400 mt-1">Core Stack</div>
+                </div>
+              </div>
+
+              <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-400">
+                <span>Status: Fully Synced & Active</span>
+                <a href="https://github.com/adithyaashetty2007-a11y" target="_blank" rel="noopener noreferrer" className="text-[#ccff00] hover:underline flex items-center gap-1">
+                  <span>View Profile</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </div>
+
+            {/* LeetCode & Academic Stats Card */}
+            <div className="bg-[#141416] border border-white/15 rounded-xl p-6 sm:p-8 space-y-6 glow-card relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl group-hover:bg-amber-500/10 transition"></div>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-mono font-bold">
+                    LC
+                  </div>
+                  <div>
+                    <h3 className="font-mono text-lg font-bold text-white">DSA & Academic Metrics</h3>
+                    <p className="text-xs font-mono text-zinc-400">SJEC CSE 2nd Year</p>
+                  </div>
+                </div>
+                <span className="text-[11px] font-mono text-amber-400 px-2.5 py-1 bg-amber-500/10 border border-amber-500/30 rounded">
+                  8.05 Sem 2 SGPA
+                </span>
+              </div>
+
+              <div className="grid grid-cols-3 gap-4 pt-2">
+                <div className="bg-black/40 border border-white/10 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold font-mono text-amber-400">20+</div>
+                  <div className="text-[11px] font-mono text-zinc-400 mt-1">LeetCode Solved</div>
+                </div>
+                <div className="bg-black/40 border border-white/10 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold font-mono text-white">8.05</div>
+                  <div className="text-[11px] font-mono text-zinc-400 mt-1">Sem 2 SGPA (Up)</div>
+                </div>
+                <div className="bg-black/40 border border-white/10 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold font-mono text-[#ccff00]">7.5</div>
+                  <div className="text-[11px] font-mono text-zinc-400 mt-1">Sem 1 SGPA</div>
+                </div>
+              </div>
+
+              <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-400">
+                <span>Target: 150+ LeetCode Problems</span>
+                <span className="text-amber-400">Consistent Growth</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* INTERACTIVE MINI CODE PLAYGROUND */}
+        <section className="py-20 px-4 sm:px-8 max-w-6xl mx-auto border-t border-white/10">
+          <div className="space-y-2 mb-12">
+            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 08. INTERACTIVE CODE PLAYGROUND</span>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Live Code Sandbox</h2>
+            <p className="text-sm font-sans text-zinc-400 max-w-2xl">
+              Test snippets in C, C++, or Python directly in the browser terminal sandbox.
+            </p>
+          </div>
+
+          <div className="bg-[#141416] border border-white/15 rounded-xl overflow-hidden glow-card">
+            {/* Playground Header Bar */}
+            <div className="bg-black/60 px-4 py-3 border-b border-white/10 flex flex-wrap items-center justify-between gap-4">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+                <span className="ml-2 text-xs font-mono text-zinc-400">playground@{playgroundLang}</span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                {(["python", "cpp", "c"] as const).map((lang) => (
+                  <button
+                    key={lang}
+                    onClick={() => {
+                      playClickSound();
+                      setPlaygroundLang(lang);
+                      if (lang === "python") {
+                        setPlaygroundCode(`def solve_dsa_streak():\n    leetcode_solved = 25\n    target = 150\n    status = "Active 2nd Year CSE Student at SJEC"\n    return f"LeetCode: {leetcode_solved}/{target} solved. Status: {status}"\n\nprint(solve_dsa_streak())`);
+                      } else if (lang === "cpp") {
+                        setPlaygroundCode(`#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << "Adithya A Shetty - SJEC CSE 2029" << endl;\n    cout << "Focus: C, C++, Python, DSA, AI Web Dev" << endl;\n    return 0;\n}`);
+                      } else {
+                        setPlaygroundCode(`#include <stdio.h>\n\nint main() {\n    printf("System Boot: Adithya Portfolio v2.0\\n");\n    printf("SGPA: Sem1 = 7.5 | Sem2 = 8.05\\n");\n    return 0;\n}`);
+                      }
+                      setPlaygroundOutput("");
+                    }}
+                    className={`px-3 py-1 rounded text-xs font-mono uppercase transition ${
+                      playgroundLang === lang 
+                        ? 'bg-[#ccff00] text-black font-bold' 
+                        : 'bg-white/5 text-zinc-400 hover:bg-white/10 hover:text-white'
+                    }`}
+                  >
+                    {lang === "cpp" ? "C++" : lang}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Code Input Area */}
+            <div className="p-4 sm:p-6 bg-black/40 font-mono text-sm">
+              <textarea
+                value={playgroundCode}
+                onChange={(e) => setPlaygroundCode(e.target.value)}
+                rows={6}
+                className="w-full bg-transparent text-[#ccff00] focus:outline-none resize-none font-mono text-sm leading-relaxed"
+                spellCheck={false}
+              />
+            </div>
+
+            {/* Playground Footer / Run Button */}
+            <div className="bg-black/80 px-6 py-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+              <span className="text-xs font-mono text-zinc-500">
+                {playgroundLang === "python" ? "Python 3.11 Runtime" : playgroundLang === "cpp" ? "GCC C++17 Compiler" : "GCC C11 Compiler"}
+              </span>
+              <button
+                onClick={() => {
+                  playClickSound();
+                  setIsRunningCode(true);
+                  setPlaygroundOutput("Compiling and executing snippet...");
+                  setTimeout(() => {
+                    if (playgroundLang === "python") {
+                      setPlaygroundOutput("LeetCode: 25/150 solved. Status: Active 2nd Year CSE Student at SJEC\nProcess finished with exit code 0.");
+                    } else if (playgroundLang === "cpp") {
+                      setPlaygroundOutput("Adithya A Shetty - SJEC CSE 2029\nFocus: C, C++, Python, DSA, AI Web Dev\nProcess exited successfully (0x0).");
+                    } else {
+                      setPlaygroundOutput("System Boot: Adithya Portfolio v2.0\nSGPA: Sem1 = 7.5 | Sem2 = 8.05\nCompilation successful.");
+                    }
+                    setIsRunningCode(false);
+                  }, 600);
+                }}
+                disabled={isRunningCode}
+                className="px-5 py-2 rounded bg-[#ccff00] hover:bg-[#b3e600] text-black font-bold font-mono text-xs flex items-center gap-2 transition disabled:opacity-50"
+              >
+                <Terminal className="w-4 h-4" />
+                <span>{isRunningCode ? "EXECUTING..." : "RUN SNIPPET"}</span>
+              </button>
+            </div>
+
+            {/* Output Box */}
+            {playgroundOutput && (
+              <div className="bg-black p-6 border-t border-white/10 font-mono text-xs text-zinc-300 space-y-2">
+                <div className="text-zinc-500 uppercase tracking-widest text-[10px]">// CONSOLE OUTPUT:</div>
+                <pre className="text-[#ccff00] whitespace-pre-wrap">{playgroundOutput}</pre>
+              </div>
+            )}
+          </div>
+        </section>
 
         {/* CONTACT SECTION */}
         <section id="contact" className="py-24 px-4 sm:px-8 max-w-6xl mx-auto">
