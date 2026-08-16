@@ -494,12 +494,9 @@ export default function Home() {
         <div className="fixed inset-0 z-50 bg-[#0a0a0a] flex flex-col items-center justify-center transition-opacity duration-700">
             <div className="text-center space-y-4 px-4">
             <h1 
-              className="font-puff text-5xl sm:text-8xl font-bold text-[#ccff00] tracking-wider animate-pulse uppercase"
-              style={{
-                textShadow: '0 4px 0 #00599C, 0 8px 0 #002b49, 0 12px 25px rgba(204,255,0,0.8)'
-              }}
+              className="font-orbitron text-4xl sm:text-7xl font-extrabold text-[#ccff00] tracking-widest animate-pulse uppercase drop-shadow-[0_0_30px_rgba(204,255,0,0.8)]"
             >
-              ADITHYA A <span className="text-white" style={{ textShadow: '0 4px 0 #3776AB, 0 8px 0 #1b3a4b, 0 12px 25px rgba(255,255,255,0.8)' }}>SHETTY</span>
+              ADITHYA A <span className="text-cyan-400 drop-shadow-[0_0_30px_rgba(6,182,212,0.8)]">SHETTY</span>
             </h1>
             <p className="font-mono text-xs uppercase tracking-widest text-zinc-500 animate-fade-in">
               Initializing Developer Portfolio...
