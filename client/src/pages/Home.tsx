@@ -2166,7 +2166,10 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               </div>
 
               <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-400">
-                <span>Target: 150+ LeetCode Problems</span>
+                <span className="flex items-center gap-1.5 text-amber-400 font-bold">
+                  <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+                  🔥 Active Daily Streak: 14 Days
+                </span>
                 <span className="text-amber-400">Consistent Growth</span>
               </div>
             </div>
