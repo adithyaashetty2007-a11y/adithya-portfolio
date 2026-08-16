@@ -1193,30 +1193,58 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             <div className="min-w-[650px] space-y-8">
               {/* LANGUAGES ROW */}
               <div>
-                <div className="text-xs font-mono text-[#ccff00] uppercase tracking-widest mb-4 pb-2 border-b border-white/10">Languages</div>
-                <div className="grid grid-cols-6 gap-3">
-                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
-                    <div className="text-lg font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">C</div>
+                <div className="text-xs font-mono text-[#ccff00] uppercase tracking-widest mb-4 pb-2 border-b border-white/10">Languages & Logos</div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+                  {/* C Programming */}
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 flex flex-col items-center justify-center transition group">
+                    <svg className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.5 14.5h-3v-9h3c1.66 0 3 1.34 3 3v3c0 1.66-1.34 3-3 3zm0-4.5h-1.5v-3h1.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5z" fill="#00599C"/>
+                      <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="monospace" font-weight="bold" font-size="10">C</text>
+                    </svg>
                     <div className="text-[10px] font-mono text-zinc-400">College Basics</div>
                   </div>
-                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
-                    <div className="text-lg font-bold font-mono text-emerald-400 mb-1">C++</div>
+
+                  {/* C++ Programming */}
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 flex flex-col items-center justify-center transition group">
+                    <svg className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm4.5 12.5h-1.25v2.25h-2.25V14.5h-2.25v-2.25h2.25V10h2.25v2.25H16.5z" fill="#00599C"/>
+                      <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle" fill="#00599C" font-family="monospace" font-weight="bold" font-size="9">C++</text>
+                    </svg>
                     <div className="text-[10px] font-mono text-zinc-400">DSA Active</div>
                   </div>
-                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
-                    <div className="text-lg font-bold font-mono text-blue-400 mb-1">PYTHON</div>
+
+                  {/* Python */}
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 flex flex-col items-center justify-center transition group">
+                    <svg className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none">
+                      <path d="M11.922.25c-3.153 0-2.981 1.373-2.981 1.373l.01 1.405h3.018v.44H7.81s-1.895-.147-1.895 1.83c0 1.978 1.69 1.851 1.69 1.851h1.026v-.935s-.036-1.272 1.254-1.272h2.954s1.218.01 1.218-1.182V2.36s.12-2.11-3.144-2.11zm-1.71 1.09a.53.53 0 1 1 0 1.061.53.53 0 0 1 0-1.06z" fill="#3776AB"/>
+                      <path d="M12.078 23.75c3.153 0 2.981-1.373 2.981-1.373l-.01-1.405H12.03v-.44h4.139s1.895.147 1.895-1.83c0-1.978-1.69-1.851-1.69-1.851h-1.026v.935s.036 1.272-1.254 1.272h-2.954s-1.218-.01-1.218 1.182v1.442s-.12 2.11 3.144 2.11zm1.71-1.09a.53.53 0 1 1 0-1.061.53.53 0 0 1 0 1.06z" fill="#FFD43B"/>
+                    </svg>
                     <div className="text-[10px] font-mono text-zinc-400">College Level</div>
                   </div>
-                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
-                    <div className="text-lg font-bold font-mono text-purple-400 mb-1">HTML</div>
+
+                  {/* HTML5 */}
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 flex flex-col items-center justify-center transition group">
+                    <svg className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M4 3l2.5 14.5L12 19l5.5-1.5L20 3H4zm14.2 2l-1.8 10L12 16.5 7.6 15 5.8 5h12.4z" fill="#E34F26"/>
+                      <path d="M12 7.5v2.2h3.1l-.3 2.8L12 13.8v2.3l2.8-.8.3-3.2H12v-2.2h4.5l.2-2.2H12z" fill="#fff"/>
+                    </svg>
                     <div className="text-[10px] font-mono text-zinc-400">Semantic markup</div>
                   </div>
-                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
-                    <div className="text-lg font-bold font-mono text-pink-400 mb-1">CSS</div>
+
+                  {/* CSS3 */}
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 flex flex-col items-center justify-center transition group">
+                    <svg className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M4 3l2.5 14.5L12 19l5.5-1.5L20 3H4zm14.2 2l-1.8 10L12 16.5 7.6 15 5.8 5h12.4z" fill="#1572B6"/>
+                    </svg>
                     <div className="text-[10px] font-mono text-zinc-400">Styling & UI</div>
                   </div>
-                  <div className="bg-[#ccff00]/10 border-2 border-[#ccff00] rounded-xl p-4 text-center shadow-[0_0_15px_rgba(204,255,0,0.3)] transition group">
-                    <div className="text-lg font-bold font-mono text-red-400 mb-1">JS</div>
+
+                  {/* JavaScript (AI) */}
+                  <div className="bg-[#ccff00]/10 border-2 border-[#ccff00] rounded-xl p-4 flex flex-col items-center justify-center shadow-[0_0_15px_rgba(204,255,0,0.3)] transition group">
+                    <svg className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M3 3h18v18H3V3z" fill="#F7DF1E"/>
+                      <path d="M7 17v-1.5c.83 0 1.5-.67 1.5-1.5v-3c0-.83-.67-1.5-1.5-1.5H6v1.5h1v3H6V17h1zm9.5 0c1.1 0 2-.9 2-2v-4.5h-1.5V14c0 .28-.22.5-.5.5s-.5-.22-.5-.5v-4.5H14V15c0 1.1.9 2 2 2z" fill="#000"/>
+                    </svg>
                     <div className="text-[10px] font-mono text-[#ccff00] font-semibold">Using AI</div>
                   </div>
                 </div>
