@@ -1199,7 +1199,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 flex flex-col items-center justify-center transition group">
                     <svg className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.5 14.5h-3v-9h3c1.66 0 3 1.34 3 3v3c0 1.66-1.34 3-3 3zm0-4.5h-1.5v-3h1.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5z" fill="#00599C"/>
-                      <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="monospace" font-weight="bold" font-size="10">C</text>
+                      <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" fill="white" fontFamily="monospace" fontWeight="bold" fontSize="10">C</text>
                     </svg>
                     <div className="text-[10px] font-mono text-zinc-400">College Basics</div>
                   </div>
@@ -1208,7 +1208,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 flex flex-col items-center justify-center transition group">
                     <svg className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm4.5 12.5h-1.25v2.25h-2.25V14.5h-2.25v-2.25h2.25V10h2.25v2.25H16.5z" fill="#00599C"/>
-                      <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle" fill="#00599C" font-family="monospace" font-weight="bold" font-size="9">C++</text>
+                      <text x="50%" y="52%" dominantBaseline="middle" textAnchor="middle" fill="#00599C" fontFamily="monospace" fontWeight="bold" fontSize="9">C++</text>
                     </svg>
                     <div className="text-[10px] font-mono text-zinc-400">DSA Active</div>
                   </div>
