@@ -540,7 +540,7 @@ export default function Home() {
       {showIntro && (
         <div className="fixed inset-0 z-50 bg-[#0a0a0a] flex flex-col items-center justify-center transition-opacity duration-700">
             <div className="text-center space-y-4 px-4">
-            <h1 className="font-montserrat text-4xl sm:text-7xl font-extrabold text-[#ccff00] tracking-wider animate-pulse drop-shadow-[0_0_25px_rgba(204,255,0,0.8)] uppercase">
+            <h1 className="font-spacemono text-4xl sm:text-7xl font-bold text-[#ccff00] tracking-widest animate-pulse drop-shadow-[0_0_25px_rgba(204,255,0,0.8)] uppercase">
               ADITHYA A <span className="text-white drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]">SHETTY</span>
             </h1>
             <p className="font-mono text-xs uppercase tracking-widest text-zinc-500 animate-fade-in">
