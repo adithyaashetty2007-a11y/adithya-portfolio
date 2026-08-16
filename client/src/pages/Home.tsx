@@ -74,7 +74,8 @@ import {
 import { toast } from "sonner";
 import { 
   PROFILE_PHOTO_BASE64, INTERNSHALA_CERT_BASE64, CS50W_CERT_BASE64, VIBEATHON_CERT_BASE64,
-  SCEPTIX_ARG_CERT_BASE64, PROMPTOPS_CERT_BASE64, WORKSHOP_PHOTO_BASE64, TRAFFIC_SCREENSHOT_BASE64 
+  SCEPTIX_ARG_CERT_BASE64, PROMPTOPS_CERT_BASE64, WORKSHOP_PHOTO_BASE64, TRAFFIC_SCREENSHOT_BASE64,
+  OUTSKILL_CERT_BASE64, BE10X_CERT_BASE64 
 } from "@/lib/assets";
 
 interface Certificate {
@@ -231,6 +232,24 @@ export default function Home() {
       imageUrl: PROMPTOPS_CERT_BASE64,
       credentialUrl: "https://www.linkedin.com/in/adithya-a-shetty-421097382",
       description: "Successfully participated in Prompt-Ops 2K26, exploring emerging trends in Artificial Intelligence, Prompt Engineering, and Agentic Technologies."
+    },
+    {
+      id: "outskill-gen-ai-mastermind",
+      title: "2 Day Generative AI Mastermind",
+      issuer: "Outskill & GrowthSchool (Priyanku Sarmah & Vaibhav Sisinity)",
+      date: "May 2026",
+      imageUrl: OUTSKILL_CERT_BASE64,
+      credentialUrl: "https://www.linkedin.com/in/adithya-a-shetty-421097382",
+      description: "Successfully completed the 2 Day Generative AI Mastermind with hands-on learning in prompt engineering, AI tools, and rapid generative workflows."
+    },
+    {
+      id: "be10x-ai-tools-workshop",
+      title: "AI Tools & Claude Workshop",
+      issuer: "be10x (Aditya Goenka & Aditya Kachave)",
+      date: "August 16, 2026",
+      imageUrl: BE10X_CERT_BASE64,
+      credentialUrl: "https://certx.in/certificate/0270772f-3809-4400-b29b-1e1c61cd09971654730",
+      description: "Successfully completed AI Tools Workshop covering AI Productivity, Workplace Automation, AI Business Applications, and Claude workflow optimization."
     }
   ]);
   const [selectedCertImage, setSelectedCertImage] = useState<string | null>(null);
