@@ -546,6 +546,14 @@ export default function Home() {
             <p className="font-mono text-xs uppercase tracking-widest text-zinc-500 animate-fade-in">
               Initializing Developer Portfolio...
             </p>
+            <div className="pt-6">
+              <button 
+                onClick={() => setShowIntro(false)}
+                className="text-xs font-mono text-zinc-400 hover:text-[#ccff00] uppercase tracking-widest border border-white/15 hover:border-[#ccff00]/50 px-4 py-2 rounded transition bg-black/40 hover:bg-[#ccff00]/10"
+              >
+                [ SKIP INTRO ]
+              </button>
+            </div>
           </div>
         </div>
       )}
