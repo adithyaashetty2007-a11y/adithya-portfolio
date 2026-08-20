@@ -1962,13 +1962,12 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             <p className="text-sm font-mono text-zinc-400">Where I've been and what I've built along the way.</p>
           </div>
 
-          <div className="relative border-l-2 border-[#ffffff]/40 ml-4 sm:ml-12 space-y-12 pl-6 sm:pl-12">
-            
+          <div className="grid grid-cols-1 gap-6">
             {[
               {
                 id: "internship",
                 cat: "experience",
-                date: "JULY 2026 – PRESENT // EXPERIENCE // INTERNSHALA & INAMIGOS",
+                date: "JULY 2026 – PRESENT // INTERNSHALA & INAMIGOS",
                 title: "AI Web Development Intern",
                 desc: "Contributed to a practical AI Web Development program focused on AI-assisted web development, rapid prototyping, debugging, and modern AI coding tools.",
                 badge: "[main]",
@@ -1985,7 +1984,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               {
                 id: "cse",
                 cat: "education",
-                date: "SEPTEMBER 2026 – PRESENT // EDUCATION // ST. JOSEPH ENGINEERING COLLEGE",
+                date: "SEPTEMBER 2026 – PRESENT // ST. JOSEPH ENGINEERING COLLEGE",
                 title: "2nd Year Computer Science Engineering",
                 desc: "Currently pursuing 2nd year BE in Computer Science Engineering. Actively mastering Data Structures & Algorithms in C++, AI vibecoding, and building modern web applications.",
                 badge: "[current]",
@@ -2001,7 +2000,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               {
                 id: "cs50w",
                 cat: "certified",
-                date: "2026 // CERTIFICATION // HARVARDX (HARVARD UNIVERSITY)",
+                date: "2026 // HARVARDX (HARVARD UNIVERSITY)",
                 title: "CS50's Web Programming with Python and JavaScript",
                 desc: "Completed rigorous coursework in web programming covering Python, JavaScript, Django, and modern frontend-backend integration concepts.",
                 badge: "[certified]",
@@ -2018,7 +2017,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               {
                 id: "prompt",
                 cat: "workshop",
-                date: "2026 // WORKSHOP // THE AGENT BLAZER CLUB SJEC",
+                date: "2026 // THE AGENT BLAZER CLUB SJEC",
                 title: "Prompt Engineering & Generative AI Workshop",
                 desc: "Participated in the Agent Blazer Club SJEC workshop exploring prompt engineering, generative AI tools, and AI ecosystem fundamentals.",
                 badge: "[workshop]",
@@ -2035,7 +2034,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               {
                 id: "techies",
                 cat: "certified",
-                date: "2025 – 2026 // CERTIFICATION // PROFESSIONAL DEVELOPMENT",
+                date: "2025 – 2026 // PROFESSIONAL DEVELOPMENT",
                 title: "AI for Techies Certification & Workshop",
                 desc: "Engaged in specialized training on 'AI for Techies', focusing on practical applications of machine learning, modern AI workflows, and software development integrations.",
                 badge: "[milestone]",
@@ -2052,7 +2051,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               {
                 id: "python",
                 cat: "education",
-                date: "FOUNDATION // CERTIFICATION // CISCO NETWORKING ACADEMY",
+                date: "FOUNDATION // CISCO NETWORKING ACADEMY",
                 title: "Python Essentials 1 (PE1)",
                 desc: "Learned fundamental concepts of computer programming, syntax, and data structures with Python. Note: Course completed, paid certification exam not taken.",
                 badge: "[python]",
@@ -2068,32 +2067,37 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             ].map((item, index) => {
               if (timelineCategory !== "all" && timelineCategory !== item.cat) return null;
               return (
-                <div key={item.id} className="relative group">
-                  {/* Square node marker */}
-                  <div className="absolute -left-[31px] sm:-left-[55px] top-1.5 w-3.5 h-3.5 bg-black border-2 border-[#ffffff] group-hover:bg-[#ffffff] transition"></div>
-                  
-                  <div 
-                    onClick={() => setSelectedTimelineItem(item.full)}
-                    className="space-y-2 cursor-pointer p-4 -ml-4 rounded hover:bg-white/5 transition border-l border-transparent hover:border-[#ffffff]/40"
-                    style={{ animation: `fadeInUp 0.5s ease forwards ${index * 0.15}s`, opacity: 0 }}
-                  >
+                <div 
+                  key={item.id} 
+                  onClick={() => setSelectedTimelineItem(item.full)}
+                  className="bg-[#121214] border border-red-500/30 hover:border-red-500/80 p-6 rounded-none cursor-pointer transition transform hover:-translate-y-1 relative group"
+                >
+                  {/* Cyberpunk corner crosshairs */}
+                  <div className="absolute -top-1 -left-1 w-2 h-2 border-t-2 border-l-2 border-red-500"></div>
+                  <div className="absolute -top-1 -right-1 w-2 h-2 border-t-2 border-r-2 border-red-500"></div>
+                  <div className="absolute -bottom-1 -left-1 w-2 h-2 border-b-2 border-l-2 border-red-500"></div>
+                  <div className="absolute -bottom-1 -right-1 w-2 h-2 border-b-2 border-r-2 border-red-500"></div>
+
+                  <div className="flex items-center justify-between mb-3">
                     <div className="text-xs font-mono text-red-500 tracking-wider uppercase flex items-center gap-2">
+                      <span className="animate-pulse">●</span>
                       <span>{item.date}</span>
-                      <span className="text-red-500 font-bold animate-pulse">●</span>
                     </div>
-
-                    <h3 className="text-2xl font-bold font-mono text-red-500 group-hover:text-red-400 transition">
-                      {item.title}
-                    </h3>
-
-                    <p className="text-sm font-mono text-red-400/90 leading-relaxed max-w-3xl">
-                      {item.desc}
-                    </p>
+                    <span className="text-xs font-mono px-2 py-0.5 bg-red-500/10 text-red-400 border border-red-500/30">
+                      {item.badge}
+                    </span>
                   </div>
+
+                  <h3 className="text-xl sm:text-2xl font-bold font-mono text-red-500 group-hover:text-red-400 transition mb-2">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-sm font-mono text-zinc-300 leading-relaxed max-w-4xl">
+                    {item.desc}
+                  </p>
                 </div>
               );
             })}
-
           </div>
         </section>
 
