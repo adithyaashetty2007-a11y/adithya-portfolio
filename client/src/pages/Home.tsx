@@ -1163,7 +1163,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-white tracking-tight uppercase">About_Me</h2>
           </div>
 
-          {/* Asymmetric Bento Grid Architecture with Interactive Dossier Tabs */}
+          {/* Streamlined Executive Bento Grid */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
             {/* Bento Cell 1: Main Bio Card with Interactive Tabs (Span 8) */}
             <div className="md:col-span-8 bg-[#141416] border border-white/15 rounded-2xl p-6 sm:p-8 flex flex-col justify-between relative group overflow-hidden">
@@ -1247,27 +1247,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               </div>
             </div>
 
-            {/* Bento Cell 2: Legendary Metric - LeetCode (Span 4) */}
-            <div className="md:col-span-4 bg-gradient-to-br from-[#18181b] to-[#09090b] border border-white/20 rounded-2xl p-6 flex flex-col justify-between relative group hover-lift overflow-hidden shadow-2xl">
-              <div className="absolute top-3 right-3 text-white/60 font-mono text-xs">+</div>
-              <div className="absolute -right-10 -bottom-10 w-32 h-32 bg-white/5 rounded-full blur-2xl pointer-events-none"></div>
-              <div className="space-y-3 relative z-10">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest bg-white/10 px-2 py-0.5 rounded border border-white/20">ELITE_TIER // 01</span>
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                </div>
-                <div>
-                  <div className="text-2xl sm:text-3xl font-extrabold font-mono text-white tracking-tight">leetcode solver</div>
-                  <p className="text-xs text-zinc-300 font-mono mt-1">Algorithmic mastery & unstoppable daily problem-solving streak.</p>
-                </div>
-              </div>
-              <div className="pt-4 mt-6 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-400 relative z-10">
-                <span className="text-white font-bold">LEGENDARY_RANK</span>
-                <Code2 className="w-5 h-5 text-white animate-pulse" />
-              </div>
-            </div>
-
-            {/* Bento Cell 3: Legendary Metric - Certifications (Span 4) */}
+            {/* Bento Cell 2: Legendary Metric - Certifications (Span 4) */}
             <div className="md:col-span-4 bg-gradient-to-br from-[#18181b] to-[#09090b] border border-white/20 rounded-2xl p-6 flex flex-col justify-between relative group hover-lift overflow-hidden shadow-2xl">
               <div className="absolute top-3 right-3 text-white/60 font-mono text-xs">+</div>
               <div className="absolute -right-10 -bottom-10 w-32 h-32 bg-white/5 rounded-full blur-2xl pointer-events-none"></div>
@@ -1287,31 +1267,11 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               </div>
             </div>
 
-            {/* Bento Cell 4: Legendary Metric - Hackathon (Span 4) */}
-            <div className="md:col-span-4 bg-gradient-to-br from-[#18181b] to-[#09090b] border border-white/20 rounded-2xl p-6 flex flex-col justify-between relative group hover-lift overflow-hidden shadow-2xl">
-              <div className="absolute top-3 right-3 text-white/60 font-mono text-xs">+</div>
-              <div className="absolute -right-10 -bottom-10 w-32 h-32 bg-white/5 rounded-full blur-2xl pointer-events-none"></div>
-              <div className="space-y-3 relative z-10">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest bg-white/10 px-2 py-0.5 rounded border border-white/20">INNOVATION // 03</span>
-                  <span className="w-2 h-2 rounded-full bg-purple-400 animate-ping"></span>
-                </div>
-                <div>
-                  <div className="text-2xl sm:text-3xl font-extrabold font-mono text-white tracking-tight">1x hackathon</div>
-                  <p className="text-xs text-zinc-300 font-mono mt-1">Polaris Replit Vibeathon high-intensity builder milestone.</p>
-                </div>
-              </div>
-              <div className="pt-4 mt-6 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-400 relative z-10">
-                <span className="text-white font-bold">VIBEHONOR_BADGE</span>
-                <Cpu className="w-5 h-5 text-white animate-pulse" />
-              </div>
-            </div>
-
-            {/* Bento Cell 5: Mission Statement / Philosophy (Span 4) */}
+            {/* Bento Cell 3: Mission Statement / Philosophy (Span 4) */}
             <div className="md:col-span-4 bg-[#141416] border border-white/15 rounded-2xl p-6 flex flex-col justify-between relative group">
               <div className="absolute top-3 right-3 text-white/40 font-mono text-xs">+</div>
               <div className="space-y-2">
-                <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">// 04_PHILOSOPHY</div>
+                <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">// 03_PHILOSOPHY</div>
                 <div className="text-lg font-bold font-mono text-white">Clean Architecture & A11y</div>
                 <p className="text-xs text-zinc-400 font-mono">Turning complex ideas into practical, high-performance software solutions.</p>
               </div>
