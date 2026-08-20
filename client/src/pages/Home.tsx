@@ -1962,7 +1962,10 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             <p className="text-sm font-mono text-zinc-400">Where I've been and what I've built along the way.</p>
           </div>
 
-          <div className="grid grid-cols-1 gap-6">
+          <div className="relative wrap overflow-hidden py-10">
+            {/* Center snake rail */}
+            <div className="absolute border-l-2 border-red-500/40 h-full left-1/2 transform -translate-x-1/2 hidden md:block"></div>
+
             {[
               {
                 id: "internship",
@@ -2066,35 +2069,44 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               }
             ].map((item, index) => {
               if (timelineCategory !== "all" && timelineCategory !== item.cat) return null;
+              const isEven = index % 2 === 0;
               return (
-                <div 
-                  key={item.id} 
-                  onClick={() => setSelectedTimelineItem(item.full)}
-                  className="bg-[#121214] border border-red-500/30 hover:border-red-500/80 p-6 rounded-none cursor-pointer transition transform hover:-translate-y-1 relative group"
-                >
-                  {/* Cyberpunk corner crosshairs */}
-                  <div className="absolute -top-1 -left-1 w-2 h-2 border-t-2 border-l-2 border-red-500"></div>
-                  <div className="absolute -top-1 -right-1 w-2 h-2 border-t-2 border-r-2 border-red-500"></div>
-                  <div className="absolute -bottom-1 -left-1 w-2 h-2 border-b-2 border-l-2 border-red-500"></div>
-                  <div className="absolute -bottom-1 -right-1 w-2 h-2 border-b-2 border-r-2 border-red-500"></div>
-
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="text-xs font-mono text-red-500 tracking-wider uppercase flex items-center gap-2">
-                      <span className="animate-pulse">●</span>
-                      <span>{item.date}</span>
-                    </div>
-                    <span className="text-xs font-mono px-2 py-0.5 bg-red-500/10 text-red-400 border border-red-500/30">
-                      {item.badge}
-                    </span>
+                <div key={item.id} className={`mb-12 flex justify-between items-center w-full ${isEven ? 'md:flex-row-reverse' : ''}`}>
+                  <div className="order-1 md:w-5/12"></div>
+                  
+                  {/* Snake node marker */}
+                  <div className="z-20 hidden md:flex items-center justify-center w-8 h-8 bg-black border-2 border-red-500 rounded-none shadow">
+                    <span className="w-2 h-2 bg-red-500 animate-ping"></span>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-bold font-mono text-red-500 group-hover:text-red-400 transition mb-2">
-                    {item.title}
-                  </h3>
+                  <div 
+                    onClick={() => setSelectedTimelineItem(item.full)}
+                    className="order-1 md:w-5/12 bg-[#121214] border border-red-500/30 hover:border-red-500/80 p-6 rounded-none cursor-pointer transition transform hover:-translate-y-1 relative group w-full"
+                  >
+                    {/* Cyberpunk corner crosshairs */}
+                    <div className="absolute -top-1 -left-1 w-2 h-2 border-t-2 border-l-2 border-red-500"></div>
+                    <div className="absolute -top-1 -right-1 w-2 h-2 border-t-2 border-r-2 border-red-500"></div>
+                    <div className="absolute -bottom-1 -left-1 w-2 h-2 border-b-2 border-l-2 border-red-500"></div>
+                    <div className="absolute -bottom-1 -right-1 w-2 h-2 border-b-2 border-r-2 border-red-500"></div>
 
-                  <p className="text-sm font-mono text-zinc-300 leading-relaxed max-w-4xl">
-                    {item.desc}
-                  </p>
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="text-xs font-mono text-red-500 tracking-wider uppercase flex items-center gap-2">
+                        <span className="animate-pulse">●</span>
+                        <span>{item.date}</span>
+                      </div>
+                      <span className="text-xs font-mono px-2 py-0.5 bg-red-500/10 text-red-400 border border-red-500/30">
+                        {item.badge}
+                      </span>
+                    </div>
+
+                    <h3 className="text-xl font-bold font-mono text-red-500 group-hover:text-red-400 transition mb-2">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-sm font-mono text-zinc-300 leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
                 </div>
               );
             })}
