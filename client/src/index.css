@@ -589,3 +589,30 @@ section {
   top: -7px;
   right: -7px;
 }
+
+@keyframes bladeSlash {
+  0% { transform: translate(-100%, -100%) rotate(-25deg); opacity: 0; }
+  30% { opacity: 1; }
+  50% { transform: translate(0%, 0%) rotate(-25deg); opacity: 1; }
+  100% { transform: translate(100%, 100%) rotate(-25deg); opacity: 0; }
+}
+
+@keyframes textSplitLeft {
+  0% { transform: translateX(0); }
+  60% { transform: translateX(0); }
+  100% { transform: translateX(-40px); opacity: 0.2; }
+}
+
+@keyframes textSplitRight {
+  0% { transform: translateX(0); }
+  60% { transform: translateX(0); }
+  100% { transform: translateX(40px); opacity: 0.2; }
+}
+
+.animate-blade-slash {
+  animation: bladeSlash 1.2s cubic-bezier(0.1, 1, 0.1, 1) forwards;
+}
+
+.animate-text-split-left {
+  animation: textSplitLeft 2.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}

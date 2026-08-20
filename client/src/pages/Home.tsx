@@ -572,7 +572,40 @@ export default function Home() {
         </svg>
       </div>
 
-      {/* Intro section removed per user request */}
+      {/* Cinematic NAMASTE Blade-Cut Intro Splash Screen */}
+      {showIntro && (
+        <div className="fixed inset-0 z-50 bg-[#0a0a0a] flex flex-col items-center justify-center overflow-hidden animate-fade-in select-none">
+          <MatrixRain />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-red-950/20 to-black pointer-events-none"></div>
+
+          {/* Skip Intro Button */}
+          <button
+            onClick={() => setShowIntro(false)}
+            className="absolute top-6 right-6 px-4 py-2 bg-black/80 border border-white/20 text-zinc-400 hover:text-white hover:border-white text-xs font-mono tracking-widest uppercase transition z-50 cursor-pointer shadow-lg"
+          >
+            [ SKIP INTRO ]
+          </button>
+
+          {/* Cinematic Container */}
+          <div className="relative z-10 flex flex-col items-center justify-center">
+            {/* Red Energy Slash Line Across Screen */}
+            <div className="absolute w-[200vw] h-[3px] bg-red-500 shadow-[0_0_25px_#ff0055,0_0_50px_#ff0055] rotate-[-25deg] animate-blade-slash pointer-events-none z-30"></div>
+
+            {/* Spark Particles Effect */}
+            <div className="absolute w-3 h-3 bg-white rounded-full shadow-[0_0_20px_#ffffff] animate-ping z-40"></div>
+
+            {/* Splitting NAMASTE! Text */}
+            <div className="relative text-5xl sm:text-8xl font-black font-almie tracking-widest text-[#ffffff] drop-shadow-[0_0_30px_rgba(255,255,255,0.4)] flex items-center">
+              <span className="inline-block animate-text-split-left">NAMASTE</span>
+              <span className="text-red-500 inline-block animate-text-split-left">!</span>
+            </div>
+
+            <p className="mt-6 text-xs font-mono text-zinc-400 tracking-[0.3em] uppercase animate-pulse">
+              INITIALIZING CYBERNETIC PORTFOLIO CORE...
+            </p>
+          </div>
+        </div>
+      )}
 
       {/* CRT Scanline & Grid Background Textures */}
       <div className="fixed inset-0 crt-scanlines z-40 pointer-events-none opacity-50"></div>
@@ -824,8 +857,8 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             <div className="lg:col-span-7 space-y-6 text-left">
 
 
-              <div className="inline-block px-3 py-1 bg-red-950/80 border border-red-500/50 text-red-400 font-mono text-xs tracking-wider uppercase font-bold">
-                NOT AVAILABLE FOR HIRE
+              <div className="inline-block px-3 py-1 bg-zinc-900 border border-[#ccff00]/50 text-[#ccff00] font-mono text-xs tracking-wider uppercase font-bold">
+                3RD SEM STUDENT // CSE
               </div>
 
               <div className="space-y-1">
