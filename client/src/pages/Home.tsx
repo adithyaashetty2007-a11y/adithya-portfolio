@@ -158,6 +158,8 @@ export default function Home() {
 
   // Typewriter placeholder for contact form
   const [namePlaceholder, setNamePlaceholder] = useState("e.g. Peer / Mentor");
+  const [visitorCount, setVisitorCount] = useState(1482);
+
   useEffect(() => {
     const namePrompts = ["e.g. Peer / Mentor", "e.g. Recruiter", "e.g. Tech Lead", "e.g. Fellow Developer"];
     let nameIdx = 0;
@@ -188,7 +190,24 @@ export default function Home() {
     };
 
     timer = setTimeout(typeName, 1000);
-    return () => clearTimeout(timer);
+
+    // Welcome toast for incoming recruiters & visitor counter increment
+    const welcomeTimer = setTimeout(() => {
+      const stored = localStorage.getItem("adithya_visitor_count");
+      const currentCount = stored ? parseInt(stored, 10) + 1 : 1483;
+      setVisitorCount(currentCount);
+      localStorage.setItem("adithya_visitor_count", currentCount.toString());
+
+      toast("⚡ Welcome, Recruiter / Visitor!", {
+        description: `You are visitor #${currentCount}. Explore Adithya's portfolio & projects.`,
+        duration: 5000,
+      });
+    }, 1500);
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(welcomeTimer);
+    };
   }, []);
   
   // Certificate management state
@@ -647,6 +666,11 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
             {/* Right Action / Command Palette Trigger & Phone / SFX */}
             <div className="hidden sm:flex items-center gap-3">
+              <div className="px-2.5 py-1.5 rounded border border-white/15 bg-black/40 text-[11px] font-mono text-zinc-300 flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>VISITORS: {visitorCount}</span>
+              </div>
+
               <button
                 onClick={() => setIsCommandPaletteOpen(true)}
                 className="px-2.5 py-1.5 rounded border border-white/20 bg-white/5 hover:bg-white/10 text-xs font-mono flex items-center gap-2 text-zinc-300 transition"
