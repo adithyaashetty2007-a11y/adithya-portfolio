@@ -323,6 +323,7 @@ export default function Home() {
   const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
   const [isAdminModalOpen, setIsAdminModalOpen] = useState(false);
   const [adminPinInput, setAdminPinInput] = useState("");
+  const [timelineScrollProgress, setTimelineScrollProgress] = useState(0);
   const [pendingActionType, setPendingActionType] = useState<"cert" | "post" | "proj" | null>(null);
 
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -404,6 +405,20 @@ export default function Home() {
             break;
           }
         }
+      }
+
+      // Timeline scroll progress calculation
+      const eduSection = document.getElementById("education");
+      if (eduSection) {
+        const rect = eduSection.getBoundingClientRect();
+        const sectionTop = rect.top;
+        const sectionHeight = rect.height;
+        const windowHeight = window.innerHeight;
+        
+        // Calculate progress as user scrolls through the education section
+        const progress = (-sectionTop + windowHeight * 0.3) / (sectionHeight - windowHeight * 0.5);
+        const clamped = Math.max(0, Math.min(1, progress));
+        setTimelineScrollProgress(clamped * 100);
       }
     };
 
@@ -1962,9 +1977,15 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             <p className="text-sm font-mono text-zinc-400">Where I've been and what I've built along the way.</p>
           </div>
 
-          <div className="relative wrap overflow-hidden py-10">
-            {/* Center snake rail with glowing pulse line */}
-            <div className="absolute border-l-2 border-red-500 h-full left-1/2 transform -translate-x-1/2 hidden md:block shadow-[0_0_15px_rgba(239,68,68,0.8)]"></div>
+          <div className="relative wrap overflow-hidden py-10 pl-6 md:pl-0">
+            {/* Background track rail (straight vertical on mobile, centered on desktop) */}
+            <div className="absolute border-l-2 border-red-500/30 h-full left-6 md:left-1/2 transform -translate-x-1/2 top-0"></div>
+
+            {/* Scroll-filling glowing red progress rail */}
+            <div 
+              className="absolute border-l-2 border-red-500 left-6 md:left-1/2 transform -translate-x-1/2 top-0 transition-all duration-150 shadow-[0_0_15px_rgba(239,68,68,0.9)]"
+              style={{ height: `${timelineScrollProgress}%` }}
+            ></div>
 
             {[
               {
@@ -2071,9 +2092,9 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               if (timelineCategory !== "all" && timelineCategory !== item.cat) return null;
               const isEven = index % 2 === 0;
               return (
-                <div key={item.id} className={`mb-16 flex justify-between items-center w-full ${isEven ? 'md:flex-row-reverse' : ''}`}>
+                <div key={item.id} className={`mb-16 flex flex-col md:flex-row justify-between items-start md:items-center w-full pl-10 md:pl-0 ${isEven ? 'md:flex-row-reverse' : ''}`}>
                   {/* Text content side */}
-                  <div className={`order-1 md:w-5/12 cursor-pointer group text-left ${isEven ? 'md:text-right' : 'md:text-left'}`} onClick={() => setSelectedTimelineItem(item.full)}>
+                  <div className={`order-1 w-full md:w-5/12 cursor-pointer group text-left ${isEven ? 'md:text-right' : 'md:text-left'}`} onClick={() => setSelectedTimelineItem(item.full)}>
                     <div className={`text-xs font-mono text-red-500 tracking-wider uppercase flex items-center gap-2 mb-1 ${isEven ? 'md:justify-end' : 'md:justify-start'}`}>
                       <span className="animate-pulse">●</span>
                       <span>{item.date}</span>
@@ -2088,18 +2109,18 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     </p>
                   </div>
                   
-                  {/* Snake circular node marker with experience indicator dot */}
-                  <div className="z-20 hidden md:flex flex-col items-center justify-center relative">
-                    <div className="w-12 h-12 bg-black border-2 border-red-500 rounded-full shadow-lg shadow-red-500/30 flex items-center justify-center group-hover:scale-110 transition">
-                      <div className="w-4 h-4 bg-red-500 rounded-full animate-ping absolute"></div>
-                      <div className="w-3 h-3 bg-red-400 rounded-full z-10"></div>
+                  {/* Snake circular node marker with experience indicator dot (Responsive: absolute left on mobile, center rail on desktop) */}
+                  <div className="absolute left-6 md:static z-20 flex flex-col items-center justify-center transform -translate-x-1/2 md:translate-x-0 mt-1 md:mt-0">
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-black border-2 border-red-500 rounded-full shadow-lg shadow-red-500/30 flex items-center justify-center group-hover:scale-110 transition">
+                      <div className="w-3 h-3 md:w-4 md:h-4 bg-red-500 rounded-full animate-ping absolute"></div>
+                      <div className="w-2.5 h-2.5 md:w-3 md:h-3 bg-red-400 rounded-full z-10"></div>
                     </div>
-                    <span className="absolute -bottom-6 text-[10px] font-mono text-red-400 uppercase tracking-widest whitespace-nowrap bg-black px-1 border border-red-500/30">
+                    <span className="hidden md:block absolute -bottom-6 text-[10px] font-mono text-red-400 uppercase tracking-widest whitespace-nowrap bg-black px-1 border border-red-500/30">
                       exp_0{index + 1}
                     </span>
                   </div>
 
-                  <div className="order-1 md:w-5/12 hidden md:block"></div>
+                  <div className="order-1 w-full md:w-5/12 hidden md:block"></div>
                 </div>
               );
             })}
