@@ -1963,8 +1963,8 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           </div>
 
           <div className="relative wrap overflow-hidden py-10">
-            {/* Center snake rail */}
-            <div className="absolute border-l-2 border-red-500/40 h-full left-1/2 transform -translate-x-1/2 hidden md:block"></div>
+            {/* Center snake rail with glowing pulse line */}
+            <div className="absolute border-l-2 border-red-500 h-full left-1/2 transform -translate-x-1/2 hidden md:block shadow-[0_0_15px_rgba(239,68,68,0.8)]"></div>
 
             {[
               {
