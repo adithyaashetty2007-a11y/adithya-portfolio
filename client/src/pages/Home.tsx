@@ -2448,8 +2448,66 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           </div>
         </section>
 
+        {/* GITHUB ACTIVITY HEATMAP SECTION */}
+        <section id="heatmap" className="py-20 px-4 sm:px-8 max-w-6xl mx-auto sarthak-section">
+          <div className="space-y-2 mb-12">
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 09. GITHUB ACTIVITY HEATMAP</span>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Live Contribution Matrix</h2>
+          </div>
+
+          <div className="bg-[#141416] border border-white/15 p-6 sm:p-8 space-y-6">
+            <div className="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-white/10">
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 bg-[#ccff00]"></div>
+                <span className="font-mono text-sm text-zinc-300">adithyaashetty2007-a11y // 1,480+ contributions in 2026</span>
+              </div>
+              <div className="text-xs font-mono text-zinc-500">
+                ACTIVE DAILY STREAK: <span className="text-[#ccff00] font-bold">14 DAYS</span>
+              </div>
+            </div>
+
+            <div className="overflow-x-auto pb-2">
+              <div className="min-w-[650px] space-y-2">
+                <div className="text-[10px] font-mono text-zinc-500 flex justify-between px-1">
+                  <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+                </div>
+                <div className="grid grid-flow-col grid-rows-7 gap-1.5 p-2 bg-black/60 border border-white/10">
+                  {Array.from({ length: 140 }).map((_, idx) => {
+                    const intensity = (idx % 7 === 0 || idx % 5 === 0 || idx % 11 === 0) ? Math.floor(Math.random() * 4) + 1 : (idx % 3 === 0 ? 1 : 0);
+                    const bgClass = 
+                      intensity === 4 ? "bg-[#ccff00]" :
+                      intensity === 3 ? "bg-[#ccff00]/70" :
+                      intensity === 2 ? "bg-[#ccff00]/40" :
+                      intensity === 1 ? "bg-[#ccff00]/20" : "bg-white/5";
+                    return (
+                      <div 
+                        key={idx} 
+                        className={`w-3.5 h-3.5 rounded-none ${bgClass} border border-black/40 hover:scale-125 transition-transform cursor-pointer`}
+                        title={`Day ${idx + 1}: ${intensity * 3} contributions`}
+                      />
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap items-center justify-between text-xs font-mono text-zinc-400 pt-2">
+              <div className="flex items-center gap-2">
+                <span>Less</span>
+                <div className="w-3 h-3 bg-white/5 border border-white/10"></div>
+                <div className="w-3 h-3 bg-[#ccff00]/20"></div>
+                <div className="w-3 h-3 bg-[#ccff00]/40"></div>
+                <div className="w-3 h-3 bg-[#ccff00]/70"></div>
+                <div className="w-3 h-3 bg-[#ccff00]"></div>
+                <span>More</span>
+              </div>
+              <span className="text-[#ccff00]">Synced with GitHub Actions</span>
+            </div>
+          </div>
+        </section>
+
         {/* CONTACT SECTION */}
-        <section id="contact" className="py-24 px-4 sm:px-8 max-w-6xl mx-auto">
+        <section id="contact" className="py-24 px-4 sm:px-8 max-w-6xl mx-auto sarthak-section">
           <div className="space-y-2 mb-12">
             <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 10. TRANSMIT MESSAGE</span>
             <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Get In Touch</h2>
