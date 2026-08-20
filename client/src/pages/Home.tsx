@@ -1160,78 +1160,95 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           </div>
         </section>
 
-        {/* ABOUT SECTION - REDESIGNED WITH SARTHAK PRIYADARSHI BENCHMARK STAT CARDS */}
+        {/* ABOUT SECTION - REDESIGNED ASYMMETRIC BENTO GRID */}
         <section id="about" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 01. BACKGROUND & GROWTH</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ffffff] tracking-tight uppercase">About_Me</h2>
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 01. BENTO_CORE & BACKGROUND</span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-white tracking-tight uppercase">About_Me</h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-            {/* Left Box: Main Bio & Technical Focus */}
-            <div className="lg:col-span-8 bg-[#141416] border border-white/15 rounded-2xl p-8 flex flex-col justify-between relative  group">
-              <div className="absolute top-3 right-3 text-[#ffffff] font-mono text-xs">+</div>
-              <div className="absolute bottom-3 left-3 text-[#ffffff] font-mono text-xs">+</div>
-              
-              <div className="space-y-6 text-zinc-300 leading-relaxed font-sans text-base sm:text-lg">
+          {/* Asymmetric Bento Grid Architecture */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+            {/* Bento Cell 1: Main Bio Card (Span 8) */}
+            <div className="md:col-span-8 bg-[#141416] border border-white/15 rounded-2xl p-8 flex flex-col justify-between relative group overflow-hidden">
+              <div className="absolute top-3 right-3 text-white/40 font-mono text-xs">+</div>
+              <div className="absolute bottom-3 left-3 text-white/40 font-mono text-xs">+</div>
+              <div className="absolute -right-12 -top-12 w-48 h-48 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
+
+              <div className="space-y-6 text-zinc-300 leading-relaxed font-sans text-base sm:text-lg relative z-10">
+                <div className="flex items-center gap-2 text-xs font-mono text-zinc-400">
+                  <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                  <span>SYSTEM_STATUS // ACTIVE_ENGINEERING_STUDENT</span>
+                </div>
                 <p>
-                  Hello! I am <strong className="text-white font-semibold">Adithya A Shetty</strong>, a Computer Science Engineering student at St. Joseph Engineering College, Mangaluru, currently in my 2nd semester. I successfully completed my second semester with consistent academic improvement, achieving an <strong className="text-emerald-400 font-semibold">8.05 SGPA in Sem 2</strong> (up from <strong className="text-white">7.5 SGPA in Sem 1</strong>).
+                  Hello! I am <strong className="text-white font-bold">Adithya A Shetty</strong>, a Computer Science Engineering student at St. Joseph Engineering College, Mangaluru, currently in my 2nd semester. I successfully completed my second semester with consistent academic improvement, achieving an <strong className="text-white font-bold">8.05 SGPA in Sem 2</strong> (up from <strong className="text-zinc-400">7.5 SGPA in Sem 1</strong>).
                 </p>
                 <p>
-                  I am building my technical foundation with college-level basics in C, C++, and Python, while actively solving Data Structures and Algorithms (DSA) problems in C++ (20+ LeetCode problems solved). I focus on building responsive frontends, exploring AI & Computer Vision projects like YOLOv8n, and leveraging modern AI-assisted development tools.
-                </p>
-                <p className="text-zinc-400 text-sm font-mono">
-                  I stay ahead of emerging tech trends by participating in hackathons, workshops, and continuous real-world project development.
+                  I am building my technical foundation with college-level basics in C, C++, and Python, while actively solving Data Structures and Algorithms (DSA) problems in C++ (leetcode solver). I focus on building responsive frontends, exploring AI & Computer Vision projects like YOLOv8n, and leveraging modern AI-assisted development tools.
                 </p>
               </div>
 
-              <div className="pt-8 mt-6 border-t border-white/10 flex flex-wrap gap-3 font-mono text-xs">
-                <span className="text-[#ffffff] bg-[#ffffff]/10 border border-[#ffffff]/30 px-3 py-1 rounded">→ C / C++ / PYTHON</span>
-                <span className="text-[#ffffff] bg-[#ffffff]/10 border border-[#ffffff]/30 px-3 py-1 rounded">→ WEB DEVELOPMENT</span>
-                <span className="text-[#ffffff] bg-[#ffffff]/10 border border-[#ffffff]/30 px-3 py-1 rounded">→ AI & COMPUTER VISION</span>
-                <span className="text-[#ffffff] bg-[#ffffff]/10 border border-[#ffffff]/30 px-3 py-1 rounded">→ DSA IN C++</span>
+              <div className="pt-8 mt-6 border-t border-white/10 flex flex-wrap gap-2.5 font-mono text-xs relative z-10">
+                <span className="text-white bg-white/10 border border-white/20 px-3 py-1 rounded">C / C++ / PYTHON</span>
+                <span className="text-white bg-white/10 border border-white/20 px-3 py-1 rounded">WEB DEV</span>
+                <span className="text-white bg-white/10 border border-white/20 px-3 py-1 rounded">AI & CV</span>
+                <span className="text-white bg-white/10 border border-white/20 px-3 py-1 rounded">DSA</span>
               </div>
             </div>
 
-            {/* Right Box: Sarthak Priyadarshi Style Metric Stack Cards */}
-            <div className="lg:col-span-4 flex flex-col gap-4">
-              {/* Stat 1: LeetCode Ranking / Score */}
-              <div className="bg-[#141416] border border-white/15 rounded-xl p-6 relative flex items-center justify-between">
-                <div className="absolute top-2 right-2 text-white/40 font-mono text-[10px]">+</div>
-                <div>
-                  <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest">leetcode & dsa</div>
-                  <div className="text-2xl sm:text-3xl font-extrabold font-almie text-white mt-1">leetcode solver</div>
-                  <div className="text-xs text-zinc-400 font-mono mt-0.5">Active daily problem solver</div>
-                </div>
-                <div className="p-3 bg-white/5 border border-white/20 rounded-lg text-white">
-                  <Code2 className="w-6 h-6" />
-                </div>
+            {/* Bento Cell 2: Quick Stat Card - LeetCode (Span 4) */}
+            <div className="md:col-span-4 bg-[#141416] border border-white/15 rounded-2xl p-6 flex flex-col justify-between relative group">
+              <div className="absolute top-3 right-3 text-white/40 font-mono text-xs">+</div>
+              <div className="space-y-2">
+                <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">// 01_METRIC</div>
+                <div className="text-2xl font-bold font-mono text-white">leetcode solver</div>
+                <p className="text-xs text-zinc-400 font-mono">Consistent daily practice & algorithmic mastery.</p>
               </div>
-
-              {/* Stat 2: Certifications */}
-              <div className="bg-[#141416] border border-white/15 rounded-xl p-6 relative flex items-center justify-between">
-                <div className="absolute top-2 right-2 text-white/40 font-mono text-[10px]">+</div>
-                <div>
-                  <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest">verified credentials</div>
-                  <div className="text-2xl sm:text-3xl font-extrabold font-almie text-white mt-1">8+ certs</div>
-                  <div className="text-xs text-zinc-400 font-mono mt-0.5">CS50W, Python, AI Workshops</div>
-                </div>
-                <div className="p-3 bg-white/5 border border-white/20 rounded-lg text-white">
-                  <Award className="w-6 h-6" />
-                </div>
+              <div className="pt-4 mt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-400">
+                <span>STREAK: ACTIVE</span>
+                <Code2 className="w-4 h-4 text-white" />
               </div>
+            </div>
 
-              {/* Stat 3: Hackathons & Vibeathons */}
-              <div className="bg-[#141416] border border-white/15 rounded-xl p-6 relative flex items-center justify-between">
-                <div className="absolute top-2 right-2 text-white/40 font-mono text-[10px]">+</div>
-                <div>
-                  <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest">hackathons</div>
-                  <div className="text-2xl sm:text-3xl font-extrabold font-almie text-white mt-1">1 hackathon</div>
-                  <div className="text-xs text-zinc-400 font-mono mt-0.5">Polaris Replit Vibeathon</div>
-                </div>
-                <div className="p-3 bg-white/5 border border-white/20 rounded-lg text-white">
-                  <Cpu className="w-6 h-6" />
-                </div>
+            {/* Bento Cell 3: Quick Stat Card - Certifications (Span 4) */}
+            <div className="md:col-span-4 bg-[#141416] border border-white/15 rounded-2xl p-6 flex flex-col justify-between relative group">
+              <div className="absolute top-3 right-3 text-white/40 font-mono text-xs">+</div>
+              <div className="space-y-2">
+                <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">// 02_METRIC</div>
+                <div className="text-2xl font-bold font-mono text-white">8+ certs</div>
+                <p className="text-xs text-zinc-400 font-mono">CS50W, Python Essentials, AI Workshops.</p>
+              </div>
+              <div className="pt-4 mt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-400">
+                <span>STATUS: VERIFIED</span>
+                <Award className="w-4 h-4 text-white" />
+              </div>
+            </div>
+
+            {/* Bento Cell 4: Quick Stat Card - Hackathon (Span 4) */}
+            <div className="md:col-span-4 bg-[#141416] border border-white/15 rounded-2xl p-6 flex flex-col justify-between relative group">
+              <div className="absolute top-3 right-3 text-white/40 font-mono text-xs">+</div>
+              <div className="space-y-2">
+                <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">// 03_METRIC</div>
+                <div className="text-2xl font-bold font-mono text-white">1 hackathon</div>
+                <p className="text-xs text-zinc-400 font-mono">Polaris Replit Vibeathon participant.</p>
+              </div>
+              <div className="pt-4 mt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-400">
+                <span>INNOVATION</span>
+                <Cpu className="w-4 h-4 text-white" />
+              </div>
+            </div>
+
+            {/* Bento Cell 5: Mission Statement / Philosophy (Span 4) */}
+            <div className="md:col-span-4 bg-[#141416] border border-white/15 rounded-2xl p-6 flex flex-col justify-between relative group">
+              <div className="absolute top-3 right-3 text-white/40 font-mono text-xs">+</div>
+              <div className="space-y-2">
+                <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">// 04_PHILOSOPHY</div>
+                <div className="text-lg font-bold font-mono text-white">Clean Architecture & A11y</div>
+                <p className="text-xs text-zinc-400 font-mono">Turning complex ideas into practical, high-performance software solutions.</p>
+              </div>
+              <div className="pt-4 mt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-400">
+                <span>ETHOS</span>
+                <span className="w-2 h-2 rounded-full bg-white"></span>
               </div>
             </div>
           </div>
