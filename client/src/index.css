@@ -498,3 +498,27 @@ button:hover, a:hover, [role="button"]:hover {
   top: -8px;
   right: -8px;
 }
+
+/* Universal Sharp Square & Neon Plus Crosshairs Everywhere */
+div, section, article, button, input, textarea, .card, .panel {
+  border-radius: 0px !important;
+}
+
+/* Ensure every section and card acts as a neon plus container */
+.sarthak-section, .sharp-card {
+  position: relative;
+}
+
+.sarthak-section::before,
+.sarthak-section::after,
+.sharp-card::before,
+.sharp-card::after {
+  content: "+";
+  position: absolute;
+  color: #ccff00;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1;
+  pointer-events: none;
+  z-index: 20;
+}
