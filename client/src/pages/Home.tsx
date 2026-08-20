@@ -1156,24 +1156,24 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             {/* Right Box: Sarthak Priyadarshi Style Metric Stack Cards */}
             <div className="lg:col-span-4 flex flex-col gap-4">
               {/* Stat 1: LeetCode Ranking / Score */}
-              <div className="bg-[#141416] border border-[#ffffff]/30 rounded-xl p-6 relative glow-card group flex items-center justify-between">
-                <div className="absolute top-2 right-2 text-[#ffffff] font-mono text-[10px]">+</div>
+              <div className="bg-[#141416] border border-white/15 rounded-xl p-6 relative flex items-center justify-between">
+                <div className="absolute top-2 right-2 text-white/40 font-mono text-[10px]">+</div>
                 <div>
-                  <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest">LEETCODE & DSA</div>
-                  <div className="text-2xl sm:text-3xl font-extrabold font-almie text-[#ffffff] mt-1">20+ SOLVED</div>
-                  <div className="text-xs text-zinc-400 font-mono mt-0.5">Active 2-week streak</div>
+                  <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest">leetcode & dsa</div>
+                  <div className="text-2xl sm:text-3xl font-extrabold font-almie text-white mt-1">leetcode solver</div>
+                  <div className="text-xs text-zinc-400 font-mono mt-0.5">Active daily problem solver</div>
                 </div>
-                <div className="p-3 bg-[#ffffff]/10 border border-[#ffffff]/30 rounded-lg text-[#ffffff]">
+                <div className="p-3 bg-white/5 border border-white/20 rounded-lg text-white">
                   <Code2 className="w-6 h-6" />
                 </div>
               </div>
 
               {/* Stat 2: Certifications */}
-              <div className="bg-[#141416] border border-white/15 rounded-xl p-6 relative glow-card group flex items-center justify-between">
-                <div className="absolute top-2 right-2 text-[#ffffff] font-mono text-[10px]">+</div>
+              <div className="bg-[#141416] border border-white/15 rounded-xl p-6 relative flex items-center justify-between">
+                <div className="absolute top-2 right-2 text-white/40 font-mono text-[10px]">+</div>
                 <div>
-                  <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest">VERIFIED CREDENTIALS</div>
-                  <div className="text-2xl sm:text-3xl font-extrabold font-almie text-white mt-1">7+ CERTS</div>
+                  <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest">verified credentials</div>
+                  <div className="text-2xl sm:text-3xl font-extrabold font-almie text-white mt-1">8+ certs</div>
                   <div className="text-xs text-zinc-400 font-mono mt-0.5">CS50W, Python, AI Workshops</div>
                 </div>
                 <div className="p-3 bg-white/5 border border-white/20 rounded-lg text-white">
@@ -1182,14 +1182,14 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               </div>
 
               {/* Stat 3: Hackathons & Vibeathons */}
-              <div className="bg-[#141416] border border-white/15 rounded-xl p-6 relative glow-card group flex items-center justify-between">
-                <div className="absolute top-2 right-2 text-[#ffffff] font-mono text-[10px]">+</div>
+              <div className="bg-[#141416] border border-white/15 rounded-xl p-6 relative flex items-center justify-between">
+                <div className="absolute top-2 right-2 text-white/40 font-mono text-[10px]">+</div>
                 <div>
-                  <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest">HACKATHONS</div>
-                  <div className="text-2xl sm:text-3xl font-extrabold font-almie text-white mt-1">1+ HACKATHON</div>
+                  <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest">hackathons</div>
+                  <div className="text-2xl sm:text-3xl font-extrabold font-almie text-white mt-1">1 hackathon</div>
                   <div className="text-xs text-zinc-400 font-mono mt-0.5">Polaris Replit Vibeathon</div>
                 </div>
-                <div className="p-3 bg-white/5 border border-white/20 rounded-lg text-[#ffffff]">
+                <div className="p-3 bg-white/5 border border-white/20 rounded-lg text-white">
                   <Cpu className="w-6 h-6" />
                 </div>
               </div>
