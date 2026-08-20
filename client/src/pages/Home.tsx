@@ -1129,7 +1129,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             {/* Left Box: Main Bio & Technical Focus */}
-            <div className="lg:col-span-8 bg-[#141416] border border-white/15 rounded-2xl p-8 flex flex-col justify-between relative glow-card group">
+            <div className="lg:col-span-8 bg-[#141416] border border-white/15 rounded-2xl p-8 flex flex-col justify-between relative  group">
               <div className="absolute top-3 right-3 text-[#ffffff] font-mono text-xs">+</div>
               <div className="absolute bottom-3 left-3 text-[#ffffff] font-mono text-xs">+</div>
               
@@ -1405,7 +1405,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               <div key={idx} className="h-72 perspective-1000 group cursor-pointer">
                 <div className="relative w-full h-full duration-500 transform-style-3d group-hover:rotate-y-180">
                   {/* Front Side */}
-                  <div className="absolute inset-0 w-full h-full bg-[#141416] border border-white/15 group-hover:border-[#ffffff]/50 rounded-2xl p-6 flex flex-col justify-between backface-hidden glow-card">
+                  <div className="absolute inset-0 w-full h-full bg-[#141416] border border-white/15 group-hover:border-[#ffffff]/50 rounded-2xl p-6 flex flex-col justify-between backface-hidden ">
                     <div className="space-y-3">
                       <div className="flex items-center justify-between">
                         <div className="w-10 h-10 rounded-lg bg-[#ffffff]/10 border border-[#ffffff]/30 flex items-center justify-center">
@@ -1463,7 +1463,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certificates.map((cert, index) => (
-              <div key={cert.id} className="bg-[#141416] border border-white/15 rounded-xl p-6 flex flex-col justify-between group glow-card relative">
+              <div key={cert.id} className="bg-[#141416] border border-white/15 rounded-xl p-6 flex flex-col justify-between group  relative">
                 <div className="absolute top-2 right-2 text-[#ffffff] font-mono text-[10px] opacity-40">+</div>
                 
                 <div className="space-y-4">
@@ -1540,7 +1540,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {/* FEATURED PROJECT 1: YOLOv8n Traffic Density Estimation */}
-            <div className="bg-[#141416] border border-[#ffffff]/30 rounded-2xl overflow-hidden flex flex-col justify-between group glow-card relative">
+            <div className="bg-[#141416] border border-[#ffffff]/30 rounded-2xl overflow-hidden flex flex-col justify-between group  relative">
               <div className="absolute top-2 right-2 text-[#ffffff] font-mono text-[10px] z-10">+</div>
               <div className="space-y-4">
                 <div 
@@ -1601,7 +1601,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
             {projects.length > 0 ? (
               projects.map((proj) => (
-                <div key={proj.id} className="bg-[#141416] border border-white/15 rounded-xl overflow-hidden flex flex-col justify-between group glow-card relative">
+                <div key={proj.id} className="bg-[#141416] border border-white/15 rounded-xl overflow-hidden flex flex-col justify-between group  relative">
                   <div className="absolute top-2 right-2 text-[#ffffff] font-mono text-[10px] z-10">+</div>
                   <div className="absolute bottom-2 left-2 text-[#ffffff] font-mono text-[10px] z-10">+</div>
 
@@ -1694,7 +1694,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ffffff] tracking-tight">GitHub Profile Stack & Stats</h2>
           </div>
 
-          <div className="bg-[#141416] border border-[#ffffff]/30 rounded-2xl p-6 sm:p-10 space-y-8 glow-card relative">
+          <div className="bg-[#141416] border border-[#ffffff]/30 rounded-2xl p-6 sm:p-10 space-y-8  relative">
             <div className="absolute top-3 right-3 text-[#ffffff] font-mono text-xs">+</div>
             <div className="absolute bottom-3 left-3 text-[#ffffff] font-mono text-xs">+</div>
 
@@ -1792,7 +1792,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             ].map((proj, idx) => (
               <div 
                 key={idx} 
-                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/60 rounded-2xl p-8 flex flex-col justify-between glow-card transition duration-300 group relative overflow-hidden"
+                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/60 rounded-2xl p-8 flex flex-col justify-between  transition duration-300 group relative overflow-hidden"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#ffffff]/5 rounded-bl-full pointer-events-none group-hover:bg-[#ffffff]/10 transition"></div>
                 
@@ -1862,7 +1862,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   tags: ["AI Web Dev", "InAmigos Foundation", "Internshala", "Rapid Prototyping"],
                   link: "https://internshala.com/verify_certificate"
                 })}
-                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
+                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4  transition duration-300 cursor-pointer group/card relative"
               >
                 <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ffffff]/60 group-hover/card:text-[#ffffff] flex items-center gap-1">
                   <span>[CLICK TO INSPECT]</span>
@@ -1908,7 +1908,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   description: "Currently pursuing 2nd year BE in Computer Science Engineering. Actively mastering Data Structures & Algorithms in C++, AI vibecoding, and building modern web applications.",
                   tags: ["DSA in C++", "AI Vibecoding", "Web Development", "LeetCode"]
                 })}
-                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
+                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4  transition duration-300 cursor-pointer group/card relative"
               >
                 <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ffffff]/60 group-hover/card:text-[#ffffff] flex items-center gap-1">
                   <span>[CLICK TO INSPECT]</span>
@@ -1955,7 +1955,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   tags: ["Python", "JavaScript", "Django", "Web Dev"],
                   link: "https://www.linkedin.com/posts/adithya-a-shetty-421097382_cs50s-web-programming-with-python-and-javascript-activity-7430943036278439936-2q8h?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
                 })}
-                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
+                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4  transition duration-300 cursor-pointer group/card relative"
               >
                 <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ffffff]/60 group-hover/card:text-[#ffffff] flex items-center gap-1">
                   <span>[CLICK TO INSPECT]</span>
@@ -2013,7 +2013,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   tags: ["Prompt Engineering", "Generative AI", "AI Ecosystem"],
                   link: "https://www.linkedin.com/posts/theagentblazerclubsjec_promptengineering-ai-generativeai-activity-7443638504024268800-BCPn?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
                 })}
-                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
+                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4  transition duration-300 cursor-pointer group/card relative"
               >
                 <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ffffff]/60 group-hover/card:text-[#ffffff] flex items-center gap-1">
                   <span>[CLICK TO INSPECT]</span>
@@ -2071,7 +2071,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   tags: ["Artificial Intelligence", "Techies", "AI Workflows"],
                   link: "https://www.linkedin.com/posts/adithya-a-shetty-421097382_ai-for-techies-activity-7385958617696620544-FPR6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
                 })}
-                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
+                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4  transition duration-300 cursor-pointer group/card relative"
               >
                 <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ffffff]/60 group-hover/card:text-[#ffffff] flex items-center gap-1">
                   <span>[CLICK TO INSPECT]</span>
@@ -2128,7 +2128,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   description: "Learned fundamental concepts of computer programming, syntax, and data structures with Python. Note: Course completed, paid certification exam not taken.",
                   tags: ["Python", "Programming Basics", "Procedural Programming", "30 Labs"]
                 })}
-                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
+                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4  transition duration-300 cursor-pointer group/card relative"
               >
                 <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ffffff]/60 group-hover/card:text-[#ffffff] flex items-center gap-1">
                   <span>[CLICK TO INSPECT]</span>
@@ -2177,7 +2177,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* GitHub Stats Card */}
-            <div className="bg-[#141416] border border-white/15 rounded-xl p-6 sm:p-8 space-y-6 glow-card relative overflow-hidden group">
+            <div className="bg-[#141416] border border-white/15 rounded-xl p-6 sm:p-8 space-y-6  relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#ffffff]/5 rounded-full blur-2xl group-hover:bg-[#ffffff]/10 transition"></div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
@@ -2219,7 +2219,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             </div>
 
             {/* LeetCode & Academic Stats Card */}
-            <div className="bg-[#141416] border border-white/15 rounded-xl p-6 sm:p-8 space-y-6 glow-card relative overflow-hidden group">
+            <div className="bg-[#141416] border border-white/15 rounded-xl p-6 sm:p-8 space-y-6  relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl group-hover:bg-amber-500/10 transition"></div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
@@ -2272,7 +2272,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             </p>
           </div>
 
-          <div className="bg-[#141416] border border-white/15 rounded-xl overflow-hidden glow-card">
+          <div className="bg-[#141416] border border-white/15 rounded-xl overflow-hidden ">
             {/* Playground Header Bar */}
             <div className="bg-black/60 px-4 py-3 border-b border-white/10 flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center gap-2">
