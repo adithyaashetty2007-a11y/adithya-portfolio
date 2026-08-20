@@ -2088,9 +2088,15 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     </p>
                   </div>
                   
-                  {/* Snake circular node marker */}
-                  <div className="z-20 hidden md:flex items-center justify-center w-12 h-12 bg-black border-2 border-red-500 rounded-full shadow-lg shadow-red-500/20">
-                    <div className="w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
+                  {/* Snake circular node marker with experience indicator dot */}
+                  <div className="z-20 hidden md:flex flex-col items-center justify-center relative">
+                    <div className="w-12 h-12 bg-black border-2 border-red-500 rounded-full shadow-lg shadow-red-500/30 flex items-center justify-center group-hover:scale-110 transition">
+                      <div className="w-4 h-4 bg-red-500 rounded-full animate-ping absolute"></div>
+                      <div className="w-3 h-3 bg-red-400 rounded-full z-10"></div>
+                    </div>
+                    <span className="absolute -bottom-6 text-[10px] font-mono text-red-400 uppercase tracking-widest whitespace-nowrap bg-black px-1 border border-red-500/30">
+                      exp_0{index + 1}
+                    </span>
                   </div>
 
                   <div className="order-1 md:w-5/12 hidden md:block"></div>
