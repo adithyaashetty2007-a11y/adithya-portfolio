@@ -1267,32 +1267,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               </div>
             </div>
 
-            {/* Bento Cell 3: Current Mission & System Metrics (Span 4) */}
-            <div className="md:col-span-4 bg-[#141416] border border-white/15 rounded-2xl p-6 flex flex-col justify-between relative group">
-              <div className="absolute top-3 right-3 text-white/40 font-mono text-xs">+</div>
-              <div className="space-y-3">
-                <div className="flex items-center justify-between text-xs font-mono text-zinc-400">
-                  <span className="text-[#ccff00]">CURRENT_MISSION</span>
-                  <span className="flex items-center gap-1.5 text-emerald-400"><span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> ACTIVE</span>
-                </div>
-                <div className="space-y-1.5 font-mono text-xs text-zinc-300">
-                  <div><strong className="text-white">BUILDING:</strong> AI-powered applications</div>
-                  <div><strong className="text-white">CURRENT PROJECT:</strong> YOLOv8 Traffic Density</div>
-                  <div><strong className="text-white">NEXT OBJECTIVE:</strong> Master DSA & Machine Learning</div>
-                </div>
-                <div className="pt-3 border-t border-white/10 space-y-2 font-mono text-xs">
-                  <div className="text-zinc-500 uppercase tracking-widest text-[10px]">// SYSTEM METRICS</div>
-                  <div className="flex justify-between"><span>DSA_PROGRESS</span> <span className="text-white font-bold">75%</span></div>
-                  <div className="flex justify-between"><span>PROJECTS_BUILT</span> <span className="text-white font-bold">05+</span></div>
-                  <div className="flex justify-between"><span>TECH_STACKS</span> <span className="text-white font-bold">06+</span></div>
-                  <div className="flex justify-between"><span>CERTIFICATIONS</span> <span className="text-white font-bold">08+</span></div>
-                </div>
-              </div>
-              <div className="pt-4 mt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-400">
-                <span>TELEMETRY</span>
-                <span className="w-2 h-2 rounded-full bg-[#ccff00]"></span>
-              </div>
-            </div>
+
           </div>
         </section>
 
