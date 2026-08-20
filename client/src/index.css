@@ -371,3 +371,24 @@ button:hover, a:hover, [role="button"]:hover {
   90% { clip: rect(60px, 9999px, 85px, 0); transform: skew(0.3deg); }
   100% { clip: rect(15px, 9999px, 45px, 0); transform: skew(0.5deg); }
 }
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+.animate-scanline {
+  animation: scanline 8s linear infinite;
+}
+
+.glass-panel {
+  background: rgba(20, 20, 22, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+}
