@@ -464,7 +464,7 @@ button:hover, a:hover, [role="button"]:hover {
   z-index: 10;
 }
 
-/* Sharp Square Design Structure Override */
-* {
+/* Sharp Square Design Structure with 0px radius */
+.sarthak-section, .glass-panel, button, input, textarea, .card {
   border-radius: 0px !important;
 }
