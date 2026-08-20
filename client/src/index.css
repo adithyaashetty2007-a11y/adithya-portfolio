@@ -522,3 +522,30 @@ div, section, article, button, input, textarea, .card, .panel {
   pointer-events: none;
   z-index: 20;
 }
+
+/* Universal Inner Card Plus Markers */
+.bg-\[\#141416\], .bg-black\/40, .bg-black\/60, .bg-white\/5 {
+  position: relative;
+}
+
+/* Custom Cyberpunk Cursor Effect & Micro-Animations */
+body {
+  cursor: crosshair;
+}
+
+button, a, input, textarea {
+  cursor: pointer;
+}
+
+/* Subtle pulse animation for neon plus signs */
+@keyframes neonPulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; text-shadow: 0 0 8px #ccff00; }
+}
+
+.sarthak-section::before,
+.sarthak-section::after,
+.sharp-card::before,
+.sharp-card::after {
+  animation: neonPulse 3s infinite ease-in-out;
+}
