@@ -1139,14 +1139,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     DOWNLOAD RESUME (PDF)
                   </a>
 
-                  <a
-                    href="/Adithya_A_Shetty_Resume.docx"
-                    download="Adithya_A_Shetty_Resume.docx"
-                    className="px-5 py-3 bg-zinc-900 border border-[#ffffff]/40 text-[#ffffff] font-mono font-bold text-xs sm:text-sm rounded hover:bg-zinc-800 transition flex items-center gap-2 cursor-pointer"
-                  >
-                    <FileText className="w-4 h-4" />
-                    DOWNLOAD DOCX
-                  </a>
+                  {/* DOCX button removed */}
                 </div>
                 <button 
                   onClick={() => scrollToSection("contact")}
