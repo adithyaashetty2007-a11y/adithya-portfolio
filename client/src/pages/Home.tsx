@@ -2071,35 +2071,15 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               if (timelineCategory !== "all" && timelineCategory !== item.cat) return null;
               const isEven = index % 2 === 0;
               return (
-                <div key={item.id} className={`mb-12 flex justify-between items-center w-full ${isEven ? 'md:flex-row-reverse' : ''}`}>
-                  <div className="order-1 md:w-5/12"></div>
-                  
-                  {/* Snake node marker */}
-                  <div className="z-20 hidden md:flex items-center justify-center w-8 h-8 bg-black border-2 border-red-500 rounded-none shadow">
-                    <span className="w-2 h-2 bg-red-500 animate-ping"></span>
-                  </div>
-
-                  <div 
-                    onClick={() => setSelectedTimelineItem(item.full)}
-                    className="order-1 md:w-5/12 bg-[#121214] border border-red-500/30 hover:border-red-500/80 p-6 rounded-none cursor-pointer transition transform hover:-translate-y-1 relative group w-full"
-                  >
-                    {/* Cyberpunk corner crosshairs */}
-                    <div className="absolute -top-1 -left-1 w-2 h-2 border-t-2 border-l-2 border-red-500"></div>
-                    <div className="absolute -top-1 -right-1 w-2 h-2 border-t-2 border-r-2 border-red-500"></div>
-                    <div className="absolute -bottom-1 -left-1 w-2 h-2 border-b-2 border-l-2 border-red-500"></div>
-                    <div className="absolute -bottom-1 -right-1 w-2 h-2 border-b-2 border-r-2 border-red-500"></div>
-
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="text-xs font-mono text-red-500 tracking-wider uppercase flex items-center gap-2">
-                        <span className="animate-pulse">●</span>
-                        <span>{item.date}</span>
-                      </div>
-                      <span className="text-xs font-mono px-2 py-0.5 bg-red-500/10 text-red-400 border border-red-500/30">
-                        {item.badge}
-                      </span>
+                <div key={item.id} className={`mb-16 flex justify-between items-center w-full ${isEven ? 'md:flex-row-reverse' : ''}`}>
+                  {/* Text content side */}
+                  <div className={`order-1 md:w-5/12 cursor-pointer group text-left ${isEven ? 'md:text-right' : 'md:text-left'}`} onClick={() => setSelectedTimelineItem(item.full)}>
+                    <div className={`text-xs font-mono text-red-500 tracking-wider uppercase flex items-center gap-2 mb-1 ${isEven ? 'md:justify-end' : 'md:justify-start'}`}>
+                      <span className="animate-pulse">●</span>
+                      <span>{item.date}</span>
                     </div>
 
-                    <h3 className="text-xl font-bold font-mono text-red-500 group-hover:text-red-400 transition mb-2">
+                    <h3 className="text-xl sm:text-2xl font-bold font-mono text-red-500 group-hover:text-red-400 transition mb-2">
                       {item.title}
                     </h3>
 
@@ -2107,6 +2087,13 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                       {item.desc}
                     </p>
                   </div>
+                  
+                  {/* Snake circular node marker */}
+                  <div className="z-20 hidden md:flex items-center justify-center w-12 h-12 bg-black border-2 border-red-500 rounded-full shadow-lg shadow-red-500/20">
+                    <div className="w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
+                  </div>
+
+                  <div className="order-1 md:w-5/12 hidden md:block"></div>
                 </div>
               );
             })}
