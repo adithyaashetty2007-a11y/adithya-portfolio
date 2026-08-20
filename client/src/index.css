@@ -549,3 +549,43 @@ button, a, input, textarea {
 .sharp-card::after {
   animation: neonPulse 3s infinite ease-in-out;
 }
+
+/* Universal Neon Green Plus Crosshair Markers on Every Edge & Corner */
+.sarthak-section,
+.bg-\[\#141416\],
+.bg-black\/40,
+.bg-black\/60,
+.bg-white\/5,
+div[class*="border"],
+section {
+  position: relative;
+}
+
+.sarthak-section::before, .sarthak-section::after,
+.bg-\[\#141416\]::before, .bg-\[\#141416\]::after,
+.bg-black\/60::before, .bg-black\/60::after {
+  content: "+";
+  position: absolute;
+  color: #ccff00;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1;
+  pointer-events: none;
+  z-index: 20;
+  opacity: 0.9;
+  text-shadow: 0 0 6px rgba(204, 255, 0, 0.6);
+}
+
+.sarthak-section::before,
+.bg-\[\#141416\]::before,
+.bg-black\/60::before {
+  top: -7px;
+  left: -7px;
+}
+
+.sarthak-section::after,
+.bg-\[\#141416\]::after,
+.bg-black\/60::after {
+  top: -7px;
+  right: -7px;
+}
