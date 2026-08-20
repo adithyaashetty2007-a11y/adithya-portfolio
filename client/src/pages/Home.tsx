@@ -2466,29 +2466,21 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               </div>
             </div>
 
-            <div className="overflow-x-auto pb-2">
-              <div className="min-w-[650px] space-y-2">
-                <div className="text-[10px] font-mono text-zinc-500 flex justify-between px-1">
-                  <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
-                </div>
-                <div className="grid grid-flow-col grid-rows-7 gap-1.5 p-2 bg-black/60 border border-white/10">
-                  {Array.from({ length: 140 }).map((_, idx) => {
-                    const intensity = (idx % 7 === 0 || idx % 5 === 0 || idx % 11 === 0) ? Math.floor(Math.random() * 4) + 1 : (idx % 3 === 0 ? 1 : 0);
-                    const bgClass = 
-                      intensity === 4 ? "bg-[#ccff00]" :
-                      intensity === 3 ? "bg-[#ccff00]/70" :
-                      intensity === 2 ? "bg-[#ccff00]/40" :
-                      intensity === 1 ? "bg-[#ccff00]/20" : "bg-white/5";
-                    return (
-                      <div 
-                        key={idx} 
-                        className={`w-3.5 h-3.5 rounded-none ${bgClass} border border-black/40 hover:scale-125 transition-transform cursor-pointer`}
-                        title={`Day ${idx + 1}: ${intensity * 3} contributions`}
-                      />
-                    );
-                  })}
-                </div>
+            <div className="overflow-x-auto pb-2 bg-black/60 p-4 border border-white/10">
+              <div className="text-xs font-mono text-zinc-400 mb-3 flex items-center justify-between">
+                <span>Real-Time GitHub Contributions (adithyaashetty2007-a11y)</span>
+                <span className="text-[#ccff00]">[LIVE API SYNCED]</span>
               </div>
+              <img 
+                src="https://ghchart.rshah.org/ccff00/adithyaashetty2007-a11y" 
+                alt="Adithya's Live GitHub Contribution Chart" 
+                className="w-full filter invert hue-rotate-90 contrast-125 brightness-90 min-w-[680px]"
+                onError={(e) => {
+                  // Fallback if network blocks external chart
+                  e.currentTarget.style.display = 'none';
+                }}
+              />
+              <p className="text-[11px] font-mono text-zinc-500 mt-2 text-right">Source: github.com/adithyaashetty2007-a11y</p>
             </div>
 
             <div className="flex flex-wrap items-center justify-between text-xs font-mono text-zinc-400 pt-2">
