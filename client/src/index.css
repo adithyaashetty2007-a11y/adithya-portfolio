@@ -463,3 +463,8 @@ button:hover, a:hover, [role="button"]:hover {
   pointer-events: none;
   z-index: 10;
 }
+
+/* Sharp Square Design Structure Override */
+* {
+  border-radius: 0px !important;
+}
