@@ -870,6 +870,10 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 </h1>
               </div>
 
+              <div className="font-mono text-sm sm:text-base text-[#ccff00] tracking-widest uppercase font-bold">
+                &gt; <TerminalTypingText key={`title-${typingKey}`} text="CSE ENGINEER // AI & PYTHON DEVELOPER" speed={15} delay={500} resetKey={typingKey} />
+              </div>
+
               <div className="space-y-4 text-zinc-300 text-base sm:text-lg font-sans leading-relaxed max-w-2xl font-mono relative">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-xs text-zinc-500">// SYSTEM_BIO.LOG</span>
