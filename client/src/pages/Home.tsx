@@ -317,6 +317,7 @@ export default function Home() {
   const [isAddProjModalOpen, setIsAddProjModalOpen] = useState(false);
   const [newProj, setNewProj] = useState({ title: "", description: "", imageUrl: "", githubUrl: "", techStack: "" });
 
+  const [activeDossierTab, setActiveDossierTab] = useState<"bio" | "metrics" | "dna">("bio");
   // Admin PIN Protection State
   const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
   const [isAdminModalOpen, setIsAdminModalOpen] = useState(false);
@@ -1162,25 +1163,80 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-white tracking-tight uppercase">About_Me</h2>
           </div>
 
-          {/* Asymmetric Bento Grid Architecture */}
+          {/* Asymmetric Bento Grid Architecture with Interactive Dossier Tabs */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-            {/* Bento Cell 1: Main Bio Card (Span 8) */}
-            <div className="md:col-span-8 bg-[#141416] border border-white/15 rounded-2xl p-8 flex flex-col justify-between relative group overflow-hidden">
+            {/* Bento Cell 1: Main Bio Card with Interactive Tabs (Span 8) */}
+            <div className="md:col-span-8 bg-[#141416] border border-white/15 rounded-2xl p-6 sm:p-8 flex flex-col justify-between relative group overflow-hidden">
               <div className="absolute top-3 right-3 text-white/40 font-mono text-xs">+</div>
               <div className="absolute bottom-3 left-3 text-white/40 font-mono text-xs">+</div>
               <div className="absolute -right-12 -top-12 w-48 h-48 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
 
-              <div className="space-y-6 text-zinc-300 leading-relaxed font-sans text-base sm:text-lg relative z-10">
+              {/* Dossier Terminal Header & Tabs */}
+              <div className="flex flex-wrap items-center justify-between gap-4 pb-4 mb-6 border-b border-white/10 relative z-10">
                 <div className="flex items-center gap-2 text-xs font-mono text-zinc-400">
-                  <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
-                  <span>SYSTEM_STATUS // ACTIVE_ENGINEERING_STUDENT</span>
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span>DOSSIER // ADITHYA_ASSET.sys</span>
                 </div>
-                <p>
-                  Hello! I am <strong className="text-white font-bold">Adithya A Shetty</strong>, a Computer Science Engineering student at St. Joseph Engineering College, Mangaluru, currently in my 2nd semester. I successfully completed my second semester with consistent academic improvement, achieving an <strong className="text-white font-bold">8.05 SGPA in Sem 2</strong> (up from <strong className="text-zinc-400">7.5 SGPA in Sem 1</strong>).
-                </p>
-                <p>
-                  I am building my technical foundation with college-level basics in C, C++, and Python, while actively solving Data Structures and Algorithms (DSA) problems in C++ (leetcode solver). I focus on building responsive frontends, exploring AI & Computer Vision projects like YOLOv8n, and leveraging modern AI-assisted development tools.
-                </p>
+                <div className="flex items-center gap-1.5 font-mono text-xs">
+                  <button 
+                    onClick={() => setActiveDossierTab("bio")}
+                    className={`px-3 py-1 rounded transition ${activeDossierTab === "bio" ? "bg-white text-black font-bold" : "bg-white/5 text-zinc-400 hover:text-white"}`}
+                  >
+                    ~/bio.md
+                  </button>
+                  <button 
+                    onClick={() => setActiveDossierTab("metrics")}
+                    className={`px-3 py-1 rounded transition ${activeDossierTab === "metrics" ? "bg-white text-black font-bold" : "bg-white/5 text-zinc-400 hover:text-white"}`}
+                  >
+                    ~/metrics.json
+                  </button>
+                  <button 
+                    onClick={() => setActiveDossierTab("dna")}
+                    className={`px-3 py-1 rounded transition ${activeDossierTab === "dna" ? "bg-white text-black font-bold" : "bg-white/5 text-zinc-400 hover:text-white"}`}
+                  >
+                    ~/dna.stack
+                  </button>
+                </div>
+              </div>
+
+              {/* Tab Content Display */}
+              <div className="space-y-6 text-zinc-300 leading-relaxed font-sans text-base sm:text-lg relative z-10 min-h-[220px]">
+                {activeDossierTab === "bio" && (
+                  <div className="space-y-4 animate-fadeIn">
+                    <p>
+                      Hello! I am <strong className="text-white font-bold">Adithya A Shetty</strong>, a Computer Science Engineering student at St. Joseph Engineering College, Mangaluru, currently in my 2nd semester. I successfully completed my second semester with consistent academic improvement, achieving an <strong className="text-white font-bold">8.05 SGPA in Sem 2</strong> (up from <strong className="text-zinc-400">7.5 SGPA in Sem 1</strong>).
+                    </p>
+                    <p>
+                      I am building my technical foundation with college-level basics in C, C++, and Python, while actively solving Data Structures and Algorithms (DSA) problems in C++ (leetcode solver). I focus on building responsive frontends, exploring AI & Computer Vision projects like YOLOv8n, and leveraging modern AI-assisted development tools.
+                    </p>
+                  </div>
+                )}
+
+                {activeDossierTab === "metrics" && (
+                  <div className="space-y-3 font-mono text-sm sm:text-base text-zinc-200 bg-black/40 p-4 rounded-xl border border-white/10 animate-fadeIn">
+                    <div className="text-zinc-500">// Academic & Engineering Telemetry</div>
+                    <div><span className="text-zinc-400">institution:</span> "St. Joseph Engineering College, Mangaluru"</div>
+                    <div><span className="text-zinc-400">program:</span> "Computer Science & Engineering (B.E.)"</div>
+                    <div><span className="text-zinc-400">current_status:</span> "2nd Year CSE (Graduating 2029)"</div>
+                    <div><span className="text-zinc-400">sem1_sgpa:</span> 7.5</div>
+                    <div><span className="text-zinc-400">sem2_sgpa:</span> <strong className="text-white">8.05 (Improved)</strong></div>
+                    <div><span className="text-zinc-400">problem_solving:</span> "Active leetcode solver"</div>
+                  </div>
+                )}
+
+                {activeDossierTab === "dna" && (
+                  <div className="space-y-3 font-mono text-sm text-zinc-200 bg-black/40 p-4 rounded-xl border border-white/10 animate-fadeIn">
+                    <div className="text-zinc-500">// Technical Stack & Foundations</div>
+                    <div className="grid grid-cols-2 gap-2">
+                      <div>• C Programming (Basics)</div>
+                      <div>• C++ & DSA</div>
+                      <div>• Python Essentials</div>
+                      <div>• Web Development</div>
+                      <div>• AI & Computer Vision</div>
+                      <div>• AI Vibe Coding & Tooling</div>
+                    </div>
+                  </div>
+                )}
               </div>
 
               <div className="pt-8 mt-6 border-t border-white/10 flex flex-wrap gap-2.5 font-mono text-xs relative z-10">
