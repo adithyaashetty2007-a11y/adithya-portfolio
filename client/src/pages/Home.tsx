@@ -39,7 +39,7 @@ const MatrixRain = () => {
         const x = i * fontSize;
         const y = drops[i] * fontSize;
 
-        ctx.fillStyle = Math.random() > 0.85 ? '#ffffff' : '#ccff00';
+        ctx.fillStyle = Math.random() > 0.85 ? '#ffffff' : '#ffffff';
         ctx.fillText(text, x, y);
 
         if (y > height && Math.random() > 0.975) {
@@ -139,7 +139,7 @@ function TerminalTypingText({ text, speed = 12, delay = 0, resetKey = 0 }: { tex
   return (
     <span>
       {displayedText}
-      {!isComplete && <span className="inline-block w-2 h-4 bg-[#ccff00] ml-1 animate-pulse align-middle"></span>}
+      {!isComplete && <span className="inline-block w-2 h-4 bg-[#ffffff] ml-1 animate-pulse align-middle"></span>}
     </span>
   );
 }
@@ -535,9 +535,9 @@ export default function Home() {
         style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px`, transform: 'translate(0, 0)' }}
       >
         <svg 
-          className={`w-6 h-6 drop-shadow-[0_0_8px_${isHoveringLink ? '#ff0055' : '#ccff00'}] transition-colors duration-200`} 
+          className={`w-6 h-6 drop-shadow-[0_0_8px_${isHoveringLink ? '#ff0055' : '#ffffff'}] transition-colors duration-200`} 
           viewBox="0 0 24 24" 
-          fill={isHoveringLink ? '#ff0055' : '#ccff00'} 
+          fill={isHoveringLink ? '#ff0055' : '#ffffff'} 
           stroke="#0a0a0a" 
           strokeWidth="1.5"
         >
@@ -553,7 +553,7 @@ export default function Home() {
 
       {/* Global Side Background Animated Hacker Data Streams (Left & Right) - Interactive Hover Effect */}
       <div className="fixed top-0 left-0 bottom-0 w-24 md:w-48 pointer-events-auto overflow-hidden opacity-15 hover:opacity-50 transition-opacity duration-300 select-none z-0 hidden sm:block group cursor-pointer" title="Hacker Data Stream - Hover to accelerate">
-        <div className="absolute inset-0 font-mono text-xs text-[#ccff00] leading-relaxed whitespace-pre animate-hex-scroll group-hover:[animation-duration:3s]">
+        <div className="absolute inset-0 font-mono text-xs text-[#ffffff] leading-relaxed whitespace-pre animate-hex-scroll group-hover:[animation-duration:3s]">
           {`48 65 6C 6C 6F 20 57 6F 72 6C 64 20 // ADITHYA A SHETTY // SYSTEM INIT...
 73 74 61 72 74 20 70 79 74 68 6f 6e 33 2e 70 79 // PYTHON ESSENTIALS 1
 0x7fff5fbff800 0x7fff5fbff808 0x7fff5fbff810 // MEMORY DUMP
@@ -577,7 +577,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         </div>
       </div>
       <div className="fixed top-0 right-0 bottom-0 w-24 md:w-48 pointer-events-auto overflow-hidden opacity-15 hover:opacity-50 transition-opacity duration-300 select-none z-0 hidden sm:block group cursor-pointer" title="Hacker Data Stream - Hover to accelerate">
-        <div className="absolute inset-0 font-mono text-xs text-[#ccff00] leading-relaxed whitespace-pre animate-hex-scroll group-hover:[animation-duration:3s]">
+        <div className="absolute inset-0 font-mono text-xs text-[#ffffff] leading-relaxed whitespace-pre animate-hex-scroll group-hover:[animation-duration:3s]">
           {`48 65 6C 6C 6F 20 57 6F 72 6C 64 20 // ADITHYA A SHETTY // SYSTEM INIT...
 73 74 61 72 74 20 70 79 74 68 6f 6e 33 2e 70 79 // PYTHON ESSENTIALS 1
 0x7fff5fbff800 0x7fff5fbff808 0x7fff5fbff810 // MEMORY DUMP
@@ -605,10 +605,10 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
       <header className="fixed top-0 left-0 right-0 z-30 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection("home")}>
-            <div className="w-8 h-8 rounded bg-[#ccff00]/10 border border-[#ccff00]/30 flex items-center justify-center font-mono text-sm font-bold text-[#ccff00]">
+            <div className="w-8 h-8 rounded bg-[#ffffff]/10 border border-[#ffffff]/30 flex items-center justify-center font-mono text-sm font-bold text-[#ffffff]">
               A
             </div>
-            <span className="font-mono font-bold tracking-wider text-sm sm:text-base text-[#ccff00]">
+            <span className="font-mono font-bold tracking-wider text-sm sm:text-base text-[#ffffff]">
               ADITHYA<span className="text-zinc-400">.SHETTY</span>
             </span>
           </div>
@@ -629,8 +629,8 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 onClick={() => scrollToSection(item.id)}
                 className={`px-3 py-1.5 text-xs font-mono uppercase tracking-wider transition-all ${
                   activeSection === item.id
-                    ? "bg-[#ccff00] text-black font-bold shadow-[0_0_15px_rgba(204,255,0,0.4)]"
-                    : "text-zinc-400 hover:text-[#ccff00] hover:bg-white/5"
+                    ? "bg-[#ffffff] text-black font-bold shadow-[0_0_15px_rgba(255,255,255,0.4)]"
+                    : "text-zinc-400 hover:text-[#ffffff] hover:bg-white/5"
                 }`}
               >
                 {item.label}
@@ -642,7 +642,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           <div className="hidden sm:flex items-center gap-3">
             <button 
               onClick={() => { setSoundEnabled(!soundEnabled); playClickSound(); }}
-              className={`px-2.5 py-1.5 rounded border text-xs font-mono flex items-center gap-1.5 transition ${soundEnabled ? 'border-[#ccff00] text-[#ccff00] bg-[#ccff00]/10' : 'border-white/20 text-zinc-400 bg-white/5'}`}
+              className={`px-2.5 py-1.5 rounded border text-xs font-mono flex items-center gap-1.5 transition ${soundEnabled ? 'border-[#ffffff] text-[#ffffff] bg-[#ffffff]/10' : 'border-white/20 text-zinc-400 bg-white/5'}`}
               title="Toggle Mechanical Key SFX"
             >
               <span>{soundEnabled ? '🔊 SFX: ON' : '🔇 SFX: OFF'}</span>
@@ -774,7 +774,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         <section id="home" className="min-h-[calc(100vh-4rem)] flex items-center justify-center relative overflow-hidden py-16 px-4 sm:px-8 border-b border-white/10 bg-hex-grid">
           <MatrixRain />
           <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-[#09090b]/60 to-[#09090b] z-0"></div>
-          <div className="absolute inset-0 pointer-events-none opacity-20 bg-[radial-gradient(circle_at_50%_50%,rgba(204,255,0,0.15),transparent_70%)] animate-pulse z-0"></div>
+          <div className="absolute inset-0 pointer-events-none opacity-20 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.15),transparent_70%)] animate-pulse z-0"></div>
           <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
             
             {/* Left Column: Text & CTAs */}
@@ -783,7 +783,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
               <div className="space-y-2">
                 <p className="text-zinc-400 font-mono text-sm sm:text-base">Hello, I'm</p>
-                <h1 className="text-4xl sm:text-6xl font-extrabold font-almie tracking-tight text-[#ccff00] glitch-hover inline-block">
+                <h1 className="text-4xl sm:text-6xl font-extrabold font-almie tracking-tight text-[#ffffff] glitch-hover inline-block">
                   Adithya A Shetty<span className="text-zinc-500">.</span>
                 </h1>
               </div>
@@ -793,7 +793,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   <span className="text-xs text-zinc-500">// SYSTEM_BIO.LOG</span>
                   <button
                     onClick={() => setTypingKey(k => k + 1)}
-                    className="px-2.5 py-1 bg-black/60 hover:bg-[#ccff00]/10 border border-white/20 hover:border-[#ccff00] text-zinc-300 hover:text-[#ccff00] text-xs rounded transition flex items-center gap-1.5 font-mono shadow"
+                    className="px-2.5 py-1 bg-black/60 hover:bg-[#ffffff]/10 border border-white/20 hover:border-[#ffffff] text-zinc-300 hover:text-[#ffffff] text-xs rounded transition flex items-center gap-1.5 font-mono shadow"
                     title="Replay Terminal Typing"
                   >
                     <RefreshCw className="w-3.5 h-3.5 animate-spin-hover" />
@@ -801,16 +801,16 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   </button>
                 </div>
                 <p className="text-zinc-200 font-['Share_Tech_Mono'] tracking-wide text-base sm:text-lg">
-                  <span className="text-[#ccff00] mr-2">&gt;</span>
+                  <span className="text-[#ffffff] mr-2">&gt;</span>
                   <span>I AM A COMPUTER SCIENCE ENGINEERING STUDENT AT ST. JOSEPH ENGINEERING COLLEGE, MANGALURU, <span className="text-red-500 font-bold underline decoration-red-500/50 animate-pulse">SECOND-YEAR STUDENT (AS OF SEPTEMBER 2026)</span>. <TerminalTypingText key={`t1-${typingKey}`} text="I ENJOY TURNING IDEAS INTO PRACTICAL SOFTWARE SOLUTIONS AND CONTINUOUSLY IMPROVING MY TECHNICAL SKILLS." speed={8} delay={2000} resetKey={typingKey} /></span>
                 </p>
                 <p className="text-zinc-300 pt-2 font-['Share_Tech_Mono'] tracking-wide text-base sm:text-lg">
-                  <span className="text-[#ccff00] mr-2">&gt;</span>
+                  <span className="text-[#ffffff] mr-2">&gt;</span>
                   <TerminalTypingText key={`t2-${typingKey}`} text="I'M CURRENTLY EXPLORING PYTHON, WEB DEVELOPMENT, ARTIFICIAL INTELLIGENCE, AND DATA STRUCTURES & ALGORITHMS (DSA) WHILE BUILDING PROJECTS THAT STRENGTHEN MY UNDERSTANDING OF SOFTWARE DEVELOPMENT." speed={8} delay={1800} resetKey={typingKey} />
                 </p>
                 
                 <div className="pt-6">
-                  <div className="bg-[#121214] border border-[#ccff00]/30 rounded-xl overflow-hidden shadow-2xl">
+                  <div className="bg-[#121214] border border-[#ffffff]/30 rounded-xl overflow-hidden shadow-2xl">
                     {/* Terminal Title Bar */}
                     <div className="bg-black/90 px-4 py-2.5 border-b border-white/10 flex flex-wrap items-center justify-between gap-2">
                       <div className="flex items-center gap-2">
@@ -819,7 +819,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                         <div className="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
                         <span className="text-[11px] font-mono text-zinc-400 ml-2">adithya@portfolio ~ what_i_enjoy_shell</span>
                       </div>
-                      <span className="text-[10px] font-mono text-[#ccff00] bg-[#ccff00]/10 px-2 py-0.5 rounded border border-[#ccff00]/30">INTERACTIVE_SHELL</span>
+                      <span className="text-[10px] font-mono text-[#ffffff] bg-[#ffffff]/10 px-2 py-0.5 rounded border border-[#ffffff]/30">INTERACTIVE_SHELL</span>
                     </div>
 
                     {/* Command Tabs */}
@@ -836,12 +836,12 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                           onClick={() => setActiveShellTab(idx)}
                           className={`px-3 py-1.5 rounded text-xs font-mono transition flex items-center gap-1.5 border ${
                             activeShellTab === idx 
-                              ? "bg-[#ccff00]/15 border-[#ccff00] text-[#ccff00] shadow-[0_0_10px_rgba(204,255,0,0.2)]" 
+                              ? "bg-[#ffffff]/15 border-[#ffffff] text-[#ffffff] shadow-[0_0_10px_rgba(255,255,255,0.2)]" 
                               : "bg-black/40 border-white/10 text-zinc-400 hover:text-zinc-200 hover:border-white/30"
                           }`}
                         >
                           <span>{tab.file}</span>
-                          {activeShellTab === idx && <span className="w-1.5 h-1.5 rounded-full bg-[#ccff00] animate-pulse"></span>}
+                          {activeShellTab === idx && <span className="w-1.5 h-1.5 rounded-full bg-[#ffffff] animate-pulse"></span>}
                         </button>
                       ))}
                     </div>
@@ -850,7 +850,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm text-zinc-300 space-y-4 min-h-[160px]">
                       <div className="flex items-center gap-2 text-zinc-500 text-xs">
                         <span>$</span>
-                        <span className="text-[#ccff00]">./execute_{['web_eng', 'ai_vision', 'dsa_ops', 'innovation', 'collab'][activeShellTab]}.sh --interactive</span>
+                        <span className="text-[#ffffff]">./execute_{['web_eng', 'ai_vision', 'dsa_ops', 'innovation', 'collab'][activeShellTab]}.sh --interactive</span>
                       </div>
 
                       <div className="bg-black/60 border border-white/10 rounded-lg p-4 space-y-3 relative overflow-hidden">
@@ -860,7 +860,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                         </div>
 
                         <div className="flex items-center justify-between border-b border-white/10 pb-2">
-                          <span className="text-[#ccff00] font-bold tracking-wide">
+                          <span className="text-[#ffffff] font-bold tracking-wide">
                             {
                               [
                                 "MODULE // 01: WEB ENGINEERING",
@@ -894,7 +894,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
                         <div className="pt-2 flex items-center justify-between text-[11px] text-zinc-500 border-t border-white/5">
                           <span>EXIT_CODE: 0 (SUCCESS)</span>
-                          <span className="text-[#ccff00] animate-pulse">_</span>
+                          <span className="text-[#ffffff] animate-pulse">_</span>
                         </div>
                       </div>
                     </div>
@@ -1047,7 +1047,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                         toast.error("Failed to generate PDF. Please try again.");
                       }
                     }}
-                    className="px-5 py-3 bg-[#ccff00] text-black font-mono font-bold text-xs sm:text-sm rounded hover:bg-[#b8ff00] transition flex items-center gap-2 shadow-[0_0_20px_rgba(204,255,0,0.3)] cursor-pointer"
+                    className="px-5 py-3 bg-[#ffffff] text-black font-mono font-bold text-xs sm:text-sm rounded hover:bg-[#ffffff] transition flex items-center gap-2 shadow-[0_0_20px_rgba(255,255,255,0.3)] cursor-pointer"
                   >
                     <Download className="w-4 h-4" />
                     DOWNLOAD RESUME (PDF)
@@ -1056,7 +1056,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   <a
                     href="/Adithya_A_Shetty_Resume.docx"
                     download="Adithya_A_Shetty_Resume.docx"
-                    className="px-5 py-3 bg-zinc-900 border border-[#ccff00]/40 text-[#ccff00] font-mono font-bold text-xs sm:text-sm rounded hover:bg-zinc-800 transition flex items-center gap-2 cursor-pointer"
+                    className="px-5 py-3 bg-zinc-900 border border-[#ffffff]/40 text-[#ffffff] font-mono font-bold text-xs sm:text-sm rounded hover:bg-zinc-800 transition flex items-center gap-2 cursor-pointer"
                   >
                     <FileText className="w-4 h-4" />
                     DOWNLOAD DOCX
@@ -1064,7 +1064,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 </div>
                 <button 
                   onClick={() => scrollToSection("contact")}
-                  className="px-6 py-3 bg-black/60 border border-[#ccff00]/40 text-[#ccff00] font-mono font-bold text-xs sm:text-sm rounded hover:bg-[#ccff00]/10 transition flex items-center gap-2"
+                  className="px-6 py-3 bg-black/60 border border-[#ffffff]/40 text-[#ffffff] font-mono font-bold text-xs sm:text-sm rounded hover:bg-[#ffffff]/10 transition flex items-center gap-2"
                 >
                   <span>Contact Me</span>
                   <ChevronRight className="w-4 h-4" />
@@ -1073,7 +1073,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
               <div className="pt-4 flex flex-wrap items-center gap-6 text-xs font-mono text-zinc-400 border-t border-white/10">
                 <div className="flex items-center gap-2">
-                  <span className="text-[#ccff00] font-bold">8.05 SGPA</span> (Sem 2)
+                  <span className="text-[#ffffff] font-bold">8.05 SGPA</span> (Sem 2)
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-white font-bold">20+</span> LeetCode Solved
@@ -1086,12 +1086,12 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
             {/* Right Column: Profile Photo Framed with Hacker HUD crosshairs */}
             <div className="lg:col-span-5 flex justify-center relative items-center py-6">
-              <div className="relative p-3 bg-[#111] border border-[#ccff00]/40 shadow-[0_0_30px_rgba(204,255,0,0.15)] w-full max-w-md">
+              <div className="relative p-3 bg-[#111] border border-[#ffffff]/40 shadow-[0_0_30px_rgba(255,255,255,0.15)] w-full max-w-md">
                 {/* Corner Crosshairs */}
-                <div className="absolute -top-2 -left-2 text-[#ccff00] font-mono text-lg">+</div>
-                <div className="absolute -top-2 -right-2 text-[#ccff00] font-mono text-lg">+</div>
-                <div className="absolute -bottom-2 -left-2 text-[#ccff00] font-mono text-lg">+</div>
-                <div className="absolute -bottom-2 -right-2 text-[#ccff00] font-mono text-lg">+</div>
+                <div className="absolute -top-2 -left-2 text-[#ffffff] font-mono text-lg">+</div>
+                <div className="absolute -top-2 -right-2 text-[#ffffff] font-mono text-lg">+</div>
+                <div className="absolute -bottom-2 -left-2 text-[#ffffff] font-mono text-lg">+</div>
+                <div className="absolute -bottom-2 -right-2 text-[#ffffff] font-mono text-lg">+</div>
                 
                 <div 
                   onClick={() => setSelectedProfileImage(PROFILE_PHOTO_BASE64)}
@@ -1104,14 +1104,14 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     className="w-full h-full object-cover object-top grayscale contrast-125 brightness-95 transition-transform duration-700 ease-out group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                  <div className="absolute inset-0 bg-[#ccff00]/0 group-hover:bg-[#ccff00]/10 transition-colors flex items-center justify-center">
-                    <span className="opacity-0 group-hover:opacity-100 transition-opacity bg-black/80 text-[#ccff00] font-mono text-xs px-3 py-1.5 border border-[#ccff00]/40 rounded shadow-lg">
+                  <div className="absolute inset-0 bg-[#ffffff]/0 group-hover:bg-[#ffffff]/10 transition-colors flex items-center justify-center">
+                    <span className="opacity-0 group-hover:opacity-100 transition-opacity bg-black/80 text-[#ffffff] font-mono text-xs px-3 py-1.5 border border-[#ffffff]/40 rounded shadow-lg">
                       [ CLICK TO EXPAND ]
                     </span>
                   </div>
-                  <div className="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[11px] font-mono text-[#ccff00]">
-                    <span className="bg-black/80 px-2 py-0.5 border border-[#ccff00]/30">ID // VERIFIED</span>
-                    <span className="bg-black/80 px-2 py-0.5 border border-[#ccff00]/30">MANGALORE_INDIA</span>
+                  <div className="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[11px] font-mono text-[#ffffff]">
+                    <span className="bg-black/80 px-2 py-0.5 border border-[#ffffff]/30">ID // VERIFIED</span>
+                    <span className="bg-black/80 px-2 py-0.5 border border-[#ffffff]/30">MANGALORE_INDIA</span>
                   </div>
                 </div>
               </div>
@@ -1123,15 +1123,15 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         {/* ABOUT SECTION - REDESIGNED WITH SARTHAK PRIYADARSHI BENCHMARK STAT CARDS */}
         <section id="about" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 01. BACKGROUND & GROWTH</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight uppercase">ABOUT_ME</h2>
+            <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 01. BACKGROUND & GROWTH</span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ffffff] tracking-tight uppercase">About_Me</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             {/* Left Box: Main Bio & Technical Focus */}
             <div className="lg:col-span-8 bg-[#141416] border border-white/15 rounded-2xl p-8 flex flex-col justify-between relative glow-card group">
-              <div className="absolute top-3 right-3 text-[#ccff00] font-mono text-xs">+</div>
-              <div className="absolute bottom-3 left-3 text-[#ccff00] font-mono text-xs">+</div>
+              <div className="absolute top-3 right-3 text-[#ffffff] font-mono text-xs">+</div>
+              <div className="absolute bottom-3 left-3 text-[#ffffff] font-mono text-xs">+</div>
               
               <div className="space-y-6 text-zinc-300 leading-relaxed font-sans text-base sm:text-lg">
                 <p>
@@ -1146,31 +1146,31 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               </div>
 
               <div className="pt-8 mt-6 border-t border-white/10 flex flex-wrap gap-3 font-mono text-xs">
-                <span className="text-[#ccff00] bg-[#ccff00]/10 border border-[#ccff00]/30 px-3 py-1 rounded">→ C / C++ / PYTHON</span>
-                <span className="text-[#ccff00] bg-[#ccff00]/10 border border-[#ccff00]/30 px-3 py-1 rounded">→ WEB DEVELOPMENT</span>
-                <span className="text-[#ccff00] bg-[#ccff00]/10 border border-[#ccff00]/30 px-3 py-1 rounded">→ AI & COMPUTER VISION</span>
-                <span className="text-[#ccff00] bg-[#ccff00]/10 border border-[#ccff00]/30 px-3 py-1 rounded">→ DSA IN C++</span>
+                <span className="text-[#ffffff] bg-[#ffffff]/10 border border-[#ffffff]/30 px-3 py-1 rounded">→ C / C++ / PYTHON</span>
+                <span className="text-[#ffffff] bg-[#ffffff]/10 border border-[#ffffff]/30 px-3 py-1 rounded">→ WEB DEVELOPMENT</span>
+                <span className="text-[#ffffff] bg-[#ffffff]/10 border border-[#ffffff]/30 px-3 py-1 rounded">→ AI & COMPUTER VISION</span>
+                <span className="text-[#ffffff] bg-[#ffffff]/10 border border-[#ffffff]/30 px-3 py-1 rounded">→ DSA IN C++</span>
               </div>
             </div>
 
             {/* Right Box: Sarthak Priyadarshi Style Metric Stack Cards */}
             <div className="lg:col-span-4 flex flex-col gap-4">
               {/* Stat 1: LeetCode Ranking / Score */}
-              <div className="bg-[#141416] border border-[#ccff00]/30 rounded-xl p-6 relative glow-card group flex items-center justify-between">
-                <div className="absolute top-2 right-2 text-[#ccff00] font-mono text-[10px]">+</div>
+              <div className="bg-[#141416] border border-[#ffffff]/30 rounded-xl p-6 relative glow-card group flex items-center justify-between">
+                <div className="absolute top-2 right-2 text-[#ffffff] font-mono text-[10px]">+</div>
                 <div>
                   <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest">LEETCODE & DSA</div>
-                  <div className="text-2xl sm:text-3xl font-extrabold font-almie text-[#ccff00] mt-1">20+ SOLVED</div>
+                  <div className="text-2xl sm:text-3xl font-extrabold font-almie text-[#ffffff] mt-1">20+ SOLVED</div>
                   <div className="text-xs text-zinc-400 font-mono mt-0.5">Active 2-week streak</div>
                 </div>
-                <div className="p-3 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded-lg text-[#ccff00]">
+                <div className="p-3 bg-[#ffffff]/10 border border-[#ffffff]/30 rounded-lg text-[#ffffff]">
                   <Code2 className="w-6 h-6" />
                 </div>
               </div>
 
               {/* Stat 2: Certifications */}
               <div className="bg-[#141416] border border-white/15 rounded-xl p-6 relative glow-card group flex items-center justify-between">
-                <div className="absolute top-2 right-2 text-[#ccff00] font-mono text-[10px]">+</div>
+                <div className="absolute top-2 right-2 text-[#ffffff] font-mono text-[10px]">+</div>
                 <div>
                   <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest">VERIFIED CREDENTIALS</div>
                   <div className="text-2xl sm:text-3xl font-extrabold font-almie text-white mt-1">7+ CERTS</div>
@@ -1183,13 +1183,13 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
               {/* Stat 3: Hackathons & Vibeathons */}
               <div className="bg-[#141416] border border-white/15 rounded-xl p-6 relative glow-card group flex items-center justify-between">
-                <div className="absolute top-2 right-2 text-[#ccff00] font-mono text-[10px]">+</div>
+                <div className="absolute top-2 right-2 text-[#ffffff] font-mono text-[10px]">+</div>
                 <div>
                   <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest">HACKATHONS</div>
                   <div className="text-2xl sm:text-3xl font-extrabold font-almie text-white mt-1">1+ HACKATHON</div>
                   <div className="text-xs text-zinc-400 font-mono mt-0.5">Polaris Replit Vibeathon</div>
                 </div>
-                <div className="p-3 bg-white/5 border border-white/20 rounded-lg text-[#ccff00]">
+                <div className="p-3 bg-white/5 border border-white/20 rounded-lg text-[#ffffff]">
                   <Cpu className="w-6 h-6" />
                 </div>
               </div>
@@ -1200,27 +1200,27 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         {/* FUTURE ROADMAP & TARGETS SECTION */}
         <section id="dsa" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 02. FUTURE_ROADMAP & TARGETS</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">2nd Year Engineering Goals</h2>
+            <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 02. FUTURE_ROADMAP & TARGETS</span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ffffff] tracking-tight">2nd Year Engineering Goals</h2>
             <p className="text-sm font-mono text-zinc-400">Strategic roadmap for mastering Data Structures, LeetCode milestones, and Core CS engineering.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-[#141416] border border-white/10 rounded-xl p-6 relative overflow-hidden group hover:border-[#ccff00]/50 transition">
-              <div className="absolute top-3 right-3 text-[#ccff00]/20 font-mono text-xs">TARGET_01</div>
+            <div className="bg-[#141416] border border-white/10 rounded-xl p-6 relative overflow-hidden group hover:border-[#ffffff]/50 transition">
+              <div className="absolute top-3 right-3 text-[#ffffff]/20 font-mono text-xs">TARGET_01</div>
               <div className="text-emerald-400 font-mono text-xs uppercase mb-2 font-semibold">DSA Mastery in C++</div>
               <div className="text-xl font-bold font-mono text-white mb-2">Advanced Structures</div>
               <p className="text-xs text-zinc-400 leading-relaxed mb-4">
                 Transitioning from basic arrays and strings to advanced data structures (Trees, Graphs, Heaps, Dynamic Programming) with rigorous C++ implementation.
               </p>
               <div className="pt-4 border-t border-white/10 flex justify-between text-[11px] font-mono">
-                <span className="text-[#ccff00]">Target: 150+ LeetCode</span>
+                <span className="text-[#ffffff]">Target: 150+ LeetCode</span>
                 <span className="text-zinc-400">In Progress</span>
               </div>
             </div>
 
-            <div className="bg-[#141416] border border-white/10 rounded-xl p-6 relative overflow-hidden group hover:border-[#ccff00]/50 transition">
-              <div className="absolute top-3 right-3 text-[#ccff00]/20 font-mono text-xs">TARGET_02</div>
+            <div className="bg-[#141416] border border-white/10 rounded-xl p-6 relative overflow-hidden group hover:border-[#ffffff]/50 transition">
+              <div className="absolute top-3 right-3 text-[#ffffff]/20 font-mono text-xs">TARGET_02</div>
               <div className="text-blue-400 font-mono text-xs uppercase mb-2 font-semibold">Core CS & System Design</div>
               <div className="text-xl font-bold font-mono text-white mb-2">OS & Architecture</div>
               <p className="text-xs text-zinc-400 leading-relaxed mb-4">
@@ -1232,8 +1232,8 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               </div>
             </div>
 
-            <div className="bg-[#141416] border border-white/10 rounded-xl p-6 relative overflow-hidden group hover:border-[#ccff00]/50 transition">
-              <div className="absolute top-3 right-3 text-[#ccff00]/20 font-mono text-xs">TARGET_03</div>
+            <div className="bg-[#141416] border border-white/10 rounded-xl p-6 relative overflow-hidden group hover:border-[#ffffff]/50 transition">
+              <div className="absolute top-3 right-3 text-[#ffffff]/20 font-mono text-xs">TARGET_03</div>
               <div className="text-purple-400 font-mono text-xs uppercase mb-2 font-semibold">AI & Full-Stack Prototyping</div>
               <div className="text-xl font-bold font-mono text-white mb-2">Applied AI Systems</div>
               <p className="text-xs text-zinc-400 leading-relaxed mb-4">
@@ -1250,8 +1250,8 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         {/* CORE COMPONENTS SKILLS SECTION */}
         <section id="visual-skills" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 03. CORE_COMPONENTS & SKILLS</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Technical Stack & Capabilities</h2>
+            <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 03. CORE_COMPONENTS & SKILLS</span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ffffff] tracking-tight">Technical Stack & Capabilities</h2>
             <p className="text-sm font-mono text-zinc-400">Comprehensive inventory of programming languages, frameworks, and AI-assisted web development proficiency.</p>
           </div>
 
@@ -1259,10 +1259,10 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             <div className="min-w-[650px] space-y-8">
               {/* LANGUAGES ROW */}
               <div>
-                <div className="text-xs font-mono text-[#ccff00] uppercase tracking-widest mb-4 pb-2 border-b border-white/10">Languages & Logos</div>
+                <div className="text-xs font-mono text-[#ffffff] uppercase tracking-widest mb-4 pb-2 border-b border-white/10">Languages & Logos</div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
                   {/* C Programming */}
-                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 flex flex-col items-center justify-center transition group">
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ffffff] rounded-xl p-4 flex flex-col items-center justify-center transition group">
                     <svg className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.5 14.5h-3v-9h3c1.66 0 3 1.34 3 3v3c0 1.66-1.34 3-3 3zm0-4.5h-1.5v-3h1.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5z" fill="#00599C"/>
                       <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" fill="white" fontFamily="monospace" fontWeight="bold" fontSize="10">C</text>
@@ -1271,7 +1271,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   </div>
 
                   {/* C++ Programming */}
-                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 flex flex-col items-center justify-center transition group">
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ffffff] rounded-xl p-4 flex flex-col items-center justify-center transition group">
                     <svg className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm4.5 12.5h-1.25v2.25h-2.25V14.5h-2.25v-2.25h2.25V10h2.25v2.25H16.5z" fill="#00599C"/>
                       <text x="50%" y="52%" dominantBaseline="middle" textAnchor="middle" fill="#00599C" fontFamily="monospace" fontWeight="bold" fontSize="9">C++</text>
@@ -1280,7 +1280,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   </div>
 
                   {/* Python */}
-                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 flex flex-col items-center justify-center transition group">
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ffffff] rounded-xl p-4 flex flex-col items-center justify-center transition group">
                     <svg className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none">
                       <path d="M11.922.25c-3.153 0-2.981 1.373-2.981 1.373l.01 1.405h3.018v.44H7.81s-1.895-.147-1.895 1.83c0 1.978 1.69 1.851 1.69 1.851h1.026v-.935s-.036-1.272 1.254-1.272h2.954s1.218.01 1.218-1.182V2.36s.12-2.11-3.144-2.11zm-1.71 1.09a.53.53 0 1 1 0 1.061.53.53 0 0 1 0-1.06z" fill="#3776AB"/>
                       <path d="M12.078 23.75c3.153 0 2.981-1.373 2.981-1.373l-.01-1.405H12.03v-.44h4.139s1.895.147 1.895-1.83c0-1.978-1.69-1.851-1.69-1.851h-1.026v.935s.036 1.272-1.254 1.272h-2.954s-1.218-.01-1.218 1.182v1.442s-.12 2.11 3.144 2.11zm1.71-1.09a.53.53 0 1 1 0-1.061.53.53 0 0 1 0 1.06z" fill="#FFD43B"/>
@@ -1289,7 +1289,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   </div>
 
                   {/* HTML5 */}
-                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 flex flex-col items-center justify-center transition group">
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ffffff] rounded-xl p-4 flex flex-col items-center justify-center transition group">
                     <svg className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M4 3l2.5 14.5L12 19l5.5-1.5L20 3H4zm14.2 2l-1.8 10L12 16.5 7.6 15 5.8 5h12.4z" fill="#E34F26"/>
                       <path d="M12 7.5v2.2h3.1l-.3 2.8L12 13.8v2.3l2.8-.8.3-3.2H12v-2.2h4.5l.2-2.2H12z" fill="#fff"/>
@@ -1298,7 +1298,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   </div>
 
                   {/* CSS3 */}
-                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 flex flex-col items-center justify-center transition group">
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ffffff] rounded-xl p-4 flex flex-col items-center justify-center transition group">
                     <svg className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M4 3l2.5 14.5L12 19l5.5-1.5L20 3H4zm14.2 2l-1.8 10L12 16.5 7.6 15 5.8 5h12.4z" fill="#1572B6"/>
                     </svg>
@@ -1306,41 +1306,41 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   </div>
 
                   {/* JavaScript (AI) */}
-                  <div className="bg-[#ccff00]/10 border-2 border-[#ccff00] rounded-xl p-4 flex flex-col items-center justify-center shadow-[0_0_15px_rgba(204,255,0,0.3)] transition group">
+                  <div className="bg-[#ffffff]/10 border-2 border-[#ffffff] rounded-xl p-4 flex flex-col items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.3)] transition group">
                     <svg className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M3 3h18v18H3V3z" fill="#F7DF1E"/>
                       <path d="M7 17v-1.5c.83 0 1.5-.67 1.5-1.5v-3c0-.83-.67-1.5-1.5-1.5H6v1.5h1v3H6V17h1zm9.5 0c1.1 0 2-.9 2-2v-4.5h-1.5V14c0 .28-.22.5-.5.5s-.5-.22-.5-.5v-4.5H14V15c0 1.1.9 2 2 2z" fill="#000"/>
                     </svg>
-                    <div className="text-[10px] font-mono text-[#ccff00] font-semibold">Using AI</div>
+                    <div className="text-[10px] font-mono text-[#ffffff] font-semibold">Using AI</div>
                   </div>
                 </div>
               </div>
 
               {/* FRAMEWORKS & TOOLS */}
-              <div className="bg-[#ccff00]/5 border border-[#ccff00]/40 rounded-2xl p-5 shadow-[0_0_20px_rgba(204,255,0,0.15)]">
-                <div className="text-xs font-mono text-[#ccff00] uppercase tracking-widest mb-4 pb-2 border-b border-[#ccff00]/20 flex justify-between items-center">
+              <div className="bg-[#ffffff]/5 border border-[#ffffff]/40 rounded-2xl p-5 shadow-[0_0_20px_rgba(255,255,255,0.15)]">
+                <div className="text-xs font-mono text-[#ffffff] uppercase tracking-widest mb-4 pb-2 border-b border-[#ffffff]/20 flex justify-between items-center">
                   <span className="font-bold">Frameworks & Tools</span>
-                  <span className="text-[10px] bg-[#ccff00]/20 text-[#ccff00] px-2.5 py-1 rounded-md border border-[#ccff00]/50 font-mono font-bold animate-pulse">Fully AI-Assisted</span>
+                  <span className="text-[10px] bg-[#ffffff]/20 text-[#ffffff] px-2.5 py-1 rounded-md border border-[#ffffff]/50 font-mono font-bold animate-pulse">Fully AI-Assisted</span>
                 </div>
                 <div className="grid grid-cols-5 gap-3">
-                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
-                    <div className="text-sm font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">SCRIPTING W/ AI</div>
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ffffff] rounded-xl p-4 text-center transition group">
+                    <div className="text-sm font-bold font-mono text-white mb-1 group-hover:text-[#ffffff]">SCRIPTING W/ AI</div>
                     <div className="text-[10px] font-mono text-zinc-400">Automated scripting & logic</div>
                   </div>
-                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
-                    <div className="text-sm font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">AI WEB DEV</div>
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ffffff] rounded-xl p-4 text-center transition group">
+                    <div className="text-sm font-bold font-mono text-white mb-1 group-hover:text-[#ffffff]">AI WEB DEV</div>
                     <div className="text-[10px] font-mono text-zinc-400">Full-stack rapid prototyping</div>
                   </div>
-                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
-                    <div className="text-sm font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">PORTFOLIOS</div>
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ffffff] rounded-xl p-4 text-center transition group">
+                    <div className="text-sm font-bold font-mono text-white mb-1 group-hover:text-[#ffffff]">PORTFOLIOS</div>
                     <div className="text-[10px] font-mono text-zinc-400">Fully functioning UI/UX</div>
                   </div>
-                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
-                    <div className="text-sm font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">REACT</div>
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ffffff] rounded-xl p-4 text-center transition group">
+                    <div className="text-sm font-bold font-mono text-white mb-1 group-hover:text-[#ffffff]">REACT</div>
                     <div className="text-[10px] font-mono text-zinc-400">Component architecture</div>
                   </div>
-                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
-                    <div className="text-sm font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">TAILWIND</div>
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ffffff] rounded-xl p-4 text-center transition group">
+                    <div className="text-sm font-bold font-mono text-white mb-1 group-hover:text-[#ffffff]">TAILWIND</div>
                     <div className="text-[10px] font-mono text-zinc-400">Responsive styling</div>
                   </div>
                 </div>
@@ -1348,18 +1348,18 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
               {/* INFRASTRUCTURE & VERSION CONTROL */}
               <div>
-                <div className="text-xs font-mono text-[#ccff00] uppercase tracking-widest mb-4 pb-2 border-b border-white/10">Infrastructure & Version Control</div>
+                <div className="text-xs font-mono text-[#ffffff] uppercase tracking-widest mb-4 pb-2 border-b border-white/10">Infrastructure & Version Control</div>
                 <div className="grid grid-cols-3 gap-3">
-                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
-                    <div className="text-base font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">GIT & GITHUB</div>
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ffffff] rounded-xl p-4 text-center transition group">
+                    <div className="text-base font-bold font-mono text-white mb-1 group-hover:text-[#ffffff]">GIT & GITHUB</div>
                     <div className="text-[10px] font-mono text-zinc-400">Version control & Pages</div>
                   </div>
-                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
-                    <div className="text-base font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">AI ASSISTANTS</div>
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ffffff] rounded-xl p-4 text-center transition group">
+                    <div className="text-base font-bold font-mono text-white mb-1 group-hover:text-[#ffffff]">AI ASSISTANTS</div>
                     <div className="text-[10px] font-mono text-zinc-400">Manus, Cursor, Lovable</div>
                   </div>
-                  <div className="bg-black/60 border border-white/10 hover:border-[#ccff00] rounded-xl p-4 text-center transition group">
-                    <div className="text-base font-bold font-mono text-white mb-1 group-hover:text-[#ccff00]">VS CODE</div>
+                  <div className="bg-black/60 border border-white/10 hover:border-[#ffffff] rounded-xl p-4 text-center transition group">
+                    <div className="text-base font-bold font-mono text-white mb-1 group-hover:text-[#ffffff]">VS CODE</div>
                     <div className="text-[10px] font-mono text-zinc-400">Development editor</div>
                   </div>
                 </div>
@@ -1371,8 +1371,8 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         {/* SKILLS SECTION */}
         <section id="skills" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 04. TECHNICAL SKILLS</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Programming & Development</h2>
+            <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 04. TECHNICAL SKILLS</span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ffffff] tracking-tight">Programming & Development</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1380,7 +1380,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               {
                 title: "College-Level Basics",
                 desc: "Learned fundamentals of C, C++, and Python during my engineering coursework at SJEC.",
-                icon: <Code2 className="w-5 h-5 text-[#ccff00]" />,
+                icon: <Code2 className="w-5 h-5 text-[#ffffff]" />,
                 items: ["C Programming Basics", "C++ & DSA Basics", "Python Fundamentals", "Academic Assignments"],
                 backTitle: "CORE_COMPUTING",
                 backDesc: "Building strong computer science foundations with procedural programming, memory pointers, and structured problem solving in C/C++."
@@ -1388,7 +1388,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               {
                 title: "AI-Assisted Frontend",
                 desc: "I build web interfaces and practice pages using AI assistance (~60% frontend accuracy).",
-                icon: <Sparkles className="w-5 h-5 text-[#ccff00]" />,
+                icon: <Sparkles className="w-5 h-5 text-[#ffffff]" />,
                 items: ["AI-Assisted Development", "HTML / CSS / JS", "React Components (~60%)", "UI Design & Layouts"],
                 backTitle: "VIBECODING_STACK",
                 backDesc: "Leveraging modern AI tools (Cursor, Manus, Lovable) to rapidly prototype, build, and deploy responsive web applications."
@@ -1396,7 +1396,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               {
                 title: "Tools & Version Control",
                 desc: "Managing code and projects with Git, GitHub, and continuous deployment pipelines.",
-                icon: <Github className="w-5 h-5 text-[#ccff00]" />,
+                icon: <Github className="w-5 h-5 text-[#ffffff]" />,
                 items: ["Git Version Control", "10+ GitHub Repositories", "Code Collaboration", "Project Management"],
                 backTitle: "REPO_INFRASTRUCTURE",
                 backDesc: "Maintaining 10+ active GitHub repositories, managing branch synchronization, and ensuring production readiness on GitHub Pages."
@@ -1405,10 +1405,10 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               <div key={idx} className="h-72 perspective-1000 group cursor-pointer">
                 <div className="relative w-full h-full duration-500 transform-style-3d group-hover:rotate-y-180">
                   {/* Front Side */}
-                  <div className="absolute inset-0 w-full h-full bg-[#141416] border border-white/15 group-hover:border-[#ccff00]/50 rounded-2xl p-6 flex flex-col justify-between backface-hidden glow-card">
+                  <div className="absolute inset-0 w-full h-full bg-[#141416] border border-white/15 group-hover:border-[#ffffff]/50 rounded-2xl p-6 flex flex-col justify-between backface-hidden glow-card">
                     <div className="space-y-3">
                       <div className="flex items-center justify-between">
-                        <div className="w-10 h-10 rounded-lg bg-[#ccff00]/10 border border-[#ccff00]/30 flex items-center justify-center">
+                        <div className="w-10 h-10 rounded-lg bg-[#ffffff]/10 border border-[#ffffff]/30 flex items-center justify-center">
                           {card.icon}
                         </div>
                         <span className="text-[10px] font-mono text-zinc-500">[HOVER TO FLIP]</span>
@@ -1419,7 +1419,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     <ul className="space-y-2 pt-2 border-t border-white/10">
                       {card.items.map((s, sIdx) => (
                         <li key={sIdx} className="flex items-center gap-2 text-xs font-mono text-zinc-300">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#ccff00]"></span>
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#ffffff]"></span>
                           {s}
                         </li>
                       ))}
@@ -1427,16 +1427,16 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   </div>
 
                   {/* Back Side */}
-                  <div className="absolute inset-0 w-full h-full bg-black border-2 border-[#ccff00] rounded-2xl p-6 flex flex-col justify-between backface-hidden rotate-y-180 shadow-[0_0_20px_rgba(204,255,0,0.2)]">
+                  <div className="absolute inset-0 w-full h-full bg-black border-2 border-[#ffffff] rounded-2xl p-6 flex flex-col justify-between backface-hidden rotate-y-180 shadow-[0_0_20px_rgba(255,255,255,0.2)]">
                     <div className="space-y-3">
-                      <div className="flex items-center justify-between border-b border-[#ccff00]/30 pb-2">
-                        <span className="text-xs font-mono text-[#ccff00] font-bold">//{card.backTitle}</span>
-                        <span className="w-2 h-2 rounded-full bg-[#ccff00] animate-ping"></span>
+                      <div className="flex items-center justify-between border-b border-[#ffffff]/30 pb-2">
+                        <span className="text-xs font-mono text-[#ffffff] font-bold">//{card.backTitle}</span>
+                        <span className="w-2 h-2 rounded-full bg-[#ffffff] animate-ping"></span>
                       </div>
                       <h3 className="text-base font-mono font-bold text-white">SYSTEM_INSPECTION</h3>
                       <p className="text-xs text-zinc-300 font-sans leading-relaxed">{card.backDesc}</p>
                     </div>
-                    <div className="pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-[#ccff00]">
+                    <div className="pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-[#ffffff]">
                       <span>STATUS: ONLINE</span>
                       <span>SECURE_NODE</span>
                     </div>
@@ -1452,11 +1452,11 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           {/* Top Vault Header Row */}
           <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
             <div>
-              <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 05. CREDENTIALS_VAULT</span>
-              <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Certifications</h2>
+              <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 05. CREDENTIALS_VAULT</span>
+              <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ffffff] tracking-tight">Certifications</h2>
             </div>
             <div className="hidden sm:flex items-center gap-2 text-xs font-mono text-zinc-400 bg-white/5 px-3 py-1.5 rounded border border-white/10">
-              <span className="w-2 h-2 rounded-full bg-[#ccff00] animate-pulse"></span>
+              <span className="w-2 h-2 rounded-full bg-[#ffffff] animate-pulse"></span>
               AUTHORIZED_CERTIFICATIONS
             </div>
           </div>
@@ -1464,11 +1464,11 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certificates.map((cert, index) => (
               <div key={cert.id} className="bg-[#141416] border border-white/15 rounded-xl p-6 flex flex-col justify-between group glow-card relative">
-                <div className="absolute top-2 right-2 text-[#ccff00] font-mono text-[10px] opacity-40">+</div>
+                <div className="absolute top-2 right-2 text-[#ffffff] font-mono text-[10px] opacity-40">+</div>
                 
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <div className="p-2.5 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded-lg text-[#ccff00]">
+                    <div className="p-2.5 bg-[#ffffff]/10 border border-[#ffffff]/30 rounded-lg text-[#ffffff]">
                       <Award className="w-5 h-5" />
                     </div>
                     <span className="text-[10px] font-mono text-zinc-400 px-2 py-0.5 bg-white/5 rounded border border-white/10">
@@ -1476,7 +1476,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-bold font-mono text-white group-hover:text-[#ccff00] transition">{cert.title}</h3>
+                  <h3 className="text-lg font-bold font-mono text-white group-hover:text-[#ffffff] transition">{cert.title}</h3>
                   <p className="text-xs font-mono text-zinc-400">{cert.issuer}</p>
                   {cert.description && (
                     <p className="text-xs text-zinc-300 font-sans leading-relaxed">{cert.description}</p>
@@ -1489,7 +1489,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                       className="mt-4 rounded-lg overflow-hidden border border-white/20 h-40 bg-black cursor-pointer relative group/img shadow-md"
                     >
                       <img src={cert.imageUrl} alt={cert.title} className="w-full h-full object-cover group-hover/img:scale-105 transition duration-300" />
-                      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-xs font-mono text-[#ccff00] gap-1.5 font-bold">
+                      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-xs font-mono text-[#ffffff] gap-1.5 font-bold">
                         <ImageIcon className="w-4 h-4" /> VIEW FULL CERTIFICATE
                       </div>
                     </div>
@@ -1503,14 +1503,14 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   </div>
                   <div>
                     <div className="text-zinc-500 uppercase text-[9px]">STATUS</div>
-                    <div className="text-[#ccff00]">VERIFIED</div>
+                    <div className="text-[#ffffff]">VERIFIED</div>
                   </div>
                   <div className="col-span-2 pt-3 mt-2 border-t border-white/5 flex items-center justify-between">
                     <a 
                       href={cert.credentialUrl} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-[#ccff00] hover:underline flex items-center gap-1 font-bold text-xs"
+                      className="text-[#ffffff] hover:underline flex items-center gap-1 font-bold text-xs"
                     >
                       <span>VERIFY_CREDENTIAL</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
@@ -1526,8 +1526,8 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         <section id="projects" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
             <div>
-              <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 06. PORTFOLIO PROJECTS</span>
-              <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Projects & Screenshots Showcase</h2>
+              <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 06. PORTFOLIO PROJECTS</span>
+              <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ffffff] tracking-tight">Projects & Screenshots Showcase</h2>
             </div>
             <button
               onClick={() => handleProtectedAction("proj")}
@@ -1540,8 +1540,8 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {/* FEATURED PROJECT 1: YOLOv8n Traffic Density Estimation */}
-            <div className="bg-[#141416] border border-[#ccff00]/30 rounded-2xl overflow-hidden flex flex-col justify-between group glow-card relative">
-              <div className="absolute top-2 right-2 text-[#ccff00] font-mono text-[10px] z-10">+</div>
+            <div className="bg-[#141416] border border-[#ffffff]/30 rounded-2xl overflow-hidden flex flex-col justify-between group glow-card relative">
+              <div className="absolute top-2 right-2 text-[#ffffff] font-mono text-[10px] z-10">+</div>
               <div className="space-y-4">
                 <div 
                   onClick={() => setSelectedProjectImage(TRAFFIC_SCREENSHOT_BASE64)}
@@ -1549,10 +1549,10 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 >
                   {/* Default State: Terminal / AI Badge banner */}
                   <div className="absolute inset-0 bg-black/80 flex flex-col items-center justify-center p-6 text-center group-hover/img:opacity-0 transition duration-300">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-[#ccff00]/10 via-transparent to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-tr from-[#ffffff]/10 via-transparent to-transparent"></div>
                     <div className="space-y-2 relative z-10">
-                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ccff00]/10 border border-[#ccff00]/30 text-xs font-mono text-[#ccff00]">
-                        <span className="w-2 h-2 rounded-full bg-[#ccff00] animate-pulse"></span>
+                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ffffff]/10 border border-[#ffffff]/30 text-xs font-mono text-[#ffffff]">
+                        <span className="w-2 h-2 rounded-full bg-[#ffffff] animate-pulse"></span>
                         Computer Vision & AI
                       </div>
                       <h3 className="text-lg font-bold font-mono text-white">YOLOv8n Traffic Density Estimation</h3>
@@ -1567,14 +1567,14 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     className="w-full h-full object-cover object-top opacity-0 group-hover/img:opacity-100 transition duration-300 scale-105 group-hover/img:scale-100" 
                   />
                   
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-xs font-mono text-[#ccff00] gap-1.5 font-bold pointer-events-none">
+                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-xs font-mono text-[#ffffff] gap-1.5 font-bold pointer-events-none">
                     <ImageIcon className="w-4 h-4" /> CLICK TO EXPAND FULL SCREENSHOT
                   </div>
                 </div>
 
                 <div className="p-6 pt-2 space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-1 bg-[#ccff00]/10 border border-[#ccff00]/20 rounded-full">YOLOv8n / Python / OpenCV</span>
+                    <span className="text-[11px] font-mono text-[#ffffff] px-2.5 py-1 bg-[#ffffff]/10 border border-[#ffffff]/20 rounded-full">YOLOv8n / Python / OpenCV</span>
                   </div>
                   <h3 className="text-xl font-bold font-mono text-white">Traffic Density Estimation Project</h3>
                   <p className="text-xs text-zinc-400 leading-relaxed font-mono">
@@ -1589,7 +1589,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   href="https://github.com/adithyaashetty2007-a11y"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs font-mono text-[#ccff00] hover:underline flex items-center gap-1.5"
+                  className="text-xs font-mono text-[#ffffff] hover:underline flex items-center gap-1.5"
                 >
                   <Github className="w-3.5 h-3.5" />
                   <span>GitHub Repository</span>
@@ -1602,8 +1602,8 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             {projects.length > 0 ? (
               projects.map((proj) => (
                 <div key={proj.id} className="bg-[#141416] border border-white/15 rounded-xl overflow-hidden flex flex-col justify-between group glow-card relative">
-                  <div className="absolute top-2 right-2 text-[#ccff00] font-mono text-[10px] z-10">+</div>
-                  <div className="absolute bottom-2 left-2 text-[#ccff00] font-mono text-[10px] z-10">+</div>
+                  <div className="absolute top-2 right-2 text-[#ffffff] font-mono text-[10px] z-10">+</div>
+                  <div className="absolute bottom-2 left-2 text-[#ffffff] font-mono text-[10px] z-10">+</div>
 
                   <div className="space-y-4">
                     {/* Project Screenshot Thumbnail */}
@@ -1613,17 +1613,17 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                         className="h-56 bg-black overflow-hidden relative cursor-pointer border-b border-white/10 group/img"
                       >
                         <img src={proj.imageUrl} alt={proj.title} className="w-full h-full object-cover group-hover/img:scale-105 transition duration-500" />
-                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-xs font-mono text-[#ccff00] gap-1.5 font-bold">
+                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-xs font-mono text-[#ffffff] gap-1.5 font-bold">
                           <ImageIcon className="w-4 h-4" /> VIEW FULL SCREENSHOT
                         </div>
                       </div>
                     ) : (
                       <div className="h-44 bg-black/40 border-b border-white/10 flex flex-col items-center justify-center text-zinc-500 text-xs font-mono gap-2 p-4 text-center">
-                        <Code2 className="w-8 h-8 opacity-40 text-[#ccff00]" />
+                        <Code2 className="w-8 h-8 opacity-40 text-[#ffffff]" />
                         <span>No project screenshot uploaded</span>
                         <button
                           onClick={() => setIsAddProjModalOpen(true)}
-                          className="text-[#ccff00] underline hover:text-white text-[11px]"
+                          className="text-[#ffffff] underline hover:text-white text-[11px]"
                         >
                           Upload Screenshot Image
                         </button>
@@ -1633,7 +1633,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     <div className="p-6 pt-2 space-y-3">
                       <div className="flex flex-wrap gap-1.5 mb-2">
                         {proj.techStack.split(',').map((tech, i) => (
-                          <span key={i} className="text-[10px] font-mono text-[#ccff00] px-2 py-0.5 bg-[#ccff00]/10 border border-[#ccff00]/20 rounded">
+                          <span key={i} className="text-[10px] font-mono text-[#ffffff] px-2 py-0.5 bg-[#ffffff]/10 border border-[#ffffff]/20 rounded">
                             {tech.trim()}
                           </span>
                         ))}
@@ -1650,7 +1650,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                         href={proj.githubUrl || "https://github.com/adithyaashetty2007-a11y"}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#ccff00] hover:underline flex items-center gap-1 font-mono text-xs font-bold"
+                        className="text-[#ffffff] hover:underline flex items-center gap-1 font-mono text-xs font-bold"
                       >
                         <Github className="w-4 h-4" />
                         <span>GITHUB</span>
@@ -1690,17 +1690,17 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         {/* SARTHAK PRIYADARSHI PROFILE README & BADGE SHOWCASE SECTION */}
         <section className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto relative">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 07. PROFILE README & SKILL BADGES</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">GitHub Profile Stack & Stats</h2>
+            <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 07. PROFILE README & SKILL BADGES</span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ffffff] tracking-tight">GitHub Profile Stack & Stats</h2>
           </div>
 
-          <div className="bg-[#141416] border border-[#ccff00]/30 rounded-2xl p-6 sm:p-10 space-y-8 glow-card relative">
-            <div className="absolute top-3 right-3 text-[#ccff00] font-mono text-xs">+</div>
-            <div className="absolute bottom-3 left-3 text-[#ccff00] font-mono text-xs">+</div>
+          <div className="bg-[#141416] border border-[#ffffff]/30 rounded-2xl p-6 sm:p-10 space-y-8 glow-card relative">
+            <div className="absolute top-3 right-3 text-[#ffffff] font-mono text-xs">+</div>
+            <div className="absolute bottom-3 left-3 text-[#ffffff] font-mono text-xs">+</div>
 
             <div className="space-y-4">
               <h3 className="text-xl font-mono font-bold text-white flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#ccff00] animate-ping"></span>
+                <span className="w-2.5 h-2.5 rounded-full bg-[#ffffff] animate-ping"></span>
                 <span>PROFILE BIO // ADITHYA A SHETTY</span>
               </h3>
               <p className="text-zinc-300 font-sans leading-relaxed text-sm sm:text-base">
@@ -1709,7 +1709,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             </div>
 
             <div className="space-y-4 pt-4 border-t border-white/10">
-              <h4 className="text-xs font-mono text-[#ccff00] tracking-wider uppercase">// TECH STACK & TOOLS BADGES</h4>
+              <h4 className="text-xs font-mono text-[#ffffff] tracking-wider uppercase">// TECH STACK & TOOLS BADGES</h4>
               <div className="flex flex-wrap gap-2.5">
                 {[
                   { label: "PYTHON", color: "3776AB" },
@@ -1734,15 +1734,15 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             </div>
 
             <div className="space-y-4 pt-4 border-t border-white/10">
-              <h4 className="text-xs font-mono text-[#ccff00] tracking-wider uppercase">// ACTIVITY & STREAK STATS</h4>
+              <h4 className="text-xs font-mono text-[#ffffff] tracking-wider uppercase">// ACTIVITY & STREAK STATS</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-black/60 border border-white/15 rounded-xl p-4 flex items-center justify-between">
                   <div>
                     <div className="text-xs font-mono text-zinc-400">LEETCODE PROBLEMS</div>
-                    <div className="text-2xl font-bold font-mono text-[#ccff00] mt-1">20+ Solved</div>
+                    <div className="text-2xl font-bold font-mono text-[#ffffff] mt-1">20+ Solved</div>
                     <div className="text-[11px] text-zinc-500 font-mono">2-week active streak</div>
                   </div>
-                  <Code2 className="w-8 h-8 text-[#ccff00] opacity-80" />
+                  <Code2 className="w-8 h-8 text-[#ffffff] opacity-80" />
                 </div>
                 <div className="bg-black/60 border border-white/15 rounded-xl p-4 flex items-center justify-between">
                   <div>
@@ -1757,7 +1757,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
             <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-400">
               <span>CONTACT: adithyaashetty2007@gmail.com</span>
-              <a href="https://github.com/adithyaashetty2007-a11y" target="_blank" rel="noopener noreferrer" className="text-[#ccff00] hover:underline flex items-center gap-1 font-bold">
+              <a href="https://github.com/adithyaashetty2007-a11y" target="_blank" rel="noopener noreferrer" className="text-[#ffffff] hover:underline flex items-center gap-1 font-bold">
                 <span>VIEW GITHUB PROFILE</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
@@ -1768,8 +1768,8 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         {/* PRACTICE WORK SECTION - HIGH-END CYBERPUNK STYLE */}
         <section className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto relative">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 07. PRACTICE WORK</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Featured Practice Work</h2>
+            <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 07. PRACTICE WORK</span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ffffff] tracking-tight">Featured Practice Work</h2>
             <p className="text-sm font-mono text-zinc-400">Core development repositories and interactive web applications.</p>
           </div>
 
@@ -1792,19 +1792,19 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             ].map((proj, idx) => (
               <div 
                 key={idx} 
-                className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/60 rounded-2xl p-8 flex flex-col justify-between glow-card transition duration-300 group relative overflow-hidden"
+                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/60 rounded-2xl p-8 flex flex-col justify-between glow-card transition duration-300 group relative overflow-hidden"
               >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#ccff00]/5 rounded-bl-full pointer-events-none group-hover:bg-[#ccff00]/10 transition"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#ffffff]/5 rounded-bl-full pointer-events-none group-hover:bg-[#ffffff]/10 transition"></div>
                 
                 <div className="space-y-4 relative z-10">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono text-zinc-400">PROJECT_0{idx + 1}</span>
-                    <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-0.5 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded">
+                    <span className="text-[11px] font-mono text-[#ffffff] px-2.5 py-0.5 bg-[#ffffff]/10 border border-[#ffffff]/30 rounded">
                       {proj.badge}
                     </span>
                   </div>
 
-                  <h3 className="text-2xl font-bold font-mono text-white group-hover:text-[#ccff00] transition duration-300">
+                  <h3 className="text-2xl font-bold font-mono text-white group-hover:text-[#ffffff] transition duration-300">
                     {proj.title}
                   </h3>
 
@@ -1816,7 +1816,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 <div className="pt-6 mt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 relative z-10">
                   <div className="flex flex-wrap gap-2">
                     {proj.tech.map((t, tIdx) => (
-                      <span key={tIdx} className="text-xs font-mono text-[#ccff00] bg-black/60 border border-[#ccff00]/30 px-3 py-1 rounded">
+                      <span key={tIdx} className="text-xs font-mono text-[#ffffff] bg-black/60 border border-[#ffffff]/30 px-3 py-1 rounded">
                         {t}
                       </span>
                     ))}
@@ -1826,7 +1826,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     href={proj.github} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#ccff00] text-black font-mono text-xs font-bold rounded hover:bg-white transition shadow-lg"
+                    className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#ffffff] text-black font-mono text-xs font-bold rounded hover:bg-white transition shadow-lg"
                   >
                     <Github className="w-3.5 h-3.5" />
                     <span>GITHUB</span>
@@ -1840,17 +1840,17 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         {/* EDUCATION & JOURNEY TIMELINE SECTION - REFERENCE STYLE */}
         <section id="education" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-5xl mx-auto relative">
           <div className="space-y-2 mb-16 text-center sm:text-left">
-            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 08. SYSTEM_LOGS & JOURNEY</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Experience & Timeline</h2>
+            <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 08. SYSTEM_LOGS & JOURNEY</span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ffffff] tracking-tight">Experience & Timeline</h2>
             <p className="text-sm font-mono text-zinc-400">Where I've been and what I've built along the way.</p>
           </div>
 
-          <div className="relative border-l-2 border-[#ccff00]/40 ml-4 sm:ml-12 space-y-12 pl-6 sm:pl-12">
+          <div className="relative border-l-2 border-[#ffffff]/40 ml-4 sm:ml-12 space-y-12 pl-6 sm:pl-12">
             
             {/* Timeline Item 1: Internshala AI Web Development Internship */}
             {(timelineCategory === "all" || timelineCategory === "experience") && (
             <div className="relative group">
-              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
+              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ffffff] ring-4 ring-[#ffffff]/20 group-hover:scale-125 transition"></div>
               
               <div 
                 onClick={() => setSelectedTimelineItem({
@@ -1862,21 +1862,21 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   tags: ["AI Web Dev", "InAmigos Foundation", "Internshala", "Rapid Prototyping"],
                   link: "https://internshala.com/verify_certificate"
                 })}
-                className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
+                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
               >
-                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ccff00]/60 group-hover/card:text-[#ccff00] flex items-center gap-1">
+                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ffffff]/60 group-hover/card:text-[#ffffff] flex items-center gap-1">
                   <span>[CLICK TO INSPECT]</span>
                 </div>
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <span className="text-xs font-mono text-zinc-400">July 2026 – Present</span>
-                  <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-0.5 bg-[#ccff00]/10 border border-[#ccff00]/25 rounded">
+                  <span className="text-[11px] font-mono text-[#ffffff] px-2.5 py-0.5 bg-[#ffffff]/10 border border-[#ffffff]/25 rounded">
                     [main]
                   </span>
                 </div>
 
                 <div className="space-y-1">
                   <h3 className="text-2xl font-bold font-mono text-white">AI Web Development Intern</h3>
-                  <p className="text-xs font-mono text-[#ccff00]">INTERNSHALA & INAMIGOS FOUNDATION</p>
+                  <p className="text-xs font-mono text-[#ffffff]">INTERNSHALA & INAMIGOS FOUNDATION</p>
                 </div>
 
                 <p className="text-sm font-sans text-zinc-300 leading-relaxed">
@@ -1897,7 +1897,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             {/* Timeline Item 2: 2nd Year BE in CSE */}
             {(timelineCategory === "all" || timelineCategory === "education") && (
             <div className="relative group">
-              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
+              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ffffff] ring-4 ring-[#ffffff]/20 group-hover:scale-125 transition"></div>
               
               <div 
                 onClick={() => setSelectedTimelineItem({
@@ -1908,9 +1908,9 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   description: "Currently pursuing 2nd year BE in Computer Science Engineering. Actively mastering Data Structures & Algorithms in C++, AI vibecoding, and building modern web applications.",
                   tags: ["DSA in C++", "AI Vibecoding", "Web Development", "LeetCode"]
                 })}
-                className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
+                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
               >
-                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ccff00]/60 group-hover/card:text-[#ccff00] flex items-center gap-1">
+                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ffffff]/60 group-hover/card:text-[#ffffff] flex items-center gap-1">
                   <span>[CLICK TO INSPECT]</span>
                 </div>
                 <div className="flex flex-wrap items-center justify-between gap-2">
@@ -1922,7 +1922,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
                 <div className="space-y-1">
                   <h3 className="text-2xl font-bold font-mono text-white">2nd Year Computer Science Engineering</h3>
-                  <p className="text-xs font-mono text-[#ccff00]">ST. JOSEPH ENGINEERING COLLEGE, MANGALURU</p>
+                  <p className="text-xs font-mono text-[#ffffff]">ST. JOSEPH ENGINEERING COLLEGE, MANGALURU</p>
                 </div>
 
                 <p className="text-sm font-sans text-zinc-300 leading-relaxed">
@@ -1943,7 +1943,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             {/* Timeline Item 3: CS50 Web Programming Certification */}
             {(timelineCategory === "all" || timelineCategory === "certified") && (
             <div className="relative group">
-              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
+              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ffffff] ring-4 ring-[#ffffff]/20 group-hover:scale-125 transition"></div>
               
               <div 
                 onClick={() => setSelectedTimelineItem({
@@ -1955,21 +1955,21 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   tags: ["Python", "JavaScript", "Django", "Web Dev"],
                   link: "https://www.linkedin.com/posts/adithya-a-shetty-421097382_cs50s-web-programming-with-python-and-javascript-activity-7430943036278439936-2q8h?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
                 })}
-                className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
+                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
               >
-                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ccff00]/60 group-hover/card:text-[#ccff00] flex items-center gap-1">
+                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ffffff]/60 group-hover/card:text-[#ffffff] flex items-center gap-1">
                   <span>[CLICK TO INSPECT]</span>
                 </div>
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <span className="text-xs font-mono text-zinc-400">2026</span>
-                  <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-0.5 bg-[#ccff00]/10 border border-[#ccff00]/25 rounded">
+                  <span className="text-[11px] font-mono text-[#ffffff] px-2.5 py-0.5 bg-[#ffffff]/10 border border-[#ffffff]/25 rounded">
                     [certified]
                   </span>
                 </div>
 
                 <div className="space-y-1">
                   <h3 className="text-2xl font-bold font-mono text-white">CS50's Web Programming with Python and JavaScript</h3>
-                  <p className="text-xs font-mono text-[#ccff00]">HARVARDX (HARVARD UNIVERSITY)</p>
+                  <p className="text-xs font-mono text-[#ffffff]">HARVARDX (HARVARD UNIVERSITY)</p>
                 </div>
 
                 <p className="text-sm font-sans text-zinc-300 leading-relaxed">
@@ -1988,7 +1988,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     href="https://www.linkedin.com/posts/adithya-a-shetty-421097382_cs50s-web-programming-with-python-and-javascript-activity-7430943036278439936-2q8h?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs font-mono text-[#ccff00] hover:underline flex items-center gap-1.5"
+                    className="text-xs font-mono text-[#ffffff] hover:underline flex items-center gap-1.5"
                   >
                     <span>View LinkedIn Post</span>
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -2001,7 +2001,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             {/* Timeline Item 4: Prompt Engineering & AI Workshop */}
             {(timelineCategory === "all" || timelineCategory === "workshop") && (
             <div className="relative group">
-              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
+              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ffffff] ring-4 ring-[#ffffff]/20 group-hover:scale-125 transition"></div>
               
               <div 
                 onClick={() => setSelectedTimelineItem({
@@ -2013,21 +2013,21 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   tags: ["Prompt Engineering", "Generative AI", "AI Ecosystem"],
                   link: "https://www.linkedin.com/posts/theagentblazerclubsjec_promptengineering-ai-generativeai-activity-7443638504024268800-BCPn?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
                 })}
-                className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
+                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
               >
-                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ccff00]/60 group-hover/card:text-[#ccff00] flex items-center gap-1">
+                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ffffff]/60 group-hover/card:text-[#ffffff] flex items-center gap-1">
                   <span>[CLICK TO INSPECT]</span>
                 </div>
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <span className="text-xs font-mono text-zinc-400">2026</span>
-                  <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-0.5 bg-[#ccff00]/10 border border-[#ccff00]/25 rounded">
+                  <span className="text-[11px] font-mono text-[#ffffff] px-2.5 py-0.5 bg-[#ffffff]/10 border border-[#ffffff]/25 rounded">
                     [workshop]
                   </span>
                 </div>
 
                 <div className="space-y-1">
                   <h3 className="text-2xl font-bold font-mono text-white">Prompt Engineering & Generative AI Workshop</h3>
-                  <p className="text-xs font-mono text-[#ccff00]">THE AGENT BLAZER CLUB SJEC</p>
+                  <p className="text-xs font-mono text-[#ffffff]">THE AGENT BLAZER CLUB SJEC</p>
                 </div>
 
                 <p className="text-sm font-sans text-zinc-300 leading-relaxed">
@@ -2046,7 +2046,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     href="https://www.linkedin.com/posts/theagentblazerclubsjec_promptengineering-ai-generativeai-activity-7443638504024268800-BCPn?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs font-mono text-[#ccff00] hover:underline flex items-center gap-1.5"
+                    className="text-xs font-mono text-[#ffffff] hover:underline flex items-center gap-1.5"
                   >
                     <span>View LinkedIn Post</span>
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -2059,7 +2059,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             {/* Timeline Item 5: AI for Techies */}
             {(timelineCategory === "all" || timelineCategory === "workshop" || timelineCategory === "certified") && (
             <div className="relative group">
-              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
+              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ffffff] ring-4 ring-[#ffffff]/20 group-hover:scale-125 transition"></div>
               
               <div 
                 onClick={() => setSelectedTimelineItem({
@@ -2071,21 +2071,21 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   tags: ["Artificial Intelligence", "Techies", "AI Workflows"],
                   link: "https://www.linkedin.com/posts/adithya-a-shetty-421097382_ai-for-techies-activity-7385958617696620544-FPR6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
                 })}
-                className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
+                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
               >
-                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ccff00]/60 group-hover/card:text-[#ccff00] flex items-center gap-1">
+                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ffffff]/60 group-hover/card:text-[#ffffff] flex items-center gap-1">
                   <span>[CLICK TO INSPECT]</span>
                 </div>
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <span className="text-xs font-mono text-zinc-400">2025 – 2026</span>
-                  <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-0.5 bg-[#ccff00]/10 border border-[#ccff00]/25 rounded">
+                  <span className="text-[11px] font-mono text-[#ffffff] px-2.5 py-0.5 bg-[#ffffff]/10 border border-[#ffffff]/25 rounded">
                     [milestone]
                   </span>
                 </div>
 
                 <div className="space-y-1">
                   <h3 className="text-2xl font-bold font-mono text-white">AI for Techies Certification & Workshop</h3>
-                  <p className="text-xs font-mono text-[#ccff00]">PROFESSIONAL DEVELOPMENT</p>
+                  <p className="text-xs font-mono text-[#ffffff]">PROFESSIONAL DEVELOPMENT</p>
                 </div>
 
                 <p className="text-sm font-sans text-zinc-300 leading-relaxed">
@@ -2104,7 +2104,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     href="https://www.linkedin.com/posts/adithya-a-shetty-421097382_ai-for-techies-activity-7385958617696620544-FPR6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs font-mono text-[#ccff00] hover:underline flex items-center gap-1.5"
+                    className="text-xs font-mono text-[#ffffff] hover:underline flex items-center gap-1.5"
                   >
                     <span>View LinkedIn Post</span>
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -2117,7 +2117,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             {/* Timeline Item 6: Cisco NetAcad Python Essentials 1 */}
             {(timelineCategory === "all" || timelineCategory === "education" || timelineCategory === "certified") && (
             <div className="relative group">
-              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ccff00] ring-4 ring-[#ccff00]/20 group-hover:scale-125 transition"></div>
+              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ffffff] ring-4 ring-[#ffffff]/20 group-hover:scale-125 transition"></div>
               
               <div 
                 onClick={() => setSelectedTimelineItem({
@@ -2128,21 +2128,21 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   description: "Learned fundamental concepts of computer programming, syntax, and data structures with Python. Note: Course completed, paid certification exam not taken.",
                   tags: ["Python", "Programming Basics", "Procedural Programming", "30 Labs"]
                 })}
-                className="bg-[#141416] border border-white/15 hover:border-[#ccff00]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
+                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4 glow-card transition duration-300 cursor-pointer group/card relative"
               >
-                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ccff00]/60 group-hover/card:text-[#ccff00] flex items-center gap-1">
+                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ffffff]/60 group-hover/card:text-[#ffffff] flex items-center gap-1">
                   <span>[CLICK TO INSPECT]</span>
                 </div>
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <span className="text-xs font-mono text-zinc-400">Foundation</span>
-                  <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-0.5 bg-[#ccff00]/10 border border-[#ccff00]/25 rounded">
+                  <span className="text-[11px] font-mono text-[#ffffff] px-2.5 py-0.5 bg-[#ffffff]/10 border border-[#ffffff]/25 rounded">
                     [python]
                   </span>
                 </div>
 
                 <div className="space-y-1">
                   <h3 className="text-2xl font-bold font-mono text-white">Python Essentials 1 (PE1)</h3>
-                  <p className="text-xs font-mono text-[#ccff00]">CISCO NETWORKING ACADEMY (30 Hours | 30 Labs)</p>
+                  <p className="text-xs font-mono text-[#ffffff]">CISCO NETWORKING ACADEMY (30 Hours | 30 Labs)</p>
                 </div>
 
                 <p className="text-sm font-sans text-zinc-300 leading-relaxed">
@@ -2171,17 +2171,17 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         {/* LIVE GITHUB & LEETCODE ACTIVITY FEEDS */}
         <section className="py-20 px-4 sm:px-8 max-w-6xl mx-auto border-t border-white/10">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 07. LIVE STATS & ACTIVITY FEEDS</span>
+            <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 07. LIVE STATS & ACTIVITY FEEDS</span>
             <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Coding Activity & Metrics</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* GitHub Stats Card */}
             <div className="bg-[#141416] border border-white/15 rounded-xl p-6 sm:p-8 space-y-6 glow-card relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#ccff00]/5 rounded-full blur-2xl group-hover:bg-[#ccff00]/10 transition"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#ffffff]/5 rounded-full blur-2xl group-hover:bg-[#ffffff]/10 transition"></div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-[#ccff00]/10 border border-[#ccff00]/30 flex items-center justify-center text-[#ccff00]">
+                  <div className="w-10 h-10 rounded-lg bg-[#ffffff]/10 border border-[#ffffff]/30 flex items-center justify-center text-[#ffffff]">
                     <Github className="w-5 h-5" />
                   </div>
                   <div>
@@ -2189,14 +2189,14 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     <p className="text-xs font-mono text-zinc-400">@adithyaashetty2007-a11y</p>
                   </div>
                 </div>
-                <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-1 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded">
+                <span className="text-[11px] font-mono text-[#ffffff] px-2.5 py-1 bg-[#ffffff]/10 border border-[#ffffff]/30 rounded">
                   10+ Repos
                 </span>
               </div>
 
               <div className="grid grid-cols-3 gap-4 pt-2">
                 <div className="bg-black/40 border border-white/10 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold font-mono text-[#ccff00]">10+</div>
+                  <div className="text-2xl font-bold font-mono text-[#ffffff]">10+</div>
                   <div className="text-[11px] font-mono text-zinc-400 mt-1">Public Repos</div>
                 </div>
                 <div className="bg-black/40 border border-white/10 rounded-lg p-4 text-center">
@@ -2211,7 +2211,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
               <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-400">
                 <span>Status: Fully Synced & Active</span>
-                <a href="https://github.com/adithyaashetty2007-a11y" target="_blank" rel="noopener noreferrer" className="text-[#ccff00] hover:underline flex items-center gap-1">
+                <a href="https://github.com/adithyaashetty2007-a11y" target="_blank" rel="noopener noreferrer" className="text-[#ffffff] hover:underline flex items-center gap-1">
                   <span>View Profile</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
@@ -2246,7 +2246,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   <div className="text-[11px] font-mono text-zinc-400 mt-1">Sem 2 SGPA (Up)</div>
                 </div>
                 <div className="bg-black/40 border border-white/10 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold font-mono text-[#ccff00]">7.5</div>
+                  <div className="text-2xl font-bold font-mono text-[#ffffff]">7.5</div>
                   <div className="text-[11px] font-mono text-zinc-400 mt-1">Sem 1 SGPA</div>
                 </div>
               </div>
@@ -2265,7 +2265,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         {/* INTERACTIVE MINI CODE PLAYGROUND */}
         <section className="py-20 px-4 sm:px-8 max-w-6xl mx-auto border-t border-white/10">
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 08. INTERACTIVE CODE PLAYGROUND</span>
+            <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 08. INTERACTIVE CODE PLAYGROUND</span>
             <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Live Code Sandbox</h2>
             <p className="text-sm font-sans text-zinc-400 max-w-2xl">
               Test snippets in C, C++, or Python directly in the browser terminal sandbox.
@@ -2300,7 +2300,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     }}
                     className={`px-3 py-1 rounded text-xs font-mono uppercase transition ${
                       playgroundLang === lang 
-                        ? 'bg-[#ccff00] text-black font-bold' 
+                        ? 'bg-[#ffffff] text-black font-bold' 
                         : 'bg-white/5 text-zinc-400 hover:bg-white/10 hover:text-white'
                     }`}
                   >
@@ -2316,7 +2316,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 value={playgroundCode}
                 onChange={(e) => setPlaygroundCode(e.target.value)}
                 rows={6}
-                className="w-full bg-transparent text-[#ccff00] focus:outline-none resize-none font-mono text-sm leading-relaxed"
+                className="w-full bg-transparent text-[#ffffff] focus:outline-none resize-none font-mono text-sm leading-relaxed"
                 spellCheck={false}
               />
             </div>
@@ -2343,7 +2343,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   }, 600);
                 }}
                 disabled={isRunningCode}
-                className="px-5 py-2 rounded bg-[#ccff00] hover:bg-[#b3e600] text-black font-bold font-mono text-xs flex items-center gap-2 transition disabled:opacity-50"
+                className="px-5 py-2 rounded bg-[#ffffff] hover:bg-[#b3e600] text-black font-bold font-mono text-xs flex items-center gap-2 transition disabled:opacity-50"
               >
                 <Terminal className="w-4 h-4" />
                 <span>{isRunningCode ? "EXECUTING..." : "RUN SNIPPET"}</span>
@@ -2354,7 +2354,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             {playgroundOutput && (
               <div className="bg-black p-6 border-t border-white/10 font-mono text-xs text-zinc-300 space-y-2">
                 <div className="text-zinc-500 uppercase tracking-widest text-[10px]">// CONSOLE OUTPUT:</div>
-                <pre className="text-[#ccff00] whitespace-pre-wrap">{playgroundOutput}</pre>
+                <pre className="text-[#ffffff] whitespace-pre-wrap">{playgroundOutput}</pre>
               </div>
             )}
           </div>
@@ -2374,11 +2374,11 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               </p>
 
               <div className="space-y-4 font-mono text-sm">
-                <div className="flex items-center gap-4 p-4 rounded-xl bg-[#141416] border border-white/10 hover:border-[#ccff00]/40 transition group/phone">
-                  <Phone className="w-5 h-5 text-[#ccff00]" />
+                <div className="flex items-center gap-4 p-4 rounded-xl bg-[#141416] border border-white/10 hover:border-[#ffffff]/40 transition group/phone">
+                  <Phone className="w-5 h-5 text-[#ffffff]" />
                   <div>
                     <div className="text-xs text-zinc-500">Direct Phone (Tap to Call)</div>
-                    <a href="tel:8088814686" className="text-white group-hover/phone:text-[#ccff00] hover:underline font-bold tracking-wider block transition">
+                    <a href="tel:8088814686" className="text-white group-hover/phone:text-[#ffffff] hover:underline font-bold tracking-wider block transition">
                       +91 80888 14686
                     </a>
                   </div>
@@ -2557,11 +2557,11 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         >
           <div 
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-2xl w-full bg-[#141416] border border-[#ccff00]/40 rounded-2xl overflow-hidden p-6 sm:p-8 shadow-[0_0_50px_rgba(204,255,0,0.15)] space-y-6"
+            className="relative max-w-2xl w-full bg-[#141416] border border-[#ffffff]/40 rounded-2xl overflow-hidden p-6 sm:p-8 shadow-[0_0_50px_rgba(255,255,255,0.15)] space-y-6"
           >
             <div className="flex items-center justify-between pb-4 border-b border-white/15">
               <div className="space-y-1">
-                <span className="text-[11px] font-mono text-[#ccff00] px-2.5 py-0.5 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded">
+                <span className="text-[11px] font-mono text-[#ffffff] px-2.5 py-0.5 bg-[#ffffff]/10 border border-[#ffffff]/30 rounded">
                   {selectedTimelineItem.badge}
                 </span>
                 <div className="text-xs font-mono text-zinc-400 mt-1">{selectedTimelineItem.date}</div>
@@ -2576,7 +2576,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
             <div className="space-y-3">
               <h3 className="text-2xl font-bold font-mono text-white">{selectedTimelineItem.title}</h3>
-              <p className="text-xs font-mono text-[#ccff00] uppercase tracking-wider">{selectedTimelineItem.subtitle}</p>
+              <p className="text-xs font-mono text-[#ffffff] uppercase tracking-wider">{selectedTimelineItem.subtitle}</p>
               <p className="text-sm font-sans text-zinc-300 leading-relaxed pt-2">{selectedTimelineItem.description}</p>
             </div>
 
@@ -2584,7 +2584,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               <div className="text-xs font-mono text-zinc-400 uppercase tracking-widest">Key Tags & Technologies</div>
               <div className="flex flex-wrap gap-2">
                 {selectedTimelineItem.tags.map((tag, idx) => (
-                  <span key={idx} className="text-xs font-mono text-[#ccff00] bg-black/60 border border-[#ccff00]/30 px-3 py-1 rounded">
+                  <span key={idx} className="text-xs font-mono text-[#ffffff] bg-black/60 border border-[#ffffff]/30 px-3 py-1 rounded">
                     {tag}
                   </span>
                 ))}
@@ -2596,7 +2596,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     href={selectedTimelineItem.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#ccff00] text-black font-mono text-xs font-bold rounded hover:bg-white transition shadow-lg"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#ffffff] text-black font-mono text-xs font-bold rounded hover:bg-white transition shadow-lg"
                   >
                     <span>View Reference / Verification Link</span>
                     <ExternalLink className="w-4 h-4" />
@@ -2898,10 +2898,10 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         >
           <div 
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-2xl w-full bg-[#141416] border border-[#ccff00]/40 rounded-2xl overflow-hidden p-4 shadow-[0_0_50px_rgba(204,255,0,0.2)]"
+            className="relative max-w-2xl w-full bg-[#141416] border border-[#ffffff]/40 rounded-2xl overflow-hidden p-4 shadow-[0_0_50px_rgba(255,255,255,0.2)]"
           >
             <div className="flex items-center justify-between mb-3 px-2">
-              <span className="font-mono text-xs text-[#ccff00]">// Adithya A Shetty - Profile Identification</span>
+              <span className="font-mono text-xs text-[#ffffff]">// Adithya A Shetty - Profile Identification</span>
               <button 
                 onClick={() => setSelectedProfileImage(null)}
                 className="p-1.5 bg-white/10 hover:bg-white/20 text-white rounded-full transition"
