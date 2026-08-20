@@ -2548,6 +2548,47 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           </div>
         </section>
 
+        {/* BOTTOM QUICK ACTION UTILITY BAR */}
+        <div className="max-w-6xl mx-auto px-4 sm:px-8 pb-8">
+          <div className="bg-[#141416] border border-white/15 rounded-2xl p-4 sm:p-6 flex flex-wrap items-center justify-between gap-4 shadow-xl font-mono">
+            <div className="flex items-center gap-3">
+              <div className="px-3 py-2 rounded-lg border border-white/15 bg-black/60 text-xs text-zinc-300 flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>VISITORS: {visitorCount}</span>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3">
+              <button
+                onClick={() => setIsCommandPaletteOpen(true)}
+                className="px-3.5 py-2 rounded-lg border border-white/20 bg-white/5 hover:bg-white/15 text-xs text-zinc-200 flex items-center gap-2 transition"
+                title="Command Palette (Ctrl+K)"
+              >
+                <Command className="w-4 h-4 text-white" />
+                <span>Ctrl+K</span>
+              </button>
+
+              <button 
+                onClick={() => { setSoundEnabled(!soundEnabled); playClickSound(); }}
+                className={`px-3.5 py-2 rounded border text-xs flex items-center gap-2 transition ${soundEnabled ? 'border-white text-white bg-white/15 font-bold' : 'border-white/20 text-zinc-400 bg-white/5'}`}
+                title="Toggle Mechanical Key SFX"
+              >
+                <span>{soundEnabled ? '🔊 SFX: ON' : '🔇 SFX: OFF'}</span>
+              </button>
+
+              <button 
+                onClick={() => { playClickSound(); copyPhone(); }}
+                className="px-4 py-2 rounded-lg border border-white/20 bg-white/5 hover:bg-white/15 text-xs text-white flex items-center gap-2 transition"
+                title="Copy Direct Phone Number"
+              >
+                <Phone className="w-4 h-4 text-zinc-400" />
+                <span>8088814686</span>
+                {isCopiedPhone && <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />}
+              </button>
+            </div>
+          </div>
+        </div>
+
         {/* FOOTER */}
         <footer className="py-8 px-4 sm:px-8 border-t border-white/10 text-center text-xs font-mono text-zinc-500">
           <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
