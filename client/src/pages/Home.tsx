@@ -1665,7 +1665,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   href="https://github.com/adithyaashetty2007-a11y"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs font-mono text-[#ffffff] hover:underline flex items-center gap-1.5"
+                  className="text-xs font-mono text-[#ffffff] hover:underline flex items-center gap-1.5 z-20 relative cursor-pointer"
                 >
                   <Github className="w-3.5 h-3.5" />
                   <span>GitHub Repository</span>
@@ -1726,7 +1726,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                         href={proj.githubUrl || "https://github.com/adithyaashetty2007-a11y"}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#ffffff] hover:underline flex items-center gap-1 font-mono text-xs font-bold"
+                        className="text-[#ffffff] hover:underline flex items-center gap-1 font-mono text-xs font-bold z-20 relative cursor-pointer"
                       >
                         <Github className="w-4 h-4" />
                         <span>GITHUB</span>
@@ -1735,7 +1735,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                         href={proj.githubUrl || "https://github.com/adithyaashetty2007-a11y"}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-zinc-400 hover:text-white flex items-center"
+                        className="text-zinc-400 hover:text-white flex items-center z-20 relative cursor-pointer"
                       >
                         <ArrowUpRight className="w-4 h-4" />
                       </a>
