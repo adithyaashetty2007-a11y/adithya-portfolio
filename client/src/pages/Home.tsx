@@ -298,9 +298,9 @@ export default function Home() {
       id: "library-system",
       title: "LIBRARY MANAGEMENT SYSTEM",
       description: "A robust Python-based Library Management System designed to handle book inventory, member records, borrowing transactions, and search queries efficiently.",
-      imageUrl: "",
+      imageUrl: "/manus-storage/ChatGPTImageAug20,2026,08_42_07PM_16ab5326.png",
       githubUrl: "https://github.com/adithyaashetty2007-a11y/LibraryManagementSystem",
-      techStack: "Python, CLI, SQLite, Data Structures"
+      techStack: "Next.js, MongoDB, TypeScript, Tailwind CSS"
     }
   ]);
   const [selectedProjectImage, setSelectedProjectImage] = useState<string | null>(null);
