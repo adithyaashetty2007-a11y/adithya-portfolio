@@ -811,16 +811,29 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           <MatrixRain />
           <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-[#09090b]/60 to-[#09090b] z-0"></div>
           <div className="absolute inset-0 pointer-events-none opacity-20 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.15),transparent_70%)] animate-pulse z-0"></div>
-          <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+
+          {/* Green (+) Corner Crosshairs for the Hero Box */}
+          <div className="absolute top-8 left-8 text-[#ccff00] font-mono text-lg z-20">+</div>
+          <div className="absolute top-8 right-8 text-[#ccff00] font-mono text-lg z-20">+</div>
+          <div className="absolute bottom-8 left-8 text-[#ccff00] font-mono text-lg z-20">+</div>
+          <div className="absolute bottom-8 right-8 text-[#ccff00] font-mono text-lg z-20">+</div>
+
+          <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 p-6 sm:p-12 border border-white/15 bg-[#121214]/90 backdrop-blur-md rounded-none">
             
             {/* Left Column: Text & CTAs */}
             <div className="lg:col-span-7 space-y-6 text-left">
 
 
-              <div className="space-y-2">
-                <p className="text-zinc-400 font-mono text-sm sm:text-base">Hello, I'm</p>
-                <h1 className="text-4xl sm:text-6xl font-extrabold font-almie tracking-tight text-[#ffffff] glitch-hover inline-block">
-                  Adithya A Shetty<span className="text-zinc-500">.</span>
+              <div className="inline-block px-3 py-1 bg-red-950/80 border border-red-500/50 text-red-400 font-mono text-xs tracking-wider uppercase font-bold">
+                NOT AVAILABLE FOR HIRE
+              </div>
+
+              <div className="space-y-1">
+                <h1 className="text-4xl sm:text-6xl font-extrabold font-almie tracking-tight text-[#ffffff] uppercase leading-none">
+                  ADITHYA A
+                </h1>
+                <h1 className="text-4xl sm:text-6xl font-extrabold font-almie tracking-tight text-[#ffffff] uppercase leading-none">
+                  SHETTY<span className="text-zinc-600">.</span>
                 </h1>
               </div>
 
