@@ -666,11 +666,6 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
             {/* Right Action / Command Palette Trigger & Phone / SFX */}
             <div className="hidden sm:flex items-center gap-3">
-              <div className="px-2.5 py-1.5 rounded border border-white/15 bg-black/40 text-[11px] font-mono text-zinc-300 flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>VISITORS: {visitorCount}</span>
-              </div>
-
               <button
                 onClick={() => setIsCommandPaletteOpen(true)}
                 className="px-2.5 py-1.5 rounded border border-white/20 bg-white/5 hover:bg-white/10 text-xs font-mono flex items-center gap-2 text-zinc-300 transition"
