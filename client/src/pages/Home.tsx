@@ -147,6 +147,7 @@ function TerminalTypingText({ text, speed = 12, delay = 0, resetKey = 0 }: { tex
 export default function Home() {
   const [showIntro, setShowIntro] = useState(true);
   const [activeSection, setActiveSection] = useState("home");
+  const [timelineInView, setTimelineInView] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
   const [commandQuery, setCommandQuery] = useState("");
@@ -1942,7 +1943,19 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         </section>
 
         {/* EDUCATION & JOURNEY TIMELINE SECTION - REFERENCE STYLE */}
-        <section id="education" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-5xl mx-auto relative">
+        <section 
+          id="education" 
+          className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-5xl mx-auto relative"
+          ref={(node) => {
+            if (!node) return;
+            const observer = new IntersectionObserver(([entry]) => {
+              if (entry.isIntersecting) {
+                setTimelineInView(true);
+              }
+            }, { threshold: 0.2 });
+            observer.observe(node);
+          }}
+        >
           <div className="space-y-2 mb-16 text-center sm:text-left">
             <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 08. SYSTEM_LOGS & JOURNEY</span>
             <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ffffff] tracking-tight">Experience & Timeline</h2>
@@ -2070,11 +2083,19 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     </div>
 
                     <h3 className="text-2xl font-bold font-mono text-red-500 group-hover:text-red-400 transition">
-                      {item.title}
+                      {timelineInView ? (
+                        <TerminalTypingText text={item.title} speed={18} delay={index * 400} resetKey={timelineInView ? 1 : 0} />
+                      ) : (
+                        <span className="opacity-0">{item.title}</span>
+                      )}
                     </h3>
 
                     <p className="text-sm font-mono text-red-400/90 leading-relaxed max-w-3xl">
-                      {item.desc}
+                      {timelineInView ? (
+                        <TerminalTypingText text={item.desc} speed={10} delay={index * 400 + 300} resetKey={timelineInView ? 1 : 0} />
+                      ) : (
+                        <span className="opacity-0">{item.desc}</span>
+                      )}
                     </p>
                   </div>
                 </div>
