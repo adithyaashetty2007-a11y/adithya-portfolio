@@ -536,27 +536,7 @@ export default function Home() {
         </svg>
       </div>
 
-      {/* INTRO CURSIVE SIGNATURE OVERLAY */}
-      {showIntro && (
-        <div className="fixed inset-0 z-50 bg-[#0a0a0a] flex flex-col items-center justify-center transition-opacity duration-700">
-            <div className="text-center space-y-4 px-4">
-            <h1 className="font-almie text-4xl sm:text-7xl font-bold text-[#ccff00] tracking-widest hacker-glitch uppercase drop-shadow-[0_0_25px_rgba(204,255,0,0.8)]" data-text="ADITHYA A SHETTY">
-              ADITHYA A <span className="text-white drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]">SHETTY</span>
-            </h1>
-            <p className="font-mono text-xs uppercase tracking-widest text-zinc-500 animate-fade-in">
-              Initializing Developer Portfolio...
-            </p>
-            <div className="pt-6">
-              <button 
-                onClick={() => setShowIntro(false)}
-                className="text-xs font-mono text-zinc-400 hover:text-[#ccff00] uppercase tracking-widest border border-white/15 hover:border-[#ccff00]/50 px-4 py-2 rounded transition bg-black/40 hover:bg-[#ccff00]/10"
-              >
-                [ SKIP INTRO ]
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Intro section removed per user request */}
 
       {/* CRT Scanline & Grid Background Textures */}
       <div className="fixed inset-0 crt-scanlines z-40 pointer-events-none opacity-50"></div>
