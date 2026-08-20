@@ -147,7 +147,7 @@ function TerminalTypingText({ text, speed = 12, delay = 0, resetKey = 0 }: { tex
 export default function Home() {
   const [showIntro, setShowIntro] = useState(true);
   const [activeSection, setActiveSection] = useState("home");
-  const [timelineInView, setTimelineInView] = useState(false);
+  const [timelineInView, setTimelineInView] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
   const [commandQuery, setCommandQuery] = useState("");
