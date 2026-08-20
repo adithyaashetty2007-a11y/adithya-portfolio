@@ -1951,13 +1951,15 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
           <div className="relative border-l-2 border-[#ffffff]/40 ml-4 sm:ml-12 space-y-12 pl-6 sm:pl-12">
             
-            {/* Timeline Item 1: Internshala AI Web Development Internship */}
-            {(timelineCategory === "all" || timelineCategory === "experience") && (
-            <div className="relative group">
-              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ffffff] ring-4 ring-[#ffffff]/20 group-hover:scale-125 transition"></div>
-              
-              <div 
-                onClick={() => setSelectedTimelineItem({
+            {[
+              {
+                id: "internship",
+                cat: "experience",
+                date: "JULY 2026 – PRESENT // EXPERIENCE // INTERNSHALA & INAMIGOS",
+                title: "AI Web Development Intern",
+                desc: "Contributed to a practical AI Web Development program focused on AI-assisted web development, rapid prototyping, debugging, and modern AI coding tools.",
+                badge: "[main]",
+                full: {
                   title: "AI Web Development Intern",
                   subtitle: "INTERNSHALA & INAMIGOS FOUNDATION",
                   date: "July 2026 – Present",
@@ -1965,92 +1967,32 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   description: "Contributed to a practical AI Web Development program focused on AI-assisted web development, rapid prototyping, debugging, and modern AI coding tools.",
                   tags: ["AI Web Dev", "InAmigos Foundation", "Internshala", "Rapid Prototyping"],
                   link: "https://internshala.com/verify_certificate"
-                })}
-                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4  transition duration-300 cursor-pointer group/card relative"
-              >
-                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ffffff]/60 group-hover/card:text-[#ffffff] flex items-center gap-1">
-                  <span>[CLICK TO INSPECT]</span>
-                </div>
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="text-xs font-mono text-zinc-400">July 2026 – Present</span>
-                  <span className="text-[11px] font-mono text-[#ffffff] px-2.5 py-0.5 bg-[#ffffff]/10 border border-[#ffffff]/25 rounded">
-                    [main]
-                  </span>
-                </div>
-
-                <div className="space-y-1">
-                  <h3 className="text-2xl font-bold font-mono text-white">AI Web Development Intern</h3>
-                  <p className="text-xs font-mono text-[#ffffff]">INTERNSHALA & INAMIGOS FOUNDATION</p>
-                </div>
-
-                <p className="text-sm font-sans text-zinc-300 leading-relaxed">
-                  Contributed to a practical AI Web Development program focused on AI-assisted web development, rapid prototyping, debugging, and modern AI coding tools.
-                </p>
-
-                <div className="pt-4 border-t border-white/10 flex flex-wrap gap-2">
-                  {["AI Web Dev", "InAmigos Foundation", "Internshala", "Rapid Prototyping"].map((tag, i) => (
-                    <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/60 border border-white/10 px-3 py-1 rounded">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-            )}
-
-            {/* Timeline Item 2: 2nd Year BE in CSE */}
-            {(timelineCategory === "all" || timelineCategory === "education") && (
-            <div className="relative group">
-              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ffffff] ring-4 ring-[#ffffff]/20 group-hover:scale-125 transition"></div>
-              
-              <div 
-                onClick={() => setSelectedTimelineItem({
+                }
+              },
+              {
+                id: "cse",
+                cat: "education",
+                date: "SEPTEMBER 2026 – PRESENT // EDUCATION // ST. JOSEPH ENGINEERING COLLEGE",
+                title: "2nd Year Computer Science Engineering",
+                desc: "Currently pursuing 2nd year BE in Computer Science Engineering. Actively mastering Data Structures & Algorithms in C++, AI vibecoding, and building modern web applications.",
+                badge: "[current]",
+                full: {
                   title: "2nd Year Computer Science Engineering",
                   subtitle: "ST. JOSEPH ENGINEERING COLLEGE, MANGALURU",
                   date: "September 2026 – Present",
                   badge: "[current]",
                   description: "Currently pursuing 2nd year BE in Computer Science Engineering. Actively mastering Data Structures & Algorithms in C++, AI vibecoding, and building modern web applications.",
                   tags: ["DSA in C++", "AI Vibecoding", "Web Development", "LeetCode"]
-                })}
-                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4  transition duration-300 cursor-pointer group/card relative"
-              >
-                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ffffff]/60 group-hover/card:text-[#ffffff] flex items-center gap-1">
-                  <span>[CLICK TO INSPECT]</span>
-                </div>
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="text-xs font-mono text-zinc-400">September 2026 – Present</span>
-                  <span className="text-[11px] font-mono text-emerald-400 px-2.5 py-0.5 bg-emerald-400/10 border border-emerald-400/25 rounded">
-                    [current]
-                  </span>
-                </div>
-
-                <div className="space-y-1">
-                  <h3 className="text-2xl font-bold font-mono text-white">2nd Year Computer Science Engineering</h3>
-                  <p className="text-xs font-mono text-[#ffffff]">ST. JOSEPH ENGINEERING COLLEGE, MANGALURU</p>
-                </div>
-
-                <p className="text-sm font-sans text-zinc-300 leading-relaxed">
-                  Currently pursuing 2nd year BE in Computer Science Engineering. Actively mastering Data Structures & Algorithms in C++, AI vibecoding, and building modern web applications.
-                </p>
-
-                <div className="pt-4 border-t border-white/10 flex flex-wrap gap-2">
-                  {["DSA in C++", "AI Vibecoding", "Web Development", "LeetCode"].map((tag, i) => (
-                    <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/60 border border-white/10 px-3 py-1 rounded">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-            )}
-
-            {/* Timeline Item 3: CS50 Web Programming Certification */}
-            {(timelineCategory === "all" || timelineCategory === "certified") && (
-            <div className="relative group">
-              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ffffff] ring-4 ring-[#ffffff]/20 group-hover:scale-125 transition"></div>
-              
-              <div 
-                onClick={() => setSelectedTimelineItem({
+                }
+              },
+              {
+                id: "cs50w",
+                cat: "certified",
+                date: "2026 // CERTIFICATION // HARVARDX (HARVARD UNIVERSITY)",
+                title: "CS50's Web Programming with Python and JavaScript",
+                desc: "Completed rigorous coursework in web programming covering Python, JavaScript, Django, and modern frontend-backend integration concepts.",
+                badge: "[certified]",
+                full: {
                   title: "CS50's Web Programming with Python and JavaScript",
                   subtitle: "HARVARDX (HARVARD UNIVERSITY)",
                   date: "2026",
@@ -2058,57 +2000,16 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   description: "Completed rigorous coursework in web programming covering Python, JavaScript, Django, and modern frontend-backend integration concepts.",
                   tags: ["Python", "JavaScript", "Django", "Web Dev"],
                   link: "https://www.linkedin.com/posts/adithya-a-shetty-421097382_cs50s-web-programming-with-python-and-javascript-activity-7430943036278439936-2q8h?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
-                })}
-                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4  transition duration-300 cursor-pointer group/card relative"
-              >
-                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ffffff]/60 group-hover/card:text-[#ffffff] flex items-center gap-1">
-                  <span>[CLICK TO INSPECT]</span>
-                </div>
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="text-xs font-mono text-zinc-400">2026</span>
-                  <span className="text-[11px] font-mono text-[#ffffff] px-2.5 py-0.5 bg-[#ffffff]/10 border border-[#ffffff]/25 rounded">
-                    [certified]
-                  </span>
-                </div>
-
-                <div className="space-y-1">
-                  <h3 className="text-2xl font-bold font-mono text-white">CS50's Web Programming with Python and JavaScript</h3>
-                  <p className="text-xs font-mono text-[#ffffff]">HARVARDX (HARVARD UNIVERSITY)</p>
-                </div>
-
-                <p className="text-sm font-sans text-zinc-300 leading-relaxed">
-                  Completed rigorous coursework in web programming covering Python, JavaScript, Django, and modern frontend-backend integration concepts.
-                </p>
-
-                <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4" onClick={(e) => e.stopPropagation()}>
-                  <div className="flex flex-wrap gap-2">
-                    {["Python", "JavaScript", "Django", "Web Dev"].map((tag, i) => (
-                      <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/60 border border-white/10 px-3 py-1 rounded">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <a 
-                    href="https://www.linkedin.com/posts/adithya-a-shetty-421097382_cs50s-web-programming-with-python-and-javascript-activity-7430943036278439936-2q8h?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs font-mono text-[#ffffff] hover:underline flex items-center gap-1.5"
-                  >
-                    <span>View LinkedIn Post</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            )}
-
-            {/* Timeline Item 4: Prompt Engineering & AI Workshop */}
-            {(timelineCategory === "all" || timelineCategory === "workshop") && (
-            <div className="relative group">
-              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ffffff] ring-4 ring-[#ffffff]/20 group-hover:scale-125 transition"></div>
-              
-              <div 
-                onClick={() => setSelectedTimelineItem({
+                }
+              },
+              {
+                id: "prompt",
+                cat: "workshop",
+                date: "2026 // WORKSHOP // THE AGENT BLAZER CLUB SJEC",
+                title: "Prompt Engineering & Generative AI Workshop",
+                desc: "Participated in the Agent Blazer Club SJEC workshop exploring prompt engineering, generative AI tools, and AI ecosystem fundamentals.",
+                badge: "[workshop]",
+                full: {
                   title: "Prompt Engineering & Generative AI Workshop",
                   subtitle: "THE AGENT BLAZER CLUB SJEC",
                   date: "2026",
@@ -2116,57 +2017,16 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   description: "Participated in the Agent Blazer Club SJEC workshop exploring prompt engineering, generative AI tools, and AI ecosystem fundamentals.",
                   tags: ["Prompt Engineering", "Generative AI", "AI Ecosystem"],
                   link: "https://www.linkedin.com/posts/theagentblazerclubsjec_promptengineering-ai-generativeai-activity-7443638504024268800-BCPn?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
-                })}
-                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4  transition duration-300 cursor-pointer group/card relative"
-              >
-                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ffffff]/60 group-hover/card:text-[#ffffff] flex items-center gap-1">
-                  <span>[CLICK TO INSPECT]</span>
-                </div>
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="text-xs font-mono text-zinc-400">2026</span>
-                  <span className="text-[11px] font-mono text-[#ffffff] px-2.5 py-0.5 bg-[#ffffff]/10 border border-[#ffffff]/25 rounded">
-                    [workshop]
-                  </span>
-                </div>
-
-                <div className="space-y-1">
-                  <h3 className="text-2xl font-bold font-mono text-white">Prompt Engineering & Generative AI Workshop</h3>
-                  <p className="text-xs font-mono text-[#ffffff]">THE AGENT BLAZER CLUB SJEC</p>
-                </div>
-
-                <p className="text-sm font-sans text-zinc-300 leading-relaxed">
-                  Participated in the Agent Blazer Club SJEC workshop exploring prompt engineering, generative AI tools, and AI ecosystem fundamentals.
-                </p>
-
-                <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4" onClick={(e) => e.stopPropagation()}>
-                  <div className="flex flex-wrap gap-2">
-                    {["Prompt Engineering", "Generative AI", "AI Ecosystem"].map((tag, i) => (
-                      <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/60 border border-white/10 px-3 py-1 rounded">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <a 
-                    href="https://www.linkedin.com/posts/theagentblazerclubsjec_promptengineering-ai-generativeai-activity-7443638504024268800-BCPn?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs font-mono text-[#ffffff] hover:underline flex items-center gap-1.5"
-                  >
-                    <span>View LinkedIn Post</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            )}
-
-            {/* Timeline Item 5: AI for Techies */}
-            {(timelineCategory === "all" || timelineCategory === "workshop" || timelineCategory === "certified") && (
-            <div className="relative group">
-              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ffffff] ring-4 ring-[#ffffff]/20 group-hover:scale-125 transition"></div>
-              
-              <div 
-                onClick={() => setSelectedTimelineItem({
+                }
+              },
+              {
+                id: "techies",
+                cat: "certified",
+                date: "2025 – 2026 // CERTIFICATION // PROFESSIONAL DEVELOPMENT",
+                title: "AI for Techies Certification & Workshop",
+                desc: "Engaged in specialized training on 'AI for Techies', focusing on practical applications of machine learning, modern AI workflows, and software development integrations.",
+                badge: "[milestone]",
+                full: {
                   title: "AI for Techies Certification & Workshop",
                   subtitle: "PROFESSIONAL DEVELOPMENT",
                   date: "2025 – 2026",
@@ -2174,98 +2034,52 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   description: "Engaged in specialized training on 'AI for Techies', focusing on practical applications of machine learning, modern AI workflows, and software development integrations.",
                   tags: ["Artificial Intelligence", "Techies", "AI Workflows"],
                   link: "https://www.linkedin.com/posts/adithya-a-shetty-421097382_ai-for-techies-activity-7385958617696620544-FPR6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
-                })}
-                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4  transition duration-300 cursor-pointer group/card relative"
-              >
-                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ffffff]/60 group-hover/card:text-[#ffffff] flex items-center gap-1">
-                  <span>[CLICK TO INSPECT]</span>
-                </div>
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="text-xs font-mono text-zinc-400">2025 – 2026</span>
-                  <span className="text-[11px] font-mono text-[#ffffff] px-2.5 py-0.5 bg-[#ffffff]/10 border border-[#ffffff]/25 rounded">
-                    [milestone]
-                  </span>
-                </div>
-
-                <div className="space-y-1">
-                  <h3 className="text-2xl font-bold font-mono text-white">AI for Techies Certification & Workshop</h3>
-                  <p className="text-xs font-mono text-[#ffffff]">PROFESSIONAL DEVELOPMENT</p>
-                </div>
-
-                <p className="text-sm font-sans text-zinc-300 leading-relaxed">
-                  Engaged in specialized training on "AI for Techies", focusing on practical applications of machine learning, modern AI workflows, and software development integrations.
-                </p>
-
-                <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4" onClick={(e) => e.stopPropagation()}>
-                  <div className="flex flex-wrap gap-2">
-                    {["Artificial Intelligence", "Techies", "AI Workflows"].map((tag, i) => (
-                      <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/60 border border-white/10 px-3 py-1 rounded">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <a 
-                    href="https://www.linkedin.com/posts/adithya-a-shetty-421097382_ai-for-techies-activity-7385958617696620544-FPR6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs font-mono text-[#ffffff] hover:underline flex items-center gap-1.5"
-                  >
-                    <span>View LinkedIn Post</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            )}
-
-            {/* Timeline Item 6: Cisco NetAcad Python Essentials 1 */}
-            {(timelineCategory === "all" || timelineCategory === "education" || timelineCategory === "certified") && (
-            <div className="relative group">
-              <div className="absolute -left-[31px] sm:-left-[55px] top-2 w-4 h-4 rounded-full bg-black border-2 border-[#ffffff] ring-4 ring-[#ffffff]/20 group-hover:scale-125 transition"></div>
-              
-              <div 
-                onClick={() => setSelectedTimelineItem({
+                }
+              },
+              {
+                id: "python",
+                cat: "education",
+                date: "FOUNDATION // CERTIFICATION // CISCO NETWORKING ACADEMY",
+                title: "Python Essentials 1 (PE1)",
+                desc: "Learned fundamental concepts of computer programming, syntax, and data structures with Python. Note: Course completed, paid certification exam not taken.",
+                badge: "[python]",
+                full: {
                   title: "Python Essentials 1 (PE1)",
                   subtitle: "CISCO NETWORKING ACADEMY (30 Hours | 30 Labs)",
                   date: "Foundation",
                   badge: "[python]",
                   description: "Learned fundamental concepts of computer programming, syntax, and data structures with Python. Note: Course completed, paid certification exam not taken.",
                   tags: ["Python", "Programming Basics", "Procedural Programming", "30 Labs"]
-                })}
-                className="bg-[#141416] border border-white/15 hover:border-[#ffffff]/50 rounded-xl p-6 sm:p-8 space-y-4  transition duration-300 cursor-pointer group/card relative"
-              >
-                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#ffffff]/60 group-hover/card:text-[#ffffff] flex items-center gap-1">
-                  <span>[CLICK TO INSPECT]</span>
-                </div>
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="text-xs font-mono text-zinc-400">Foundation</span>
-                  <span className="text-[11px] font-mono text-[#ffffff] px-2.5 py-0.5 bg-[#ffffff]/10 border border-[#ffffff]/25 rounded">
-                    [python]
-                  </span>
-                </div>
+                }
+              }
+            ].map((item, index) => {
+              if (timelineCategory !== "all" && timelineCategory !== item.cat) return null;
+              return (
+                <div key={item.id} className="relative group">
+                  {/* Square node marker */}
+                  <div className="absolute -left-[31px] sm:-left-[55px] top-1.5 w-3.5 h-3.5 bg-black border-2 border-[#ffffff] group-hover:bg-[#ffffff] transition"></div>
+                  
+                  <div 
+                    onClick={() => setSelectedTimelineItem(item.full)}
+                    className="space-y-2 cursor-pointer p-4 -ml-4 rounded hover:bg-white/5 transition border-l border-transparent hover:border-[#ffffff]/40"
+                    style={{ animation: `fadeInUp 0.5s ease forwards ${index * 0.15}s`, opacity: 0 }}
+                  >
+                    <div className="text-xs font-mono text-[#ffffff] tracking-wider uppercase flex items-center gap-2">
+                      <span>{item.date}</span>
+                      <span className="text-red-500 font-bold animate-pulse">●</span>
+                    </div>
 
-                <div className="space-y-1">
-                  <h3 className="text-2xl font-bold font-mono text-white">Python Essentials 1 (PE1)</h3>
-                  <p className="text-xs font-mono text-[#ffffff]">CISCO NETWORKING ACADEMY (30 Hours | 30 Labs)</p>
-                </div>
+                    <h3 className="text-2xl font-bold font-mono text-white group-hover:text-[#ffffff] transition">
+                      {item.title}
+                    </h3>
 
-                <p className="text-sm font-sans text-zinc-300 leading-relaxed">
-                  Learned fundamental concepts of computer programming, syntax, and data structures with Python. Note: Course completed, paid certification exam not taken.
-                </p>
-
-                <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
-                  <div className="flex flex-wrap gap-2">
-                    {["Python", "Programming Basics", "Procedural Programming", "30 Labs"].map((tag, i) => (
-                      <span key={i} className="text-[11px] font-mono text-zinc-300 bg-black/60 border border-white/10 px-3 py-1 rounded">
-                        {tag}
-                      </span>
-                    ))}
+                    <p className="text-sm font-sans text-zinc-300 leading-relaxed max-w-3xl">
+                      {item.desc}
+                    </p>
                   </div>
-                  <span className="text-xs font-mono text-zinc-400 italic">Course Final Exam Completed</span>
                 </div>
-              </div>
-            </div>
-            )}
+              );
+            })}
 
           </div>
         </section>
