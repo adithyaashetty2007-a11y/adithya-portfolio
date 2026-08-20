@@ -419,3 +419,47 @@ button:hover, a:hover, [role="button"]:hover {
 .hover-glow-subtle:hover {
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
 }
+
+/* Sarthak Section Style with Green Neon Corner Plus Crosshairs */
+.sarthak-section {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 4rem 2rem;
+  margin-bottom: 3rem;
+  background: rgba(10, 10, 12, 0.6);
+  border-radius: 4px;
+}
+
+.sarthak-section::before,
+.sarthak-section::after {
+  content: "+";
+  position: absolute;
+  color: #ccff00;
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.sarthak-section::before {
+  top: -9px;
+  left: -9px;
+}
+
+.sarthak-section::after {
+  top: -9px;
+  right: -9px;
+}
+
+.sarthak-section-bottom-plus::before,
+.sarthak-section-bottom-plus::after {
+  content: "+";
+  position: absolute;
+  color: #ccff00;
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1u;
+  pointer-events: none;
+  z-index: 10;
+}
