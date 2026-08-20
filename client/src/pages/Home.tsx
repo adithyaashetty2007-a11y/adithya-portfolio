@@ -2082,11 +2082,11 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                       <span className="text-red-500 font-bold animate-pulse">●</span>
                     </div>
 
-                    <h3 className={`text-2xl font-bold font-mono text-red-500 group-hover:text-red-400 transition transform duration-500 ${timelineInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: `${index * 150}ms` }}>
+                    <h3 className="text-2xl font-bold font-mono text-red-500 group-hover:text-red-400 transition">
                       {item.title}
                     </h3>
 
-                    <p className={`text-sm font-mono text-red-400/90 leading-relaxed max-w-3xl transform duration-500 ${timelineInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: `${index * 150 + 100}ms` }}>
+                    <p className="text-sm font-mono text-red-400/90 leading-relaxed max-w-3xl">
                       {item.desc}
                     </p>
                   </div>
