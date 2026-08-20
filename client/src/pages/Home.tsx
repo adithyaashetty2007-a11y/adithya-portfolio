@@ -1687,6 +1687,84 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
 
 
+        {/* SARTHAK PRIYADARSHI PROFILE README & BADGE SHOWCASE SECTION */}
+        <section className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto relative">
+          <div className="space-y-2 mb-12">
+            <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 07. PROFILE README & SKILL BADGES</span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">GitHub Profile Stack & Stats</h2>
+          </div>
+
+          <div className="bg-[#141416] border border-[#ccff00]/30 rounded-2xl p-6 sm:p-10 space-y-8 glow-card relative">
+            <div className="absolute top-3 right-3 text-[#ccff00] font-mono text-xs">+</div>
+            <div className="absolute bottom-3 left-3 text-[#ccff00] font-mono text-xs">+</div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-mono font-bold text-white flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#ccff00] animate-ping"></span>
+                <span>PROFILE BIO // ADITHYA A SHETTY</span>
+              </h3>
+              <p className="text-zinc-300 font-sans leading-relaxed text-sm sm:text-base">
+                I am a Computer Science Engineering student at St. Joseph Engineering College, Mangaluru, currently in my 2nd semester. Eager to learn and apply new technology to production-level use. Skilled in C, C++, Python, and AI-assisted web development.
+              </p>
+            </div>
+
+            <div className="space-y-4 pt-4 border-t border-white/10">
+              <h4 className="text-xs font-mono text-[#ccff00] tracking-wider uppercase">// TECH STACK & TOOLS BADGES</h4>
+              <div className="flex flex-wrap gap-2.5">
+                {[
+                  { label: "PYTHON", color: "3776AB" },
+                  { label: "C++", color: "00599C" },
+                  { label: "C", color: "A8B9CC" },
+                  { label: "REACT", color: "61DAFB" },
+                  { label: "TYPESCRIPT", color: "3178C6" },
+                  { label: "TAILWIND", color: "38B2AC" },
+                  { label: "NODE.JS", color: "339933" },
+                  { label: "MONGODB", color: "47A248" },
+                  { label: "GIT", color: "F05032" },
+                  { label: "GITHUB", color: "181717" },
+                  { label: "VS CODE", color: "007ACC" },
+                  { label: "LINUX", color: "FCC624" }
+                ].map((badge, idx) => (
+                  <span key={idx} className="px-3 py-1 bg-black/60 border border-white/20 rounded-md text-xs font-mono text-white flex items-center gap-1.5 shadow">
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: `#${badge.color}` }}></span>
+                    {badge.label}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-4 pt-4 border-t border-white/10">
+              <h4 className="text-xs font-mono text-[#ccff00] tracking-wider uppercase">// ACTIVITY & STREAK STATS</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-black/60 border border-white/15 rounded-xl p-4 flex items-center justify-between">
+                  <div>
+                    <div className="text-xs font-mono text-zinc-400">LEETCODE PROBLEMS</div>
+                    <div className="text-2xl font-bold font-mono text-[#ccff00] mt-1">20+ Solved</div>
+                    <div className="text-[11px] text-zinc-500 font-mono">2-week active streak</div>
+                  </div>
+                  <Code2 className="w-8 h-8 text-[#ccff00] opacity-80" />
+                </div>
+                <div className="bg-black/60 border border-white/15 rounded-xl p-4 flex items-center justify-between">
+                  <div>
+                    <div className="text-xs font-mono text-zinc-400">GITHUB REPOSITORIES</div>
+                    <div className="text-2xl font-bold font-mono text-white mt-1">10+ Repos</div>
+                    <div className="text-[11px] text-zinc-500 font-mono">Library Management & YOLOv8n</div>
+                  </div>
+                  <Github className="w-8 h-8 text-white opacity-80" />
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-400">
+              <span>CONTACT: adithyaashetty2007@gmail.com</span>
+              <a href="https://github.com/adithyaashetty2007-a11y" target="_blank" rel="noopener noreferrer" className="text-[#ccff00] hover:underline flex items-center gap-1 font-bold">
+                <span>VIEW GITHUB PROFILE</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* PRACTICE WORK SECTION - HIGH-END CYBERPUNK STYLE */}
         <section className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto relative">
           <div className="space-y-2 mb-12">
