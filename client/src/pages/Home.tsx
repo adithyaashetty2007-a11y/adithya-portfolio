@@ -2064,17 +2064,17 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     className="space-y-2 cursor-pointer p-4 -ml-4 rounded hover:bg-white/5 transition border-l border-transparent hover:border-[#ffffff]/40"
                     style={{ animation: `fadeInUp 0.5s ease forwards ${index * 0.15}s`, opacity: 0 }}
                   >
-                    <div className="text-xs font-mono text-[#ffffff] tracking-wider uppercase flex items-center gap-2">
+                    <div className="text-xs font-mono text-red-500 tracking-wider uppercase flex items-center gap-2">
                       <span>{item.date}</span>
                       <span className="text-red-500 font-bold animate-pulse">●</span>
                     </div>
 
-                    <h3 className="text-2xl font-bold font-mono text-white group-hover:text-[#ffffff] transition">
-                      {item.title}
+                    <h3 className="text-2xl font-bold font-mono text-red-500 group-hover:text-red-400 transition">
+                      <TerminalTypingText text={item.title} speed={15} delay={index * 300} resetKey={typingKey} />
                     </h3>
 
-                    <p className="text-sm font-sans text-zinc-300 leading-relaxed max-w-3xl">
-                      {item.desc}
+                    <p className="text-sm font-mono text-red-400/90 leading-relaxed max-w-3xl">
+                      <TerminalTypingText text={item.desc} speed={8} delay={index * 300 + 400} resetKey={typingKey} />
                     </p>
                   </div>
                 </div>
