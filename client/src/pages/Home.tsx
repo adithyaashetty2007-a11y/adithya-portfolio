@@ -272,7 +272,16 @@ export default function Home() {
   const [timelineCategory, setTimelineCategory] = useState<string>("all");
   
   // Projects showcase state
-  const [projects, setProjects] = useState<ProjectItem[]>([]);
+  const [projects, setProjects] = useState<ProjectItem[]>([
+    {
+      id: "library-system",
+      title: "LIBRARY MANAGEMENT SYSTEM",
+      description: "A robust Python-based Library Management System designed to handle book inventory, member records, borrowing transactions, and search queries efficiently.",
+      imageUrl: "",
+      githubUrl: "https://github.com/adithyaashetty2007-a11y/LibraryManagementSystem",
+      techStack: "Python, CLI, SQLite, Data Structures"
+    }
+  ]);
   const [selectedProjectImage, setSelectedProjectImage] = useState<string | null>(null);
   const [selectedProfileImage, setSelectedProfileImage] = useState<string | null>(null);
   const [selectedTimelineItem, setSelectedTimelineItem] = useState<{
