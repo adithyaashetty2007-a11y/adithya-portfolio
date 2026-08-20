@@ -2070,11 +2070,11 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     </div>
 
                     <h3 className="text-2xl font-bold font-mono text-red-500 group-hover:text-red-400 transition">
-                      <TerminalTypingText text={item.title} speed={15} delay={index * 300} resetKey={typingKey} />
+                      {item.title}
                     </h3>
 
                     <p className="text-sm font-mono text-red-400/90 leading-relaxed max-w-3xl">
-                      <TerminalTypingText text={item.desc} speed={8} delay={index * 300 + 400} resetKey={typingKey} />
+                      {item.desc}
                     </p>
                   </div>
                 </div>
