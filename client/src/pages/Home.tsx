@@ -1120,68 +1120,79 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           </div>
         </section>
 
-        {/* ABOUT SECTION */}
+        {/* ABOUT SECTION - REDESIGNED WITH SARTHAK PRIYADARSHI BENCHMARK STAT CARDS */}
         <section id="about" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
             <span className="text-xs font-mono text-[#ccff00] uppercase tracking-widest">// 01. BACKGROUND & GROWTH</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">About Adithya</h2>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">About_Me</h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            <div className="lg:col-span-7 space-y-6 text-zinc-300 leading-relaxed font-sans text-base sm:text-lg">
-              <p>
-                Hello! I am <strong className="text-white font-semibold">Adithya A Shetty</strong>. I have successfully completed my second semester of engineering, showing consistent academic improvement with an <strong className="text-emerald-400 font-semibold">8.05 SGPA in Sem 2</strong> (up from <strong className="text-white">7.5 SGPA in Sem 1</strong>).
-              </p>
-              <p>
-                I am building my foundation in programming with college-level basics in C, C++, and Python. I started practicing Data Structures and Algorithms (DSA) in C++ 2 weeks ago, and I have already solved 20+ problems on LeetCode.
-              </p>
-              <div className="grid grid-cols-2 gap-4 pt-4">
-                <div className="p-4 rounded-lg bg-[#141416] border border-white/10">
-                  <h4 className="text-white font-mono text-sm font-bold mb-1">Academic Growth</h4>
-                  <p className="text-xs text-zinc-400">Sem 1: 7.5 SGPA → Sem 2: 8.05 SGPA (Consistent improvement).</p>
-                </div>
-                <div className="p-4 rounded-lg bg-[#141416] border border-white/10">
-                  <h4 className="text-white font-mono text-sm font-bold mb-1">DSA in C++ (2 Weeks)</h4>
-                  <p className="text-xs text-zinc-400">Started DSA 2 weeks ago in C++, with 20+ LeetCode problems solved so far.</p>
-                </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            {/* Left Box: Main Bio & Technical Focus */}
+            <div className="lg:col-span-8 bg-[#141416] border border-white/15 rounded-2xl p-8 flex flex-col justify-between relative glow-card group">
+              <div className="absolute top-3 right-3 text-[#ccff00] font-mono text-xs">+</div>
+              <div className="absolute bottom-3 left-3 text-[#ccff00] font-mono text-xs">+</div>
+              
+              <div className="space-y-6 text-zinc-300 leading-relaxed font-sans text-base sm:text-lg">
+                <p>
+                  Hello! I am <strong className="text-white font-semibold">Adithya A Shetty</strong>, a Computer Science Engineering student at St. Joseph Engineering College, Mangaluru, currently in my 2nd semester. I successfully completed my second semester with consistent academic improvement, achieving an <strong className="text-emerald-400 font-semibold">8.05 SGPA in Sem 2</strong> (up from <strong className="text-white">7.5 SGPA in Sem 1</strong>).
+                </p>
+                <p>
+                  I am building my technical foundation with college-level basics in C, C++, and Python, while actively solving Data Structures and Algorithms (DSA) problems in C++ (20+ LeetCode problems solved). I focus on building responsive frontends, exploring AI & Computer Vision projects like YOLOv8n, and leveraging modern AI-assisted development tools.
+                </p>
+                <p className="text-zinc-400 text-sm font-mono">
+                  I stay ahead of emerging tech trends by participating in hackathons, workshops, and continuous real-world project development.
+                </p>
+              </div>
+
+              <div className="pt-8 mt-6 border-t border-white/10 flex flex-wrap gap-3 font-mono text-xs">
+                <span className="text-[#ccff00] bg-[#ccff00]/10 border border-[#ccff00]/30 px-3 py-1 rounded">→ C / C++ / PYTHON</span>
+                <span className="text-[#ccff00] bg-[#ccff00]/10 border border-[#ccff00]/30 px-3 py-1 rounded">→ WEB DEVELOPMENT</span>
+                <span className="text-[#ccff00] bg-[#ccff00]/10 border border-[#ccff00]/30 px-3 py-1 rounded">→ AI & COMPUTER VISION</span>
+                <span className="text-[#ccff00] bg-[#ccff00]/10 border border-[#ccff00]/30 px-3 py-1 rounded">→ DSA IN C++</span>
               </div>
             </div>
 
-            <div className="lg:col-span-5 bg-[#141416] border border-white/10 rounded-xl p-6 space-y-6">
-              <h3 className="font-mono text-sm text-white font-bold tracking-wider uppercase border-b border-white/10 pb-3 flex items-center gap-2">
-                <User className="w-4 h-4 text-zinc-400" />
-                Quick Profile Spec
-              </h3>
-              <ul className="space-y-4 font-mono text-xs sm:text-sm">
-                <li className="flex justify-between border-b border-white/5 pb-2">
-                  <span className="text-zinc-500">Full Name:</span>
-                  <span className="text-white font-semibold">Adithya A Shetty</span>
-                </li>
-                <li className="flex justify-between border-b border-white/5 pb-2">
-                  <span className="text-zinc-500">Sem 2 SGPA:</span>
-                  <span className="text-emerald-400 font-bold">8.05 (Improved)</span>
-                </li>
-                <li className="flex justify-between border-b border-white/5 pb-2">
-                  <span className="text-zinc-500">Sem 1 SGPA:</span>
-                  <span className="text-white">7.5</span>
-                </li>
-                <li className="flex justify-between border-b border-white/5 pb-2">
-                  <span className="text-zinc-500">Phone:</span>
-                  <span className="text-white">8088814686</span>
-                </li>
-                <li className="flex justify-between border-b border-white/5 pb-2">
-                  <span className="text-zinc-500">GitHub:</span>
-                  <a href="https://github.com/adithyaashetty2007-a11y" target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-zinc-300">
-                    adithyaashetty2007-a11y
-                  </a>
-                </li>
-                <li className="flex justify-between pb-2">
-                  <span className="text-zinc-500">LinkedIn:</span>
-                  <a href="https://www.linkedin.com/in/adithya-a-shetty-421097382" target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-zinc-300 truncate max-w-[180px]">
-                    /in/adithya-a-shetty
-                  </a>
-                </li>
-              </ul>
+            {/* Right Box: Sarthak Priyadarshi Style Metric Stack Cards */}
+            <div className="lg:col-span-4 flex flex-col gap-4">
+              {/* Stat 1: LeetCode Ranking / Score */}
+              <div className="bg-[#141416] border border-[#ccff00]/30 rounded-xl p-6 relative glow-card group flex items-center justify-between">
+                <div className="absolute top-2 right-2 text-[#ccff00] font-mono text-[10px]">+</div>
+                <div>
+                  <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest">LEETCODE & DSA</div>
+                  <div className="text-2xl sm:text-3xl font-extrabold font-almie text-[#ccff00] mt-1">20+ SOLVED</div>
+                  <div className="text-xs text-zinc-400 font-mono mt-0.5">Active 2-week streak</div>
+                </div>
+                <div className="p-3 bg-[#ccff00]/10 border border-[#ccff00]/30 rounded-lg text-[#ccff00]">
+                  <Code2 className="w-6 h-6" />
+                </div>
+              </div>
+
+              {/* Stat 2: Certifications */}
+              <div className="bg-[#141416] border border-white/15 rounded-xl p-6 relative glow-card group flex items-center justify-between">
+                <div className="absolute top-2 right-2 text-[#ccff00] font-mono text-[10px]">+</div>
+                <div>
+                  <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest">VERIFIED CREDENTIALS</div>
+                  <div className="text-2xl sm:text-3xl font-extrabold font-almie text-white mt-1">7+ CERTS</div>
+                  <div className="text-xs text-zinc-400 font-mono mt-0.5">CS50W, Python, AI Workshops</div>
+                </div>
+                <div className="p-3 bg-white/5 border border-white/20 rounded-lg text-white">
+                  <Award className="w-6 h-6" />
+                </div>
+              </div>
+
+              {/* Stat 3: Hackathons & Vibeathons */}
+              <div className="bg-[#141416] border border-white/15 rounded-xl p-6 relative glow-card group flex items-center justify-between">
+                <div className="absolute top-2 right-2 text-[#ccff00] font-mono text-[10px]">+</div>
+                <div>
+                  <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest">HACKATHONS</div>
+                  <div className="text-2xl sm:text-3xl font-extrabold font-almie text-white mt-1">1+ HACKATHON</div>
+                  <div className="text-xs text-zinc-400 font-mono mt-0.5">Polaris Replit Vibeathon</div>
+                </div>
+                <div className="p-3 bg-white/5 border border-white/20 rounded-lg text-[#ccff00]">
+                  <Cpu className="w-6 h-6" />
+                </div>
+              </div>
             </div>
           </div>
         </section>
