@@ -468,3 +468,33 @@ button:hover, a:hover, [role="button"]:hover {
 .sarthak-section, .glass-panel, button, input, textarea, .card {
   border-radius: 0px !important;
 }
+
+/* Universal Sharp Square & Neon Plus Corner Markers */
+.sharp-card {
+  border-radius: 0px !important;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #141416;
+}
+
+.sharp-card::before,
+.sharp-card::after {
+  content: "+";
+  position: absolute;
+  color: #ccff00;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.sharp-card::before {
+  top: -8px;
+  left: -8px;
+}
+
+.sharp-card::after {
+  top: -8px;
+  right: -8px;
+}
