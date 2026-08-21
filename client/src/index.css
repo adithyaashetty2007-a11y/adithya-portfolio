@@ -616,3 +616,28 @@ section {
 .animate-text-split-left {
   animation: textSplitLeft 2.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }
+
+/* Responsive portfolio polish: phones and tablets */
+html { overflow-x: hidden; scroll-padding-top: 4.5rem; }
+body { overflow-x: hidden; }
+@media (max-width: 767px) {
+  main { padding-top: 4rem; }
+  section { scroll-margin-top: 4rem; }
+  section[id] { padding-left: 1rem !important; padding-right: 1rem !important; }
+  section[id] > .space-y-2, section[id] > .flex.flex-col { margin-bottom: 2rem !important; }
+  h1 { font-size: clamp(2.35rem, 13vw, 4rem) !important; overflow-wrap: anywhere; }
+  h2 { font-size: clamp(1.8rem, 9vw, 3rem) !important; line-height: 0.98 !important; overflow-wrap: anywhere; }
+  .max-w-7xl, .max-w-6xl, .max-w-5xl { max-width: 100%; }
+  button, a { touch-action: manipulation; }
+  .grid { min-width: 0; }
+  pre, code, textarea { max-width: 100%; overflow-x: auto; }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  section[id] { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .max-w-7xl, .max-w-6xl, .max-w-5xl { max-width: 100%; }
+}
+@media (max-width: 639px) {
+  header .max-w-7xl { padding-left: 0.75rem; padding-right: 0.75rem; }
+  header .font-mono.font-bold { font-size: 0.75rem; letter-spacing: 0.06em; }
+  .text-xs { line-height: 1.35; }
+}
