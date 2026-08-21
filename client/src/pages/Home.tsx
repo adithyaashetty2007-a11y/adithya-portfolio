@@ -1664,11 +1664,9 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         </section>
 
         {/* CERTIFICATIONS SECTION - CREDENTIALS_VAULT */}
-        <section id="certifications" className="sarthak-section py-24 px-4 sm:px-8 max-w-6xl mx-auto relative">
+        <section id="certifications" className="sarthak-section py-16 px-4 sm:px-8 max-w-6xl mx-auto relative">
           <div className="absolute -bottom-3 -left-3 text-[#ccff00] font-mono text-base pointer-events-none">+</div>
           <div className="absolute -bottom-3 -right-3 text-[#ccff00] font-mono text-base pointer-events-none">+</div>
-
-
 
           {/* Top Vault Header Row */}
           <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
