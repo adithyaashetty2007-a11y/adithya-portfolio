@@ -873,8 +873,12 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             <div className="lg:col-span-7 space-y-6 text-left">
 
 
-              <div className="inline-block px-3 py-1 bg-zinc-900 border border-[#ccff00]/50 text-[#ccff00] font-mono text-xs tracking-wider uppercase font-bold">
-                3RD SEM STUDENT // CSE
+              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-black border border-red-500/70 text-red-400 font-mono text-xs tracking-widest uppercase font-bold shadow-[0_0_15px_rgba(239,68,68,0.3)]">
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500 shadow-[0_0_8px_#ef4444]"></span>
+                </span>
+                <span>3RD SEM STUDENT // CSE</span>
               </div>
 
               <div className="space-y-1">
