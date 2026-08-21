@@ -1403,49 +1403,99 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
         {/* FUTURE ROADMAP & TARGETS SECTION */}
         <section id="dsa" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
-          <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 02. FUTURE_ROADMAP & TARGETS</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ffffff] tracking-tight">2nd Year Engineering Goals</h2>
-            <p className="text-sm font-mono text-zinc-400">Strategic roadmap for mastering Data Structures, LeetCode milestones, and Core CS engineering.</p>
+          {/* Cybernetic Telemetry Banner */}
+          <div className="relative mb-12 rounded-2xl overflow-hidden border border-white/25 bg-[#121214] p-6 sm:p-8 shadow-[0_0_35px_rgba(255,255,255,0.06)]">
+            <div className="absolute top-2 right-2 text-white font-mono text-xs">+</div>
+            <div className="absolute bottom-2 left-2 text-white font-mono text-xs">+</div>
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-black pointer-events-none"></div>
+            <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+              <div className="space-y-3 text-left w-full lg:max-w-2xl">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 border border-white/20 text-white font-mono text-xs rounded-full">
+                  <span className="w-2 h-2 rounded-full bg-white animate-ping"></span>
+                  CONSOLE // TARGET_MATRIX_ACTIVE
+                </div>
+                <h2 className="text-2xl sm:text-4xl font-extrabold font-almie text-white tracking-tight">2nd Year Engineering Goals</h2>
+                <p className="text-xs sm:text-sm font-mono text-zinc-300 leading-relaxed">
+                  Strategic tactical roadmap for mastering Data Structures, LeetCode milestones, Operating Systems, and applied AI systems at SJEC.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-3 w-full lg:w-auto">
+                <div className="px-4 py-3 bg-black/70 border border-white/20 rounded-xl text-center font-mono">
+                  <div className="text-[10px] sm:text-xs text-zinc-400">LEETCODE TARGET</div>
+                  <div className="text-xs sm:text-sm text-white font-bold">150+ SOLVING</div>
+                </div>
+                <div className="px-4 py-3 bg-black/70 border border-white/20 rounded-xl text-center font-mono">
+                  <div className="text-[10px] sm:text-xs text-zinc-400">EXECUTION STATUS</div>
+                  <div className="text-xs sm:text-sm text-white font-bold">OPTIMIZED</div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-[#141416] border border-white/10 rounded-xl p-6 relative overflow-hidden group hover:border-[#ffffff]/50 transition">
-              <div className="absolute top-3 right-3 text-[#ffffff]/20 font-mono text-xs">TARGET_01</div>
-              <div className="text-emerald-400 font-mono text-xs uppercase mb-2 font-semibold">DSA Mastery in C++</div>
+            <div className="bg-[#141416] border border-white/20 rounded-xl p-6 relative overflow-hidden group hover:border-white transition shadow-xl">
+              <div className="absolute top-3 right-3 text-white/40 font-mono text-xs">+</div>
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-[10px] font-mono text-white uppercase tracking-wider bg-white/10 px-2 py-0.5 rounded border border-white/20">TARGET_01</span>
+                <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+              </div>
+              <div className="text-emerald-400 font-mono text-xs uppercase mb-1 font-semibold">DSA Mastery in C++</div>
               <div className="text-xl font-bold font-mono text-white mb-2">Advanced Structures</div>
-              <p className="text-xs text-zinc-400 leading-relaxed mb-4">
-                Transitioning from basic arrays and strings to advanced data structures (Trees, Graphs, Heaps, Dynamic Programming) with rigorous C++ implementation.
+              <p className="text-xs text-zinc-300 leading-relaxed mb-4 font-mono">
+                Transitioning from basic arrays and strings to advanced data structures (Trees, Graphs, Heaps, DP) with rigorous C++ implementation.
               </p>
-              <div className="pt-4 border-t border-white/10 flex justify-between text-[11px] font-mono">
-                <span className="text-[#ffffff]">Target: 150+ LeetCode</span>
-                <span className="text-zinc-400">In Progress</span>
+              <div className="space-y-2 pt-2 border-t border-white/10 font-mono text-xs">
+                <div className="flex justify-between text-zinc-400">
+                  <span>Progress</span>
+                  <span className="text-white font-bold">75%</span>
+                </div>
+                <div className="w-full bg-black/60 h-2 rounded-full overflow-hidden border border-white/20">
+                  <div className="bg-white h-full w-[75%] rounded-full animate-pulse"></div>
+                </div>
               </div>
             </div>
 
-            <div className="bg-[#141416] border border-white/10 rounded-xl p-6 relative overflow-hidden group hover:border-[#ffffff]/50 transition">
-              <div className="absolute top-3 right-3 text-[#ffffff]/20 font-mono text-xs">TARGET_02</div>
-              <div className="text-blue-400 font-mono text-xs uppercase mb-2 font-semibold">Core CS & System Design</div>
+            <div className="bg-[#141416] border border-white/20 rounded-xl p-6 relative overflow-hidden group hover:border-white transition shadow-xl">
+              <div className="absolute top-3 right-3 text-white/40 font-mono text-xs">+</div>
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-[10px] font-mono text-white uppercase tracking-wider bg-white/10 px-2 py-0.5 rounded border border-white/20">TARGET_02</span>
+                <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+              </div>
+              <div className="text-blue-400 font-mono text-xs uppercase mb-1 font-semibold">Core CS & System Design</div>
               <div className="text-xl font-bold font-mono text-white mb-2">OS & Architecture</div>
-              <p className="text-xs text-zinc-400 leading-relaxed mb-4">
-                Deepening understanding of Operating Systems, Database Management Systems (DBMS), Computer Networks, and low-level software execution principles at SJEC.
+              <p className="text-xs text-zinc-300 leading-relaxed mb-4 font-mono">
+                Deepening understanding of Operating Systems, Database Management Systems (DBMS), Computer Networks, and low-level execution principles.
               </p>
-              <div className="pt-4 border-t border-white/10 flex justify-between text-[11px] font-mono">
-                <span className="text-blue-400">Semester Focus</span>
-                <span className="text-zinc-400">Upcoming</span>
+              <div className="space-y-2 pt-2 border-t border-white/10 font-mono text-xs">
+                <div className="flex justify-between text-zinc-400">
+                  <span>Semester Focus</span>
+                  <span className="text-white font-bold">Active</span>
+                </div>
+                <div className="w-full bg-black/60 h-2 rounded-full overflow-hidden border border-white/20">
+                  <div className="bg-blue-400 h-full w-[60%] rounded-full animate-pulse"></div>
+                </div>
               </div>
             </div>
 
-            <div className="bg-[#141416] border border-white/10 rounded-xl p-6 relative overflow-hidden group hover:border-[#ffffff]/50 transition">
-              <div className="absolute top-3 right-3 text-[#ffffff]/20 font-mono text-xs">TARGET_03</div>
-              <div className="text-purple-400 font-mono text-xs uppercase mb-2 font-semibold">AI & Full-Stack Prototyping</div>
+            <div className="bg-[#141416] border border-white/20 rounded-xl p-6 relative overflow-hidden group hover:border-white transition shadow-xl">
+              <div className="absolute top-3 right-3 text-white/40 font-mono text-xs">+</div>
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-[10px] font-mono text-white uppercase tracking-wider bg-white/10 px-2 py-0.5 rounded border border-white/20">TARGET_03</span>
+                <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+              </div>
+              <div className="text-purple-400 font-mono text-xs uppercase mb-1 font-semibold">AI & Full-Stack Prototyping</div>
               <div className="text-xl font-bold font-mono text-white mb-2">Applied AI Systems</div>
-              <p className="text-xs text-zinc-400 leading-relaxed mb-4">
+              <p className="text-xs text-zinc-300 leading-relaxed mb-4 font-mono">
                 Building production-grade AI tools, computer vision scripts (YOLOv8), and modern web applications with responsive interfaces and robust backend integration.
               </p>
-              <div className="pt-4 border-t border-white/10 flex justify-between text-[11px] font-mono">
-                <span className="text-purple-400">Goal: 5+ Major Apps</span>
-                <span className="text-zinc-400">Active</span>
+              <div className="space-y-2 pt-2 border-t border-white/10 font-mono text-xs">
+                <div className="flex justify-between text-zinc-400">
+                  <span>Deployment</span>
+                  <span className="text-white font-bold">90%</span>
+                </div>
+                <div className="w-full bg-black/60 h-2 rounded-full overflow-hidden border border-white/20">
+                  <div className="bg-purple-400 h-full w-[90%] rounded-full animate-pulse"></div>
+                </div>
               </div>
             </div>
           </div>
