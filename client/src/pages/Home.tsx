@@ -1120,9 +1120,9 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           </div>
 
           {/* Streamlined Executive Bento Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
             {/* Bento Cell 1: Main Bio Card with Interactive Tabs (Span 8) */}
-            <div className="md:col-span-8 bg-[#141416] border border-white/15 rounded-2xl p-6 sm:p-8 flex flex-col relative group overflow-hidden">
+            <div className="md:col-span-8 h-fit bg-[#141416] border border-white/15 rounded-2xl p-6 sm:p-8 flex flex-col relative group overflow-hidden">
               <div className="absolute top-3 right-3 text-white/40 font-mono text-xs">+</div>
               <div className="absolute bottom-3 left-3 text-white/40 font-mono text-xs">+</div>
               <div className="absolute -right-12 -top-12 w-48 h-48 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
@@ -1204,7 +1204,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             </div>
 
             {/* Bento Cell 2: Legendary Metric - Certifications (Span 4) with Cyberpunk Banner Accent */}
-            <div className="md:col-span-4 bg-gradient-to-br from-[#18181b] to-[#09090b] border border-white/20 rounded-2xl p-6 flex flex-col relative group hover-lift overflow-hidden shadow-2xl">
+            <div className="md:col-span-4 h-fit bg-gradient-to-br from-[#18181b] to-[#09090b] border border-white/20 rounded-2xl p-6 flex flex-col relative group hover-lift overflow-hidden shadow-2xl">
               <div className="absolute top-3 right-3 text-white/60 font-mono text-xs">+</div>
               <div className="absolute -right-10 -bottom-10 w-32 h-32 bg-white/5 rounded-full blur-2xl pointer-events-none"></div>
               
