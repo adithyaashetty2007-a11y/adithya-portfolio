@@ -1082,7 +1082,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         </section>
 
         {/* ABOUT SECTION - REDESIGNED ASYMMETRIC BENTO GRID */}
-        <section id="about" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
+        <section id="about" className="pt-0 pb-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           {/* Cyberpunk About Me Banner */}
           <div className="relative mb-12 rounded-2xl overflow-hidden border border-[#ffffff]/30 bg-[#121214] p-5 sm:p-8 shadow-[0_0_30px_rgba(255,255,255,0.08)]">
             <div className="absolute top-2 right-2 text-[#ffffff] font-mono text-xs">+</div>
