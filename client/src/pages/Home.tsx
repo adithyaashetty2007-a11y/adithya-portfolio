@@ -1626,12 +1626,13 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               <div className="space-y-4">
                 <div 
                   onClick={() => setSelectedProjectImage("/adithya-portfolio/traffic-density-banner.png")}
-                  className="h-56 bg-black overflow-hidden relative border-b border-white/10 cursor-pointer group/img"
+                  className="aspect-[2/1] bg-black overflow-hidden relative border-b border-white/10 cursor-pointer group/img"
                 >
                   <img 
                     src="/adithya-portfolio/traffic-density-banner.png" 
                     alt="YOLOv8n Traffic Density Estimation Banner" 
                     className="w-full h-full object-cover group-hover/img:scale-105 transition duration-500" 
+                    onError={(e) => e.currentTarget.parentElement?.classList.add("hidden")}
                   />
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-xs font-mono text-[#ffffff] gap-1.5 font-bold">
                     <ImageIcon className="w-4 h-4" /> CLICK TO VIEW FULL BANNER
@@ -1676,9 +1677,9 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     {proj.imageUrl ? (
                       <div 
                         onClick={() => setSelectedProjectImage(proj.imageUrl)}
-                        className="h-56 bg-black overflow-hidden relative cursor-pointer border-b border-white/10 group/img"
+                        className="aspect-[2/1] bg-black overflow-hidden relative cursor-pointer border-b border-white/10 group/img"
                       >
-                        <img src={proj.imageUrl} alt={proj.title} className="w-full h-full object-cover group-hover/img:scale-105 transition duration-500" />
+                        <img src={proj.imageUrl} alt={proj.title} className="w-full h-full object-cover group-hover/img:scale-105 transition duration-500" onError={(e) => e.currentTarget.parentElement?.classList.add("hidden")} />
                         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-xs font-mono text-[#ffffff] gap-1.5 font-bold">
                           <ImageIcon className="w-4 h-4" /> VIEW FULL SCREENSHOT
                         </div>
