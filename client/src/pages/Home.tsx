@@ -2113,153 +2113,162 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             <p className="text-sm font-mono text-zinc-400">Where I've been and what I've built along the way.</p>
           </div>
 
-          <div className="relative wrap overflow-hidden py-10 pl-6 md:pl-0">
-            {/* Background track rail (straight vertical on mobile, centered on desktop) */}
-            <div className="absolute border-l-2 border-red-500/30 h-full left-6 md:left-1/2 transform -translate-x-1/2 top-0"></div>
+          <div className="mt-8 bg-[#121214] border border-red-500/30 rounded-none overflow-hidden shadow-2xl relative">
+            {/* Terminal Window Top Bar */}
+            <div className="bg-black/90 px-4 py-3 border-b border-red-500/30 flex flex-wrap items-center justify-between gap-4">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-500 shadow-[0_0_8px_#ef4444]"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+                <span className="ml-2 text-xs font-mono text-red-400">~/dossier/career_history.sys</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs font-mono">
+                <span className="text-zinc-400">STATUS:</span>
+                <span className="text-red-400 font-bold animate-pulse">STREAM_ACTIVE</span>
+              </div>
+            </div>
 
-            {/* Scroll-filling glowing red progress rail */}
-            <div 
-              className="absolute border-l-2 border-red-500 left-6 md:left-1/2 transform -translate-x-1/2 top-0 transition-all duration-150 shadow-[0_0_15px_rgba(239,68,68,0.9)]"
-              style={{ height: `${timelineScrollProgress}%` }}
-            ></div>
-
-            {[
-              {
-                id: "internship",
-                cat: "experience",
-                date: "JULY 2026 – PRESENT // INTERNSHALA & INAMIGOS",
-                title: "AI Web Development Intern",
-                desc: "Contributed to a practical AI Web Development program focused on AI-assisted web development, rapid prototyping, debugging, and modern AI coding tools.",
-                badge: "[main]",
-                full: {
+            {/* Console Content Stream */}
+            <div className="p-6 sm:p-8 space-y-6">
+              {[
+                {
+                  id: "internship",
+                  cat: "experience",
+                  date: "JULY 2026 – PRESENT // INTERNSHALA & INAMIGOS",
                   title: "AI Web Development Intern",
-                  subtitle: "INTERNSHALA & INAMIGOS FOUNDATION",
-                  date: "July 2026 – Present",
+                  desc: "Contributed to a practical AI Web Development program focused on AI-assisted web development, rapid prototyping, debugging, and modern AI coding tools.",
                   badge: "[main]",
-                  description: "Contributed to a practical AI Web Development program focused on AI-assisted web development, rapid prototyping, debugging, and modern AI coding tools.",
-                  tags: ["AI Web Dev", "InAmigos Foundation", "Internshala", "Rapid Prototyping"],
-                  link: "https://internshala.com/verify_certificate"
-                }
-              },
-              {
-                id: "cse",
-                cat: "education",
-                date: "SEPTEMBER 2026 – PRESENT // ST. JOSEPH ENGINEERING COLLEGE",
-                title: "2nd Year Computer Science Engineering",
-                desc: "Currently pursuing 2nd year BE in Computer Science Engineering. Actively mastering Data Structures & Algorithms in C++, AI vibecoding, and building modern web applications.",
-                badge: "[current]",
-                full: {
+                  full: {
+                    title: "AI Web Development Intern",
+                    subtitle: "INTERNSHALA & INAMIGOS FOUNDATION",
+                    date: "July 2026 – Present",
+                    badge: "[main]",
+                    description: "Contributed to a practical AI Web Development program focused on AI-assisted web development, rapid prototyping, debugging, and modern AI coding tools.",
+                    tags: ["AI Web Dev", "InAmigos Foundation", "Internshala", "Rapid Prototyping"],
+                    link: "https://internshala.com/verify_certificate"
+                  }
+                },
+                {
+                  id: "cse",
+                  cat: "education",
+                  date: "SEPTEMBER 2026 – PRESENT // ST. JOSEPH ENGINEERING COLLEGE",
                   title: "2nd Year Computer Science Engineering",
-                  subtitle: "ST. JOSEPH ENGINEERING COLLEGE, MANGALURU",
-                  date: "September 2026 – Present",
+                  desc: "Currently pursuing 2nd year BE in Computer Science Engineering. Actively mastering Data Structures & Algorithms in C++, AI vibecoding, and building modern web applications.",
                   badge: "[current]",
-                  description: "Currently pursuing 2nd year BE in Computer Science Engineering. Actively mastering Data Structures & Algorithms in C++, AI vibecoding, and building modern web applications.",
-                  tags: ["DSA in C++", "AI Vibecoding", "Web Development", "LeetCode"]
-                }
-              },
-              {
-                id: "cs50w",
-                cat: "certified",
-                date: "2026 // HARVARDX (HARVARD UNIVERSITY)",
-                title: "CS50's Web Programming with Python and JavaScript",
-                desc: "Completed rigorous coursework in web programming covering Python, JavaScript, Django, and modern frontend-backend integration concepts.",
-                badge: "[certified]",
-                full: {
+                  full: {
+                    title: "2nd Year Computer Science Engineering",
+                    subtitle: "ST. JOSEPH ENGINEERING COLLEGE, MANGALURU",
+                    date: "September 2026 – Present",
+                    badge: "[current]",
+                    description: "Currently pursuing 2nd year BE in Computer Science Engineering. Actively mastering Data Structures & Algorithms in C++, AI vibecoding, and building modern web applications.",
+                    tags: ["DSA in C++", "AI Vibecoding", "Web Development", "LeetCode"]
+                  }
+                },
+                {
+                  id: "cs50w",
+                  cat: "certified",
+                  date: "2026 // HARVARDX (HARVARD UNIVERSITY)",
                   title: "CS50's Web Programming with Python and JavaScript",
-                  subtitle: "HARVARDX (HARVARD UNIVERSITY)",
-                  date: "2026",
+                  desc: "Completed rigorous coursework in web programming covering Python, JavaScript, Django, and modern frontend-backend integration concepts.",
                   badge: "[certified]",
-                  description: "Completed rigorous coursework in web programming covering Python, JavaScript, Django, and modern frontend-backend integration concepts.",
-                  tags: ["Python", "JavaScript", "Django", "Web Dev"],
-                  link: "https://www.linkedin.com/posts/adithya-a-shetty-421097382_cs50s-web-programming-with-python-and-javascript-activity-7430943036278439936-2q8h?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
-                }
-              },
-              {
-                id: "prompt",
-                cat: "workshop",
-                date: "2026 // THE AGENT BLAZER CLUB SJEC",
-                title: "Prompt Engineering & Generative AI Workshop",
-                desc: "Participated in the Agent Blazer Club SJEC workshop exploring prompt engineering, generative AI tools, and AI ecosystem fundamentals.",
-                badge: "[workshop]",
-                full: {
+                  full: {
+                    title: "CS50's Web Programming with Python and JavaScript",
+                    subtitle: "HARVARDX (HARVARD UNIVERSITY)",
+                    date: "2026",
+                    badge: "[certified]",
+                    description: "Completed rigorous coursework in web programming covering Python, JavaScript, Django, and modern frontend-backend integration concepts.",
+                    tags: ["Python", "JavaScript", "Django", "Web Dev"],
+                    link: "https://www.linkedin.com/posts/adithya-a-shetty-421097382_cs50s-web-programming-with-python-and-javascript-activity-7430943036278439936-2q8h?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
+                  }
+                },
+                {
+                  id: "prompt",
+                  cat: "workshop",
+                  date: "2026 // THE AGENT BLAZER CLUB SJEC",
                   title: "Prompt Engineering & Generative AI Workshop",
-                  subtitle: "THE AGENT BLAZER CLUB SJEC",
-                  date: "2026",
+                  desc: "Participated in the Agent Blazer Club SJEC workshop exploring prompt engineering, generative AI tools, and AI ecosystem fundamentals.",
                   badge: "[workshop]",
-                  description: "Participated in the Agent Blazer Club SJEC workshop exploring prompt engineering, generative AI tools, and AI ecosystem fundamentals.",
-                  tags: ["Prompt Engineering", "Generative AI", "AI Ecosystem"],
-                  link: "https://www.linkedin.com/posts/theagentblazerclubsjec_promptengineering-ai-generativeai-activity-7443638504024268800-BCPn?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
-                }
-              },
-              {
-                id: "techies",
-                cat: "certified",
-                date: "2025 – 2026 // PROFESSIONAL DEVELOPMENT",
-                title: "AI for Techies Certification & Workshop",
-                desc: "Engaged in specialized training on 'AI for Techies', focusing on practical applications of machine learning, modern AI workflows, and software development integrations.",
-                badge: "[milestone]",
-                full: {
+                  full: {
+                    title: "Prompt Engineering & Generative AI Workshop",
+                    subtitle: "THE AGENT BLAZER CLUB SJEC",
+                    date: "2026",
+                    badge: "[workshop]",
+                    description: "Participated in the Agent Blazer Club SJEC workshop exploring prompt engineering, generative AI tools, and AI ecosystem fundamentals.",
+                    tags: ["Prompt Engineering", "Generative AI", "AI Ecosystem"],
+                    link: "https://www.linkedin.com/posts/theagentblazerclubsjec_promptengineering-ai-generativeai-activity-7443638504024268800-BCPn?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
+                  }
+                },
+                {
+                  id: "techies",
+                  cat: "certified",
+                  date: "2025 – 2026 // PROFESSIONAL DEVELOPMENT",
                   title: "AI for Techies Certification & Workshop",
-                  subtitle: "PROFESSIONAL DEVELOPMENT",
-                  date: "2025 – 2026",
+                  desc: "Engaged in specialized training on 'AI for Techies', focusing on practical applications of machine learning, modern AI workflows, and software development integrations.",
                   badge: "[milestone]",
-                  description: "Engaged in specialized training on 'AI for Techies', focusing on practical applications of machine learning, modern AI workflows, and software development integrations.",
-                  tags: ["Artificial Intelligence", "Techies", "AI Workflows"],
-                  link: "https://www.linkedin.com/posts/adithya-a-shetty-421097382_ai-for-techies-activity-7385958617696620544-FPR6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
-                }
-              },
-              {
-                id: "python",
-                cat: "education",
-                date: "FOUNDATION // CISCO NETWORKING ACADEMY",
-                title: "Python Essentials 1 (PE1)",
-                desc: "Learned fundamental concepts of computer programming, syntax, and data structures with Python. Note: Course completed, paid certification exam not taken.",
-                badge: "[python]",
-                full: {
+                  full: {
+                    title: "AI for Techies Certification & Workshop",
+                    subtitle: "PROFESSIONAL DEVELOPMENT",
+                    date: "2025 – 2026",
+                    badge: "[milestone]",
+                    description: "Engaged in specialized training on 'AI for Techies', focusing on practical applications of machine learning, modern AI workflows, and software development integrations.",
+                    tags: ["Artificial Intelligence", "Techies", "AI Workflows"],
+                    link: "https://www.linkedin.com/posts/adithya-a-shetty-421097382_ai-for-techies-activity-7385958617696620544-FPR6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5XKpkBQMATaHFDU3LFC949G6_TKfyltwI"
+                  }
+                },
+                {
+                  id: "python",
+                  cat: "education",
+                  date: "FOUNDATION // CISCO NETWORKING ACADEMY",
                   title: "Python Essentials 1 (PE1)",
-                  subtitle: "CISCO NETWORKING ACADEMY (30 Hours | 30 Labs)",
-                  date: "Foundation",
+                  desc: "Learned fundamental concepts of computer programming, syntax, and data structures with Python. Note: Course completed, paid certification exam not taken.",
                   badge: "[python]",
-                  description: "Learned fundamental concepts of computer programming, syntax, and data structures with Python. Note: Course completed, paid certification exam not taken.",
-                  tags: ["Python", "Programming Basics", "Procedural Programming", "30 Labs"]
+                  full: {
+                    title: "Python Essentials 1 (PE1)",
+                    subtitle: "CISCO NETWORKING ACADEMY (30 Hours | 30 Labs)",
+                    date: "Foundation",
+                    badge: "[python]",
+                    description: "Learned fundamental concepts of computer programming, syntax, and data structures with Python. Note: Course completed, paid certification exam not taken.",
+                    tags: ["Python", "Programming Basics", "Procedural Programming", "30 Labs"]
+                  }
                 }
-              }
-            ].map((item, index) => {
-              if (timelineCategory !== "all" && timelineCategory !== item.cat) return null;
-              const isEven = index % 2 === 0;
-              return (
-                <div key={item.id} className={`mb-16 flex flex-col md:flex-row justify-between items-start md:items-center w-full pl-10 md:pl-0 ${isEven ? 'md:flex-row-reverse' : ''}`}>
-                  {/* Text content side */}
-                  <div className={`order-1 w-full md:w-5/12 cursor-pointer group text-left ${isEven ? 'md:text-right' : 'md:text-left'}`} onClick={() => setSelectedTimelineItem(item.full)}>
-                    <div className={`text-xs font-mono text-red-500 tracking-wider uppercase flex items-center gap-2 mb-1 ${isEven ? 'md:justify-end' : 'md:justify-start'}`}>
-                      <span className="animate-pulse">●</span>
-                      <span>{item.date}</span>
+              ].map((item, index) => {
+                if (timelineCategory !== "all" && timelineCategory !== item.cat) return null;
+                return (
+                  <div 
+                    key={item.id} 
+                    onClick={() => setSelectedTimelineItem(item.full)}
+                    className="p-5 sm:p-6 bg-black/60 border border-red-500/30 hover:border-red-500 transition-all duration-300 cursor-pointer group relative overflow-hidden"
+                  >
+                    {/* Glowing corner crosshairs */}
+                    <div className="absolute top-2 right-2 text-red-500 font-mono text-xs opacity-50 group-hover:opacity-100">+</div>
+                    <div className="absolute bottom-2 left-2 text-red-500 font-mono text-xs opacity-50 group-hover:opacity-100">+</div>
+
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                      <div className="flex items-center gap-2 text-xs font-mono text-red-400">
+                        <span className="animate-pulse">●</span>
+                        <span>{item.date}</span>
+                      </div>
+                      <span className="px-2.5 py-0.5 bg-red-500/10 border border-red-500/30 text-red-400 font-mono text-[11px] uppercase tracking-wider">
+                        {item.badge}
+                      </span>
                     </div>
 
-                    <h3 className="text-xl sm:text-2xl font-bold font-mono text-red-500 group-hover:text-red-400 transition mb-2">
+                    <h3 className="text-xl sm:text-2xl font-bold font-mono text-white group-hover:text-red-400 transition mb-2">
                       {item.title}
                     </h3>
 
                     <p className="text-sm font-mono text-zinc-300 leading-relaxed">
                       {item.desc}
                     </p>
-                  </div>
-                  
-                  {/* Snake circular node marker with experience indicator dot (Responsive: absolute left on mobile, center rail on desktop) */}
-                  <div className="absolute left-6 md:static z-20 flex flex-col items-center justify-center transform -translate-x-1/2 md:translate-x-0 mt-1 md:mt-0">
-                    <div className="w-10 h-10 md:w-12 md:h-12 bg-black border-2 border-red-500 rounded-full shadow-lg shadow-red-500/30 flex items-center justify-center group-hover:scale-110 transition">
-                      <div className="w-3 h-3 md:w-4 md:h-4 bg-red-500 rounded-full animate-ping absolute"></div>
-                      <div className="w-2.5 h-2.5 md:w-3 md:h-3 bg-red-400 rounded-full z-10"></div>
-                    </div>
-                    <span className="hidden md:block absolute -bottom-6 text-[10px] font-mono text-red-400 uppercase tracking-widest whitespace-nowrap bg-black px-1 border border-red-500/30">
-                      exp_0{index + 1}
-                    </span>
-                  </div>
 
-                  <div className="order-1 w-full md:w-5/12 hidden md:block"></div>
-                </div>
-              );
-            })}
+                    <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-500 group-hover:text-red-400 transition">
+                      <span>// CLICK_TO_INSPECT_DOSSIER</span>
+                      <span className="underline">OPEN_LOG</span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </section>
 
