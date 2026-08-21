@@ -1114,6 +1114,23 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
 
 
+          {/* CRED VAULT Cinematic Banner */}
+          <div className="mb-8 relative rounded-xl overflow-hidden border border-red-500/30 shadow-[0_0_30px_rgba(239,68,68,0.2)] bg-black">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-red-950/20 via-black to-black pointer-events-none"></div>
+            <div className="absolute top-2 left-2 text-red-500/60 font-mono text-[10px] z-10">[ SECURE_VAULT_NODE ]</div>
+            <div className="absolute top-2 right-2 text-red-500/60 font-mono text-[10px] z-10">+</div>
+            <div className="absolute bottom-2 left-2 text-red-500/60 font-mono text-[10px] z-10">+</div>
+            <div className="absolute bottom-2 right-2 text-red-500/60 font-mono text-[10px] z-10">[ ACCESS_GRANTED ]</div>
+            
+            <div className="w-full aspect-[2/1] relative flex items-center justify-center p-2 sm:p-4">
+              <img 
+                src="/manus-storage/pasted_file_Li41QA_image_1d05be21.png" 
+                alt="CRED VAULT - Certifications, Badges, Achievements" 
+                className="w-full h-full object-contain rounded-lg border border-red-500/20"
+              />
+            </div>
+          </div>
+
           <div className="space-y-2 mb-12">
             <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 02. SYSTEM_DOSSIER & ABOUT</span>
             <h2 className="text-3xl sm:text-5xl font-extrabold font-sans font-black tracking-tighter uppercase text-[#ccff00] tracking-tight">Executive Dossier & Bio</h2>
