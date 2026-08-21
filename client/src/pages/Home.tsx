@@ -299,7 +299,7 @@ export default function Home() {
       id: "library-system",
       title: "LIBRARY MANAGEMENT SYSTEM",
       description: "A robust Python-based Library Management System designed to handle book inventory, member records, borrowing transactions, and search queries efficiently.",
-      imageUrl: "/manus-storage/ChatGPTImageAug20,2026,08_42_07PM_16ab5326.png",
+      imageUrl: "/adithya-portfolio/library-management-banner.png",
       githubUrl: "https://github.com/adithyaashetty2007-a11y/LibraryManagementSystem",
       techStack: "Next.js, MongoDB, TypeScript, Tailwind CSS"
     }
@@ -1625,11 +1625,11 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               <div className="absolute top-2 right-2 text-[#ffffff] font-mono text-[10px] z-10">+</div>
               <div className="space-y-4">
                 <div 
-                  onClick={() => setSelectedProjectImage("/manus-storage/ChatGPTImageAug20,2026,08_46_16PM_91ff4c56.png")}
+                  onClick={() => setSelectedProjectImage("/adithya-portfolio/traffic-density-banner.png")}
                   className="h-56 bg-black overflow-hidden relative border-b border-white/10 cursor-pointer group/img"
                 >
                   <img 
-                    src="/manus-storage/ChatGPTImageAug20,2026,08_46_16PM_91ff4c56.png" 
+                    src="/adithya-portfolio/traffic-density-banner.png" 
                     alt="YOLOv8n Traffic Density Estimation Banner" 
                     className="w-full h-full object-cover group-hover/img:scale-105 transition duration-500" 
                   />
