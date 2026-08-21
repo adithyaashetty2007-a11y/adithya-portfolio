@@ -1246,6 +1246,35 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             </div>
           </div>
 
+          {/* Executive Dossier Cyberpunk Banner */}
+          <div className="relative mb-12 rounded-2xl overflow-hidden border border-[#ffffff]/30 bg-[#121214] p-5 sm:p-8 shadow-[0_0_30px_rgba(255,255,255,0.08)]">
+            <div className="absolute top-2 right-2 text-[#ffffff] font-mono text-xs">+</div>
+            <div className="absolute bottom-2 left-2 text-[#ffffff] font-mono text-xs">+</div>
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-black pointer-events-none"></div>
+            <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+              <div className="space-y-3 text-left w-full lg:max-w-2xl">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 border border-white/20 text-[#ffffff] font-mono text-xs rounded-full">
+                  <span className="w-2 h-2 rounded-full bg-[#ffffff] animate-ping"></span>
+                  DOSSIER_TERMINAL // TELEMETRY & STACK
+                </div>
+                <h2 className="text-2xl sm:text-4xl font-extrabold font-almie text-white tracking-tight break-words">Executive Dossier & Bio</h2>
+                <p className="text-xs sm:text-sm font-mono text-zinc-300 leading-relaxed">
+                  Interactive cybernetic terminal showcasing academic telemetry, SGPA progression, and core engineering competency stack.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-3 w-full lg:w-auto">
+                <div className="px-4 py-3 bg-black/60 border border-white/20 rounded-xl text-center font-mono">
+                  <div className="text-[10px] sm:text-xs text-zinc-400">SEM 2 SGPA</div>
+                  <div className="text-xs sm:text-sm text-[#ffffff] font-bold">8.05 (UP)</div>
+                </div>
+                <div className="px-4 py-3 bg-black/60 border border-white/20 rounded-xl text-center font-mono">
+                  <div className="text-[10px] sm:text-xs text-zinc-400">STATUS</div>
+                  <div className="text-xs sm:text-sm text-[#ffffff] font-bold">ACTIVE</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="space-y-2 mb-12">
             <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 02. SYSTEM_DOSSIER & ABOUT</span>
             <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ffffff] tracking-tight">Executive Dossier & Bio</h2>
@@ -1335,20 +1364,33 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               </div>
             </div>
 
-            {/* Bento Cell 2: Legendary Metric - Certifications (Span 4) */}
+            {/* Bento Cell 2: Legendary Metric - Certifications (Span 4) with Cyberpunk Banner Accent */}
             <div className="md:col-span-4 bg-gradient-to-br from-[#18181b] to-[#09090b] border border-white/20 rounded-2xl p-6 flex flex-col justify-between relative group hover-lift overflow-hidden shadow-2xl">
               <div className="absolute top-3 right-3 text-white/60 font-mono text-xs">+</div>
               <div className="absolute -right-10 -bottom-10 w-32 h-32 bg-white/5 rounded-full blur-2xl pointer-events-none"></div>
-              <div className="space-y-3 relative z-10">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest bg-white/10 px-2 py-0.5 rounded border border-white/20">VERIFIED_VAULT // 02</span>
-                  <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+              
+              <div className="space-y-4 relative z-10">
+                {/* Internal Mini Cyberpunk Banner */}
+                <div className="p-3 bg-black/50 border border-white/20 rounded-xl flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-white animate-ping"></span>
+                    <span className="text-[10px] font-mono text-white font-bold tracking-wider">VAULT_BANNER</span>
+                  </div>
+                  <span className="text-[10px] font-mono text-zinc-400">SECURE_ARCHIVE</span>
                 </div>
-                <div>
-                  <div className="text-2xl sm:text-3xl font-extrabold font-mono text-white tracking-tight">8+ certs</div>
-                  <p className="text-xs text-zinc-300 font-mono mt-1">CS50W, Python Essentials, & Advanced AI Workshops.</p>
+
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest bg-white/10 px-2 py-0.5 rounded border border-white/20">VERIFIED_VAULT // 02</span>
+                    <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                  </div>
+                  <div>
+                    <div className="text-2xl sm:text-3xl font-extrabold font-mono text-white tracking-tight">8+ certs</div>
+                    <p className="text-xs text-zinc-300 font-mono mt-1">CS50W, Python Essentials, & Advanced AI Workshops.</p>
+                  </div>
                 </div>
               </div>
+
               <div className="pt-4 mt-6 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-400 relative z-10">
                 <span className="text-white font-bold">ELITE_ACCREDITATION</span>
                 <Award className="w-5 h-5 text-white animate-bounce" />
