@@ -1181,12 +1181,12 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
             {/* Right Column: Profile Photo Framed with Hacker HUD crosshairs */}
             <div className="lg:col-span-5 flex justify-center relative items-center py-6">
-              <div className="relative p-3 bg-[#111] border border-[#ffffff]/40 shadow-[0_0_30px_rgba(255,255,255,0.15)] w-full max-w-md">
+              <div className="relative p-3 bg-[#111] border-2 border-red-500 shadow-[0_0_30px_rgba(239,68,68,0.3)] w-full max-w-md">
                 {/* Corner Crosshairs */}
-                <div className="absolute -top-2 -left-2 text-[#ffffff] font-mono text-lg">+</div>
-                <div className="absolute -top-2 -right-2 text-[#ffffff] font-mono text-lg">+</div>
-                <div className="absolute -bottom-2 -left-2 text-[#ffffff] font-mono text-lg">+</div>
-                <div className="absolute -bottom-2 -right-2 text-[#ffffff] font-mono text-lg">+</div>
+                <div className="absolute -top-2 -left-2 text-red-500 font-mono text-lg">+</div>
+                <div className="absolute -top-2 -right-2 text-red-500 font-mono text-lg">+</div>
+                <div className="absolute -bottom-2 -left-2 text-red-500 font-mono text-lg">+</div>
+                <div className="absolute -bottom-2 -right-2 text-red-500 font-mono text-lg">+</div>
                 
                 <div 
                   onClick={() => setSelectedProfileImage(PROFILE_PHOTO_BASE64)}
