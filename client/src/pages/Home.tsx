@@ -1668,30 +1668,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           <div className="absolute -bottom-3 -left-3 text-[#ccff00] font-mono text-base pointer-events-none">+</div>
           <div className="absolute -bottom-3 -right-3 text-[#ccff00] font-mono text-base pointer-events-none">+</div>
 
-          {/* Certifications Vault Cyberpunk Banner */}
-          <div className="relative mb-12 rounded-2xl overflow-hidden border border-[#ffffff]/30 bg-[#121214] p-5 sm:p-8 shadow-[0_0_30px_rgba(255,255,255,0.08)]">
-            <div className="absolute top-2 right-2 text-[#ffffff] font-mono text-xs">+</div>
-            <div className="absolute bottom-2 left-2 text-[#ffffff] font-mono text-xs">+</div>
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-black pointer-events-none"></div>
-            <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
-              <div className="space-y-3 text-left w-full lg:max-w-2xl">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 border border-white/20 text-[#ffffff] font-mono text-xs rounded-full">
-                  <span className="w-2 h-2 rounded-full bg-[#ffffff] animate-pulse"></span>
-                  CREDENTIALS_VAULT // VERIFIED MILESTONES
-                </div>
-                <h2 className="text-2xl sm:text-4xl font-extrabold font-sans font-black tracking-tighter uppercase text-[#ccff00] tracking-tight break-words">Professional Certifications & Badges</h2>
-                <p className="text-xs sm:text-sm font-mono text-zinc-300 leading-relaxed">
-                  Verified credentials and technical badges acquired through continuous learning in Python, Web Development, AI, and Cybersecurity.
-                </p>
-              </div>
-              <div className="w-full lg:w-auto">
-                <div className="px-5 py-3 bg-black/60 border border-white/20 rounded-xl text-center font-mono w-full lg:w-48">
-                  <div className="text-[10px] sm:text-xs text-zinc-400">TOTAL VAULT</div>
-                  <div className="text-base sm:text-lg text-[#ffffff] font-bold">8+ CERTIFICATES</div>
-                </div>
-              </div>
-            </div>
-          </div>
+
 
           {/* Top Vault Header Row */}
           <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
