@@ -1217,9 +1217,38 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
         {/* ABOUT SECTION - REDESIGNED ASYMMETRIC BENTO GRID */}
         <section id="about" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
+          {/* Cyberpunk About Me Banner */}
+          <div className="relative mb-12 rounded-2xl overflow-hidden border border-[#ffffff]/30 bg-[#121214] p-6 sm:p-8 shadow-[0_0_30px_rgba(255,255,255,0.08)]">
+            <div className="absolute top-2 right-2 text-[#ffffff] font-mono text-xs">+</div>
+            <div className="absolute bottom-2 left-2 text-[#ffffff] font-mono text-xs">+</div>
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-black pointer-events-none"></div>
+            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="space-y-2 text-left">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 border border-white/20 text-[#ffffff] font-mono text-xs rounded-full">
+                  <span className="w-2 h-2 rounded-full bg-[#ffffff] animate-ping"></span>
+                  SYSTEM_BIO // COGNITIVE PROFILE
+                </div>
+                <h2 className="text-3xl sm:text-4xl font-extrabold font-almie text-white tracking-tight">About Adithya A Shetty</h2>
+                <p className="text-sm font-mono text-zinc-300 max-w-2xl leading-relaxed">
+                  Computer Science Engineering student at St. Joseph Engineering College, Mangaluru. Passionate about software engineering, AI-assisted development, and robust backend architectures.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <div className="px-4 py-3 bg-black/60 border border-white/20 rounded-xl text-center font-mono">
+                  <div className="text-xs text-zinc-400">INSTITUTION</div>
+                  <div className="text-sm text-[#ffffff] font-bold">SJEC MANGALURU</div>
+                </div>
+                <div className="px-4 py-3 bg-black/60 border border-white/20 rounded-xl text-center font-mono">
+                  <div className="text-xs text-zinc-400">STATUS</div>
+                  <div className="text-sm text-[#ffffff] font-bold">3RD SEM STUDENT</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 01. BENTO_CORE & BACKGROUND</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-white tracking-tight uppercase">About_Me</h2>
+            <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 02. SYSTEM_DOSSIER & ABOUT</span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ffffff] tracking-tight">Executive Dossier & Bio</h2>
           </div>
 
           {/* Streamlined Executive Bento Grid */}
@@ -1584,11 +1613,37 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         <section id="certifications" className="sarthak-section py-24 px-4 sm:px-8 max-w-6xl mx-auto relative">
           <div className="absolute -bottom-3 -left-3 text-[#ccff00] font-mono text-base pointer-events-none">+</div>
           <div className="absolute -bottom-3 -right-3 text-[#ccff00] font-mono text-base pointer-events-none">+</div>
+
+          {/* Certifications Vault Cyberpunk Banner */}
+          <div className="relative mb-12 rounded-2xl overflow-hidden border border-[#ffffff]/30 bg-[#121214] p-6 sm:p-8 shadow-[0_0_30px_rgba(255,255,255,0.08)]">
+            <div className="absolute top-2 right-2 text-[#ffffff] font-mono text-xs">+</div>
+            <div className="absolute bottom-2 left-2 text-[#ffffff] font-mono text-xs">+</div>
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-black pointer-events-none"></div>
+            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="space-y-2 text-left">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 border border-white/20 text-[#ffffff] font-mono text-xs rounded-full">
+                  <span className="w-2 h-2 rounded-full bg-[#ffffff] animate-pulse"></span>
+                  CREDENTIALS_VAULT // VERIFIED MILESTONES
+                </div>
+                <h2 className="text-3xl sm:text-4xl font-extrabold font-almie text-white tracking-tight">Professional Certifications & Badges</h2>
+                <p className="text-sm font-mono text-zinc-300 max-w-2xl leading-relaxed">
+                  Verified credentials and technical badges acquired through continuous learning in Python, Web Development, AI, and Cybersecurity.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <div className="px-5 py-3 bg-black/60 border border-white/20 rounded-xl text-center font-mono">
+                  <div className="text-xs text-zinc-400">TOTAL VAULT</div>
+                  <div className="text-lg text-[#ffffff] font-bold">8+ CERTIFICATES</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Top Vault Header Row */}
           <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
             <div>
               <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 05. CREDENTIALS_VAULT</span>
-              <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ffffff] tracking-tight">Certifications</h2>
+              <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ffffff] tracking-tight">Certifications Archive</h2>
             </div>
             <div className="hidden sm:flex items-center gap-2 text-xs font-mono text-zinc-400 bg-white/5 px-3 py-1.5 rounded border border-white/10">
               <span className="w-2 h-2 rounded-full bg-[#ffffff] animate-pulse"></span>
