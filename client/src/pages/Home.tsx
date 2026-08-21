@@ -1434,68 +1434,53 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="bg-[#141416] border border-white/20 rounded-xl p-6 relative overflow-hidden group hover:border-white transition shadow-xl">
-              <div className="absolute top-3 right-3 text-white/40 font-mono text-xs">+</div>
+              <div className="absolute top-3 right-3 text-[#ffffff]/60 font-mono text-xs">+</div>
               <div className="flex items-center justify-between mb-3">
-                <span className="text-[10px] font-mono text-white uppercase tracking-wider bg-white/10 px-2 py-0.5 rounded border border-white/20">TARGET_01</span>
-                <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                <span className="text-[10px] font-mono text-[#ffffff] uppercase tracking-wider bg-[#ffffff]/10 px-2.5 py-0.5 rounded border border-[#ffffff]/30">TARGET_01</span>
+                <span className="w-2 h-2 rounded-full bg-[#ffffff] animate-pulse"></span>
               </div>
-              <div className="text-emerald-400 font-mono text-xs uppercase mb-1 font-semibold">DSA Mastery in C++</div>
-              <div className="text-xl font-bold font-mono text-white mb-2">Advanced Structures</div>
-              <p className="text-xs text-zinc-300 leading-relaxed mb-4 font-mono">
-                Transitioning from basic arrays and strings to advanced data structures (Trees, Graphs, Heaps, DP) with rigorous C++ implementation.
+              <div className="text-[#ffffff] font-mono text-xs uppercase mb-1 font-bold tracking-wide">DSA Mastery in C++</div>
+              <div className="text-xl font-bold font-almie text-white mb-2">Advanced Structures</div>
+              <p className="text-xs text-zinc-300 leading-relaxed font-mono">
+                Transitioning from basic arrays and strings to advanced data structures (Trees, Graphs, Heaps, Dynamic Programming) with rigorous C++ implementation.
               </p>
-              <div className="space-y-2 pt-2 border-t border-white/10 font-mono text-xs">
-                <div className="flex justify-between text-zinc-400">
-                  <span>Progress</span>
-                  <span className="text-white font-bold">75%</span>
-                </div>
-                <div className="w-full bg-black/60 h-2 rounded-full overflow-hidden border border-white/20">
-                  <div className="bg-white h-full w-[75%] rounded-full animate-pulse"></div>
-                </div>
+              <div className="mt-4 pt-3 border-t border-white/10 flex justify-between items-center font-mono text-xs text-zinc-400">
+                <span>Target: 150+ LeetCode</span>
+                <span className="text-[#ffffff] font-bold bg-[#ffffff]/10 px-2 py-0.5 rounded border border-[#ffffff]/20">IN PROGRESS</span>
               </div>
             </div>
 
             <div className="bg-[#141416] border border-white/20 rounded-xl p-6 relative overflow-hidden group hover:border-white transition shadow-xl">
-              <div className="absolute top-3 right-3 text-white/40 font-mono text-xs">+</div>
+              <div className="absolute top-3 right-3 text-[#ffffff]/60 font-mono text-xs">+</div>
               <div className="flex items-center justify-between mb-3">
-                <span className="text-[10px] font-mono text-white uppercase tracking-wider bg-white/10 px-2 py-0.5 rounded border border-white/20">TARGET_02</span>
-                <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                <span className="text-[10px] font-mono text-[#ffffff] uppercase tracking-wider bg-[#ffffff]/10 px-2.5 py-0.5 rounded border border-[#ffffff]/30">TARGET_02</span>
+                <span className="w-2 h-2 rounded-full bg-[#ffffff] animate-pulse"></span>
               </div>
-              <div className="text-blue-400 font-mono text-xs uppercase mb-1 font-semibold">Core CS & System Design</div>
-              <div className="text-xl font-bold font-mono text-white mb-2">OS & Architecture</div>
-              <p className="text-xs text-zinc-300 leading-relaxed mb-4 font-mono">
+              <div className="text-[#ffffff] font-mono text-xs uppercase mb-1 font-bold tracking-wide">Core CS & System Design</div>
+              <div className="text-xl font-bold font-almie text-white mb-2">OS & Architecture</div>
+              <p className="text-xs text-zinc-300 leading-relaxed font-mono">
                 Deepening understanding of Operating Systems, Database Management Systems (DBMS), Computer Networks, and low-level execution principles.
               </p>
-              <div className="space-y-2 pt-2 border-t border-white/10 font-mono text-xs">
-                <div className="flex justify-between text-zinc-400">
-                  <span>Semester Focus</span>
-                  <span className="text-white font-bold">Active</span>
-                </div>
-                <div className="w-full bg-black/60 h-2 rounded-full overflow-hidden border border-white/20">
-                  <div className="bg-blue-400 h-full w-[60%] rounded-full animate-pulse"></div>
-                </div>
+              <div className="mt-4 pt-3 border-t border-white/10 flex justify-between items-center font-mono text-xs text-zinc-400">
+                <span>Semester Focus</span>
+                <span className="text-[#ffffff] font-bold bg-[#ffffff]/10 px-2 py-0.5 rounded border border-[#ffffff]/20">ACTIVE</span>
               </div>
             </div>
 
             <div className="bg-[#141416] border border-white/20 rounded-xl p-6 relative overflow-hidden group hover:border-white transition shadow-xl">
-              <div className="absolute top-3 right-3 text-white/40 font-mono text-xs">+</div>
+              <div className="absolute top-3 right-3 text-[#ffffff]/60 font-mono text-xs">+</div>
               <div className="flex items-center justify-between mb-3">
-                <span className="text-[10px] font-mono text-white uppercase tracking-wider bg-white/10 px-2 py-0.5 rounded border border-white/20">TARGET_03</span>
-                <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+                <span className="text-[10px] font-mono text-[#ffffff] uppercase tracking-wider bg-[#ffffff]/10 px-2.5 py-0.5 rounded border border-[#ffffff]/30">TARGET_03</span>
+                <span className="w-2 h-2 rounded-full bg-[#ffffff] animate-pulse"></span>
               </div>
-              <div className="text-purple-400 font-mono text-xs uppercase mb-1 font-semibold">AI & Full-Stack Prototyping</div>
-              <div className="text-xl font-bold font-mono text-white mb-2">Applied AI Systems</div>
-              <p className="text-xs text-zinc-300 leading-relaxed mb-4 font-mono">
+              <div className="text-[#ffffff] font-mono text-xs uppercase mb-1 font-bold tracking-wide">AI & Full-Stack Prototyping</div>
+              <div className="text-xl font-bold font-almie text-white mb-2">Applied AI Systems</div>
+              <p className="text-xs text-zinc-300 leading-relaxed font-mono">
                 Building production-grade AI tools, computer vision scripts (YOLOv8), and modern web applications with responsive interfaces and robust backend integration.
               </p>
-              <div className="space-y-2 pt-2 border-t border-white/10 font-mono text-xs">
-                <div className="flex justify-between text-zinc-400">
-                  <span>Deployment</span>
-                  <span className="text-white font-bold">90%</span>
-                </div>
-                <div className="w-full bg-black/60 h-2 rounded-full overflow-hidden border border-white/20">
-                  <div className="bg-purple-400 h-full w-[90%] rounded-full animate-pulse"></div>
-                </div>
+              <div className="mt-4 pt-3 border-t border-white/10 flex justify-between items-center font-mono text-xs text-zinc-400">
+                <span>Deployment</span>
+                <span className="text-[#ffffff] font-bold bg-[#ffffff]/10 px-2 py-0.5 rounded border border-[#ffffff]/20">OPTIMIZED</span>
               </div>
             </div>
           </div>
