@@ -613,7 +613,7 @@ export default function Home() {
             {/* Splitting NAMASTE! Text */}
             <div className="relative text-5xl sm:text-8xl font-black font-almie tracking-widest text-[#ffffff] drop-shadow-[0_0_30px_rgba(255,255,255,0.4)] flex items-center">
               <span className="inline-block animate-text-split-left">NAMASTE</span>
-              <span className="text-red-500 inline-block animate-text-split-left">!</span>
+              <span className="text-[#ccff00] inline-block animate-text-split-left">!</span>
             </div>
 
             <p className="mt-6 text-xs font-mono text-zinc-400 tracking-[0.3em] uppercase animate-pulse">
@@ -1187,10 +1187,10 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             <div className="lg:col-span-5 flex justify-center relative items-center py-6">
               <div className="relative p-3 bg-[#111] border-2 border-red-500 shadow-[0_0_30px_rgba(239,68,68,0.3)] w-full max-w-md">
                 {/* Corner Crosshairs */}
-                <div className="absolute -top-2 -left-2 text-red-500 font-mono text-lg">+</div>
-                <div className="absolute -top-2 -right-2 text-red-500 font-mono text-lg">+</div>
-                <div className="absolute -bottom-2 -left-2 text-red-500 font-mono text-lg">+</div>
-                <div className="absolute -bottom-2 -right-2 text-red-500 font-mono text-lg">+</div>
+                <div className="absolute -top-2 -left-2 text-[#ccff00] font-mono text-lg">+</div>
+                <div className="absolute -top-2 -right-2 text-[#ccff00] font-mono text-lg">+</div>
+                <div className="absolute -bottom-2 -left-2 text-[#ccff00] font-mono text-lg">+</div>
+                <div className="absolute -bottom-2 -right-2 text-[#ccff00] font-mono text-lg">+</div>
                 
                 <div 
                   onClick={() => setSelectedProfileImage(PROFILE_PHOTO_BASE64)}
@@ -1232,7 +1232,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   <span className="w-2 h-2 rounded-full bg-[#ffffff] animate-ping"></span>
                   SYSTEM_BIO // COGNITIVE PROFILE
                 </div>
-                <h2 className="text-2xl sm:text-4xl font-extrabold font-almie text-red-500 tracking-tight break-words">About Adithya A Shetty</h2>
+                <h2 className="text-2xl sm:text-4xl font-extrabold font-almie text-[#ccff00] tracking-tight break-words">About Adithya A Shetty</h2>
                 <p className="text-xs sm:text-sm font-mono text-zinc-300 leading-relaxed">
                   Computer Science Engineering student at St. Joseph Engineering College, Mangaluru. Passionate about software engineering, AI-assisted development, and robust backend architectures.
                 </p>
@@ -1261,7 +1261,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   <span className="w-2 h-2 rounded-full bg-[#ffffff] animate-ping"></span>
                   DOSSIER_TERMINAL // TELEMETRY & STACK
                 </div>
-                <h2 className="text-2xl sm:text-4xl font-extrabold font-almie text-red-500 tracking-tight break-words">Executive Dossier & Bio</h2>
+                <h2 className="text-2xl sm:text-4xl font-extrabold font-almie text-[#ccff00] tracking-tight break-words">Executive Dossier & Bio</h2>
                 <p className="text-xs sm:text-sm font-mono text-zinc-300 leading-relaxed">
                   Interactive cybernetic terminal showcasing academic telemetry, SGPA progression, and core engineering competency stack.
                 </p>
@@ -1281,7 +1281,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
           <div className="space-y-2 mb-12">
             <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 02. SYSTEM_DOSSIER & ABOUT</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-red-500 tracking-tight">Executive Dossier & Bio</h2>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Executive Dossier & Bio</h2>
           </div>
 
           {/* Streamlined Executive Bento Grid */}
@@ -1418,7 +1418,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   <span className="w-2 h-2 rounded-full bg-white animate-ping"></span>
                   CONSOLE // TARGET_MATRIX_ACTIVE
                 </div>
-                <h2 className="text-2xl sm:text-4xl font-extrabold font-almie text-red-500 tracking-tight">2nd Year Engineering Goals</h2>
+                <h2 className="text-2xl sm:text-4xl font-extrabold font-almie text-[#ccff00] tracking-tight">2nd Year Engineering Goals</h2>
                 <p className="text-xs sm:text-sm font-mono text-zinc-300 leading-relaxed">
                   Strategic tactical roadmap for mastering Data Structures, LeetCode milestones, Operating Systems, and applied AI systems at SJEC.
                 </p>
@@ -1494,7 +1494,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         <section id="visual-skills" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
             <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 03. CORE_COMPONENTS & SKILLS</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-red-500 tracking-tight">Technical Stack & Capabilities</h2>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Technical Stack & Capabilities</h2>
             <p className="text-sm font-mono text-zinc-400">Comprehensive inventory of programming languages, frameworks, and AI-assisted web development proficiency.</p>
           </div>
 
@@ -1615,7 +1615,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         <section id="skills" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="space-y-2 mb-12">
             <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 04. TECHNICAL SKILLS</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-red-500 tracking-tight">Programming & Development</h2>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Programming & Development</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1706,7 +1706,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   <span className="w-2 h-2 rounded-full bg-[#ffffff] animate-pulse"></span>
                   CREDENTIALS_VAULT // VERIFIED MILESTONES
                 </div>
-                <h2 className="text-2xl sm:text-4xl font-extrabold font-almie text-red-500 tracking-tight break-words">Professional Certifications & Badges</h2>
+                <h2 className="text-2xl sm:text-4xl font-extrabold font-almie text-[#ccff00] tracking-tight break-words">Professional Certifications & Badges</h2>
                 <p className="text-xs sm:text-sm font-mono text-zinc-300 leading-relaxed">
                   Verified credentials and technical badges acquired through continuous learning in Python, Web Development, AI, and Cybersecurity.
                 </p>
@@ -1724,7 +1724,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
             <div>
               <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 05. CREDENTIALS_VAULT</span>
-              <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-red-500 tracking-tight">Certifications Archive</h2>
+              <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Certifications Archive</h2>
             </div>
             <div className="hidden sm:flex items-center gap-2 text-xs font-mono text-zinc-400 bg-white/5 px-3 py-1.5 rounded border border-white/10">
               <span className="w-2 h-2 rounded-full bg-[#ffffff] animate-pulse"></span>
@@ -1798,7 +1798,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
             <div>
               <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 06. PORTFOLIO PROJECTS</span>
-              <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-red-500 tracking-tight">Projects & Screenshots Showcase</h2>
+              <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Projects & Screenshots Showcase</h2>
             </div>
             <button
               onClick={() => handleProtectedAction("proj")}
@@ -1947,7 +1947,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         <section className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto relative">
           <div className="space-y-2 mb-12">
             <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 07. PROFILE README & SKILL BADGES</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-red-500 tracking-tight">GitHub Profile Stack & Stats</h2>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">GitHub Profile Stack & Stats</h2>
           </div>
 
           <div className="bg-[#141416] border border-[#ffffff]/30 rounded-2xl p-6 sm:p-10 space-y-8  relative">
@@ -2025,7 +2025,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         <section className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto relative">
           <div className="space-y-2 mb-12">
             <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 07. PRACTICE WORK</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-red-500 tracking-tight">Featured Practice Work</h2>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Featured Practice Work</h2>
             <p className="text-sm font-mono text-zinc-400">Core development repositories and interactive web applications.</p>
           </div>
 
@@ -2109,7 +2109,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         >
           <div className="space-y-2 mb-16 text-center sm:text-left">
             <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 08. SYSTEM_LOGS & JOURNEY</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-red-500 tracking-tight">Experience & Timeline</h2>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-almie text-[#ccff00] tracking-tight">Experience & Timeline</h2>
             <p className="text-sm font-mono text-zinc-400">Where I've been and what I've built along the way.</p>
           </div>
 
@@ -2240,8 +2240,8 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     className="p-5 sm:p-6 bg-black/60 border border-red-500/30 hover:border-red-500 transition-all duration-300 cursor-pointer group relative overflow-hidden"
                   >
                     {/* Glowing corner crosshairs */}
-                    <div className="absolute top-2 right-2 text-red-500 font-mono text-xs opacity-50 group-hover:opacity-100">+</div>
-                    <div className="absolute bottom-2 left-2 text-red-500 font-mono text-xs opacity-50 group-hover:opacity-100">+</div>
+                    <div className="absolute top-2 right-2 text-[#ccff00] font-mono text-xs opacity-50 group-hover:opacity-100">+</div>
+                    <div className="absolute bottom-2 left-2 text-[#ccff00] font-mono text-xs opacity-50 group-hover:opacity-100">+</div>
 
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
                       <div className="flex items-center gap-2 text-xs font-mono text-red-400">
