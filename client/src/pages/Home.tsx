@@ -332,7 +332,7 @@ export default function Home() {
   const [soundEnabled, setSoundEnabled] = useState(false);
   const [playgroundLang, setPlaygroundLang] = useState<"python" | "cpp" | "c">("python");
   const [playgroundCode, setPlaygroundCode] = useState(
-    `def solve_dsa_streak():\n    leetcode_solved = 25\n    target = 150\n    status = "Active 2nd Year CSE Student at SJEC"\n    return f"LeetCode: {leetcode_solved}/{target} solved. Status: {status}"\n\nprint(solve_dsa_streak())`
+    `def solve_dsa_streak():\n    leetcode_solved = 14\n    target = 150\n    status = "Active 3rd Semester CSE Student at SJEC"\n    return f"LeetCode: {leetcode_solved}/{target} solved. Status: {status}"\n\nprint(solve_dsa_streak())`
   );
   const [playgroundOutput, setPlaygroundOutput] = useState("");
   const [isRunningCode, setIsRunningCode] = useState(false);
@@ -1011,7 +1011,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <div className="flex flex-wrap items-center gap-3">
                   <a
-                    href="/resume.pdf"
+                    href="/adithya-portfolio/resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     download="Adithya_A_Shetty_Updated_Resume.pdf"
@@ -1160,7 +1160,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 {activeDossierTab === "bio" && (
                   <div className="space-y-4 animate-fadeIn">
                     <p>
-                      Hello! I am <strong className="text-white font-bold">Adithya A Shetty</strong>, a Computer Science Engineering student at St. Joseph Engineering College, Mangaluru, currently in my 2nd semester. I successfully completed my second semester with consistent academic improvement, achieving an <strong className="text-white font-bold">8.05 SGPA in Sem 2</strong> (up from <strong className="text-zinc-400">7.5 SGPA in Sem 1</strong>).
+                      Hello! I am <strong className="text-white font-bold">Adithya A Shetty</strong>, a Computer Science Engineering student at St. Joseph Engineering College, Mangaluru, currently in my 3rd semester. I successfully completed my second semester with consistent academic improvement, achieving an <strong className="text-white font-bold">8.05 SGPA in Sem 2</strong> (up from <strong className="text-zinc-400">7.2 SGPA in Sem 1</strong>).
                     </p>
                     <p>
                       I am building my technical foundation with college-level basics in C, C++, and Python, while actively solving Data Structures and Algorithms (DSA) problems in C++ (leetcode solver). I focus on building responsive frontends, exploring AI & Computer Vision projects like YOLOv8n, and leveraging modern AI-assisted development tools.
@@ -1173,8 +1173,8 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     <div className="text-zinc-500">// Academic & Engineering Telemetry</div>
                     <div><span className="text-zinc-400">institution:</span> "St. Joseph Engineering College, Mangaluru"</div>
                     <div><span className="text-zinc-400">program:</span> "Computer Science & Engineering (B.E.)"</div>
-                    <div><span className="text-zinc-400">current_status:</span> "2nd Year CSE (Graduating 2029)"</div>
-                    <div><span className="text-zinc-400">sem1_sgpa:</span> 7.5</div>
+                    <div><span className="text-zinc-400">current_status:</span> "2nd Year CSE (Graduating 2028)"</div>
+                    <div><span className="text-zinc-400">sem1_sgpa:</span> 7.2</div>
                     <div><span className="text-zinc-400">sem2_sgpa:</span> <strong className="text-white">8.05 (Improved)</strong></div>
                     <div><span className="text-zinc-400">problem_solving:</span> "Active leetcode solver"</div>
                   </div>
@@ -1771,7 +1771,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 <span>PROFILE BIO // ADITHYA A SHETTY</span>
               </h3>
               <p className="text-zinc-300 font-sans leading-relaxed text-sm sm:text-base">
-                I am a Computer Science Engineering student at St. Joseph Engineering College, Mangaluru, currently in my 2nd semester. Eager to learn and apply new technology to production-level use. Skilled in C, C++, Python, and AI-assisted web development.
+                I am a Computer Science Engineering student at St. Joseph Engineering College, Mangaluru, currently in my 3rd semester. Eager to learn and apply new technology to production-level use. Skilled in C, C++, Python, and AI-assisted web development.
               </p>
             </div>
 
@@ -1963,15 +1963,15 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   id: "cse",
                   cat: "education",
                   date: "SEPTEMBER 2026 – PRESENT // ST. JOSEPH ENGINEERING COLLEGE",
-                  title: "2nd Year Computer Science Engineering",
-                  desc: "Currently pursuing 2nd year BE in Computer Science Engineering. Actively mastering Data Structures & Algorithms in C++, AI vibecoding, and building modern web applications.",
+                  title: "3rd Semester Computer Science Engineering",
+                  desc: "Currently pursuing 3rd semester BE in Computer Science Engineering. Actively mastering Data Structures & Algorithms in C++, AI vibecoding, and building modern web applications.",
                   badge: "[current]",
                   full: {
-                    title: "2nd Year Computer Science Engineering",
+                    title: "3rd Semester Computer Science Engineering",
                     subtitle: "ST. JOSEPH ENGINEERING COLLEGE, MANGALURU",
                     date: "September 2026 – Present",
                     badge: "[current]",
-                    description: "Currently pursuing 2nd year BE in Computer Science Engineering. Actively mastering Data Structures & Algorithms in C++, AI vibecoding, and building modern web applications.",
+                    description: "Currently pursuing 3rd semester BE in Computer Science Engineering. Actively mastering Data Structures & Algorithms in C++, AI vibecoding, and building modern web applications.",
                     tags: ["DSA in C++", "AI Vibecoding", "Web Development", "LeetCode"]
                   }
                 },
@@ -2115,11 +2115,11 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                       playClickSound();
                       setPlaygroundLang(lang);
                       if (lang === "python") {
-                        setPlaygroundCode(`def solve_dsa_streak():\n    leetcode_solved = 25\n    target = 150\n    status = "Active 2nd Year CSE Student at SJEC"\n    return f"LeetCode: {leetcode_solved}/{target} solved. Status: {status}"\n\nprint(solve_dsa_streak())`);
+                        setPlaygroundCode(`def solve_dsa_streak():\n    leetcode_solved = 14\n    target = 150\n    status = "Active 3rd Semester CSE Student at SJEC"\n    return f"LeetCode: {leetcode_solved}/{target} solved. Status: {status}"\n\nprint(solve_dsa_streak())`);
                       } else if (lang === "cpp") {
-                        setPlaygroundCode(`#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << "Adithya A Shetty - SJEC CSE 2029" << endl;\n    cout << "Focus: C, C++, Python, DSA, AI Web Dev" << endl;\n    return 0;\n}`);
+                        setPlaygroundCode(`#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << "Adithya A Shetty - SJEC CSE 2028" << endl;\n    cout << "Focus: C, C++, Python, DSA, AI Web Dev" << endl;\n    return 0;\n}`);
                       } else {
-                        setPlaygroundCode(`#include <stdio.h>\n\nint main() {\n    printf("System Boot: Adithya Portfolio v2.0\\n");\n    printf("SGPA: Sem1 = 7.5 | Sem2 = 8.05\\n");\n    return 0;\n}`);
+                        setPlaygroundCode(`#include <stdio.h>\n\nint main() {\n    printf("System Boot: Adithya Portfolio v2.0\\n");\n    printf("SGPA: Sem1 = 7.2 | Sem2 = 8.05\\n");\n    return 0;\n}`);
                       }
                       setPlaygroundOutput("");
                     }}
@@ -2158,11 +2158,11 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   setPlaygroundOutput("Compiling and executing snippet...");
                   setTimeout(() => {
                     if (playgroundLang === "python") {
-                      setPlaygroundOutput("LeetCode: 25/150 solved. Status: Active 2nd Year CSE Student at SJEC\nProcess finished with exit code 0.");
+                      setPlaygroundOutput("LeetCode: 14+ problems solved. Status: Active 3rd Semester CSE Student at SJEC\nProcess finished with exit code 0.");
                     } else if (playgroundLang === "cpp") {
-                      setPlaygroundOutput("Adithya A Shetty - SJEC CSE 2029\nFocus: C, C++, Python, DSA, AI Web Dev\nProcess exited successfully (0x0).");
+                      setPlaygroundOutput("Adithya A Shetty - SJEC CSE 2028\nFocus: C, C++, Python, DSA, AI Web Dev\nProcess exited successfully (0x0).");
                     } else {
-                      setPlaygroundOutput("System Boot: Adithya Portfolio v2.0\nSGPA: Sem1 = 7.5 | Sem2 = 8.05\nCompilation successful.");
+                      setPlaygroundOutput("System Boot: Adithya Portfolio v2.0\nSGPA: Sem1 = 7.2 | Sem2 = 8.05\nCompilation successful.");
                     }
                     setIsRunningCode(false);
                   }, 600);
@@ -2947,7 +2947,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   icon: Download, 
                   action: () => {
                     const link = document.createElement("a");
-                    link.href = "/resume.pdf";
+                    link.href = "/adithya-portfolio/resume.pdf";
                     link.download = "Adithya_A_Shetty_Resume.pdf";
                     link.click();
                   } 
