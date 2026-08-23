@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap');
 
 /* CRT Scanline Overlay */
 body::after {
@@ -654,6 +655,15 @@ body { overflow-x: hidden; }
   h1 { font-size: clamp(2.15rem, 12vw, 3.5rem) !important; }
   h2 { font-size: clamp(1.7rem, 8vw, 2.7rem) !important; }
   h3.text-2xl { font-size: 1.3rem !important; }
+}
+
+/* Executive Dossier heading typography */
+.dossier-heading-font h1,
+.dossier-heading-font h2,
+.dossier-heading-font h3,
+.dossier-heading-font h4 {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 900 !important;
 }
 
 /* SYSTEM_DOSSIER dashboard motion */

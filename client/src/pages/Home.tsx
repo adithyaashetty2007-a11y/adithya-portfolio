@@ -1082,7 +1082,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         </section>
 
         {/* ABOUT SECTION - EXECUTIVE DOSSIER */}
-        <section id="about" className="py-16 sm:py-20 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
+        <section id="about" className="dossier-heading-font py-16 sm:py-20 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col gap-3 mb-8">
               <span className="text-xs font-mono text-[#ffffff] uppercase tracking-[0.22em]">// 02. SYSTEM_DOSSIER</span>
