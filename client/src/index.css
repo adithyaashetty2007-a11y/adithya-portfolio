@@ -718,6 +718,14 @@ body { overflow-x: hidden; }
   font-weight: 900 !important;
 }
 
+/* Shared heading system from Executive Dossier onward */
+main > section:not(#home) h2,
+main > section:not(#home) h3,
+main > section:not(#home) h4 {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 900 !important;
+}
+
 /* Performance guardrails for smaller screens and accessibility preferences */
 @media (max-width: 767px) {
   .animate-hex-scroll { animation-duration: 30s !important; }
