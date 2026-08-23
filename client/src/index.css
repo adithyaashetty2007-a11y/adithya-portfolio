@@ -641,3 +641,17 @@ body { overflow-x: hidden; }
   header .font-mono.font-bold { font-size: 0.75rem; letter-spacing: 0.06em; }
   .text-xs { line-height: 1.35; }
 }
+
+/* Slightly reduced heading scale for a cleaner, more balanced layout */
+@media (min-width: 768px) {
+  h1.text-6xl { font-size: 3.25rem !important; }
+  h2.text-5xl { font-size: 3rem !important; }
+  h2.text-4xl { font-size: 2.15rem !important; }
+  h3.text-2xl { font-size: 1.4rem !important; }
+}
+
+@media (max-width: 767px) {
+  h1 { font-size: clamp(2.15rem, 12vw, 3.5rem) !important; }
+  h2 { font-size: clamp(1.7rem, 8vw, 2.7rem) !important; }
+  h3.text-2xl { font-size: 1.3rem !important; }
+}
