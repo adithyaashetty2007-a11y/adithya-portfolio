@@ -1081,165 +1081,130 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           </div>
         </section>
 
-        {/* ABOUT SECTION - REDESIGNED ASYMMETRIC BENTO GRID */}
-        <section id="about" className="pt-0 pb-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
-          {/* Cyberpunk About Me Banner */}
-          <div className="relative mb-12 rounded-2xl overflow-hidden border border-[#ffffff]/30 bg-[#121214] p-5 sm:p-8 shadow-[0_0_30px_rgba(255,255,255,0.08)]">
-            <div className="absolute top-2 right-2 text-[#ffffff] font-mono text-xs">+</div>
-            <div className="absolute bottom-2 left-2 text-[#ffffff] font-mono text-xs">+</div>
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-black pointer-events-none"></div>
-            <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
-              <div className="space-y-3 text-left w-full lg:max-w-2xl">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 border border-white/20 text-[#ffffff] font-mono text-xs rounded-full">
-                  <span className="w-2 h-2 rounded-full bg-[#ffffff] animate-ping"></span>
-                  SYSTEM_BIO // COGNITIVE PROFILE
-                </div>
-                <h2 className="text-2xl sm:text-4xl font-extrabold font-sans font-black tracking-tighter uppercase text-[#ccff00] tracking-tight break-words">About Me</h2>
-                <p className="text-xs sm:text-sm font-mono text-zinc-300 leading-relaxed">
-                  Computer Science Engineering student at St. Joseph Engineering College, Mangaluru. Passionate about software engineering, AI-assisted development, and robust backend architectures.
-                </p>
-              </div>
-              <div className="grid grid-cols-2 gap-3 w-full lg:w-auto">
-                <div className="px-4 py-3 bg-black/60 border border-white/20 rounded-xl text-center font-mono">
-                  <div className="text-[10px] sm:text-xs text-zinc-400">INSTITUTION</div>
-                  <div className="text-xs sm:text-sm text-[#ffffff] font-bold truncate">SJEC MANGALURU</div>
-                </div>
-                <div className="px-4 py-3 bg-black/60 border border-white/20 rounded-xl text-center font-mono">
-                  <div className="text-[10px] sm:text-xs text-zinc-400">STATUS</div>
-                  <div className="text-xs sm:text-sm text-[#ffffff] font-bold truncate">3RD SEM STUDENT</div>
-                </div>
-              </div>
+        {/* ABOUT SECTION - EXECUTIVE DOSSIER */}
+        <section id="about" className="py-16 sm:py-20 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-col gap-3 mb-8">
+              <span className="text-xs font-mono text-[#ffffff] uppercase tracking-[0.22em]">// 02. SYSTEM_DOSSIER</span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold font-sans tracking-tighter uppercase text-[#ccff00]">Executive Dossier &amp; Bio</h2>
+              <p className="max-w-2xl text-sm sm:text-base text-zinc-400 leading-relaxed">
+                A concise snapshot of my current engineering foundation, academic progress, and areas of technical focus.
+              </p>
             </div>
-          </div>
 
-
-
-          <div className="space-y-2 mb-12">
-            <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 02. SYSTEM_DOSSIER & ABOUT</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-sans font-black tracking-tighter uppercase text-[#ccff00] tracking-tight">Executive Dossier & Bio</h2>
-          </div>
-
-          {/* Streamlined Executive Bento Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
-            {/* Bento Cell 1: Main Bio Card with Interactive Tabs (Span 8) */}
-            <div className="md:col-span-8 h-fit bg-[#141416] border border-white/15 rounded-2xl p-6 sm:p-8 flex flex-col relative group overflow-hidden">
-              <div className="absolute top-3 right-3 text-white/40 font-mono text-xs">+</div>
-              <div className="absolute bottom-3 left-3 text-white/40 font-mono text-xs">+</div>
-              <div className="absolute -right-12 -top-12 w-48 h-48 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
-
-              {/* Dossier Terminal Header & Tabs */}
-              <div className="flex flex-wrap items-center justify-between gap-4 pb-4 mb-6 border-b border-white/10 relative z-10">
-                <div className="flex items-center gap-2 text-xs font-mono text-zinc-400">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                  <span>DOSSIER // ADITHYA_ASSET.sys</span>
-                </div>
-                <div className="flex items-center gap-1.5 font-mono text-xs">
-                  <button 
-                    onClick={() => setActiveDossierTab("bio")}
-                    className={`px-3 py-1 rounded transition ${activeDossierTab === "bio" ? "bg-white text-black font-bold" : "bg-white/5 text-zinc-400 hover:text-white"}`}
-                  >
-                    ~/bio.md
-                  </button>
-                  <button 
-                    onClick={() => setActiveDossierTab("metrics")}
-                    className={`px-3 py-1 rounded transition ${activeDossierTab === "metrics" ? "bg-white text-black font-bold" : "bg-white/5 text-zinc-400 hover:text-white"}`}
-                  >
-                    ~/metrics.json
-                  </button>
-                  <button 
-                    onClick={() => setActiveDossierTab("dna")}
-                    className={`px-3 py-1 rounded transition ${activeDossierTab === "dna" ? "bg-white text-black font-bold" : "bg-white/5 text-zinc-400 hover:text-white"}`}
-                  >
-                    ~/dna.stack
-                  </button>
-                </div>
-              </div>
-
-              {/* Tab Content Display */}
-              <div className="space-y-6 text-zinc-300 leading-relaxed font-sans text-base sm:text-lg relative z-10">
-                {activeDossierTab === "bio" && (
-                  <div className="space-y-4 animate-fadeIn">
-                    <p>
-                      Hello! I am <strong className="text-white font-bold">Adithya A Shetty</strong>, a Computer Science Engineering student at St. Joseph Engineering College, Mangaluru, currently in my 3rd semester. I successfully completed my second semester with consistent academic improvement, achieving an <strong className="text-white font-bold">8.05 SGPA in Sem 2</strong> (up from <strong className="text-zinc-400">7.2 SGPA in Sem 1</strong>).
-                    </p>
-                    <p>
-                      I am building my technical foundation with college-level basics in C, C++, and Python, while actively solving Data Structures and Algorithms (DSA) problems in C++ (leetcode solver). I focus on building responsive frontends, exploring AI & Computer Vision projects like YOLOv8n, and leveraging modern AI-assisted development tools.
-                    </p>
-                  </div>
-                )}
-
-                {activeDossierTab === "metrics" && (
-                  <div className="space-y-3 font-mono text-sm sm:text-base text-zinc-200 bg-black/40 p-4 rounded-xl border border-white/10 animate-fadeIn">
-                    <div className="text-zinc-500">// Academic & Engineering Telemetry</div>
-                    <div><span className="text-zinc-400">institution:</span> "St. Joseph Engineering College, Mangaluru"</div>
-                    <div><span className="text-zinc-400">program:</span> "Computer Science & Engineering (B.E.)"</div>
-                    <div><span className="text-zinc-400">current_status:</span> "2nd Year CSE (Graduating 2028)"</div>
-                    <div><span className="text-zinc-400">sem1_sgpa:</span> 7.2</div>
-                    <div><span className="text-zinc-400">sem2_sgpa:</span> <strong className="text-white">8.05 (Improved)</strong></div>
-                    <div><span className="text-zinc-400">problem_solving:</span> "Active leetcode solver"</div>
-                  </div>
-                )}
-
-                {activeDossierTab === "dna" && (
-                  <div className="space-y-3 font-mono text-sm text-zinc-200 bg-black/40 p-4 rounded-xl border border-white/10 animate-fadeIn">
-                    <div className="text-zinc-500">// Technical Stack & Foundations</div>
-                    <div className="grid grid-cols-2 gap-2">
-                      <div>• C Programming (Basics)</div>
-                      <div>• C++ & DSA</div>
-                      <div>• Python Essentials</div>
-                      <div>• Web Development</div>
-                      <div>• AI & Computer Vision</div>
-                      <div>• AI Vibe Coding & Tooling</div>
+            <div className="grid lg:grid-cols-[1.35fr_0.65fr] gap-5 items-start">
+              <article className="rounded-2xl border border-white/15 bg-[#141416] p-5 sm:p-7 relative overflow-hidden">
+                <div className="absolute -right-16 -top-16 w-48 h-48 rounded-full bg-[#ccff00]/10 blur-3xl pointer-events-none"></div>
+                <div className="relative z-10 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-5">
+                  <div className="flex items-start gap-3">
+                    <div className="w-11 h-11 shrink-0 border border-[#ccff00]/50 bg-[#ccff00]/10 text-[#ccff00] flex items-center justify-center font-mono font-bold">A</div>
+                    <div>
+                      <div className="flex items-center gap-2 text-[10px] font-mono text-emerald-400 uppercase tracking-widest">
+                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        PROFILE // VERIFIED
+                      </div>
+                      <h3 className="mt-2 text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight">Adithya A Shetty</h3>
+                      <p className="mt-1 text-xs sm:text-sm font-mono text-zinc-400">Computer Science Engineering Student · AI &amp; Python Developer</p>
                     </div>
                   </div>
-                )}
-              </div>
-
-              <div className="pt-8 mt-6 border-t border-white/10 flex flex-wrap gap-2.5 font-mono text-xs relative z-10">
-                <span className="text-white bg-white/10 border border-white/20 px-3 py-1 rounded">C / C++ / PYTHON</span>
-                <span className="text-white bg-white/10 border border-white/20 px-3 py-1 rounded">WEB DEV</span>
-                <span className="text-white bg-white/10 border border-white/20 px-3 py-1 rounded">AI & CV</span>
-                <span className="text-white bg-white/10 border border-white/20 px-3 py-1 rounded">DSA</span>
-              </div>
-            </div>
-
-            {/* Bento Cell 2: Legendary Metric - Certifications (Span 4) with Cyberpunk Banner Accent */}
-            <div className="md:col-span-4 h-fit bg-gradient-to-br from-[#18181b] to-[#09090b] border border-white/20 rounded-2xl p-6 flex flex-col relative group hover-lift overflow-hidden shadow-2xl">
-              <div className="absolute top-3 right-3 text-white/60 font-mono text-xs">+</div>
-              <div className="absolute -right-10 -bottom-10 w-32 h-32 bg-white/5 rounded-full blur-2xl pointer-events-none"></div>
-              
-              <div className="space-y-4 relative z-10">
-                {/* Internal Mini Cyberpunk Banner */}
-                <div className="p-3 bg-black/50 border border-white/20 rounded-xl flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-white animate-ping"></span>
-                    <span className="text-[10px] font-mono text-white font-bold tracking-wider">VAULT_BANNER</span>
-                  </div>
-                  <span className="text-[10px] font-mono text-zinc-400">SECURE_ARCHIVE</span>
+                  <span className="w-fit px-2.5 py-1 border border-white/15 bg-black/40 text-[10px] font-mono text-zinc-400 uppercase tracking-wider">SJEC · Mangaluru</span>
                 </div>
 
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest bg-white/10 px-2 py-0.5 rounded border border-white/20">VERIFIED_VAULT // 02</span>
-                    <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                <p className="relative z-10 mt-7 max-w-3xl text-sm sm:text-base text-zinc-300 leading-relaxed">
+                  I am a Computer Science Engineering student at St. Joseph Engineering College, Mangaluru, building practical strength in Python, Object-Oriented Programming, Computer Vision, web development, and Data Structures &amp; Algorithms. I enjoy turning focused learning into self-driven software projects.
+                </p>
+
+                <div className="relative z-10 mt-7 grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  <div className="border border-white/10 bg-black/30 p-3">
+                    <div className="text-[10px] font-mono text-zinc-500 uppercase">Semester</div>
+                    <div className="mt-1 text-sm font-mono font-bold text-white">3rd</div>
                   </div>
-                  <div>
-                    <div className="text-2xl sm:text-3xl font-extrabold font-mono text-white tracking-tight">8+ certs</div>
-                    <p className="text-xs text-zinc-300 font-mono mt-1">CS50W, Python Essentials, & Advanced AI Workshops.</p>
+                  <div className="border border-white/10 bg-black/30 p-3">
+                    <div className="text-[10px] font-mono text-zinc-500 uppercase">Sem 2 SGPA</div>
+                    <div className="mt-1 text-sm font-mono font-bold text-[#ccff00]">8.05</div>
+                  </div>
+                  <div className="border border-white/10 bg-black/30 p-3">
+                    <div className="text-[10px] font-mono text-zinc-500 uppercase">Sem 1 SGPA</div>
+                    <div className="mt-1 text-sm font-mono font-bold text-white">7.2</div>
+                  </div>
+                  <div className="border border-white/10 bg-black/30 p-3">
+                    <div className="text-[10px] font-mono text-zinc-500 uppercase">Graduation</div>
+                    <div className="mt-1 text-sm font-mono font-bold text-white">2028</div>
                   </div>
                 </div>
-              </div>
 
-              <div className="pt-4 mt-6 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-400 relative z-10">
-                <span className="text-white font-bold">ELITE_ACCREDITATION</span>
-                <Award className="w-5 h-5 text-white animate-bounce" />
-              </div>
+                <div className="relative z-10 mt-7 flex flex-wrap gap-2">
+                  {['PYTHON', 'OOP', 'DSA', 'YOLOv8', 'OPENCV', 'WEB DEVELOPMENT'].map((skill) => (
+                    <span key={skill} className="px-2.5 py-1 border border-white/15 bg-white/5 text-[10px] font-mono text-zinc-300 tracking-wide">{skill}</span>
+                  ))}
+                </div>
+              </article>
+
+              <aside className="rounded-2xl border border-white/15 bg-[#101012] p-4 sm:p-5 relative overflow-hidden">
+                <div className="flex items-center justify-between gap-3 mb-4">
+                  <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">PROFILE_MODULES</span>
+                  <span className="text-[10px] font-mono text-emerald-400">ONLINE</span>
+                </div>
+                <div className="grid grid-cols-3 lg:grid-cols-1 gap-1.5 p-1 bg-black/40 border border-white/10">
+                  {[
+                    { id: 'bio', label: '~/bio.md' },
+                    { id: 'metrics', label: '~/metrics.json' },
+                    { id: 'dna', label: '~/stack.dna' },
+                  ].map((tab) => (
+                    <button
+                      key={tab.id}
+                      onClick={() => setActiveDossierTab(tab.id as "bio" | "metrics" | "dna")}
+                      className={`px-2.5 py-2 text-left text-[10px] font-mono transition ${activeDossierTab === tab.id ? 'bg-white text-black font-bold' : 'text-zinc-500 hover:text-white hover:bg-white/10'}`}
+                    >
+                      {tab.label}
+                    </button>
+                  ))}
+                </div>
+
+                <div className="mt-4 min-h-[170px] text-xs sm:text-sm font-mono text-zinc-300 leading-relaxed">
+                  {activeDossierTab === "bio" && (
+                    <div className="space-y-3 animate-fadeIn">
+                      <p className="text-zinc-500">// current mission</p>
+                      <p>Build a strong engineering foundation through practical Python, AI, and web projects.</p>
+                      <p className="text-zinc-400">Actively learning, shipping, and improving one system at a time.</p>
+                    </div>
+                  )}
+                  {activeDossierTab === "metrics" && (
+                    <div className="space-y-3 animate-fadeIn">
+                      <div><span className="text-zinc-500">institution:</span> SJEC, Mangaluru</div>
+                      <div><span className="text-zinc-500">program:</span> B.E. Computer Science &amp; Engineering</div>
+                      <div><span className="text-zinc-500">status:</span> 3rd semester student</div>
+                      <div><span className="text-zinc-500">progress:</span> 7.2 → <strong className="text-[#ccff00]">8.05 SGPA</strong></div>
+                      <div><span className="text-zinc-500">leetcode:</span> 14+ problems solved</div>
+                    </div>
+                  )}
+                  {activeDossierTab === "dna" && (
+                    <div className="grid grid-cols-2 gap-2 animate-fadeIn">
+                      {['Python', 'JavaScript', 'HTML / CSS', 'SQL basics', 'Pandas', 'Matplotlib', 'Git / GitHub', 'Generative AI'].map((item) => (
+                        <div key={item} className="border border-white/10 bg-white/5 px-2 py-2 text-[10px] text-zinc-300">{item}</div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </aside>
             </div>
 
-
+            <div className="mt-5 grid md:grid-cols-3 gap-5">
+              <div className="border border-white/10 bg-white/[0.03] p-4">
+                <div className="flex items-center gap-2 text-[#ccff00]"><Code2 className="w-4 h-4" /><span className="text-[10px] font-mono uppercase tracking-widest">Focus</span></div>
+                <p className="mt-3 text-sm text-zinc-400 leading-relaxed">Computer vision, deep learning fundamentals, responsive interfaces, and DSA practice.</p>
+              </div>
+              <div className="border border-white/10 bg-white/[0.03] p-4">
+                <div className="flex items-center gap-2 text-[#ccff00]"><GraduationCap className="w-4 h-4" /><span className="text-[10px] font-mono uppercase tracking-widest">Education</span></div>
+                <p className="mt-3 text-sm text-zinc-400 leading-relaxed">B.E. Computer Science &amp; Engineering at St. Joseph Engineering College, expected 2028.</p>
+              </div>
+              <div className="border border-white/10 bg-white/[0.03] p-4">
+                <div className="flex items-center gap-2 text-[#ccff00]"><Mail className="w-4 h-4" /><span className="text-[10px] font-mono uppercase tracking-widest">Connect</span></div>
+                <a href="mailto:adithyaashetty2007@gmail.com" className="mt-3 block text-sm text-zinc-400 hover:text-white transition break-all">adithyaashetty2007@gmail.com</a>
+              </div>
+            </div>
           </div>
         </section>
-
         {/* FUTURE ROADMAP & TARGETS SECTION */}
         <section id="dsa" className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-6xl mx-auto">
           {/* Cybernetic Telemetry Banner */}
