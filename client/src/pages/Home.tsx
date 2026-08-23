@@ -1093,53 +1093,99 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             </div>
 
             <div className="grid lg:grid-cols-[1.35fr_0.65fr] gap-5 items-start">
-              <article className="rounded-2xl border border-white/15 bg-[#141416] p-5 sm:p-7 relative overflow-hidden">
-                <div className="absolute -right-16 -top-16 w-48 h-48 rounded-full bg-[#ccff00]/10 blur-3xl pointer-events-none"></div>
-                <div className="relative z-10 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-5">
-                  <div className="flex items-start gap-3">
-                    <div className="w-11 h-11 shrink-0 border border-[#ccff00]/50 bg-[#ccff00]/10 text-[#ccff00] flex items-center justify-center font-mono font-bold">A</div>
-                    <div>
-                      <div className="flex items-center gap-2 text-[10px] font-mono text-emerald-400 uppercase tracking-widest">
-                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                        PROFILE // VERIFIED
-                      </div>
-                      <h3 className="mt-2 text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight">Adithya A Shetty</h3>
-                      <p className="mt-1 text-xs sm:text-sm font-mono text-zinc-400">Computer Science Engineering Student · AI &amp; Python Developer</p>
+              <article className="system-dossier-card md:min-h-[620px] rounded-2xl border border-[#ccff00]/25 bg-[#141416] p-5 sm:p-7 relative overflow-hidden group">
+                <div className="system-dossier-scanline pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#ccff00]/80 to-transparent"></div>
+                <div className="absolute top-3 right-3 text-[#ccff00]/60 font-mono text-xs">+</div>
+                <div className="absolute bottom-3 left-3 text-[#ccff00]/60 font-mono text-xs">+</div>
+                <div className="absolute -right-24 -top-24 w-64 h-64 rounded-full bg-[#ccff00]/[0.07] blur-3xl pointer-events-none"></div>
+
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-white/10">
+                    <div className="flex items-center gap-2 text-[10px] font-mono text-zinc-300 uppercase tracking-[0.18em]">
+                      <span className="w-2 h-2 rounded-full bg-[#ccff00] shadow-[0_0_10px_#ccff00] animate-pulse"></span>
+                      SYSTEM_DOSSIER
+                    </div>
+                    <span className="text-[10px] font-mono text-[#ccff00] uppercase tracking-widest">STATUS: BUILDING</span>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-4 text-[10px] font-mono uppercase tracking-wider">
+                    <div className="border border-white/10 bg-black/30 px-3 py-2">
+                      <span className="block text-zinc-500">LOCATION</span>
+                      <span className="block mt-1 text-zinc-200">MANGALURU, INDIA</span>
+                    </div>
+                    <div className="border border-white/10 bg-black/30 px-3 py-2">
+                      <span className="block text-zinc-500">SEMESTER</span>
+                      <span className="block mt-1 text-zinc-200">02</span>
+                    </div>
+                    <div className="border border-[#ccff00]/20 bg-[#ccff00]/[0.04] px-3 py-2">
+                      <span className="block text-zinc-500">BUILD_STATE</span>
+                      <span className="block mt-1 text-[#ccff00]">ACTIVE</span>
                     </div>
                   </div>
-                  <span className="w-fit px-2.5 py-1 border border-white/15 bg-black/40 text-[10px] font-mono text-zinc-400 uppercase tracking-wider">SJEC · Mangaluru</span>
-                </div>
 
-                <p className="relative z-10 mt-7 max-w-3xl text-sm sm:text-base text-zinc-300 leading-relaxed">
-                  I am a Computer Science Engineering student at St. Joseph Engineering College, Mangaluru, building practical strength in Python, Object-Oriented Programming, Computer Vision, web development, and Data Structures &amp; Algorithms. I enjoy turning focused learning into self-driven software projects.
-                </p>
+                  <div className="mt-7">
+                    <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-[0.2em]">IDENTITY // 001</span>
+                    <h3 className="mt-2 text-2xl sm:text-4xl font-bold font-mono tracking-tight text-white group-hover:text-[#ccff00] transition-colors">ADITHYA A SHETTY</h3>
+                    <p className="mt-2 text-xs sm:text-sm font-mono text-zinc-400 tracking-widest">CSE STUDENT // SOFTWARE BUILDER</p>
+                  </div>
 
-                <div className="relative z-10 mt-7 grid grid-cols-2 sm:grid-cols-4 gap-3">
-                  <div className="border border-white/10 bg-black/30 p-3">
-                    <div className="text-[10px] font-mono text-zinc-500 uppercase">Semester</div>
-                    <div className="mt-1 text-sm font-mono font-bold text-white">3rd</div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-7">
+                    <div className="border border-white/10 bg-black/35 p-4 hover:border-[#ccff00]/50 transition-colors">
+                      <div className="flex items-center justify-between">
+                        <span className="text-[10px] font-mono text-zinc-500 tracking-widest">ACADEMIC_NODE</span>
+                        <GraduationCap className="w-4 h-4 text-[#ccff00]" />
+                      </div>
+                      <div className="mt-3 text-2xl font-bold font-mono text-white">SEMESTER 02</div>
+                      <div className="mt-1 text-[10px] font-mono text-zinc-500">SJEC // CSE // 2028</div>
+                    </div>
+                    <div className="border border-white/10 bg-black/35 p-4 hover:border-[#ccff00]/50 transition-colors">
+                      <div className="flex items-center justify-between">
+                        <span className="text-[10px] font-mono text-zinc-500 tracking-widest">CURRENT_FOCUS</span>
+                        <Cpu className="w-4 h-4 text-[#ccff00]" />
+                      </div>
+                      <div className="mt-3 space-y-1.5 text-[10px] font-mono text-zinc-300">
+                        <div><span className="text-[#ccff00]">01</span> DSA &amp; C++</div>
+                        <div><span className="text-[#ccff00]">02</span> FULL-STACK DEVELOPMENT</div>
+                        <div><span className="text-[#ccff00]">03</span> AI &amp; COMPUTER VISION</div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="border border-white/10 bg-black/30 p-3">
-                    <div className="text-[10px] font-mono text-zinc-500 uppercase">Sem 2 SGPA</div>
-                    <div className="mt-1 text-sm font-mono font-bold text-[#ccff00]">8.05</div>
-                  </div>
-                  <div className="border border-white/10 bg-black/30 p-3">
-                    <div className="text-[10px] font-mono text-zinc-500 uppercase">Sem 1 SGPA</div>
-                    <div className="mt-1 text-sm font-mono font-bold text-white">7.2</div>
-                  </div>
-                  <div className="border border-white/10 bg-black/30 p-3">
-                    <div className="text-[10px] font-mono text-zinc-500 uppercase">Graduation</div>
-                    <div className="mt-1 text-sm font-mono font-bold text-white">2028</div>
-                  </div>
-                </div>
 
-                <div className="relative z-10 mt-7 flex flex-wrap gap-2">
-                  {['PYTHON', 'OOP', 'DSA', 'YOLOv8', 'OPENCV', 'WEB DEVELOPMENT'].map((skill) => (
-                    <span key={skill} className="px-2.5 py-1 border border-white/15 bg-white/5 text-[10px] font-mono text-zinc-300 tracking-wide">{skill}</span>
-                  ))}
+                  <div className="mt-7 flex-1">
+                    <div className="flex items-center justify-between mb-4">
+                      <div>
+                        <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-[0.2em]">TECH_FOUNDATION</span>
+                        <p className="mt-1 text-[10px] font-mono text-zinc-600">SKILL_SIGNAL // LIVE_SCAN</p>
+                      </div>
+                      <span className="text-[10px] font-mono text-[#ccff00] animate-pulse">SCANNING...</span>
+                    </div>
+                    <div className="space-y-4">
+                      {[
+                        { label: 'C / C++', width: '78%' },
+                        { label: 'PYTHON', width: '84%' },
+                        { label: 'WEB DEVELOPMENT', width: '72%' },
+                        { label: 'AI & COMPUTER VISION', width: '64%' },
+                        { label: 'CLOUD / AWS', width: '38%' },
+                      ].map((skill, index) => (
+                        <div key={skill.label} className="system-dossier-reveal" style={{ animationDelay: `${index * 110}ms` }}>
+                          <div className="flex items-center justify-between mb-1.5 text-[10px] font-mono uppercase tracking-wider">
+                            <span className="text-zinc-300">{skill.label}</span>
+                            <span className="text-zinc-600">SIGNAL_{String(index + 1).padStart(2, '0')}</span>
+                          </div>
+                          <div className="h-1.5 bg-black/70 border border-white/10 overflow-hidden">
+                            <div className="system-dossier-bar h-full bg-gradient-to-r from-[#ccff00]/40 via-[#ccff00] to-white/80" style={{ '--bar-width': skill.width } as React.CSSProperties}></div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mt-7 pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-[10px] font-mono uppercase tracking-widest">
+                    <span className="text-zinc-500">// PROFILE_READY_FOR_BUILD</span>
+                    <span className="text-[#ccff00]">NO LIMITS // KEEP SHIPPING</span>
+                  </div>
                 </div>
               </article>
-
               <aside className="rounded-2xl border border-white/15 bg-[#101012] p-4 sm:p-5 relative overflow-hidden">
                 <div className="flex items-center justify-between gap-3 mb-4">
                   <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">PROFILE_MODULES</span>

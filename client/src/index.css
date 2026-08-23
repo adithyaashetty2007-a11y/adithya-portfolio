@@ -655,3 +655,46 @@ body { overflow-x: hidden; }
   h2 { font-size: clamp(1.7rem, 8vw, 2.7rem) !important; }
   h3.text-2xl { font-size: 1.3rem !important; }
 }
+
+/* SYSTEM_DOSSIER dashboard motion */
+.system-dossier-card {
+  background-image: linear-gradient(rgba(204, 255, 0, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(204, 255, 0, 0.02) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.system-dossier-scanline {
+  animation: dossierScan 4.5s ease-in-out infinite;
+  box-shadow: 0 0 16px rgba(204, 255, 0, 0.7);
+}
+
+.system-dossier-reveal {
+  opacity: 0;
+  animation: dossierReveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.system-dossier-bar {
+  width: 0;
+  animation: dossierBarFill 1.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes dossierScan {
+  0%, 100% { transform: translateY(0); opacity: 0.35; }
+  50% { transform: translateY(560px); opacity: 1; }
+}
+
+@keyframes dossierReveal {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes dossierBarFill {
+  to { width: var(--bar-width); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .system-dossier-scanline,
+  .system-dossier-reveal,
+  .system-dossier-bar { animation: none; }
+  .system-dossier-reveal { opacity: 1; }
+  .system-dossier-bar { width: var(--bar-width); }
+}
