@@ -145,7 +145,12 @@ function TerminalTypingText({ text, speed = 12, delay = 0, resetKey = 0 }: { tex
 }
 
 export default function Home() {
-  const [showIntro, setShowIntro] = useState(true);
+  const [showIntro, setShowIntro] = useState(() => {
+    if (typeof window === "undefined") return false;
+    const hasSeenIntro = window.sessionStorage.getItem("adithya-intro-seen") === "true";
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    return !hasSeenIntro && !prefersReducedMotion;
+  });
   const [activeSection, setActiveSection] = useState("home");
   const [timelineInView, setTimelineInView] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -379,13 +384,15 @@ export default function Home() {
     };
   }, []);
 
-  // Intro animation timer
+  // Show the cinematic intro only once per browser session and skip it for reduced-motion users.
   useEffect(() => {
+    if (!showIntro) return;
     const timer = setTimeout(() => {
+      window.sessionStorage.setItem("adithya-intro-seen", "true");
       setShowIntro(false);
-    }, 2800);
+    }, 2400);
     return () => clearTimeout(timer);
-  }, []);
+  }, [showIntro]);
 
   // Scroll spy & back to top visibility
   useEffect(() => {
@@ -571,7 +578,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-[#ededed] font-sans relative selection:bg-white/20 selection:text-white cursor-none sm:cursor-none">
+    <div className="min-h-screen bg-[#0a0a0a] text-[#ededed] font-sans relative selection:bg-white/20 selection:text-white sm:cursor-none">
       {/* Custom Neon Arrow Cursor */}
       <div 
         className={`fixed pointer-events-none z-50 transition-transform duration-75 ease-out hidden sm:block`}
@@ -596,7 +603,11 @@ export default function Home() {
 
           {/* Skip Intro Button */}
           <button
-            onClick={() => setShowIntro(false)}
+            onClick={() => {
+              window.sessionStorage.setItem("adithya-intro-seen", "true");
+              setShowIntro(false);
+            }}
+            aria-label="Skip portfolio introduction"
             className="absolute top-6 right-6 px-4 py-2 bg-black/80 border border-white/20 text-zinc-400 hover:text-white hover:border-white text-xs font-mono tracking-widest uppercase transition z-50 cursor-pointer shadow-lg"
           >
             [ SKIP INTRO ]
@@ -705,8 +716,8 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 onClick={() => scrollToSection(item.id)}
                 className={`px-3 py-1.5 text-xs font-mono uppercase tracking-wider transition-all ${
                   activeSection === item.id
-                    ? "bg-[#ffffff] text-black font-bold shadow-[0_0_15px_rgba(255,255,255,0.4)]"
-                    : "text-zinc-400 hover:text-[#ffffff] hover:bg-white/5"
+                    ? "text-[#ccff00] font-bold border-b border-[#ccff00]"
+                    : "text-zinc-400 hover:text-white hover:bg-white/5"
                 }`}
               >
                 {item.label}
@@ -747,7 +758,9 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded text-zinc-400 hover:text-white hover:bg-white/10"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={mobileMenuOpen}
+              className="p-2 rounded text-zinc-400 hover:text-white hover:bg-white/10 transition"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -1580,7 +1593,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                       onClick={() => setSelectedCertImage(cert.imageUrl || null)}
                       className="mt-4 rounded-lg overflow-hidden border border-white/20 h-40 bg-black cursor-pointer relative group/img shadow-md"
                     >
-                      <img src={cert.imageUrl} alt={cert.title} className="w-full h-full object-cover group-hover/img:scale-105 transition duration-300" />
+                      <img src={cert.imageUrl} alt={cert.title} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover/img:scale-105 transition duration-300" />
                       <div className="absolute inset-0 bg-black/50 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-xs font-mono text-[#ffffff] gap-1.5 font-bold">
                         <ImageIcon className="w-4 h-4" /> VIEW FULL CERTIFICATE
                       </div>
@@ -1690,7 +1703,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                         onClick={() => setSelectedProjectImage(proj.imageUrl)}
                         className="aspect-[2/1] bg-black overflow-hidden relative cursor-pointer border-b border-white/10 group/img"
                       >
-                        <img src={proj.imageUrl} alt={proj.title} className="w-full h-full object-cover group-hover/img:scale-105 transition duration-500" onError={(e) => e.currentTarget.parentElement?.classList.add("hidden")} />
+                        <img src={proj.imageUrl} alt={proj.title} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover/img:scale-105 transition duration-500" onError={(e) => e.currentTarget.parentElement?.classList.add("hidden")} />
                         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-xs font-mono text-[#ffffff] gap-1.5 font-bold">
                           <ImageIcon className="w-4 h-4" /> VIEW FULL SCREENSHOT
                         </div>
@@ -1930,9 +1943,9 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           }}
         >
           <div className="space-y-2 mb-16 text-center sm:text-left">
-            <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 08. SYSTEM_LOGS & JOURNEY</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-sans font-black tracking-tighter uppercase text-[#ccff00] tracking-tight">Experience & Timeline</h2>
-            <p className="text-sm font-mono text-zinc-400">Where I've been and what I've built along the way.</p>
+            <span className="text-xs font-mono text-white uppercase tracking-widest">// 08. SYSTEM_LOGS & JOURNEY</span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-sans font-black tracking-tighter uppercase text-white tracking-tight">Experience & Timeline</h2>
+            <p className="text-sm font-mono text-white">Where I've been and what I've built along the way.</p>
           </div>
 
           <div className="mt-8 bg-[#121214] border border-[#ccff00]/20 rounded-none overflow-hidden shadow-2xl relative">
@@ -2108,7 +2121,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         <section className="py-20 px-4 sm:px-8 max-w-6xl mx-auto border-t border-white/10">
           <div className="space-y-2 mb-12">
             <span className="text-xs font-mono text-[#ffffff] uppercase tracking-widest">// 08. INTERACTIVE CODE PLAYGROUND</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Live Code Sandbox</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-[#ccff00]">Live Code Sandbox</h2>
             <p className="text-sm font-sans text-zinc-400 max-w-2xl">
               Test snippets in C, C++, or Python directly in the browser terminal sandbox.
             </p>
@@ -2206,7 +2219,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         <section id="heatmap" className="py-20 px-4 sm:px-8 max-w-6xl mx-auto sarthak-section">
           <div className="space-y-2 mb-12">
             <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 09. GITHUB ACTIVITY HEATMAP</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Live Contribution Matrix</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-[#ccff00]">Live Contribution Matrix</h2>
           </div>
 
           <div className="bg-[#141416] border border-white/15 p-6 sm:p-8 space-y-6">
@@ -2256,7 +2269,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         <section id="contact" className="py-24 px-4 sm:px-8 max-w-6xl mx-auto sarthak-section">
           <div className="space-y-2 mb-12">
             <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// 10. TRANSMIT MESSAGE</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white">Get In Touch</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-[#ccff00]">Get In Touch</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
