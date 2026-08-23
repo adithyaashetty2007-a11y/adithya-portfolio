@@ -1931,7 +1931,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         {/* EDUCATION & JOURNEY TIMELINE SECTION - REFERENCE STYLE */}
         <section 
           id="education" 
-          className="py-24 px-4 sm:px-8 border-b border-white/10 max-w-5xl mx-auto relative"
+          className="timeline-heading-font py-24 px-4 sm:px-8 border-b border-white/10 max-w-5xl mx-auto relative"
           ref={(node) => {
             if (!node) return;
             const observer = new IntersectionObserver(([entry]) => {
@@ -1944,7 +1944,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
         >
           <div className="space-y-2 mb-16 text-center sm:text-left">
             <span className="text-xs font-mono text-white uppercase tracking-widest">// 08. SYSTEM_LOGS & JOURNEY</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold font-sans font-black tracking-tighter uppercase text-white tracking-tight">Experience & Timeline</h2>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-sans font-black tracking-tighter uppercase text-[#ccff00] tracking-tight">Experience & Timeline</h2>
             <p className="text-sm font-mono text-white">Where I've been and what I've built along the way.</p>
           </div>
 

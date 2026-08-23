@@ -709,6 +709,15 @@ body { overflow-x: hidden; }
   .system-dossier-bar { width: var(--bar-width); }
 }
 
+/* Experience & Timeline heading typography */
+.timeline-heading-font h1,
+.timeline-heading-font h2,
+.timeline-heading-font h3,
+.timeline-heading-font h4 {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 900 !important;
+}
+
 /* Performance guardrails for smaller screens and accessibility preferences */
 @media (max-width: 767px) {
   .animate-hex-scroll { animation-duration: 30s !important; }
