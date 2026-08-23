@@ -708,3 +708,53 @@ body { overflow-x: hidden; }
   .system-dossier-reveal { opacity: 1; }
   .system-dossier-bar { width: var(--bar-width); }
 }
+
+/* Performance guardrails for smaller screens and accessibility preferences */
+@media (max-width: 767px) {
+  .animate-hex-scroll { animation-duration: 30s !important; }
+  .crt-scanlines { opacity: 0.3 !important; }
+  .system-dossier-scanline { animation-duration: 7s; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Premium motion language: opacity and transforms only */
+.portfolio-hero-enter {
+  animation: portfolioHeroEnter 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.portfolio-stagger {
+  opacity: 0;
+  animation: portfolioStagger 550ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.portfolio-stagger-1 { animation-delay: 120ms; }
+.portfolio-stagger-2 { animation-delay: 220ms; }
+.portfolio-stagger-3 { animation-delay: 340ms; }
+
+.portfolio-mobile-menu {
+  transform-origin: top;
+  animation: portfolioMenuIn 220ms ease-out both;
+}
+
+@keyframes portfolioHeroEnter {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes portfolioStagger {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes portfolioMenuIn {
+  from { opacity: 0; transform: scaleY(0.96) translateY(-4px); }
+  to { opacity: 1; transform: scaleY(1) translateY(0); }
+}

@@ -769,7 +769,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
         {/* Mobile dropdown menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-[#141416] border-b border-white/10 px-4 pt-2 pb-4 space-y-1">
+          <div className="portfolio-mobile-menu md:hidden bg-[#141416] border-b border-white/10 px-4 pt-2 pb-4 space-y-1">
             {[
               { id: "home", label: "Home" },
               { id: "about", label: "About" },
@@ -880,13 +880,13 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
           <div className="absolute bottom-8 left-8 text-[#ccff00] font-mono text-lg z-20">+</div>
           <div className="absolute bottom-8 right-8 text-[#ccff00] font-mono text-lg z-20">+</div>
 
-          <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 p-6 sm:p-12 border border-white/15 bg-[#121214]/90 backdrop-blur-md rounded-none">
+          <div className="portfolio-hero-enter max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 p-6 sm:p-12 border border-white/15 bg-[#121214]/90 backdrop-blur-md rounded-none">
             
             {/* Left Column: Text & CTAs */}
             <div className="lg:col-span-7 space-y-6 text-left">
 
 
-              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-black border border-red-500/70 text-red-400 font-mono text-xs tracking-widest uppercase font-bold shadow-[0_0_15px_rgba(239,68,68,0.3)]">
+              <div className="portfolio-stagger portfolio-stagger-1 inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-black border border-red-500/70 text-red-400 font-mono text-xs tracking-widest uppercase font-bold shadow-[0_0_15px_rgba(239,68,68,0.3)]">
                 <span className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500 shadow-[0_0_8px_#ef4444]"></span>
@@ -894,7 +894,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 <span>3RD SEM STUDENT // CSE</span>
               </div>
 
-              <div className="space-y-1">
+              <div className="portfolio-stagger portfolio-stagger-2 space-y-1">
                 <h1 className="text-4xl sm:text-6xl font-extrabold font-sans font-black tracking-tighter uppercase tracking-tight text-[#ffffff] uppercase leading-none">
                   ADITHYA A
                 </h1>
@@ -903,7 +903,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 </h1>
               </div>
 
-              <div className="font-mono text-sm sm:text-base text-[#ccff00] tracking-widest uppercase font-bold">
+              <div className="portfolio-stagger portfolio-stagger-3 font-mono text-sm sm:text-base text-[#ccff00] tracking-widest uppercase font-bold">
                 &gt; <TerminalTypingText key={`title-${typingKey}`} text="CSE ENGINEER // AI & PYTHON DEVELOPER" speed={15} delay={500} resetKey={typingKey} />
               </div>
 
