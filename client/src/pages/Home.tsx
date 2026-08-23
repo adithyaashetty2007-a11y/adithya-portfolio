@@ -1889,18 +1889,18 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             <p className="text-sm font-mono text-zinc-400">Where I've been and what I've built along the way.</p>
           </div>
 
-          <div className="mt-8 bg-[#121214] border border-red-500/30 rounded-none overflow-hidden shadow-2xl relative">
+          <div className="mt-8 bg-[#121214] border border-[#ccff00]/20 rounded-none overflow-hidden shadow-2xl relative">
             {/* Terminal Window Top Bar */}
-            <div className="bg-black/90 px-4 py-3 border-b border-red-500/30 flex flex-wrap items-center justify-between gap-4">
+            <div className="bg-black/90 px-4 py-3 border-b border-white/10 flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-red-500 shadow-[0_0_8px_#ef4444]"></div>
+                <div className="w-3 h-3 rounded-full bg-[#ccff00] shadow-[0_0_8px_#ccff00]"></div>
                 <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
                 <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
-                <span className="ml-2 text-xs font-mono text-red-400">~/dossier/career_history.sys</span>
+                <span className="ml-2 text-xs font-mono text-[#ccff00]">~/dossier/career_history.sys</span>
               </div>
               <div className="flex items-center gap-2 text-xs font-mono">
                 <span className="text-zinc-400">STATUS:</span>
-                <span className="text-red-400 font-bold animate-pulse">STREAM_ACTIVE</span>
+                <span className="text-[#ccff00] font-bold animate-pulse">STREAM_ACTIVE</span>
               </div>
             </div>
 
@@ -2013,23 +2013,23 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   <div 
                     key={item.id} 
                     onClick={() => setSelectedTimelineItem(item.full)}
-                    className="p-5 sm:p-6 bg-black/60 border border-red-500/30 hover:border-red-500 transition-all duration-300 cursor-pointer group relative overflow-hidden"
+                    className="p-5 sm:p-6 bg-black/60 border border-white/10 hover:border-[#ccff00]/70 transition-all duration-300 cursor-pointer group relative overflow-hidden"
                   >
                     {/* Glowing corner crosshairs */}
                     <div className="absolute top-2 right-2 text-[#ccff00] font-mono text-xs opacity-50 group-hover:opacity-100">+</div>
                     <div className="absolute bottom-2 left-2 text-[#ccff00] font-mono text-xs opacity-50 group-hover:opacity-100">+</div>
 
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-                      <div className="flex items-center gap-2 text-xs font-mono text-red-400">
+                      <div className="flex items-center gap-2 text-xs font-mono text-[#ccff00]">
                         <span className="animate-pulse">●</span>
                         <span>{item.date}</span>
                       </div>
-                      <span className="px-2.5 py-0.5 bg-red-500/10 border border-red-500/30 text-red-400 font-mono text-[11px] uppercase tracking-wider">
+                      <span className="px-2.5 py-0.5 bg-white/5 border border-white/15 text-zinc-300 font-mono text-[11px] uppercase tracking-wider">
                         {item.badge}
                       </span>
                     </div>
 
-                    <h3 className="text-xl sm:text-2xl font-bold font-mono text-white group-hover:text-red-400 transition mb-2">
+                    <h3 className="text-xl sm:text-2xl font-bold font-mono text-white group-hover:text-[#ccff00] transition mb-2">
                       {item.title}
                     </h3>
 
@@ -2037,7 +2037,13 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                       {item.desc}
                     </p>
 
-                    <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-500 group-hover:text-red-400 transition">
+                    <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2">
+                      {item.full.tags.map((tag) => (
+                        <span key={tag} className="px-2 py-1 border border-[#ccff00]/20 bg-[#ccff00]/5 text-[10px] font-mono text-zinc-300 truncate" title={tag}>{tag}</span>
+                      ))}
+                    </div>
+
+                    <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-500 group-hover:text-[#ccff00] transition">
                       <span>// CLICK_TO_INSPECT_DOSSIER</span>
                       <span className="underline">OPEN_LOG</span>
                     </div>
