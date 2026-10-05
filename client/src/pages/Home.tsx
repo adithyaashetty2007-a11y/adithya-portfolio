@@ -78,6 +78,19 @@ import {
   OUTSKILL_CERT_BASE64, BE10X_CERT_BASE64 
 } from "@/lib/assets";
 
+const PROFESSIONAL_SUMMARY = [
+  "I’m a Computer Science Engineering student passionate about technology, problem-solving, and building practical solutions.",
+  "Currently focused on strengthening my programming fundamentals and mastering Data Structures & Algorithms.",
+  "I have completed a Web Development internship with InAmigos, gaining hands-on development experience.",
+  "I actively participate in college clubs, technical events, and hackathons.",
+  "I have successfully completed 2 hackathons, gaining experience in teamwork, innovation, and problem-solving.",
+  "Currently participating in the Smart India Hackathon (SIH), working with a team on a real-world problem statement.",
+  "I enjoy learning beyond the traditional academic syllabus through hands-on projects and experimentation.",
+  "My current goal is to become strong in DSA and core computer science fundamentals.",
+  "My next goal is to explore and master Machine Learning, Deep Learning, and Computer Vision.",
+  "Always learning, building, participating, and looking forward to creating meaningful technology."
+] as const;
+
 interface Certificate {
   id: string;
   title: string;
@@ -160,11 +173,9 @@ export default function Home() {
   const [contactForm, setContactForm] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [typingKey, setTypingKey] = useState(0);
-  const [activeShellTab, setActiveShellTab] = useState(0);
 
   // Typewriter placeholder for contact form
   const [namePlaceholder, setNamePlaceholder] = useState("e.g. Peer / Mentor");
-  const [visitorCount, setVisitorCount] = useState(1482);
 
   useEffect(() => {
     const namePrompts = ["e.g. Peer / Mentor", "e.g. Recruiter", "e.g. Tech Lead", "e.g. Fellow Developer"];
@@ -197,22 +208,8 @@ export default function Home() {
 
     timer = setTimeout(typeName, 1000);
 
-    // Welcome toast for incoming recruiters & visitor counter increment
-    const welcomeTimer = setTimeout(() => {
-      const stored = localStorage.getItem("adithya_visitor_count");
-      const currentCount = stored ? parseInt(stored, 10) + 1 : 1483;
-      setVisitorCount(currentCount);
-      localStorage.setItem("adithya_visitor_count", currentCount.toString());
-
-      toast("⚡ Welcome, Recruiter / Visitor!", {
-        description: `You are visitor #${currentCount}. Explore Adithya's portfolio & projects.`,
-        duration: 5000,
-      });
-    }, 1500);
-
     return () => {
       clearTimeout(timer);
-      clearTimeout(welcomeTimer);
     };
   }, []);
   
@@ -909,7 +906,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
 
               <div className="space-y-4 text-zinc-300 text-base sm:text-lg font-sans leading-relaxed max-w-2xl font-mono relative">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs text-zinc-500">// SYSTEM_BIO.LOG</span>
+                  <span className="text-xs text-zinc-500">// PROFESSIONAL_SUMMARY.LOG</span>
                   <button
                     onClick={() => setTypingKey(k => k + 1)}
                     className="px-2.5 py-1 bg-black/60 hover:bg-[#ffffff]/10 border border-white/20 hover:border-[#ffffff] text-zinc-300 hover:text-[#ffffff] text-xs rounded transition flex items-center gap-1.5 font-mono shadow"
@@ -919,115 +916,23 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                     <span>REPLAY TYPING</span>
                   </button>
                 </div>
-                <p className="text-zinc-200 font-['Share_Tech_Mono'] tracking-wide text-base sm:text-lg">
-                  <span className="text-[#ffffff] mr-2">&gt;</span>
-                  <span>I AM A COMPUTER SCIENCE ENGINEERING STUDENT AT ST. JOSEPH ENGINEERING COLLEGE, MANGALURU. <TerminalTypingText key={`t1-${typingKey}`} text="I ENJOY TURNING IDEAS INTO PRACTICAL SOFTWARE SOLUTIONS AND CONTINUOUSLY IMPROVING MY TECHNICAL SKILLS." speed={8} delay={2000} resetKey={typingKey} /></span>
-                </p>
-                <p className="text-zinc-300 pt-2 font-['Share_Tech_Mono'] tracking-wide text-base sm:text-lg">
-                  <span className="text-[#ffffff] mr-2">&gt;</span>
-                  <TerminalTypingText key={`t2-${typingKey}`} text="I'M CURRENTLY EXPLORING PYTHON, WEB DEVELOPMENT, ARTIFICIAL INTELLIGENCE, AND DATA STRUCTURES & ALGORITHMS (DSA) WHILE BUILDING PROJECTS THAT STRENGTHEN MY UNDERSTANDING OF SOFTWARE DEVELOPMENT." speed={8} delay={1800} resetKey={typingKey} />
-                </p>
-                
-                <div className="pt-6">
-                  <div className="bg-[#121214] border border-[#ffffff]/30 rounded-xl overflow-hidden shadow-2xl">
-                    {/* Terminal Title Bar */}
-                    <div className="bg-black/90 px-4 py-2.5 border-b border-white/10 flex flex-wrap items-center justify-between gap-2">
-                      <div className="flex items-center gap-2">
-                        <div className="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
-                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
-                        <div className="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
-                        <span className="text-[11px] font-mono text-zinc-400 ml-2">adithya@portfolio ~ what_i_enjoy_shell</span>
-                      </div>
-                      <span className="text-[10px] font-mono text-[#ffffff] bg-[#ffffff]/10 px-2 py-0.5 rounded border border-[#ffffff]/30">INTERACTIVE_SHELL</span>
-                    </div>
-
-                    {/* Command Tabs */}
-                    <div className="bg-zinc-950 px-3 py-2 border-b border-white/10 flex flex-wrap gap-1.5 overflow-x-auto">
-                      {[
-                        { file: "web_eng.sh", label: "WEB ENG" },
-                        { file: "ai_vision.sh", label: "AI & VISION" },
-                        { file: "dsa_ops.sh", label: "DSA & OPS" },
-                        { file: "innovation.sh", label: "INNOVATION" },
-                        { file: "collab.sh", label: "COLLAB" }
-                      ].map((tab, idx) => (
-                        <button
-                          key={tab.file}
-                          onClick={() => setActiveShellTab(idx)}
-                          className={`px-3 py-1.5 rounded text-xs font-mono transition flex items-center gap-1.5 border ${
-                            activeShellTab === idx 
-                              ? "bg-[#ffffff]/15 border-[#ffffff] text-[#ffffff] shadow-[0_0_10px_rgba(255,255,255,0.2)]" 
-                              : "bg-black/40 border-white/10 text-zinc-400 hover:text-zinc-200 hover:border-white/30"
-                          }`}
-                        >
-                          <span>{tab.file}</span>
-                          {activeShellTab === idx && <span className="w-1.5 h-1.5 rounded-full bg-[#ffffff] animate-pulse"></span>}
-                        </button>
-                      ))}
-                    </div>
-
-                    {/* Terminal Output Area */}
-                    <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm text-zinc-300 space-y-4 min-h-[160px]">
-                      <div className="flex items-center gap-2 text-zinc-500 text-xs">
-                        <span>$</span>
-                        <span className="text-[#ffffff]">./execute_{['web_eng', 'ai_vision', 'dsa_ops', 'innovation', 'collab'][activeShellTab]}.sh --interactive</span>
-                      </div>
-
-                      <div className="bg-black/60 border border-white/10 rounded-lg p-4 space-y-3 relative overflow-hidden">
-                        {/* Background watermark */}
-                        <div className="absolute right-3 bottom-2 text-6xl opacity-5 pointer-events-none select-none font-bold">
-                          {['💻', '🤖', '🚀', '🌱', '🤝'][activeShellTab]}
-                        </div>
-
-                        <div className="flex items-center justify-between border-b border-white/10 pb-2">
-                          <span className="text-[#ffffff] font-bold tracking-wide">
-                            {
-                              [
-                                "MODULE // 01: WEB ENGINEERING",
-                                "MODULE // 02: ARTIFICIAL INTELLIGENCE & COMPUTER VISION",
-                                "MODULE // 03: ALGORITHMIC OPS & DATA STRUCTURES",
-                                "MODULE // 04: INNOVATION, WORKSHOPS & HACKATHONS",
-                                "MODULE // 05: INTERNSHIPS & COLLABORATIONS"
-                              ][activeShellTab]
-                            }
-                          </span>
-                          <span className="text-[10px] text-zinc-500 bg-white/5 px-2 py-0.5 rounded">STATUS: EXECUTING</span>
-                        </div>
-
-                        <p className="text-zinc-200 text-sm leading-relaxed font-sans pt-1">
-                          <TerminalTypingText 
-                            key={`shell-tab-${activeShellTab}-${typingKey}`} 
-                            text={
-                              [
-                                "BUILDING RESPONSIVE AND MODERN WEB APPLICATIONS WITH CLEAN ARCHITECTURE, ACCESSIBILITY (A11Y), AND SEAMLESS USER INTERFACES.",
-                                "EXPLORING ARTIFICIAL INTELLIGENCE AND COMPUTER VISION PROJECTS LIKE YOLOv8n TRAFFIC DENSITY ESTIMATION AND REAL-TIME DATA PROCESSING.",
-                                "SOLVING PROGRAMMING CHALLENGES AND LEARNING NEW TECHNOLOGIES. ACTIVELY SOLVING LEETCODE PROBLEMS AND STRENGTHENING C++ FUNDAMENTALS.",
-                                "CONTINUOUSLY IMPROVING THROUGH REAL-WORLD PROJECTS, WORKSHOPS, AND HACKATHONS SUCH AS REPOLIS VIBEATHON AND SCEPTIX CLUB EVENTS.",
-                                "OPEN TO INTERNSHIPS, COLLABORATIONS, AND NETWORKING OPPORTUNITIES. CONNECTING WITH INDUSTRY MENTORS TO ACCELERATE SOFTWARE ENGINEERING GROWTH."
-                              ][activeShellTab]
-                            } 
-                            speed={5} 
-                            delay={100} 
-                            resetKey={typingKey + activeShellTab} 
-                          />
-                        </p>
-
-                        <div className="pt-2 flex items-center justify-between text-[11px] text-zinc-500 border-t border-white/5">
-                          <span>EXIT_CODE: 0 (SUCCESS)</span>
-                          <span className="text-[#ffffff] animate-pulse">_</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div className="border border-white/15 bg-black/40 p-4 sm:p-5 space-y-3">
+                  {PROFESSIONAL_SUMMARY.map((line, index) => (
+                    <p key={line} className="text-zinc-200 font-['Share_Tech_Mono'] tracking-wide text-sm sm:text-base">
+                      <span className="text-[#ffffff] mr-2">&gt;{String(index + 1).padStart(2, '0')}</span>
+                      {index === 0 && typingKey === 0 ? <TerminalTypingText text={line.toUpperCase()} speed={4} delay={300} resetKey={typingKey} /> : line}
+                    </p>
+                  ))}
                 </div>
               </div>
 
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <div className="flex flex-wrap items-center gap-3">
                   <a
-                    href="/adithya-portfolio/resume.pdf"
+                    href="/adithya-portfolio/Adithya_A_Shetty_Resume_clean.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    download="Adithya_A_Shetty_Updated_Resume.pdf"
+                    download="Adithya_A_Shetty_Resume_clean.pdf"
                     className="px-5 py-3 bg-[#ffffff] text-black font-mono font-bold text-xs sm:text-sm rounded hover:bg-[#ffffff] transition flex items-center gap-2 shadow-[0_0_20px_rgba(255,255,255,0.3)] cursor-pointer"
                   >
                     <Download className="w-4 h-4" />
@@ -1223,9 +1128,8 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 <div className="mt-4 min-h-[170px] text-xs sm:text-sm font-mono text-zinc-300 leading-relaxed">
                   {activeDossierTab === "bio" && (
                     <div className="space-y-3 animate-fadeIn">
-                      <p className="text-zinc-500">// current mission</p>
-                      <p>Build a strong engineering foundation through practical Python, AI, and web projects.</p>
-                      <p className="text-zinc-400">Actively learning, shipping, and improving one system at a time.</p>
+                      <p className="text-zinc-500">// professional summary</p>
+                      {PROFESSIONAL_SUMMARY.map((line) => <p key={line}>{line}</p>)}
                     </div>
                   )}
                   {activeDossierTab === "metrics" && (
@@ -1986,16 +1890,16 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                 {
                   id: "cse",
                   cat: "education",
-                  date: "SEPTEMBER 2026 – PRESENT // ST. JOSEPH ENGINEERING COLLEGE",
-                  title: "3rd Semester Computer Science Engineering",
-                  desc: "Currently pursuing 3rd semester BE in Computer Science Engineering. Actively mastering Data Structures & Algorithms in C++, AI vibecoding, and building modern web applications.",
+                  date: "CURRENT // ST. JOSEPH ENGINEERING COLLEGE",
+                  title: "Computer Science Engineering Student",
+                  desc: "Strengthening programming fundamentals and mastering Data Structures & Algorithms while building practical solutions.",
                   badge: "[current]",
                   full: {
-                    title: "3rd Semester Computer Science Engineering",
+                    title: "Computer Science Engineering Student",
                     subtitle: "ST. JOSEPH ENGINEERING COLLEGE, MANGALURU",
-                    date: "September 2026 – Present",
+                    date: "Current",
                     badge: "[current]",
-                    description: "Currently pursuing 3rd semester BE in Computer Science Engineering. Actively mastering Data Structures & Algorithms in C++, AI vibecoding, and building modern web applications.",
+                    description: "Strengthening programming fundamentals and mastering Data Structures & Algorithms while building practical solutions.",
                     tags: ["DSA in C++", "AI Vibecoding", "Web Development", "LeetCode"]
                   }
                 },
@@ -2419,7 +2323,7 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
             <div className="flex items-center gap-3">
               <div className="px-3 py-2 rounded-lg border border-white/15 bg-black/60 text-xs text-zinc-300 flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>VISITORS: {visitorCount}</span>
+                <span>ANALYTICS: PRIVACY-FIRST</span>
               </div>
             </div>
 
@@ -2977,8 +2881,8 @@ YOLOv8n TRAFFIC DENSITY ESTIMATION // OPENCV COMPUTER VISION`}
                   icon: Download, 
                   action: () => {
                     const link = document.createElement("a");
-                    link.href = "/adithya-portfolio/resume.pdf";
-                    link.download = "Adithya_A_Shetty_Resume.pdf";
+                    link.href = "/adithya-portfolio/Adithya_A_Shetty_Resume_clean.pdf";
+                    link.download = "Adithya_A_Shetty_Resume_clean.pdf";
                     link.click();
                   } 
                 },
