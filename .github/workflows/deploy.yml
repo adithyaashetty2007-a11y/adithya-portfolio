@@ -26,9 +26,8 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v3
         with:
-          version: 9
-          # This forces pnpm to ignore frozen lockfiles globally
-          run_install: false 
+          version: 11.25.0
+          run_install: false
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -37,8 +36,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        # We explicitly add the bypass flag here
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Build project
         run: pnpm run build
